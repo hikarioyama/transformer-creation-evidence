@@ -1,0 +1,28 @@
+{
+  "schema": "next-token-machine-audit-review-v1",
+  "target": "[REDACTED_LOCAL_PATH]",
+  "focused_checks": {
+    "numerical": {
+      "results": "audit/numerical/results.json",
+      "status": "PASS",
+      "executed": 213,
+      "pass": 213,
+      "fail": 0,
+      "blocked": 0,
+      "max_abs_error": 3.019806626980426e-14,
+      "tolerance": "audit/numerical/tolerances.json: atol=1e-9, rtol=1e-7, mutation_min_delta=1e-12"
+    },
+    "browser": {
+      "results": "audit/browser/results.json",
+      "generatedAt": "2026-09-05T15:54:55.202Z",
+      "executed": 33,
+      "pass": 26,
+      "fail": 7,
+      "blocked": 0,
+      "independent_compare": "audit/browser/independent_compare.json: 51 executed, 49 PASS, 2 FAIL for documented cached embedding shape omissions"
+    },
+    "dom_numeric_values": "All-cell vector comparisons PASS for S05b, S06, S07, S12, S13, and S14; S14 probability comparison uses 5e-4 tolerance for one-decimal percent rendering.",
+    "arc_normalization": "S08/S32 causal-row and S32 normalization/arc-count/color assertions PASS; S09 L1 arc assertion and S32 depth assertion FAIL on observed target defects, not tautologies."
+  },
+  "assessment": "Focused coverage corrections are present and final artifacts are fresh. No remaining audit-method blocker found in the requested scope; browser failures are explicit observations of unchanged-target UI defects."
+}

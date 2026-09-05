@@ -1,0 +1,11 @@
+{
+  "schema": "next-token-machine-audit-tolerance-declaration-v1",
+  "declared_before_reference_and_comparison": true,
+  "precision": "binary64 / float64",
+  "atol": 1e-09,
+  "rtol": 1e-07,
+  "formula": "abs(a-r) <= atol + rtol*abs(r)",
+  "mutation_min_delta": 1e-12,
+  "justification": "Original JavaScript Number/Float64Array and independent NumPy arrays are binary64; this fixed tolerance is declared before any comparison and is not relaxed post hoc.",
+  "masked_values": "Causal rows store only j<=i; no masked -Inf entries are represented or compared."
+}

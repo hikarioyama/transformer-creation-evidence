@@ -1,0 +1,43 @@
+{
+  "sanitizer": {
+    "name": "sanitize_public.py",
+    "version": "1.0"
+  },
+  "input_kind": "file",
+  "files": [
+    {
+      "name": "2026-09-05T14-05-11-597Z_[REDACTED_ID_1].jsonl",
+      "source_sha256": "8c57dcfc77e0676ad83d2ae5578e7c6d0121ac2f77344cee90b9f073d6439d7c",
+      "public_sha256": "17350ebbcaaae7425a92be958525788ed2eca8596f9120ee289a51b7a024891f",
+      "bytes": 1143479,
+      "public_bytes": 609415,
+      "redactions": {
+        "embedded_image_object": 1,
+        "embedded_image_url": 3,
+        "home_directory_listing": 7,
+        "local_file_url": 12,
+        "local_path": 259,
+        "localhost_port_or_route": 26,
+        "metadata_omission": 121,
+        "opaque_id": 931,
+        "sensitive_key": 121
+      }
+    }
+  ],
+  "totals": {
+    "replacements": {
+      "embedded_image_object": 1,
+      "embedded_image_url": 3,
+      "home_directory_listing": 7,
+      "local_file_url": 12,
+      "local_path": 259,
+      "localhost_port_or_route": 26,
+      "metadata_omission": 121,
+      "opaque_id": 931,
+      "sensitive_key": 121
+    },
+    "files_seen": 1,
+    "files_written": 1,
+    "files_omitted": 0
+  }
+}

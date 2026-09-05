@@ -1,0 +1,3991 @@
+{
+  "schema": "next-token-machine-audit-browser-independent-compare-v1",
+  "target": "http://localhost:8765/",
+  "reference": "audit/numerical/reference.py (independent NumPy equations)",
+  "tolerance": {
+    "atol": 1e-09,
+    "rtol": 1e-07,
+    "formula": "abs(a-r) <= atol + rtol*abs(r)"
+  },
+  "summary": {
+    "status": "FAIL",
+    "executed_cases": 51,
+    "PASS": 49,
+    "FAIL": 2,
+    "BLOCKED": 0,
+    "N/A": 0,
+    "unexecuted": 0,
+    "pass_over_pass_plus_fail": 0.9607843137254902,
+    "unique_sequences": 11
+  },
+  "cases": [
+    {
+      "id": "[REDACTED_ID_1]",
+      "domain": [
+        "independent_reference",
+        "browser_trace"
+      ],
+      "status": "PASS",
+      "executed": true,
+      "inputs": {
+        "ids": [
+          4,
+          9,
+          5,
+          10,
+          6,
+          11,
+          7,
+          12
+        ],
+        "browser_state": "audit/browser/raw/S01-load-intro.json"
+      },
+      "assertions": [
+        {
+          "name": "tokEmb",
+          "status": "PASS",
+          "max_abs_error": 0.0,
+          "reason": null
+        },
+        {
+          "name": "posEmb",
+          "status": "PASS",
+          "max_abs_error": 0.0,
+          "reason": null
+        },
+        {
+          "name": "embed",
+          "status": "PASS",
+          "max_abs_error": 0.0,
+          "reason": null
+        },
+        {
+          "name": "lnf",
+          "status": "PASS",
+          "max_abs_error": 2.3314683517128287e-15,
+          "reason": null
+        },
+        {
+          "name": "logits",
+          "status": "PASS",
+          "max_abs_error": 5.329070518200751e-15,
+          "reason": null
+        },
+        {
+          "name": "probs",
+          "status": "PASS",
+          "max_abs_error": 4.440892098500626e-16,
+          "reason": null
+        },
+        {
+          "name": "xFinal",
+          "status": "PASS",
+          "max_abs_error": 5.329070518200751e-15,
+          "reason": null
+        },
+        {
+          "name": "blocks",
+          "status": "PASS",
+          "max_abs_error": 6.217248937900877e-15,
+          "reason": null
+        }
+      ],
+      "max_abs_error": 6.217248937900877e-15,
+      "evidence": {
+        "browser_state": "audit/browser/raw/S01-load-intro.json"
+      },
+      "reason": []
+    },
+    {
+      "id": "[REDACTED_ID_2]",
+      "domain": [
+        "independent_reference",
+        "browser_trace"
+      ],
+      "status": "PASS",
+      "executed": true,
+      "inputs": {
+        "ids": [
+          4,
+          9,
+          5,
+          10,
+          6,
+          11,
+          7,
+          12
+        ],
+        "browser_state": "audit/browser/raw/S02-close-intro-controls.json"
+      },
+      "assertions": [
+        {
+          "name": "tokEmb",
+          "status": "PASS",
+          "max_abs_error": 0.0,
+          "reason": null
+        },
+        {
+          "name": "posEmb",
+          "status": "PASS",
+          "max_abs_error": 0.0,
+          "reason": null
+        },
+        {
+          "name": "embed",
+          "status": "PASS",
+          "max_abs_error": 0.0,
+          "reason": null
+        },
+        {
+          "name": "lnf",
+          "status": "PASS",
+          "max_abs_error": 2.3314683517128287e-15,
+          "reason": null
+        },
+        {
+          "name": "logits",
+          "status": "PASS",
+          "max_abs_error": 5.329070518200751e-15,
+          "reason": null
+        },
+        {
+          "name": "probs",
+          "status": "PASS",
+          "max_abs_error": 4.440892098500626e-16,
+          "reason": null
+        },
+        {
+          "name": "xFinal",
+          "status": "PASS",
+          "max_abs_error": 5.329070518200751e-15,
+          "reason": null
+        },
+        {
+          "name": "blocks",
+          "status": "PASS",
+          "max_abs_error": 6.217248937900877e-15,
+          "reason": null
+        }
+      ],
+      "max_abs_error": 6.217248937900877e-15,
+      "evidence": {
+        "browser_state": "audit/browser/raw/S02-close-intro-controls.json"
+      },
+      "reason": []
+    },
+    {
+      "id": "[REDACTED_ID_3]",
+      "domain": [
+        "independent_reference",
+        "browser_trace"
+      ],
+      "status": "PASS",
+      "executed": true,
+      "inputs": {
+        "ids": [
+          4,
+          9,
+          5,
+          10,
+          6,
+          11,
+          7,
+          12
+        ],
+        "browser_state": "audit/browser/raw/S03-step1-input.json"
+      },
+      "assertions": [
+        {
+          "name": "tokEmb",
+          "status": "PASS",
+          "max_abs_error": 0.0,
+          "reason": null
+        },
+        {
+          "name": "posEmb",
+          "status": "PASS",
+          "max_abs_error": 0.0,
+          "reason": null
+        },
+        {
+          "name": "embed",
+          "status": "PASS",
+          "max_abs_error": 0.0,
+          "reason": null
+        },
+        {
+          "name": "lnf",
+          "status": "PASS",
+          "max_abs_error": 2.3314683517128287e-15,
+          "reason": null
+        },
+        {
+          "name": "logits",
+          "status": "PASS",
+          "max_abs_error": 5.329070518200751e-15,
+          "reason": null
+        },
+        {
+          "name": "probs",
+          "status": "PASS",
+          "max_abs_error": 4.440892098500626e-16,
+          "reason": null
+        },
+        {
+          "name": "xFinal",
+          "status": "PASS",
+          "max_abs_error": 5.329070518200751e-15,
+          "reason": null
+        },
+        {
+          "name": "blocks",
+          "status": "PASS",
+          "max_abs_error": 6.217248937900877e-15,
+          "reason": null
+        }
+      ],
+      "max_abs_error": 6.217248937900877e-15,
+      "evidence": {
+        "browser_state": "audit/browser/raw/S03-step1-input.json"
+      },
+      "reason": []
+    },
+    {
+      "id": "[REDACTED_ID_4]",
+      "domain": [
+        "independent_reference",
+        "browser_trace"
+      ],
+      "status": "PASS",
+      "executed": true,
+      "inputs": {
+        "ids": [
+          4,
+          9,
+          5,
+          10,
+          6,
+          11,
+          7,
+          12
+        ],
+        "browser_state": "audit/browser/raw/S04-stage-01.json"
+      },
+      "assertions": [
+        {
+          "name": "tokEmb",
+          "status": "PASS",
+          "max_abs_error": 0.0,
+          "reason": null
+        },
+        {
+          "name": "posEmb",
+          "status": "PASS",
+          "max_abs_error": 0.0,
+          "reason": null
+        },
+        {
+          "name": "embed",
+          "status": "PASS",
+          "max_abs_error": 0.0,
+          "reason": null
+        },
+        {
+          "name": "lnf",
+          "status": "PASS",
+          "max_abs_error": 2.3314683517128287e-15,
+          "reason": null
+        },
+        {
+          "name": "logits",
+          "status": "PASS",
+          "max_abs_error": 5.329070518200751e-15,
+          "reason": null
+        },
+        {
+          "name": "probs",
+          "status": "PASS",
+          "max_abs_error": 4.440892098500626e-16,
+          "reason": null
+        },
+        {
+          "name": "xFinal",
+          "status": "PASS",
+          "max_abs_error": 5.329070518200751e-15,
+          "reason": null
+        },
+        {
+          "name": "blocks",
+          "status": "PASS",
+          "max_abs_error": 6.217248937900877e-15,
+          "reason": null
+        }
+      ],
+      "max_abs_error": 6.217248937900877e-15,
+      "evidence": {
+        "browser_state": "audit/browser/raw/S04-stage-01.json"
+      },
+      "reason": []
+    },
+    {
+      "id": "[REDACTED_ID_5]",
+      "domain": [
+        "independent_reference",
+        "browser_trace"
+      ],
+      "status": "PASS",
+      "executed": true,
+      "inputs": {
+        "ids": [
+          4,
+          9,
+          5,
+          10,
+          6,
+          11,
+          7,
+          12
+        ],
+        "browser_state": "audit/browser/raw/S04-stage-02.json"
+      },
+      "assertions": [
+        {
+          "name": "tokEmb",
+          "status": "PASS",
+          "max_abs_error": 0.0,
+          "reason": null
+        },
+        {
+          "name": "posEmb",
+          "status": "PASS",
+          "max_abs_error": 0.0,
+          "reason": null
+        },
+        {
+          "name": "embed",
+          "status": "PASS",
+          "max_abs_error": 0.0,
+          "reason": null
+        },
+        {
+          "name": "lnf",
+          "status": "PASS",
+          "max_abs_error": 2.3314683517128287e-15,
+          "reason": null
+        },
+        {
+          "name": "logits",
+          "status": "PASS",
+          "max_abs_error": 5.329070518200751e-15,
+          "reason": null
+        },
+        {
+          "name": "probs",
+          "status": "PASS",
+          "max_abs_error": 4.440892098500626e-16,
+          "reason": null
+        },
+        {
+          "name": "xFinal",
+          "status": "PASS",
+          "max_abs_error": 5.329070518200751e-15,
+          "reason": null
+        },
+        {
+          "name": "blocks",
+          "status": "PASS",
+          "max_abs_error": 6.217248937900877e-15,
+          "reason": null
+        }
+      ],
+      "max_abs_error": 6.217248937900877e-15,
+      "evidence": {
+        "browser_state": "audit/browser/raw/S04-stage-02.json"
+      },
+      "reason": []
+    },
+    {
+      "id": "[REDACTED_ID_6]",
+      "domain": [
+        "independent_reference",
+        "browser_trace"
+      ],
+      "status": "PASS",
+      "executed": true,
+      "inputs": {
+        "ids": [
+          4,
+          9,
+          5,
+          10,
+          6,
+          11,
+          7,
+          12
+        ],
+        "browser_state": "audit/browser/raw/S04-stage-03.json"
+      },
+      "assertions": [
+        {
+          "name": "tokEmb",
+          "status": "PASS",
+          "max_abs_error": 0.0,
+          "reason": null
+        },
+        {
+          "name": "posEmb",
+          "status": "PASS",
+          "max_abs_error": 0.0,
+          "reason": null
+        },
+        {
+          "name": "embed",
+          "status": "PASS",
+          "max_abs_error": 0.0,
+          "reason": null
+        },
+        {
+          "name": "lnf",
+          "status": "PASS",
+          "max_abs_error": 2.3314683517128287e-15,
+          "reason": null
+        },
+        {
+          "name": "logits",
+          "status": "PASS",
+          "max_abs_error": 5.329070518200751e-15,
+          "reason": null
+        },
+        {
+          "name": "probs",
+          "status": "PASS",
+          "max_abs_error": 4.440892098500626e-16,
+          "reason": null
+        },
+        {
+          "name": "xFinal",
+          "status": "PASS",
+          "max_abs_error": 5.329070518200751e-15,
+          "reason": null
+        },
+        {
+          "name": "blocks",
+          "status": "PASS",
+          "max_abs_error": 6.217248937900877e-15,
+          "reason": null
+        }
+      ],
+      "max_abs_error": 6.217248937900877e-15,
+      "evidence": {
+        "browser_state": "audit/browser/raw/S04-stage-03.json"
+      },
+      "reason": []
+    },
+    {
+      "id": "[REDACTED_ID_7]",
+      "domain": [
+        "independent_reference",
+        "browser_trace"
+      ],
+      "status": "PASS",
+      "executed": true,
+      "inputs": {
+        "ids": [
+          4,
+          9,
+          5,
+          10,
+          6,
+          11,
+          7,
+          12
+        ],
+        "browser_state": "audit/browser/raw/S04-stage-04.json"
+      },
+      "assertions": [
+        {
+          "name": "tokEmb",
+          "status": "PASS",
+          "max_abs_error": 0.0,
+          "reason": null
+        },
+        {
+          "name": "posEmb",
+          "status": "PASS",
+          "max_abs_error": 0.0,
+          "reason": null
+        },
+        {
+          "name": "embed",
+          "status": "PASS",
+          "max_abs_error": 0.0,
+          "reason": null
+        },
+        {
+          "name": "lnf",
+          "status": "PASS",
+          "max_abs_error": 2.3314683517128287e-15,
+          "reason": null
+        },
+        {
+          "name": "logits",
+          "status": "PASS",
+          "max_abs_error": 5.329070518200751e-15,
+          "reason": null
+        },
+        {
+          "name": "probs",
+          "status": "PASS",
+          "max_abs_error": 4.440892098500626e-16,
+          "reason": null
+        },
+        {
+          "name": "xFinal",
+          "status": "PASS",
+          "max_abs_error": 5.329070518200751e-15,
+          "reason": null
+        },
+        {
+          "name": "blocks",
+          "status": "PASS",
+          "max_abs_error": 6.217248937900877e-15,
+          "reason": null
+        }
+      ],
+      "max_abs_error": 6.217248937900877e-15,
+      "evidence": {
+        "browser_state": "audit/browser/raw/S04-stage-04.json"
+      },
+      "reason": []
+    },
+    {
+      "id": "[REDACTED_ID_8]",
+      "domain": [
+        "independent_reference",
+        "browser_trace"
+      ],
+      "status": "PASS",
+      "executed": true,
+      "inputs": {
+        "ids": [
+          4,
+          9,
+          5,
+          10,
+          6,
+          11,
+          7,
+          12
+        ],
+        "browser_state": "audit/browser/raw/S04-stage-05.json"
+      },
+      "assertions": [
+        {
+          "name": "tokEmb",
+          "status": "PASS",
+          "max_abs_error": 0.0,
+          "reason": null
+        },
+        {
+          "name": "posEmb",
+          "status": "PASS",
+          "max_abs_error": 0.0,
+          "reason": null
+        },
+        {
+          "name": "embed",
+          "status": "PASS",
+          "max_abs_error": 0.0,
+          "reason": null
+        },
+        {
+          "name": "lnf",
+          "status": "PASS",
+          "max_abs_error": 2.3314683517128287e-15,
+          "reason": null
+        },
+        {
+          "name": "logits",
+          "status": "PASS",
+          "max_abs_error": 5.329070518200751e-15,
+          "reason": null
+        },
+        {
+          "name": "probs",
+          "status": "PASS",
+          "max_abs_error": 4.440892098500626e-16,
+          "reason": null
+        },
+        {
+          "name": "xFinal",
+          "status": "PASS",
+          "max_abs_error": 5.329070518200751e-15,
+          "reason": null
+        },
+        {
+          "name": "blocks",
+          "status": "PASS",
+          "max_abs_error": 6.217248937900877e-15,
+          "reason": null
+        }
+      ],
+      "max_abs_error": 6.217248937900877e-15,
+      "evidence": {
+        "browser_state": "audit/browser/raw/S04-stage-05.json"
+      },
+      "reason": []
+    },
+    {
+      "id": "[REDACTED_ID_9]",
+      "domain": [
+        "independent_reference",
+        "browser_trace"
+      ],
+      "status": "PASS",
+      "executed": true,
+      "inputs": {
+        "ids": [
+          4,
+          9,
+          5,
+          10,
+          6,
+          11,
+          7,
+          12
+        ],
+        "browser_state": "audit/browser/raw/S04-stage-06.json"
+      },
+      "assertions": [
+        {
+          "name": "tokEmb",
+          "status": "PASS",
+          "max_abs_error": 0.0,
+          "reason": null
+        },
+        {
+          "name": "posEmb",
+          "status": "PASS",
+          "max_abs_error": 0.0,
+          "reason": null
+        },
+        {
+          "name": "embed",
+          "status": "PASS",
+          "max_abs_error": 0.0,
+          "reason": null
+        },
+        {
+          "name": "lnf",
+          "status": "PASS",
+          "max_abs_error": 2.3314683517128287e-15,
+          "reason": null
+        },
+        {
+          "name": "logits",
+          "status": "PASS",
+          "max_abs_error": 5.329070518200751e-15,
+          "reason": null
+        },
+        {
+          "name": "probs",
+          "status": "PASS",
+          "max_abs_error": 4.440892098500626e-16,
+          "reason": null
+        },
+        {
+          "name": "xFinal",
+          "status": "PASS",
+          "max_abs_error": 5.329070518200751e-15,
+          "reason": null
+        },
+        {
+          "name": "blocks",
+          "status": "PASS",
+          "max_abs_error": 6.217248937900877e-15,
+          "reason": null
+        }
+      ],
+      "max_abs_error": 6.217248937900877e-15,
+      "evidence": {
+        "browser_state": "audit/browser/raw/S04-stage-06.json"
+      },
+      "reason": []
+    },
+    {
+      "id": "[REDACTED_ID_10]",
+      "domain": [
+        "independent_reference",
+        "browser_trace"
+      ],
+      "status": "PASS",
+      "executed": true,
+      "inputs": {
+        "ids": [
+          4,
+          9,
+          5,
+          10,
+          6,
+          11,
+          7,
+          12
+        ],
+        "browser_state": "audit/browser/raw/S04-stage-07.json"
+      },
+      "assertions": [
+        {
+          "name": "tokEmb",
+          "status": "PASS",
+          "max_abs_error": 0.0,
+          "reason": null
+        },
+        {
+          "name": "posEmb",
+          "status": "PASS",
+          "max_abs_error": 0.0,
+          "reason": null
+        },
+        {
+          "name": "embed",
+          "status": "PASS",
+          "max_abs_error": 0.0,
+          "reason": null
+        },
+        {
+          "name": "lnf",
+          "status": "PASS",
+          "max_abs_error": 2.3314683517128287e-15,
+          "reason": null
+        },
+        {
+          "name": "logits",
+          "status": "PASS",
+          "max_abs_error": 5.329070518200751e-15,
+          "reason": null
+        },
+        {
+          "name": "probs",
+          "status": "PASS",
+          "max_abs_error": 4.440892098500626e-16,
+          "reason": null
+        },
+        {
+          "name": "xFinal",
+          "status": "PASS",
+          "max_abs_error": 5.329070518200751e-15,
+          "reason": null
+        },
+        {
+          "name": "blocks",
+          "status": "PASS",
+          "max_abs_error": 6.217248937900877e-15,
+          "reason": null
+        }
+      ],
+      "max_abs_error": 6.217248937900877e-15,
+      "evidence": {
+        "browser_state": "audit/browser/raw/S04-stage-07.json"
+      },
+      "reason": []
+    },
+    {
+      "id": "[REDACTED_ID_11]",
+      "domain": [
+        "independent_reference",
+        "browser_trace"
+      ],
+      "status": "PASS",
+      "executed": true,
+      "inputs": {
+        "ids": [
+          4,
+          9,
+          5,
+          10,
+          6,
+          11,
+          7,
+          12
+        ],
+        "browser_state": "audit/browser/raw/S04-stage-08.json"
+      },
+      "assertions": [
+        {
+          "name": "tokEmb",
+          "status": "PASS",
+          "max_abs_error": 0.0,
+          "reason": null
+        },
+        {
+          "name": "posEmb",
+          "status": "PASS",
+          "max_abs_error": 0.0,
+          "reason": null
+        },
+        {
+          "name": "embed",
+          "status": "PASS",
+          "max_abs_error": 0.0,
+          "reason": null
+        },
+        {
+          "name": "lnf",
+          "status": "PASS",
+          "max_abs_error": 2.3314683517128287e-15,
+          "reason": null
+        },
+        {
+          "name": "logits",
+          "status": "PASS",
+          "max_abs_error": 5.329070518200751e-15,
+          "reason": null
+        },
+        {
+          "name": "probs",
+          "status": "PASS",
+          "max_abs_error": 4.440892098500626e-16,
+          "reason": null
+        },
+        {
+          "name": "xFinal",
+          "status": "PASS",
+          "max_abs_error": 5.329070518200751e-15,
+          "reason": null
+        },
+        {
+          "name": "blocks",
+          "status": "PASS",
+          "max_abs_error": 6.217248937900877e-15,
+          "reason": null
+        }
+      ],
+      "max_abs_error": 6.217248937900877e-15,
+      "evidence": {
+        "browser_state": "audit/browser/raw/S04-stage-08.json"
+      },
+      "reason": []
+    },
+    {
+      "id": "[REDACTED_ID_12]",
+      "domain": [
+        "independent_reference",
+        "browser_trace"
+      ],
+      "status": "PASS",
+      "executed": true,
+      "inputs": {
+        "ids": [
+          4,
+          9,
+          5,
+          10,
+          6,
+          11,
+          7,
+          12
+        ],
+        "browser_state": "audit/browser/raw/S04-stage-09.json"
+      },
+      "assertions": [
+        {
+          "name": "tokEmb",
+          "status": "PASS",
+          "max_abs_error": 0.0,
+          "reason": null
+        },
+        {
+          "name": "posEmb",
+          "status": "PASS",
+          "max_abs_error": 0.0,
+          "reason": null
+        },
+        {
+          "name": "embed",
+          "status": "PASS",
+          "max_abs_error": 0.0,
+          "reason": null
+        },
+        {
+          "name": "lnf",
+          "status": "PASS",
+          "max_abs_error": 2.3314683517128287e-15,
+          "reason": null
+        },
+        {
+          "name": "logits",
+          "status": "PASS",
+          "max_abs_error": 5.329070518200751e-15,
+          "reason": null
+        },
+        {
+          "name": "probs",
+          "status": "PASS",
+          "max_abs_error": 4.440892098500626e-16,
+          "reason": null
+        },
+        {
+          "name": "xFinal",
+          "status": "PASS",
+          "max_abs_error": 5.329070518200751e-15,
+          "reason": null
+        },
+        {
+          "name": "blocks",
+          "status": "PASS",
+          "max_abs_error": 6.217248937900877e-15,
+          "reason": null
+        }
+      ],
+      "max_abs_error": 6.217248937900877e-15,
+      "evidence": {
+        "browser_state": "audit/browser/raw/S04-stage-09.json"
+      },
+      "reason": []
+    },
+    {
+      "id": "[REDACTED_ID_13]",
+      "domain": [
+        "independent_reference",
+        "browser_trace"
+      ],
+      "status": "PASS",
+      "executed": true,
+      "inputs": {
+        "ids": [
+          4,
+          9,
+          5,
+          10,
+          6,
+          11,
+          7,
+          12
+        ],
+        "browser_state": "audit/browser/raw/S04-stage-10.json"
+      },
+      "assertions": [
+        {
+          "name": "tokEmb",
+          "status": "PASS",
+          "max_abs_error": 0.0,
+          "reason": null
+        },
+        {
+          "name": "posEmb",
+          "status": "PASS",
+          "max_abs_error": 0.0,
+          "reason": null
+        },
+        {
+          "name": "embed",
+          "status": "PASS",
+          "max_abs_error": 0.0,
+          "reason": null
+        },
+        {
+          "name": "lnf",
+          "status": "PASS",
+          "max_abs_error": 2.3314683517128287e-15,
+          "reason": null
+        },
+        {
+          "name": "logits",
+          "status": "PASS",
+          "max_abs_error": 5.329070518200751e-15,
+          "reason": null
+        },
+        {
+          "name": "probs",
+          "status": "PASS",
+          "max_abs_error": 4.440892098500626e-16,
+          "reason": null
+        },
+        {
+          "name": "xFinal",
+          "status": "PASS",
+          "max_abs_error": 5.329070518200751e-15,
+          "reason": null
+        },
+        {
+          "name": "blocks",
+          "status": "PASS",
+          "max_abs_error": 6.217248937900877e-15,
+          "reason": null
+        }
+      ],
+      "max_abs_error": 6.217248937900877e-15,
+      "evidence": {
+        "browser_state": "audit/browser/raw/S04-stage-10.json"
+      },
+      "reason": []
+    },
+    {
+      "id": "[REDACTED_ID_14]",
+      "domain": [
+        "independent_reference",
+        "browser_trace"
+      ],
+      "status": "PASS",
+      "executed": true,
+      "inputs": {
+        "ids": [
+          4,
+          9,
+          5,
+          10,
+          6,
+          11,
+          7,
+          12
+        ],
+        "browser_state": "audit/browser/raw/S04-stage-11.json"
+      },
+      "assertions": [
+        {
+          "name": "tokEmb",
+          "status": "PASS",
+          "max_abs_error": 0.0,
+          "reason": null
+        },
+        {
+          "name": "posEmb",
+          "status": "PASS",
+          "max_abs_error": 0.0,
+          "reason": null
+        },
+        {
+          "name": "embed",
+          "status": "PASS",
+          "max_abs_error": 0.0,
+          "reason": null
+        },
+        {
+          "name": "lnf",
+          "status": "PASS",
+          "max_abs_error": 2.3314683517128287e-15,
+          "reason": null
+        },
+        {
+          "name": "logits",
+          "status": "PASS",
+          "max_abs_error": 5.329070518200751e-15,
+          "reason": null
+        },
+        {
+          "name": "probs",
+          "status": "PASS",
+          "max_abs_error": 4.440892098500626e-16,
+          "reason": null
+        },
+        {
+          "name": "xFinal",
+          "status": "PASS",
+          "max_abs_error": 5.329070518200751e-15,
+          "reason": null
+        },
+        {
+          "name": "blocks",
+          "status": "PASS",
+          "max_abs_error": 6.217248937900877e-15,
+          "reason": null
+        }
+      ],
+      "max_abs_error": 6.217248937900877e-15,
+      "evidence": {
+        "browser_state": "audit/browser/raw/S04-stage-11.json"
+      },
+      "reason": []
+    },
+    {
+      "id": "[REDACTED_ID_15]",
+      "domain": [
+        "independent_reference",
+        "browser_trace"
+      ],
+      "status": "PASS",
+      "executed": true,
+      "inputs": {
+        "ids": [
+          4,
+          9,
+          5,
+          10,
+          6,
+          11,
+          7,
+          12
+        ],
+        "browser_state": "audit/browser/raw/S04-stage-12.json"
+      },
+      "assertions": [
+        {
+          "name": "tokEmb",
+          "status": "PASS",
+          "max_abs_error": 0.0,
+          "reason": null
+        },
+        {
+          "name": "posEmb",
+          "status": "PASS",
+          "max_abs_error": 0.0,
+          "reason": null
+        },
+        {
+          "name": "embed",
+          "status": "PASS",
+          "max_abs_error": 0.0,
+          "reason": null
+        },
+        {
+          "name": "lnf",
+          "status": "PASS",
+          "max_abs_error": 2.3314683517128287e-15,
+          "reason": null
+        },
+        {
+          "name": "logits",
+          "status": "PASS",
+          "max_abs_error": 5.329070518200751e-15,
+          "reason": null
+        },
+        {
+          "name": "probs",
+          "status": "PASS",
+          "max_abs_error": 4.440892098500626e-16,
+          "reason": null
+        },
+        {
+          "name": "xFinal",
+          "status": "PASS",
+          "max_abs_error": 5.329070518200751e-15,
+          "reason": null
+        },
+        {
+          "name": "blocks",
+          "status": "PASS",
+          "max_abs_error": 6.217248937900877e-15,
+          "reason": null
+        }
+      ],
+      "max_abs_error": 6.217248937900877e-15,
+      "evidence": {
+        "browser_state": "audit/browser/raw/S04-stage-12.json"
+      },
+      "reason": []
+    },
+    {
+      "id": "[REDACTED_ID_16]",
+      "domain": [
+        "independent_reference",
+        "browser_trace"
+      ],
+      "status": "PASS",
+      "executed": true,
+      "inputs": {
+        "ids": [
+          4,
+          9,
+          5,
+          10,
+          6,
+          11,
+          7,
+          12
+        ],
+        "browser_state": "audit/browser/raw/S04-stage-13.json"
+      },
+      "assertions": [
+        {
+          "name": "tokEmb",
+          "status": "PASS",
+          "max_abs_error": 0.0,
+          "reason": null
+        },
+        {
+          "name": "posEmb",
+          "status": "PASS",
+          "max_abs_error": 0.0,
+          "reason": null
+        },
+        {
+          "name": "embed",
+          "status": "PASS",
+          "max_abs_error": 0.0,
+          "reason": null
+        },
+        {
+          "name": "lnf",
+          "status": "PASS",
+          "max_abs_error": 2.3314683517128287e-15,
+          "reason": null
+        },
+        {
+          "name": "logits",
+          "status": "PASS",
+          "max_abs_error": 5.329070518200751e-15,
+          "reason": null
+        },
+        {
+          "name": "probs",
+          "status": "PASS",
+          "max_abs_error": 4.440892098500626e-16,
+          "reason": null
+        },
+        {
+          "name": "xFinal",
+          "status": "PASS",
+          "max_abs_error": 5.329070518200751e-15,
+          "reason": null
+        },
+        {
+          "name": "blocks",
+          "status": "PASS",
+          "max_abs_error": 6.217248937900877e-15,
+          "reason": null
+        }
+      ],
+      "max_abs_error": 6.217248937900877e-15,
+      "evidence": {
+        "browser_state": "audit/browser/raw/S04-stage-13.json"
+      },
+      "reason": []
+    },
+    {
+      "id": "[REDACTED_ID_17]",
+      "domain": [
+        "independent_reference",
+        "browser_trace"
+      ],
+      "status": "PASS",
+      "executed": true,
+      "inputs": {
+        "ids": [
+          4,
+          9,
+          5,
+          10,
+          6,
+          11,
+          7,
+          12
+        ],
+        "browser_state": "audit/browser/raw/S04-stage-14.json"
+      },
+      "assertions": [
+        {
+          "name": "tokEmb",
+          "status": "PASS",
+          "max_abs_error": 0.0,
+          "reason": null
+        },
+        {
+          "name": "posEmb",
+          "status": "PASS",
+          "max_abs_error": 0.0,
+          "reason": null
+        },
+        {
+          "name": "embed",
+          "status": "PASS",
+          "max_abs_error": 0.0,
+          "reason": null
+        },
+        {
+          "name": "lnf",
+          "status": "PASS",
+          "max_abs_error": 2.3314683517128287e-15,
+          "reason": null
+        },
+        {
+          "name": "logits",
+          "status": "PASS",
+          "max_abs_error": 5.329070518200751e-15,
+          "reason": null
+        },
+        {
+          "name": "probs",
+          "status": "PASS",
+          "max_abs_error": 4.440892098500626e-16,
+          "reason": null
+        },
+        {
+          "name": "xFinal",
+          "status": "PASS",
+          "max_abs_error": 5.329070518200751e-15,
+          "reason": null
+        },
+        {
+          "name": "blocks",
+          "status": "PASS",
+          "max_abs_error": 6.217248937900877e-15,
+          "reason": null
+        }
+      ],
+      "max_abs_error": 6.217248937900877e-15,
+      "evidence": {
+        "browser_state": "audit/browser/raw/S04-stage-14.json"
+      },
+      "reason": []
+    },
+    {
+      "id": "[REDACTED_ID_18]",
+      "domain": [
+        "independent_reference",
+        "browser_trace"
+      ],
+      "status": "PASS",
+      "executed": true,
+      "inputs": {
+        "ids": [
+          4,
+          9,
+          5,
+          10,
+          6,
+          11,
+          7,
+          12
+        ],
+        "browser_state": "audit/browser/raw/S04-stage-15.json"
+      },
+      "assertions": [
+        {
+          "name": "tokEmb",
+          "status": "PASS",
+          "max_abs_error": 0.0,
+          "reason": null
+        },
+        {
+          "name": "posEmb",
+          "status": "PASS",
+          "max_abs_error": 0.0,
+          "reason": null
+        },
+        {
+          "name": "embed",
+          "status": "PASS",
+          "max_abs_error": 0.0,
+          "reason": null
+        },
+        {
+          "name": "lnf",
+          "status": "PASS",
+          "max_abs_error": 2.3314683517128287e-15,
+          "reason": null
+        },
+        {
+          "name": "logits",
+          "status": "PASS",
+          "max_abs_error": 5.329070518200751e-15,
+          "reason": null
+        },
+        {
+          "name": "probs",
+          "status": "PASS",
+          "max_abs_error": 4.440892098500626e-16,
+          "reason": null
+        },
+        {
+          "name": "xFinal",
+          "status": "PASS",
+          "max_abs_error": 5.329070518200751e-15,
+          "reason": null
+        },
+        {
+          "name": "blocks",
+          "status": "PASS",
+          "max_abs_error": 6.217248937900877e-15,
+          "reason": null
+        }
+      ],
+      "max_abs_error": 6.217248937900877e-15,
+      "evidence": {
+        "browser_state": "audit/browser/raw/S04-stage-15.json"
+      },
+      "reason": []
+    },
+    {
+      "id": "[REDACTED_ID_19]",
+      "domain": [
+        "independent_reference",
+        "browser_trace"
+      ],
+      "status": "PASS",
+      "executed": true,
+      "inputs": {
+        "ids": [
+          4,
+          9,
+          5,
+          10,
+          6,
+          11,
+          7,
+          12
+        ],
+        "browser_state": "audit/browser/raw/S04-step-walk-all-15.json"
+      },
+      "assertions": [
+        {
+          "name": "tokEmb",
+          "status": "PASS",
+          "max_abs_error": 0.0,
+          "reason": null
+        },
+        {
+          "name": "posEmb",
+          "status": "PASS",
+          "max_abs_error": 0.0,
+          "reason": null
+        },
+        {
+          "name": "embed",
+          "status": "PASS",
+          "max_abs_error": 0.0,
+          "reason": null
+        },
+        {
+          "name": "lnf",
+          "status": "PASS",
+          "max_abs_error": 2.3314683517128287e-15,
+          "reason": null
+        },
+        {
+          "name": "logits",
+          "status": "PASS",
+          "max_abs_error": 5.329070518200751e-15,
+          "reason": null
+        },
+        {
+          "name": "probs",
+          "status": "PASS",
+          "max_abs_error": 4.440892098500626e-16,
+          "reason": null
+        },
+        {
+          "name": "xFinal",
+          "status": "PASS",
+          "max_abs_error": 5.329070518200751e-15,
+          "reason": null
+        },
+        {
+          "name": "blocks",
+          "status": "PASS",
+          "max_abs_error": 6.217248937900877e-15,
+          "reason": null
+        }
+      ],
+      "max_abs_error": 6.217248937900877e-15,
+      "evidence": {
+        "browser_state": "audit/browser/raw/S04-step-walk-all-15.json"
+      },
+      "reason": []
+    },
+    {
+      "id": "[REDACTED_ID_20]",
+      "domain": [
+        "independent_reference",
+        "browser_trace"
+      ],
+      "status": "PASS",
+      "executed": true,
+      "inputs": {
+        "ids": [
+          4,
+          9,
+          5,
+          10,
+          6,
+          11,
+          7,
+          12
+        ],
+        "browser_state": "audit/browser/raw/S05-embedding-values-selected-token.json"
+      },
+      "assertions": [
+        {
+          "name": "tokEmb",
+          "status": "PASS",
+          "max_abs_error": 0.0,
+          "reason": null
+        },
+        {
+          "name": "posEmb",
+          "status": "PASS",
+          "max_abs_error": 0.0,
+          "reason": null
+        },
+        {
+          "name": "embed",
+          "status": "PASS",
+          "max_abs_error": 0.0,
+          "reason": null
+        },
+        {
+          "name": "lnf",
+          "status": "PASS",
+          "max_abs_error": 2.3314683517128287e-15,
+          "reason": null
+        },
+        {
+          "name": "logits",
+          "status": "PASS",
+          "max_abs_error": 5.329070518200751e-15,
+          "reason": null
+        },
+        {
+          "name": "probs",
+          "status": "PASS",
+          "max_abs_error": 4.440892098500626e-16,
+          "reason": null
+        },
+        {
+          "name": "xFinal",
+          "status": "PASS",
+          "max_abs_error": 5.329070518200751e-15,
+          "reason": null
+        },
+        {
+          "name": "blocks",
+          "status": "PASS",
+          "max_abs_error": 6.217248937900877e-15,
+          "reason": null
+        }
+      ],
+      "max_abs_error": 6.217248937900877e-15,
+      "evidence": {
+        "browser_state": "audit/browser/raw/S05-embedding-values-selected-token.json"
+      },
+      "reason": []
+    },
+    {
+      "id": "[REDACTED_ID_21]",
+      "domain": [
+        "independent_reference",
+        "browser_trace"
+      ],
+      "status": "PASS",
+      "executed": true,
+      "inputs": {
+        "ids": [
+          4,
+          9,
+          5,
+          10,
+          6,
+          11,
+          7,
+          12
+        ],
+        "browser_state": "audit/browser/raw/S05-token-chip-selection.json"
+      },
+      "assertions": [
+        {
+          "name": "tokEmb",
+          "status": "PASS",
+          "max_abs_error": 0.0,
+          "reason": null
+        },
+        {
+          "name": "posEmb",
+          "status": "PASS",
+          "max_abs_error": 0.0,
+          "reason": null
+        },
+        {
+          "name": "embed",
+          "status": "PASS",
+          "max_abs_error": 0.0,
+          "reason": null
+        },
+        {
+          "name": "lnf",
+          "status": "PASS",
+          "max_abs_error": 2.3314683517128287e-15,
+          "reason": null
+        },
+        {
+          "name": "logits",
+          "status": "PASS",
+          "max_abs_error": 5.329070518200751e-15,
+          "reason": null
+        },
+        {
+          "name": "probs",
+          "status": "PASS",
+          "max_abs_error": 4.440892098500626e-16,
+          "reason": null
+        },
+        {
+          "name": "xFinal",
+          "status": "PASS",
+          "max_abs_error": 5.329070518200751e-15,
+          "reason": null
+        },
+        {
+          "name": "blocks",
+          "status": "PASS",
+          "max_abs_error": 6.217248937900877e-15,
+          "reason": null
+        }
+      ],
+      "max_abs_error": 6.217248937900877e-15,
+      "evidence": {
+        "browser_state": "audit/browser/raw/S05-token-chip-selection.json"
+      },
+      "reason": []
+    },
+    {
+      "id": "[REDACTED_ID_22]",
+      "domain": [
+        "independent_reference",
+        "browser_trace"
+      ],
+      "status": "PASS",
+      "executed": true,
+      "inputs": {
+        "ids": [
+          4,
+          9,
+          5,
+          10,
+          6,
+          11,
+          7,
+          12
+        ],
+        "browser_state": "audit/browser/raw/S05b-embedding-values-current-position.json"
+      },
+      "assertions": [
+        {
+          "name": "tokEmb",
+          "status": "PASS",
+          "max_abs_error": 0.0,
+          "reason": null
+        },
+        {
+          "name": "posEmb",
+          "status": "PASS",
+          "max_abs_error": 0.0,
+          "reason": null
+        },
+        {
+          "name": "embed",
+          "status": "PASS",
+          "max_abs_error": 0.0,
+          "reason": null
+        },
+        {
+          "name": "lnf",
+          "status": "PASS",
+          "max_abs_error": 2.3314683517128287e-15,
+          "reason": null
+        },
+        {
+          "name": "logits",
+          "status": "PASS",
+          "max_abs_error": 5.329070518200751e-15,
+          "reason": null
+        },
+        {
+          "name": "probs",
+          "status": "PASS",
+          "max_abs_error": 4.440892098500626e-16,
+          "reason": null
+        },
+        {
+          "name": "xFinal",
+          "status": "PASS",
+          "max_abs_error": 5.329070518200751e-15,
+          "reason": null
+        },
+        {
+          "name": "blocks",
+          "status": "PASS",
+          "max_abs_error": 6.217248937900877e-15,
+          "reason": null
+        }
+      ],
+      "max_abs_error": 6.217248937900877e-15,
+      "evidence": {
+        "browser_state": "audit/browser/raw/S05b-embedding-values-current-position.json"
+      },
+      "reason": []
+    },
+    {
+      "id": "[REDACTED_ID_23]",
+      "domain": [
+        "independent_reference",
+        "browser_trace"
+      ],
+      "status": "PASS",
+      "executed": true,
+      "inputs": {
+        "ids": [
+          4,
+          9,
+          5,
+          10,
+          6,
+          11,
+          7,
+          12
+        ],
+        "browser_state": "audit/browser/raw/S06-layernorm-values.json"
+      },
+      "assertions": [
+        {
+          "name": "tokEmb",
+          "status": "PASS",
+          "max_abs_error": 0.0,
+          "reason": null
+        },
+        {
+          "name": "posEmb",
+          "status": "PASS",
+          "max_abs_error": 0.0,
+          "reason": null
+        },
+        {
+          "name": "embed",
+          "status": "PASS",
+          "max_abs_error": 0.0,
+          "reason": null
+        },
+        {
+          "name": "lnf",
+          "status": "PASS",
+          "max_abs_error": 2.3314683517128287e-15,
+          "reason": null
+        },
+        {
+          "name": "logits",
+          "status": "PASS",
+          "max_abs_error": 5.329070518200751e-15,
+          "reason": null
+        },
+        {
+          "name": "probs",
+          "status": "PASS",
+          "max_abs_error": 4.440892098500626e-16,
+          "reason": null
+        },
+        {
+          "name": "xFinal",
+          "status": "PASS",
+          "max_abs_error": 5.329070518200751e-15,
+          "reason": null
+        },
+        {
+          "name": "blocks",
+          "status": "PASS",
+          "max_abs_error": 6.217248937900877e-15,
+          "reason": null
+        }
+      ],
+      "max_abs_error": 6.217248937900877e-15,
+      "evidence": {
+        "browser_state": "audit/browser/raw/S06-layernorm-values.json"
+      },
+      "reason": []
+    },
+    {
+      "id": "[REDACTED_ID_24]",
+      "domain": [
+        "independent_reference",
+        "browser_trace"
+      ],
+      "status": "PASS",
+      "executed": true,
+      "inputs": {
+        "ids": [
+          4,
+          9,
+          5,
+          10,
+          6,
+          11,
+          7,
+          12
+        ],
+        "browser_state": "audit/browser/raw/S07-qkv-values.json"
+      },
+      "assertions": [
+        {
+          "name": "tokEmb",
+          "status": "PASS",
+          "max_abs_error": 0.0,
+          "reason": null
+        },
+        {
+          "name": "posEmb",
+          "status": "PASS",
+          "max_abs_error": 0.0,
+          "reason": null
+        },
+        {
+          "name": "embed",
+          "status": "PASS",
+          "max_abs_error": 0.0,
+          "reason": null
+        },
+        {
+          "name": "lnf",
+          "status": "PASS",
+          "max_abs_error": 2.3314683517128287e-15,
+          "reason": null
+        },
+        {
+          "name": "logits",
+          "status": "PASS",
+          "max_abs_error": 5.329070518200751e-15,
+          "reason": null
+        },
+        {
+          "name": "probs",
+          "status": "PASS",
+          "max_abs_error": 4.440892098500626e-16,
+          "reason": null
+        },
+        {
+          "name": "xFinal",
+          "status": "PASS",
+          "max_abs_error": 5.329070518200751e-15,
+          "reason": null
+        },
+        {
+          "name": "blocks",
+          "status": "PASS",
+          "max_abs_error": 6.217248937900877e-15,
+          "reason": null
+        }
+      ],
+      "max_abs_error": 6.217248937900877e-15,
+      "evidence": {
+        "browser_state": "audit/browser/raw/S07-qkv-values.json"
+      },
+      "reason": []
+    },
+    {
+      "id": "[REDACTED_ID_25]",
+      "domain": [
+        "independent_reference",
+        "browser_trace"
+      ],
+      "status": "PASS",
+      "executed": true,
+      "inputs": {
+        "ids": [
+          4,
+          9,
+          5,
+          10,
+          6,
+          11,
+          7,
+          12
+        ],
+        "browser_state": "audit/browser/raw/S08-attention-L1H1.json"
+      },
+      "assertions": [
+        {
+          "name": "tokEmb",
+          "status": "PASS",
+          "max_abs_error": 0.0,
+          "reason": null
+        },
+        {
+          "name": "posEmb",
+          "status": "PASS",
+          "max_abs_error": 0.0,
+          "reason": null
+        },
+        {
+          "name": "embed",
+          "status": "PASS",
+          "max_abs_error": 0.0,
+          "reason": null
+        },
+        {
+          "name": "lnf",
+          "status": "PASS",
+          "max_abs_error": 2.3314683517128287e-15,
+          "reason": null
+        },
+        {
+          "name": "logits",
+          "status": "PASS",
+          "max_abs_error": 5.329070518200751e-15,
+          "reason": null
+        },
+        {
+          "name": "probs",
+          "status": "PASS",
+          "max_abs_error": 4.440892098500626e-16,
+          "reason": null
+        },
+        {
+          "name": "xFinal",
+          "status": "PASS",
+          "max_abs_error": 5.329070518200751e-15,
+          "reason": null
+        },
+        {
+          "name": "blocks",
+          "status": "PASS",
+          "max_abs_error": 6.217248937900877e-15,
+          "reason": null
+        }
+      ],
+      "max_abs_error": 6.217248937900877e-15,
+      "evidence": {
+        "browser_state": "audit/browser/raw/S08-attention-L1H1.json"
+      },
+      "reason": []
+    },
+    {
+      "id": "[REDACTED_ID_26]",
+      "domain": [
+        "independent_reference",
+        "browser_trace"
+      ],
+      "status": "PASS",
+      "executed": true,
+      "inputs": {
+        "ids": [
+          4,
+          9,
+          5,
+          10,
+          6,
+          11,
+          7,
+          12
+        ],
+        "browser_state": "audit/browser/raw/S09-L1H2-selector.json"
+      },
+      "assertions": [
+        {
+          "name": "tokEmb",
+          "status": "PASS",
+          "max_abs_error": 0.0,
+          "reason": null
+        },
+        {
+          "name": "posEmb",
+          "status": "PASS",
+          "max_abs_error": 0.0,
+          "reason": null
+        },
+        {
+          "name": "embed",
+          "status": "PASS",
+          "max_abs_error": 0.0,
+          "reason": null
+        },
+        {
+          "name": "lnf",
+          "status": "PASS",
+          "max_abs_error": 2.3314683517128287e-15,
+          "reason": null
+        },
+        {
+          "name": "logits",
+          "status": "PASS",
+          "max_abs_error": 5.329070518200751e-15,
+          "reason": null
+        },
+        {
+          "name": "probs",
+          "status": "PASS",
+          "max_abs_error": 4.440892098500626e-16,
+          "reason": null
+        },
+        {
+          "name": "xFinal",
+          "status": "PASS",
+          "max_abs_error": 5.329070518200751e-15,
+          "reason": null
+        },
+        {
+          "name": "blocks",
+          "status": "PASS",
+          "max_abs_error": 6.217248937900877e-15,
+          "reason": null
+        }
+      ],
+      "max_abs_error": 6.217248937900877e-15,
+      "evidence": {
+        "browser_state": "audit/browser/raw/S09-L1H2-selector.json"
+      },
+      "reason": []
+    },
+    {
+      "id": "[REDACTED_ID_27]",
+      "domain": [
+        "independent_reference",
+        "browser_trace"
+      ],
+      "status": "PASS",
+      "executed": true,
+      "inputs": {
+        "ids": [
+          4,
+          9,
+          5,
+          10,
+          6,
+          11,
+          7,
+          12
+        ],
+        "browser_state": "audit/browser/raw/S09-L2H1-selector.json"
+      },
+      "assertions": [
+        {
+          "name": "tokEmb",
+          "status": "PASS",
+          "max_abs_error": 0.0,
+          "reason": null
+        },
+        {
+          "name": "posEmb",
+          "status": "PASS",
+          "max_abs_error": 0.0,
+          "reason": null
+        },
+        {
+          "name": "embed",
+          "status": "PASS",
+          "max_abs_error": 0.0,
+          "reason": null
+        },
+        {
+          "name": "lnf",
+          "status": "PASS",
+          "max_abs_error": 2.3314683517128287e-15,
+          "reason": null
+        },
+        {
+          "name": "logits",
+          "status": "PASS",
+          "max_abs_error": 5.329070518200751e-15,
+          "reason": null
+        },
+        {
+          "name": "probs",
+          "status": "PASS",
+          "max_abs_error": 4.440892098500626e-16,
+          "reason": null
+        },
+        {
+          "name": "xFinal",
+          "status": "PASS",
+          "max_abs_error": 5.329070518200751e-15,
+          "reason": null
+        },
+        {
+          "name": "blocks",
+          "status": "PASS",
+          "max_abs_error": 6.217248937900877e-15,
+          "reason": null
+        }
+      ],
+      "max_abs_error": 6.217248937900877e-15,
+      "evidence": {
+        "browser_state": "audit/browser/raw/S09-L2H1-selector.json"
+      },
+      "reason": []
+    },
+    {
+      "id": "[REDACTED_ID_28]",
+      "domain": [
+        "independent_reference",
+        "browser_trace"
+      ],
+      "status": "PASS",
+      "executed": true,
+      "inputs": {
+        "ids": [
+          4,
+          9,
+          5,
+          10,
+          6,
+          11,
+          7,
+          12
+        ],
+        "browser_state": "audit/browser/raw/S09-L2H2-selector.json"
+      },
+      "assertions": [
+        {
+          "name": "tokEmb",
+          "status": "PASS",
+          "max_abs_error": 0.0,
+          "reason": null
+        },
+        {
+          "name": "posEmb",
+          "status": "PASS",
+          "max_abs_error": 0.0,
+          "reason": null
+        },
+        {
+          "name": "embed",
+          "status": "PASS",
+          "max_abs_error": 0.0,
+          "reason": null
+        },
+        {
+          "name": "lnf",
+          "status": "PASS",
+          "max_abs_error": 2.3314683517128287e-15,
+          "reason": null
+        },
+        {
+          "name": "logits",
+          "status": "PASS",
+          "max_abs_error": 5.329070518200751e-15,
+          "reason": null
+        },
+        {
+          "name": "probs",
+          "status": "PASS",
+          "max_abs_error": 4.440892098500626e-16,
+          "reason": null
+        },
+        {
+          "name": "xFinal",
+          "status": "PASS",
+          "max_abs_error": 5.329070518200751e-15,
+          "reason": null
+        },
+        {
+          "name": "blocks",
+          "status": "PASS",
+          "max_abs_error": 6.217248937900877e-15,
+          "reason": null
+        }
+      ],
+      "max_abs_error": 6.217248937900877e-15,
+      "evidence": {
+        "browser_state": "audit/browser/raw/S09-L2H2-selector.json"
+      },
+      "reason": []
+    },
+    {
+      "id": "[REDACTED_ID_29]",
+      "domain": [
+        "independent_reference",
+        "browser_trace"
+      ],
+      "status": "PASS",
+      "executed": true,
+      "inputs": {
+        "ids": [
+          4,
+          9,
+          5,
+          10,
+          6,
+          11,
+          7,
+          12
+        ],
+        "browser_state": "audit/browser/raw/S12-mlp.json"
+      },
+      "assertions": [
+        {
+          "name": "tokEmb",
+          "status": "PASS",
+          "max_abs_error": 0.0,
+          "reason": null
+        },
+        {
+          "name": "posEmb",
+          "status": "PASS",
+          "max_abs_error": 0.0,
+          "reason": null
+        },
+        {
+          "name": "embed",
+          "status": "PASS",
+          "max_abs_error": 0.0,
+          "reason": null
+        },
+        {
+          "name": "lnf",
+          "status": "PASS",
+          "max_abs_error": 2.3314683517128287e-15,
+          "reason": null
+        },
+        {
+          "name": "logits",
+          "status": "PASS",
+          "max_abs_error": 5.329070518200751e-15,
+          "reason": null
+        },
+        {
+          "name": "probs",
+          "status": "PASS",
+          "max_abs_error": 4.440892098500626e-16,
+          "reason": null
+        },
+        {
+          "name": "xFinal",
+          "status": "PASS",
+          "max_abs_error": 5.329070518200751e-15,
+          "reason": null
+        },
+        {
+          "name": "blocks",
+          "status": "PASS",
+          "max_abs_error": 6.217248937900877e-15,
+          "reason": null
+        }
+      ],
+      "max_abs_error": 6.217248937900877e-15,
+      "evidence": {
+        "browser_state": "audit/browser/raw/S12-mlp.json"
+      },
+      "reason": []
+    },
+    {
+      "id": "[REDACTED_ID_30]",
+      "domain": [
+        "independent_reference",
+        "browser_trace"
+      ],
+      "status": "PASS",
+      "executed": true,
+      "inputs": {
+        "ids": [
+          4,
+          9,
+          5,
+          10,
+          6,
+          11,
+          7,
+          12
+        ],
+        "browser_state": "audit/browser/raw/S12-residual-add.json"
+      },
+      "assertions": [
+        {
+          "name": "tokEmb",
+          "status": "PASS",
+          "max_abs_error": 0.0,
+          "reason": null
+        },
+        {
+          "name": "posEmb",
+          "status": "PASS",
+          "max_abs_error": 0.0,
+          "reason": null
+        },
+        {
+          "name": "embed",
+          "status": "PASS",
+          "max_abs_error": 0.0,
+          "reason": null
+        },
+        {
+          "name": "lnf",
+          "status": "PASS",
+          "max_abs_error": 2.3314683517128287e-15,
+          "reason": null
+        },
+        {
+          "name": "logits",
+          "status": "PASS",
+          "max_abs_error": 5.329070518200751e-15,
+          "reason": null
+        },
+        {
+          "name": "probs",
+          "status": "PASS",
+          "max_abs_error": 4.440892098500626e-16,
+          "reason": null
+        },
+        {
+          "name": "xFinal",
+          "status": "PASS",
+          "max_abs_error": 5.329070518200751e-15,
+          "reason": null
+        },
+        {
+          "name": "blocks",
+          "status": "PASS",
+          "max_abs_error": 6.217248937900877e-15,
+          "reason": null
+        }
+      ],
+      "max_abs_error": 6.217248937900877e-15,
+      "evidence": {
+        "browser_state": "audit/browser/raw/S12-residual-add.json"
+      },
+      "reason": []
+    },
+    {
+      "id": "[REDACTED_ID_31]",
+      "domain": [
+        "independent_reference",
+        "browser_trace"
+      ],
+      "status": "PASS",
+      "executed": true,
+      "inputs": {
+        "ids": [
+          4,
+          9,
+          5,
+          10,
+          6,
+          11,
+          7,
+          12
+        ],
+        "browser_state": "audit/browser/raw/S12-residual-and-mlp-values.json"
+      },
+      "assertions": [
+        {
+          "name": "tokEmb",
+          "status": "PASS",
+          "max_abs_error": 0.0,
+          "reason": null
+        },
+        {
+          "name": "posEmb",
+          "status": "PASS",
+          "max_abs_error": 0.0,
+          "reason": null
+        },
+        {
+          "name": "embed",
+          "status": "PASS",
+          "max_abs_error": 0.0,
+          "reason": null
+        },
+        {
+          "name": "lnf",
+          "status": "PASS",
+          "max_abs_error": 2.3314683517128287e-15,
+          "reason": null
+        },
+        {
+          "name": "logits",
+          "status": "PASS",
+          "max_abs_error": 5.329070518200751e-15,
+          "reason": null
+        },
+        {
+          "name": "probs",
+          "status": "PASS",
+          "max_abs_error": 4.440892098500626e-16,
+          "reason": null
+        },
+        {
+          "name": "xFinal",
+          "status": "PASS",
+          "max_abs_error": 5.329070518200751e-15,
+          "reason": null
+        },
+        {
+          "name": "blocks",
+          "status": "PASS",
+          "max_abs_error": 6.217248937900877e-15,
+          "reason": null
+        }
+      ],
+      "max_abs_error": 6.217248937900877e-15,
+      "evidence": {
+        "browser_state": "audit/browser/raw/S12-residual-and-mlp-values.json"
+      },
+      "reason": []
+    },
+    {
+      "id": "[REDACTED_ID_32]",
+      "domain": [
+        "independent_reference",
+        "browser_trace"
+      ],
+      "status": "PASS",
+      "executed": true,
+      "inputs": {
+        "ids": [
+          4,
+          9,
+          5,
+          10,
+          6,
+          11,
+          7,
+          12
+        ],
+        "browser_state": "audit/browser/raw/S13-final-ln-values.json"
+      },
+      "assertions": [
+        {
+          "name": "tokEmb",
+          "status": "PASS",
+          "max_abs_error": 0.0,
+          "reason": null
+        },
+        {
+          "name": "posEmb",
+          "status": "PASS",
+          "max_abs_error": 0.0,
+          "reason": null
+        },
+        {
+          "name": "embed",
+          "status": "PASS",
+          "max_abs_error": 0.0,
+          "reason": null
+        },
+        {
+          "name": "lnf",
+          "status": "PASS",
+          "max_abs_error": 2.3314683517128287e-15,
+          "reason": null
+        },
+        {
+          "name": "logits",
+          "status": "PASS",
+          "max_abs_error": 5.329070518200751e-15,
+          "reason": null
+        },
+        {
+          "name": "probs",
+          "status": "PASS",
+          "max_abs_error": 4.440892098500626e-16,
+          "reason": null
+        },
+        {
+          "name": "xFinal",
+          "status": "PASS",
+          "max_abs_error": 5.329070518200751e-15,
+          "reason": null
+        },
+        {
+          "name": "blocks",
+          "status": "PASS",
+          "max_abs_error": 6.217248937900877e-15,
+          "reason": null
+        }
+      ],
+      "max_abs_error": 6.217248937900877e-15,
+      "evidence": {
+        "browser_state": "audit/browser/raw/S13-final-ln-values.json"
+      },
+      "reason": []
+    },
+    {
+      "id": "[REDACTED_ID_33]",
+      "domain": [
+        "independent_reference",
+        "browser_trace"
+      ],
+      "status": "PASS",
+      "executed": true,
+      "inputs": {
+        "ids": [
+          4,
+          9,
+          5,
+          10,
+          6,
+          11,
+          7,
+          12
+        ],
+        "browser_state": "audit/browser/raw/S14-logits-probability-token-ids.json"
+      },
+      "assertions": [
+        {
+          "name": "tokEmb",
+          "status": "PASS",
+          "max_abs_error": 0.0,
+          "reason": null
+        },
+        {
+          "name": "posEmb",
+          "status": "PASS",
+          "max_abs_error": 0.0,
+          "reason": null
+        },
+        {
+          "name": "embed",
+          "status": "PASS",
+          "max_abs_error": 0.0,
+          "reason": null
+        },
+        {
+          "name": "lnf",
+          "status": "PASS",
+          "max_abs_error": 2.3314683517128287e-15,
+          "reason": null
+        },
+        {
+          "name": "logits",
+          "status": "PASS",
+          "max_abs_error": 5.329070518200751e-15,
+          "reason": null
+        },
+        {
+          "name": "probs",
+          "status": "PASS",
+          "max_abs_error": 4.440892098500626e-16,
+          "reason": null
+        },
+        {
+          "name": "xFinal",
+          "status": "PASS",
+          "max_abs_error": 5.329070518200751e-15,
+          "reason": null
+        },
+        {
+          "name": "blocks",
+          "status": "PASS",
+          "max_abs_error": 6.217248937900877e-15,
+          "reason": null
+        }
+      ],
+      "max_abs_error": 6.217248937900877e-15,
+      "evidence": {
+        "browser_state": "audit/browser/raw/S14-logits-probability-token-ids.json"
+      },
+      "reason": []
+    },
+    {
+      "id": "[REDACTED_ID_34]",
+      "domain": [
+        "independent_reference",
+        "browser_trace"
+      ],
+      "status": "PASS",
+      "executed": true,
+      "inputs": {
+        "ids": [
+          1,
+          9,
+          5,
+          10,
+          6,
+          11,
+          7,
+          12
+        ],
+        "browser_state": "audit/browser/raw/S15-edit-first-token.json"
+      },
+      "assertions": [
+        {
+          "name": "tokEmb",
+          "status": "PASS",
+          "max_abs_error": 0.0,
+          "reason": null
+        },
+        {
+          "name": "posEmb",
+          "status": "PASS",
+          "max_abs_error": 0.0,
+          "reason": null
+        },
+        {
+          "name": "embed",
+          "status": "PASS",
+          "max_abs_error": 0.0,
+          "reason": null
+        },
+        {
+          "name": "lnf",
+          "status": "PASS",
+          "max_abs_error": 2.220446049250313e-15,
+          "reason": null
+        },
+        {
+          "name": "logits",
+          "status": "PASS",
+          "max_abs_error": 5.329070518200751e-15,
+          "reason": null
+        },
+        {
+          "name": "probs",
+          "status": "PASS",
+          "max_abs_error": 4.440892098500626e-16,
+          "reason": null
+        },
+        {
+          "name": "xFinal",
+          "status": "PASS",
+          "max_abs_error": 7.105427357601002e-15,
+          "reason": null
+        },
+        {
+          "name": "blocks",
+          "status": "PASS",
+          "max_abs_error": 7.105427357601002e-15,
+          "reason": null
+        }
+      ],
+      "max_abs_error": 7.105427357601002e-15,
+      "evidence": {
+        "browser_state": "audit/browser/raw/S15-edit-first-token.json"
+      },
+      "reason": []
+    },
+    {
+      "id": "[REDACTED_ID_35]",
+      "domain": [
+        "independent_reference",
+        "browser_trace"
+      ],
+      "status": "PASS",
+      "executed": true,
+      "inputs": {
+        "ids": [
+          4,
+          9,
+          5,
+          0,
+          6,
+          11,
+          7,
+          12
+        ],
+        "browser_state": "audit/browser/raw/S16-edit-middle-token.json"
+      },
+      "assertions": [
+        {
+          "name": "tokEmb",
+          "status": "PASS",
+          "max_abs_error": 0.0,
+          "reason": null
+        },
+        {
+          "name": "posEmb",
+          "status": "PASS",
+          "max_abs_error": 0.0,
+          "reason": null
+        },
+        {
+          "name": "embed",
+          "status": "PASS",
+          "max_abs_error": 0.0,
+          "reason": null
+        },
+        {
+          "name": "lnf",
+          "status": "PASS",
+          "max_abs_error": 2.3314683517128287e-15,
+          "reason": null
+        },
+        {
+          "name": "logits",
+          "status": "PASS",
+          "max_abs_error": 7.105427357601002e-15,
+          "reason": null
+        },
+        {
+          "name": "probs",
+          "status": "PASS",
+          "max_abs_error": 2.220446049250313e-16,
+          "reason": null
+        },
+        {
+          "name": "xFinal",
+          "status": "PASS",
+          "max_abs_error": 7.105427357601002e-15,
+          "reason": null
+        },
+        {
+          "name": "blocks",
+          "status": "PASS",
+          "max_abs_error": 7.105427357601002e-15,
+          "reason": null
+        }
+      ],
+      "max_abs_error": 7.105427357601002e-15,
+      "evidence": {
+        "browser_state": "audit/browser/raw/S16-edit-middle-token.json"
+      },
+      "reason": []
+    },
+    {
+      "id": "[REDACTED_ID_36]",
+      "domain": [
+        "independent_reference",
+        "browser_trace"
+      ],
+      "status": "PASS",
+      "executed": true,
+      "inputs": {
+        "ids": [
+          4,
+          9,
+          5,
+          10,
+          6,
+          11,
+          7,
+          15
+        ],
+        "browser_state": "audit/browser/raw/S17-edit-last-token.json"
+      },
+      "assertions": [
+        {
+          "name": "tokEmb",
+          "status": "PASS",
+          "max_abs_error": 0.0,
+          "reason": null
+        },
+        {
+          "name": "posEmb",
+          "status": "PASS",
+          "max_abs_error": 0.0,
+          "reason": null
+        },
+        {
+          "name": "embed",
+          "status": "PASS",
+          "max_abs_error": 0.0,
+          "reason": null
+        },
+        {
+          "name": "lnf",
+          "status": "PASS",
+          "max_abs_error": 2.3314683517128287e-15,
+          "reason": null
+        },
+        {
+          "name": "logits",
+          "status": "PASS",
+          "max_abs_error": 5.329070518200751e-15,
+          "reason": null
+        },
+        {
+          "name": "probs",
+          "status": "PASS",
+          "max_abs_error": 4.440892098500626e-16,
+          "reason": null
+        },
+        {
+          "name": "xFinal",
+          "status": "PASS",
+          "max_abs_error": 5.329070518200751e-15,
+          "reason": null
+        },
+        {
+          "name": "blocks",
+          "status": "PASS",
+          "max_abs_error": 6.217248937900877e-15,
+          "reason": null
+        }
+      ],
+      "max_abs_error": 6.217248937900877e-15,
+      "evidence": {
+        "browser_state": "audit/browser/raw/S17-edit-last-token.json"
+      },
+      "reason": []
+    },
+    {
+      "id": "[REDACTED_ID_37]",
+      "domain": [
+        "independent_reference",
+        "browser_trace"
+      ],
+      "status": "PASS",
+      "executed": true,
+      "inputs": {
+        "ids": [
+          4,
+          9,
+          5,
+          10,
+          6,
+          11,
+          7,
+          12
+        ],
+        "browser_state": "audit/browser/raw/S18-repeat-same-token-selection.json"
+      },
+      "assertions": [
+        {
+          "name": "tokEmb",
+          "status": "PASS",
+          "max_abs_error": 0.0,
+          "reason": null
+        },
+        {
+          "name": "posEmb",
+          "status": "PASS",
+          "max_abs_error": 0.0,
+          "reason": null
+        },
+        {
+          "name": "embed",
+          "status": "PASS",
+          "max_abs_error": 0.0,
+          "reason": null
+        },
+        {
+          "name": "lnf",
+          "status": "PASS",
+          "max_abs_error": 2.3314683517128287e-15,
+          "reason": null
+        },
+        {
+          "name": "logits",
+          "status": "PASS",
+          "max_abs_error": 5.329070518200751e-15,
+          "reason": null
+        },
+        {
+          "name": "probs",
+          "status": "PASS",
+          "max_abs_error": 4.440892098500626e-16,
+          "reason": null
+        },
+        {
+          "name": "xFinal",
+          "status": "PASS",
+          "max_abs_error": 5.329070518200751e-15,
+          "reason": null
+        },
+        {
+          "name": "blocks",
+          "status": "PASS",
+          "max_abs_error": 6.217248937900877e-15,
+          "reason": null
+        }
+      ],
+      "max_abs_error": 6.217248937900877e-15,
+      "evidence": {
+        "browser_state": "audit/browser/raw/S18-repeat-same-token-selection.json"
+      },
+      "reason": []
+    },
+    {
+      "id": "[REDACTED_ID_38]",
+      "domain": [
+        "independent_reference",
+        "browser_trace"
+      ],
+      "status": "PASS",
+      "executed": true,
+      "inputs": {
+        "ids": [
+          4
+        ],
+        "browser_state": "audit/browser/raw/S19-shorten-to-length-one.json"
+      },
+      "assertions": [
+        {
+          "name": "tokEmb",
+          "status": "PASS",
+          "max_abs_error": 0.0,
+          "reason": null
+        },
+        {
+          "name": "posEmb",
+          "status": "PASS",
+          "max_abs_error": 0.0,
+          "reason": null
+        },
+        {
+          "name": "embed",
+          "status": "PASS",
+          "max_abs_error": 0.0,
+          "reason": null
+        },
+        {
+          "name": "lnf",
+          "status": "PASS",
+          "max_abs_error": 2.6645352591003757e-15,
+          "reason": null
+        },
+        {
+          "name": "logits",
+          "status": "PASS",
+          "max_abs_error": 6.217248937900877e-15,
+          "reason": null
+        },
+        {
+          "name": "probs",
+          "status": "PASS",
+          "max_abs_error": 1.1102230246251565e-16,
+          "reason": null
+        },
+        {
+          "name": "xFinal",
+          "status": "PASS",
+          "max_abs_error": 5.551115123125783e-15,
+          "reason": null
+        },
+        {
+          "name": "blocks",
+          "status": "PASS",
+          "max_abs_error": 5.551115123125783e-15,
+          "reason": null
+        }
+      ],
+      "max_abs_error": 6.217248937900877e-15,
+      "evidence": {
+        "browser_state": "audit/browser/raw/S19-shorten-to-length-one.json"
+      },
+      "reason": []
+    },
+    {
+      "id": "[REDACTED_ID_39]",
+      "domain": [
+        "independent_reference",
+        "browser_trace"
+      ],
+      "status": "FAIL",
+      "executed": true,
+      "inputs": {
+        "ids": [
+          4,
+          5,
+          5,
+          6,
+          6,
+          7,
+          7,
+          8,
+          8,
+          9,
+          9,
+          10,
+          10,
+          11,
+          11,
+          12
+        ],
+        "browser_state": "audit/browser/raw/S20-cache-grow-to-max-context.json"
+      },
+      "assertions": [
+        {
+          "name": "tokEmb",
+          "status": "FAIL",
+          "max_abs_error": null,
+          "reason": "tokEmb: shape 1 != 16"
+        },
+        {
+          "name": "posEmb",
+          "status": "FAIL",
+          "max_abs_error": null,
+          "reason": "posEmb: shape 1 != 16"
+        },
+        {
+          "name": "embed",
+          "status": "FAIL",
+          "max_abs_error": null,
+          "reason": "embed: shape 1 != 16"
+        },
+        {
+          "name": "lnf",
+          "status": "PASS",
+          "max_abs_error": 2.3314683517128287e-15,
+          "reason": null
+        },
+        {
+          "name": "logits",
+          "status": "PASS",
+          "max_abs_error": 5.773159728050814e-15,
+          "reason": null
+        },
+        {
+          "name": "probs",
+          "status": "PASS",
+          "max_abs_error": 6.661338147750939e-16,
+          "reason": null
+        },
+        {
+          "name": "xFinal",
+          "status": "PASS",
+          "max_abs_error": 7.105427357601002e-15,
+          "reason": null
+        },
+        {
+          "name": "blocks",
+          "status": "FAIL",
+          "max_abs_error": null,
+          "reason": "blocks[0].x2_in: shape 1 != 16"
+        }
+      ],
+      "max_abs_error": 7.105427357601002e-15,
+      "evidence": {
+        "browser_state": "audit/browser/raw/S20-cache-grow-to-max-context.json"
+      },
+      "reason": [
+        "tokEmb: shape 1 != 16",
+        "posEmb: shape 1 != 16",
+        "embed: shape 1 != 16",
+        "blocks[0].x2_in: shape 1 != 16"
+      ]
+    },
+    {
+      "id": "[REDACTED_ID_40]",
+      "domain": [
+        "independent_reference",
+        "browser_trace"
+      ],
+      "status": "PASS",
+      "executed": true,
+      "inputs": {
+        "ids": [
+          4,
+          9,
+          5,
+          10,
+          6,
+          11,
+          7,
+          12
+        ],
+        "browser_state": "audit/browser/raw/S21-cache-toggle-prefill-demo.json"
+      },
+      "assertions": [
+        {
+          "name": "tokEmb",
+          "status": "PASS",
+          "max_abs_error": 0.0,
+          "reason": null
+        },
+        {
+          "name": "posEmb",
+          "status": "PASS",
+          "max_abs_error": 0.0,
+          "reason": null
+        },
+        {
+          "name": "embed",
+          "status": "PASS",
+          "max_abs_error": 0.0,
+          "reason": null
+        },
+        {
+          "name": "lnf",
+          "status": "PASS",
+          "max_abs_error": 2.3314683517128287e-15,
+          "reason": null
+        },
+        {
+          "name": "logits",
+          "status": "PASS",
+          "max_abs_error": 5.329070518200751e-15,
+          "reason": null
+        },
+        {
+          "name": "probs",
+          "status": "PASS",
+          "max_abs_error": 4.440892098500626e-16,
+          "reason": null
+        },
+        {
+          "name": "xFinal",
+          "status": "N/A",
+          "max_abs_error": null,
+          "reason": "cached display trace omits xFinal; no UI stage consumes this duplicate of final block x2"
+        },
+        {
+          "name": "blocks",
+          "status": "PASS",
+          "max_abs_error": 6.217248937900877e-15,
+          "reason": null
+        }
+      ],
+      "max_abs_error": 6.217248937900877e-15,
+      "evidence": {
+        "browser_state": "audit/browser/raw/S21-cache-toggle-prefill-demo.json"
+      },
+      "reason": [
+        "cached display trace omits xFinal; no UI stage consumes this duplicate of final block x2"
+      ]
+    },
+    {
+      "id": "[REDACTED_ID_41]",
+      "domain": [
+        "independent_reference",
+        "browser_trace"
+      ],
+      "status": "FAIL",
+      "executed": true,
+      "inputs": {
+        "ids": [
+          4,
+          9,
+          5,
+          10,
+          6,
+          11,
+          7,
+          12,
+          8,
+          13
+        ],
+        "browser_state": "audit/browser/raw/S22-cache-append-twice.json"
+      },
+      "assertions": [
+        {
+          "name": "tokEmb",
+          "status": "FAIL",
+          "max_abs_error": null,
+          "reason": "tokEmb: shape 8 != 10"
+        },
+        {
+          "name": "posEmb",
+          "status": "FAIL",
+          "max_abs_error": null,
+          "reason": "posEmb: shape 8 != 10"
+        },
+        {
+          "name": "embed",
+          "status": "FAIL",
+          "max_abs_error": null,
+          "reason": "embed: shape 8 != 10"
+        },
+        {
+          "name": "lnf",
+          "status": "PASS",
+          "max_abs_error": 2.3314683517128287e-15,
+          "reason": null
+        },
+        {
+          "name": "logits",
+          "status": "PASS",
+          "max_abs_error": 6.217248937900877e-15,
+          "reason": null
+        },
+        {
+          "name": "probs",
+          "status": "PASS",
+          "max_abs_error": 4.440892098500626e-16,
+          "reason": null
+        },
+        {
+          "name": "xFinal",
+          "status": "N/A",
+          "max_abs_error": null,
+          "reason": "cached display trace omits xFinal; no UI stage consumes this duplicate of final block x2"
+        },
+        {
+          "name": "blocks",
+          "status": "FAIL",
+          "max_abs_error": null,
+          "reason": "blocks[0].x2_in: shape 8 != 10"
+        }
+      ],
+      "max_abs_error": 6.217248937900877e-15,
+      "evidence": {
+        "browser_state": "audit/browser/raw/S22-cache-append-twice.json"
+      },
+      "reason": [
+        "tokEmb: shape 8 != 10",
+        "posEmb: shape 8 != 10",
+        "embed: shape 8 != 10",
+        "cached display trace omits xFinal; no UI stage consumes this duplicate of final block x2",
+        "blocks[0].x2_in: shape 8 != 10"
+      ]
+    },
+    {
+      "id": "[REDACTED_ID_42]",
+      "domain": [
+        "independent_reference",
+        "browser_trace"
+      ],
+      "status": "PASS",
+      "executed": true,
+      "inputs": {
+        "ids": [
+          4,
+          9,
+          5,
+          10,
+          6,
+          11,
+          7,
+          12,
+          8,
+          13
+        ],
+        "browser_state": "audit/browser/raw/S23-cache-toggle-off-on-equivalence.json"
+      },
+      "assertions": [
+        {
+          "name": "tokEmb",
+          "status": "PASS",
+          "max_abs_error": 0.0,
+          "reason": null
+        },
+        {
+          "name": "posEmb",
+          "status": "PASS",
+          "max_abs_error": 0.0,
+          "reason": null
+        },
+        {
+          "name": "embed",
+          "status": "PASS",
+          "max_abs_error": 0.0,
+          "reason": null
+        },
+        {
+          "name": "lnf",
+          "status": "PASS",
+          "max_abs_error": 2.3314683517128287e-15,
+          "reason": null
+        },
+        {
+          "name": "logits",
+          "status": "PASS",
+          "max_abs_error": 6.217248937900877e-15,
+          "reason": null
+        },
+        {
+          "name": "probs",
+          "status": "PASS",
+          "max_abs_error": 4.440892098500626e-16,
+          "reason": null
+        },
+        {
+          "name": "xFinal",
+          "status": "N/A",
+          "max_abs_error": null,
+          "reason": "cached display trace omits xFinal; no UI stage consumes this duplicate of final block x2"
+        },
+        {
+          "name": "blocks",
+          "status": "PASS",
+          "max_abs_error": 7.993605777301127e-15,
+          "reason": null
+        }
+      ],
+      "max_abs_error": 7.993605777301127e-15,
+      "evidence": {
+        "browser_state": "audit/browser/raw/S23-cache-toggle-off-on-equivalence.json"
+      },
+      "reason": [
+        "cached display trace omits xFinal; no UI stage consumes this duplicate of final block x2"
+      ]
+    },
+    {
+      "id": "[REDACTED_ID_43]",
+      "domain": [
+        "independent_reference",
+        "browser_trace"
+      ],
+      "status": "PASS",
+      "executed": true,
+      "inputs": {
+        "ids": [
+          1,
+          9,
+          5,
+          10,
+          6,
+          11,
+          7,
+          12,
+          8
+        ],
+        "browser_state": "audit/browser/raw/S24-cache-edit-first.json"
+      },
+      "assertions": [
+        {
+          "name": "tokEmb",
+          "status": "PASS",
+          "max_abs_error": 0.0,
+          "reason": null
+        },
+        {
+          "name": "posEmb",
+          "status": "PASS",
+          "max_abs_error": 0.0,
+          "reason": null
+        },
+        {
+          "name": "embed",
+          "status": "PASS",
+          "max_abs_error": 0.0,
+          "reason": null
+        },
+        {
+          "name": "lnf",
+          "status": "PASS",
+          "max_abs_error": 2.220446049250313e-15,
+          "reason": null
+        },
+        {
+          "name": "logits",
+          "status": "PASS",
+          "max_abs_error": 5.329070518200751e-15,
+          "reason": null
+        },
+        {
+          "name": "probs",
+          "status": "PASS",
+          "max_abs_error": 4.440892098500626e-16,
+          "reason": null
+        },
+        {
+          "name": "xFinal",
+          "status": "N/A",
+          "max_abs_error": null,
+          "reason": "cached display trace omits xFinal; no UI stage consumes this duplicate of final block x2"
+        },
+        {
+          "name": "blocks",
+          "status": "PASS",
+          "max_abs_error": 7.105427357601002e-15,
+          "reason": null
+        }
+      ],
+      "max_abs_error": 7.105427357601002e-15,
+      "evidence": {
+        "browser_state": "audit/browser/raw/S24-cache-edit-first.json"
+      },
+      "reason": [
+        "cached display trace omits xFinal; no UI stage consumes this duplicate of final block x2"
+      ]
+    },
+    {
+      "id": "[REDACTED_ID_44]",
+      "domain": [
+        "independent_reference",
+        "browser_trace"
+      ],
+      "status": "PASS",
+      "executed": true,
+      "inputs": {
+        "ids": [
+          4,
+          9,
+          5,
+          0,
+          6,
+          11,
+          7,
+          12,
+          8
+        ],
+        "browser_state": "audit/browser/raw/S25-cache-edit-middle.json"
+      },
+      "assertions": [
+        {
+          "name": "tokEmb",
+          "status": "PASS",
+          "max_abs_error": 0.0,
+          "reason": null
+        },
+        {
+          "name": "posEmb",
+          "status": "PASS",
+          "max_abs_error": 0.0,
+          "reason": null
+        },
+        {
+          "name": "embed",
+          "status": "PASS",
+          "max_abs_error": 0.0,
+          "reason": null
+        },
+        {
+          "name": "lnf",
+          "status": "PASS",
+          "max_abs_error": 2.3314683517128287e-15,
+          "reason": null
+        },
+        {
+          "name": "logits",
+          "status": "PASS",
+          "max_abs_error": 7.105427357601002e-15,
+          "reason": null
+        },
+        {
+          "name": "probs",
+          "status": "PASS",
+          "max_abs_error": 2.220446049250313e-16,
+          "reason": null
+        },
+        {
+          "name": "xFinal",
+          "status": "N/A",
+          "max_abs_error": null,
+          "reason": "cached display trace omits xFinal; no UI stage consumes this duplicate of final block x2"
+        },
+        {
+          "name": "blocks",
+          "status": "PASS",
+          "max_abs_error": 7.105427357601002e-15,
+          "reason": null
+        }
+      ],
+      "max_abs_error": 7.105427357601002e-15,
+      "evidence": {
+        "browser_state": "audit/browser/raw/S25-cache-edit-middle.json"
+      },
+      "reason": [
+        "cached display trace omits xFinal; no UI stage consumes this duplicate of final block x2"
+      ]
+    },
+    {
+      "id": "[REDACTED_ID_45]",
+      "domain": [
+        "independent_reference",
+        "browser_trace"
+      ],
+      "status": "PASS",
+      "executed": true,
+      "inputs": {
+        "ids": [
+          4,
+          9,
+          5,
+          10,
+          6,
+          11,
+          7,
+          15,
+          8
+        ],
+        "browser_state": "audit/browser/raw/S26-cache-edit-last.json"
+      },
+      "assertions": [
+        {
+          "name": "tokEmb",
+          "status": "PASS",
+          "max_abs_error": 0.0,
+          "reason": null
+        },
+        {
+          "name": "posEmb",
+          "status": "PASS",
+          "max_abs_error": 0.0,
+          "reason": null
+        },
+        {
+          "name": "embed",
+          "status": "PASS",
+          "max_abs_error": 0.0,
+          "reason": null
+        },
+        {
+          "name": "lnf",
+          "status": "PASS",
+          "max_abs_error": 2.3314683517128287e-15,
+          "reason": null
+        },
+        {
+          "name": "logits",
+          "status": "PASS",
+          "max_abs_error": 5.329070518200751e-15,
+          "reason": null
+        },
+        {
+          "name": "probs",
+          "status": "PASS",
+          "max_abs_error": 4.440892098500626e-16,
+          "reason": null
+        },
+        {
+          "name": "xFinal",
+          "status": "N/A",
+          "max_abs_error": null,
+          "reason": "cached display trace omits xFinal; no UI stage consumes this duplicate of final block x2"
+        },
+        {
+          "name": "blocks",
+          "status": "PASS",
+          "max_abs_error": 6.217248937900877e-15,
+          "reason": null
+        }
+      ],
+      "max_abs_error": 6.217248937900877e-15,
+      "evidence": {
+        "browser_state": "audit/browser/raw/S26-cache-edit-last.json"
+      },
+      "reason": [
+        "cached display trace omits xFinal; no UI stage consumes this duplicate of final block x2"
+      ]
+    },
+    {
+      "id": "[REDACTED_ID_46]",
+      "domain": [
+        "independent_reference",
+        "browser_trace"
+      ],
+      "status": "PASS",
+      "executed": true,
+      "inputs": {
+        "ids": [
+          4,
+          9,
+          5,
+          10,
+          6,
+          11,
+          7,
+          12
+        ],
+        "browser_state": "audit/browser/raw/S27-cache-shorten-current-input.json"
+      },
+      "assertions": [
+        {
+          "name": "tokEmb",
+          "status": "PASS",
+          "max_abs_error": 0.0,
+          "reason": null
+        },
+        {
+          "name": "posEmb",
+          "status": "PASS",
+          "max_abs_error": 0.0,
+          "reason": null
+        },
+        {
+          "name": "embed",
+          "status": "PASS",
+          "max_abs_error": 0.0,
+          "reason": null
+        },
+        {
+          "name": "lnf",
+          "status": "PASS",
+          "max_abs_error": 2.3314683517128287e-15,
+          "reason": null
+        },
+        {
+          "name": "logits",
+          "status": "PASS",
+          "max_abs_error": 5.329070518200751e-15,
+          "reason": null
+        },
+        {
+          "name": "probs",
+          "status": "PASS",
+          "max_abs_error": 4.440892098500626e-16,
+          "reason": null
+        },
+        {
+          "name": "xFinal",
+          "status": "N/A",
+          "max_abs_error": null,
+          "reason": "cached display trace omits xFinal; no UI stage consumes this duplicate of final block x2"
+        },
+        {
+          "name": "blocks",
+          "status": "PASS",
+          "max_abs_error": 6.217248937900877e-15,
+          "reason": null
+        }
+      ],
+      "max_abs_error": 6.217248937900877e-15,
+      "evidence": {
+        "browser_state": "audit/browser/raw/S27-cache-shorten-current-input.json"
+      },
+      "reason": [
+        "cached display trace omits xFinal; no UI stage consumes this duplicate of final block x2"
+      ]
+    },
+    {
+      "id": "[REDACTED_ID_47]",
+      "domain": [
+        "independent_reference",
+        "browser_trace"
+      ],
+      "status": "PASS",
+      "executed": true,
+      "inputs": {
+        "ids": [
+          4,
+          9,
+          5,
+          10,
+          6,
+          11,
+          7,
+          12
+        ],
+        "browser_state": "audit/browser/raw/S28-verify-parity-current-sequence.json"
+      },
+      "assertions": [
+        {
+          "name": "tokEmb",
+          "status": "PASS",
+          "max_abs_error": 0.0,
+          "reason": null
+        },
+        {
+          "name": "posEmb",
+          "status": "PASS",
+          "max_abs_error": 0.0,
+          "reason": null
+        },
+        {
+          "name": "embed",
+          "status": "PASS",
+          "max_abs_error": 0.0,
+          "reason": null
+        },
+        {
+          "name": "lnf",
+          "status": "PASS",
+          "max_abs_error": 2.3314683517128287e-15,
+          "reason": null
+        },
+        {
+          "name": "logits",
+          "status": "PASS",
+          "max_abs_error": 5.329070518200751e-15,
+          "reason": null
+        },
+        {
+          "name": "probs",
+          "status": "PASS",
+          "max_abs_error": 4.440892098500626e-16,
+          "reason": null
+        },
+        {
+          "name": "xFinal",
+          "status": "N/A",
+          "max_abs_error": null,
+          "reason": "cached display trace omits xFinal; no UI stage consumes this duplicate of final block x2"
+        },
+        {
+          "name": "blocks",
+          "status": "PASS",
+          "max_abs_error": 6.217248937900877e-15,
+          "reason": null
+        }
+      ],
+      "max_abs_error": 6.217248937900877e-15,
+      "evidence": {
+        "browser_state": "audit/browser/raw/S28-verify-parity-current-sequence.json"
+      },
+      "reason": [
+        "cached display trace omits xFinal; no UI stage consumes this duplicate of final block x2"
+      ]
+    },
+    {
+      "id": "[REDACTED_ID_48]",
+      "domain": [
+        "independent_reference",
+        "browser_trace"
+      ],
+      "status": "PASS",
+      "executed": true,
+      "inputs": {
+        "ids": [
+          4,
+          14,
+          5,
+          10,
+          6,
+          11,
+          7,
+          12
+        ],
+        "browser_state": "audit/browser/raw/S29-verify-stale-after-edit.json"
+      },
+      "assertions": [
+        {
+          "name": "tokEmb",
+          "status": "PASS",
+          "max_abs_error": 0.0,
+          "reason": null
+        },
+        {
+          "name": "posEmb",
+          "status": "PASS",
+          "max_abs_error": 0.0,
+          "reason": null
+        },
+        {
+          "name": "embed",
+          "status": "PASS",
+          "max_abs_error": 0.0,
+          "reason": null
+        },
+        {
+          "name": "lnf",
+          "status": "PASS",
+          "max_abs_error": 2.3314683517128287e-15,
+          "reason": null
+        },
+        {
+          "name": "logits",
+          "status": "PASS",
+          "max_abs_error": 5.551115123125783e-15,
+          "reason": null
+        },
+        {
+          "name": "probs",
+          "status": "PASS",
+          "max_abs_error": 4.440892098500626e-16,
+          "reason": null
+        },
+        {
+          "name": "xFinal",
+          "status": "PASS",
+          "max_abs_error": 7.16093850883226e-15,
+          "reason": null
+        },
+        {
+          "name": "blocks",
+          "status": "PASS",
+          "max_abs_error": 7.16093850883226e-15,
+          "reason": null
+        }
+      ],
+      "max_abs_error": 7.16093850883226e-15,
+      "evidence": {
+        "browser_state": "audit/browser/raw/S29-verify-stale-after-edit.json"
+      },
+      "reason": []
+    },
+    {
+      "id": "[REDACTED_ID_49]",
+      "domain": [
+        "independent_reference",
+        "browser_trace"
+      ],
+      "status": "PASS",
+      "executed": true,
+      "inputs": {
+        "ids": [
+          4,
+          9,
+          5,
+          10,
+          6,
+          11,
+          7,
+          12
+        ],
+        "browser_state": "audit/browser/raw/S30-random-and-demo-reset.json"
+      },
+      "assertions": [
+        {
+          "name": "tokEmb",
+          "status": "PASS",
+          "max_abs_error": 0.0,
+          "reason": null
+        },
+        {
+          "name": "posEmb",
+          "status": "PASS",
+          "max_abs_error": 0.0,
+          "reason": null
+        },
+        {
+          "name": "embed",
+          "status": "PASS",
+          "max_abs_error": 0.0,
+          "reason": null
+        },
+        {
+          "name": "lnf",
+          "status": "PASS",
+          "max_abs_error": 2.3314683517128287e-15,
+          "reason": null
+        },
+        {
+          "name": "logits",
+          "status": "PASS",
+          "max_abs_error": 5.329070518200751e-15,
+          "reason": null
+        },
+        {
+          "name": "probs",
+          "status": "PASS",
+          "max_abs_error": 4.440892098500626e-16,
+          "reason": null
+        },
+        {
+          "name": "xFinal",
+          "status": "PASS",
+          "max_abs_error": 5.329070518200751e-15,
+          "reason": null
+        },
+        {
+          "name": "blocks",
+          "status": "PASS",
+          "max_abs_error": 6.217248937900877e-15,
+          "reason": null
+        }
+      ],
+      "max_abs_error": 6.217248937900877e-15,
+      "evidence": {
+        "browser_state": "audit/browser/raw/S30-random-and-demo-reset.json"
+      },
+      "reason": []
+    },
+    {
+      "id": "[REDACTED_ID_50]",
+      "domain": [
+        "independent_reference",
+        "browser_trace"
+      ],
+      "status": "PASS",
+      "executed": true,
+      "inputs": {
+        "ids": [
+          4,
+          9,
+          5,
+          10,
+          6,
+          11,
+          7,
+          12
+        ],
+        "browser_state": "audit/browser/raw/S31-weight-selector.json"
+      },
+      "assertions": [
+        {
+          "name": "tokEmb",
+          "status": "PASS",
+          "max_abs_error": 0.0,
+          "reason": null
+        },
+        {
+          "name": "posEmb",
+          "status": "PASS",
+          "max_abs_error": 0.0,
+          "reason": null
+        },
+        {
+          "name": "embed",
+          "status": "PASS",
+          "max_abs_error": 0.0,
+          "reason": null
+        },
+        {
+          "name": "lnf",
+          "status": "PASS",
+          "max_abs_error": 2.3314683517128287e-15,
+          "reason": null
+        },
+        {
+          "name": "logits",
+          "status": "PASS",
+          "max_abs_error": 5.329070518200751e-15,
+          "reason": null
+        },
+        {
+          "name": "probs",
+          "status": "PASS",
+          "max_abs_error": 4.440892098500626e-16,
+          "reason": null
+        },
+        {
+          "name": "xFinal",
+          "status": "PASS",
+          "max_abs_error": 5.329070518200751e-15,
+          "reason": null
+        },
+        {
+          "name": "blocks",
+          "status": "PASS",
+          "max_abs_error": 6.217248937900877e-15,
+          "reason": null
+        }
+      ],
+      "max_abs_error": 6.217248937900877e-15,
+      "evidence": {
+        "browser_state": "audit/browser/raw/S31-weight-selector.json"
+      },
+      "reason": []
+    },
+    {
+      "id": "[REDACTED_ID_51]",
+      "domain": [
+        "independent_reference",
+        "browser_trace"
+      ],
+      "status": "PASS",
+      "executed": true,
+      "inputs": {
+        "ids": [
+          4,
+          9,
+          5,
+          10,
+          6,
+          11,
+          7,
+          12
+        ],
+        "browser_state": "audit/browser/raw/S32-attention-causal-render-inputs.json"
+      },
+      "assertions": [
+        {
+          "name": "tokEmb",
+          "status": "PASS",
+          "max_abs_error": 0.0,
+          "reason": null
+        },
+        {
+          "name": "posEmb",
+          "status": "PASS",
+          "max_abs_error": 0.0,
+          "reason": null
+        },
+        {
+          "name": "embed",
+          "status": "PASS",
+          "max_abs_error": 0.0,
+          "reason": null
+        },
+        {
+          "name": "lnf",
+          "status": "PASS",
+          "max_abs_error": 2.3314683517128287e-15,
+          "reason": null
+        },
+        {
+          "name": "logits",
+          "status": "PASS",
+          "max_abs_error": 5.329070518200751e-15,
+          "reason": null
+        },
+        {
+          "name": "probs",
+          "status": "PASS",
+          "max_abs_error": 4.440892098500626e-16,
+          "reason": null
+        },
+        {
+          "name": "xFinal",
+          "status": "PASS",
+          "max_abs_error": 5.329070518200751e-15,
+          "reason": null
+        },
+        {
+          "name": "blocks",
+          "status": "PASS",
+          "max_abs_error": 6.217248937900877e-15,
+          "reason": null
+        }
+      ],
+      "max_abs_error": 6.217248937900877e-15,
+      "evidence": {
+        "browser_state": "audit/browser/raw/S32-attention-causal-render-inputs.json"
+      },
+      "reason": []
+    }
+  ],
+  "commands": [
+    "python3 audit/browser/compare_independent.py"
+  ],
+  "limitations": [
+    "Cached display traces omit xFinal, which duplicates final block x2 and is marked N/A because no UI stage consumes it.",
+    "Cached append traces omit tokEmb/posEmb/embed rows for newly appended positions; those required intermediate rows remain explicit FAILs.",
+    "Render geometry is assessed in browser results.json; this file compares raw numeric traces only."
+  ]
+}

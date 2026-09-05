@@ -1,0 +1,1718 @@
+{
+  "schema": "next-token-machine-audit-baseline-v1",
+  "target": "[REDACTED_LOCAL_PATH]",
+  "audit_start_utc": "2026-09-05T15:18:16Z",
+  "capture": {
+    "target_path_explicit": true,
+    "cwd_was_not_used_as_target": true,
+    "preexisting_audit_directory": false,
+    "preexisting_audit_check": {
+      "command": "test ! -e [REDACTED_LOCAL_PATH] && printf 'absent\\n'",
+      "result": "absent",
+      "exit_code": 0
+    },
+    "commands": [
+      "date -u '+%Y-%m-%dT%H:%M:%SZ'",
+      "glob [REDACTED_LOCAL_PATH]-machine/** with hidden=true and gitignore=false",
+      "stat -c '%F\\t%s\\t%n' <each enumerated path>",
+      "sha256sum <each enumerated regular file>",
+      "git -C [REDACTED_LOCAL_PATH] rev-parse --is-inside-work-tree"
+    ],
+    "inventory_policy": "All pre-audit filesystem entries under the target are represented, including hidden and gitignored content. Regular files have byte sizes and SHA256; symlinks are represented with link_target and no content hash. The audit subtree was absent at capture and is excluded from later verification as audit-created content.",
+    "correction": {
+      "captured_at_utc": "2026-09-05T15:22:04Z",
+      "reason": "The first visible directory enumeration omitted the preexisting gitignored node_modules tree; this complete scan corrected the inventory before audit-dependent work continued.",
+      "command": "python3 [REDACTED_LOCAL_PATH]",
+      "excluded_path": "audit"
+    }
+  },
+  "entry_file": "index.html",
+  "launch_hints": {
+    "source": "README.md and package.json, read without executing the app",
+    "readme": [
+      "No build step or install is needed to use the app.",
+      "Linux: xdg-open index.html",
+      "Local server: python3 -m http.server 8000, then http://localhost:8000",
+      "The page is intended to run fully offline with locally vendored assets."
+    ],
+    "package_start_script": "python3 -m http.server 8000",
+    "not_executed_during_baseline": true
+  },
+  "directory_listing": [
+    {
+      "path": ".",
+      "type": "directory",
+      "is_symlink": false
+    },
+    {
+      "path": ".gitignore",
+      "type": "regular_file",
+      "size": 30,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "README.md",
+      "type": "regular_file",
+      "size": 5747,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "css",
+      "type": "directory",
+      "is_symlink": false
+    },
+    {
+      "path": "css/style.css",
+      "type": "regular_file",
+      "size": 12895,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "index.html",
+      "type": "regular_file",
+      "size": 5837,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "js",
+      "type": "directory",
+      "is_symlink": false
+    },
+    {
+      "path": "js/app.js",
+      "type": "regular_file",
+      "size": 39485,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "js/model.js",
+      "type": "regular_file",
+      "size": 15038,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "js/tokens.js",
+      "type": "regular_file",
+      "size": 1157,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "js/viz3d.js",
+      "type": "regular_file",
+      "size": 27225,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "js/weights.js",
+      "type": "regular_file",
+      "size": 154230,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules",
+      "type": "directory",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/.bin",
+      "type": "directory",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/.bin/playwright",
+      "type": "symlink",
+      "is_symlink": true,
+      "size": 20,
+      "sha256": null,
+      "link_target": "../playwright/cli.js"
+    },
+    {
+      "path": "node_modules/.bin/playwright-core",
+      "type": "symlink",
+      "is_symlink": true,
+      "size": 25,
+      "sha256": null,
+      "link_target": "../playwright-core/cli.js"
+    },
+    {
+      "path": "node_modules/.package-lock.json",
+      "type": "regular_file",
+      "size": 1018,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright",
+      "type": "directory",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright-core",
+      "type": "directory",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright-core/LICENSE",
+      "type": "regular_file",
+      "size": 11601,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright-core/NOTICE",
+      "type": "regular_file",
+      "size": 254,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright-core/README.md",
+      "type": "regular_file",
+      "size": 120,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright-core/ThirdPartyNotices.txt",
+      "type": "regular_file",
+      "size": 676,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright-core/bin",
+      "type": "directory",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright-core/bin/install_media_pack.ps1",
+      "type": "regular_file",
+      "size": 174,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright-core/bin/install_webkit_wsl.ps1",
+      "type": "regular_file",
+      "size": 1464,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright-core/bin/reinstall_chrome_beta_linux.sh",
+      "type": "regular_file",
+      "size": 1217,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright-core/bin/reinstall_chrome_beta_mac.sh",
+      "type": "regular_file",
+      "size": 563,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright-core/bin/reinstall_chrome_beta_win.ps1",
+      "type": "regular_file",
+      "size": 957,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright-core/bin/reinstall_chrome_stable_linux.sh",
+      "type": "regular_file",
+      "size": 1212,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright-core/bin/reinstall_chrome_stable_mac.sh",
+      "type": "regular_file",
+      "size": 519,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright-core/bin/reinstall_chrome_stable_win.ps1",
+      "type": "regular_file",
+      "size": 923,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright-core/bin/reinstall_msedge_beta_linux.sh",
+      "type": "regular_file",
+      "size": 1494,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright-core/bin/reinstall_msedge_beta_mac.sh",
+      "type": "regular_file",
+      "size": 377,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright-core/bin/reinstall_msedge_beta_win.ps1",
+      "type": "regular_file",
+      "size": 874,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright-core/bin/reinstall_msedge_dev_linux.sh",
+      "type": "regular_file",
+      "size": 1489,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright-core/bin/reinstall_msedge_dev_mac.sh",
+      "type": "regular_file",
+      "size": 372,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright-core/bin/reinstall_msedge_dev_win.ps1",
+      "type": "regular_file",
+      "size": 869,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright-core/bin/reinstall_msedge_stable_linux.sh",
+      "type": "regular_file",
+      "size": 1507,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright-core/bin/reinstall_msedge_stable_mac.sh",
+      "type": "regular_file",
+      "size": 371,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright-core/bin/reinstall_msedge_stable_win.ps1",
+      "type": "regular_file",
+      "size": 856,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright-core/browsers.json",
+      "type": "regular_file",
+      "size": 1137,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright-core/cli.js",
+      "type": "regular_file",
+      "size": 839,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright-core/index.d.ts",
+      "type": "regular_file",
+      "size": 634,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright-core/index.js",
+      "type": "regular_file",
+      "size": 697,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright-core/index.mjs",
+      "type": "regular_file",
+      "size": 1063,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright-core/lib",
+      "type": "directory",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright-core/lib/bootstrap.js",
+      "type": "regular_file",
+      "size": 3481,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright-core/lib/coreBundle.js",
+      "type": "regular_file",
+      "size": 3477183,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright-core/lib/entry",
+      "type": "directory",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright-core/lib/entry/cliDaemon.js",
+      "type": "regular_file",
+      "size": 197,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright-core/lib/entry/dashboardApp.js",
+      "type": "regular_file",
+      "size": 108,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright-core/lib/entry/mcp.js",
+      "type": "regular_file",
+      "size": 442,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright-core/lib/entry/oopBrowserDownload.js",
+      "type": "regular_file",
+      "size": 120,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright-core/lib/package.js",
+      "type": "regular_file",
+      "size": 2112,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright-core/lib/server",
+      "type": "directory",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright-core/lib/server/chromium",
+      "type": "directory",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright-core/lib/server/chromium/appIcon.png",
+      "type": "regular_file",
+      "size": 16565,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright-core/lib/server/electron",
+      "type": "directory",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright-core/lib/server/electron/loader.js",
+      "type": "regular_file",
+      "size": 4994,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright-core/lib/serverRegistry.js",
+      "type": "regular_file",
+      "size": 57039,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright-core/lib/serverRegistry.js.LICENSE",
+      "type": "regular_file",
+      "size": 2982,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright-core/lib/tools",
+      "type": "directory",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright-core/lib/tools/cli-client",
+      "type": "directory",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright-core/lib/tools/cli-client/channelSessions.js",
+      "type": "regular_file",
+      "size": 7087,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright-core/lib/tools/cli-client/cli.js",
+      "type": "regular_file",
+      "size": 153,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright-core/lib/tools/cli-client/help.json",
+      "type": "regular_file",
+      "size": 38799,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright-core/lib/tools/cli-client/minimist.js",
+      "type": "regular_file",
+      "size": 4109,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright-core/lib/tools/cli-client/output.js",
+      "type": "regular_file",
+      "size": 11972,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright-core/lib/tools/cli-client/program.js",
+      "type": "regular_file",
+      "size": 16373,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright-core/lib/tools/cli-client/registry.js",
+      "type": "regular_file",
+      "size": 6768,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright-core/lib/tools/cli-client/session.js",
+      "type": "regular_file",
+      "size": 9544,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright-core/lib/tools/dashboard",
+      "type": "directory",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright-core/lib/tools/dashboard/appIcon.png",
+      "type": "regular_file",
+      "size": 18945,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright-core/lib/tools/skills",
+      "type": "directory",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright-core/lib/tools/skills/playwright-cli",
+      "type": "directory",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright-core/lib/tools/skills/playwright-cli/SKILL.md",
+      "type": "regular_file",
+      "size": 12726,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright-core/lib/tools/skills/playwright-cli/references",
+      "type": "directory",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright-core/lib/tools/skills/playwright-cli/references/element-attributes.md",
+      "type": "regular_file",
+      "size": 665,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright-core/lib/tools/skills/playwright-cli/references/playwright-tests.md",
+      "type": "regular_file",
+      "size": 1690,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright-core/lib/tools/skills/playwright-cli/references/request-mocking.md",
+      "type": "regular_file",
+      "size": 2182,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright-core/lib/tools/skills/playwright-cli/references/running-code.md",
+      "type": "regular_file",
+      "size": 5642,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright-core/lib/tools/skills/playwright-cli/references/[REDACTED_ID_1].md",
+      "type": "regular_file",
+      "size": 5671,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright-core/lib/tools/skills/playwright-cli/references/storage-state.md",
+      "type": "regular_file",
+      "size": 5198,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright-core/lib/tools/skills/playwright-cli/references/test-generation.md",
+      "type": "regular_file",
+      "size": 16114,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright-core/lib/tools/skills/playwright-cli/references/tracing.md",
+      "type": "regular_file",
+      "size": 3456,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright-core/lib/tools/skills/playwright-cli/references/video-recording.md",
+      "type": "regular_file",
+      "size": 5387,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright-core/lib/tools/skills/playwright-component-testing",
+      "type": "directory",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright-core/lib/tools/skills/playwright-component-testing/SKILL.md",
+      "type": "regular_file",
+      "size": 10404,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright-core/lib/tools/skills/playwright-component-testing/references",
+      "type": "directory",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright-core/lib/tools/skills/playwright-component-testing/references/gallery-spec.md",
+      "type": "regular_file",
+      "size": 6199,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright-core/lib/tools/skills/playwright-component-testing/references/migration.md",
+      "type": "regular_file",
+      "size": 5031,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright-core/lib/tools/skills/playwright-component-testing/references/react.md",
+      "type": "regular_file",
+      "size": 3115,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright-core/lib/tools/skills/playwright-component-testing/references/typing.md",
+      "type": "regular_file",
+      "size": 6883,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright-core/lib/tools/skills/playwright-component-testing/references/vue.md",
+      "type": "regular_file",
+      "size": 3374,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright-core/lib/tools/skills/playwright-trace",
+      "type": "directory",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright-core/lib/tools/skills/playwright-trace/SKILL.md",
+      "type": "regular_file",
+      "size": 4845,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright-core/lib/tools/utils",
+      "type": "directory",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright-core/lib/tools/utils/extension.js",
+      "type": "regular_file",
+      "size": 4689,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright-core/lib/tools/utils/socketConnection.js",
+      "type": "regular_file",
+      "size": 3317,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright-core/lib/utilsBundle.js",
+      "type": "regular_file",
+      "size": 3048692,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright-core/lib/utilsBundle.js.LICENSE",
+      "type": "regular_file",
+      "size": 106591,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright-core/lib/vite",
+      "type": "directory",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright-core/lib/vite/dashboard",
+      "type": "directory",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright-core/lib/vite/dashboard/assets",
+      "type": "directory",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright-core/lib/vite/dashboard/assets/codeMirrorModule--QdMvsKi.css",
+      "type": "regular_file",
+      "size": 6251,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright-core/lib/vite/dashboard/assets/codeMirrorModule-CQ8RZGBm.js",
+      "type": "regular_file",
+      "size": 307374,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright-core/lib/vite/dashboard/assets/codicon-DCmgc-ay.ttf",
+      "type": "regular_file",
+      "size": 80340,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright-core/lib/vite/dashboard/assets/firefox-1bWoP6pv.svg",
+      "type": "regular_file",
+      "size": 7488,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright-core/lib/vite/dashboard/assets/firefox-beta-k3eOH_eK.svg",
+      "type": "regular_file",
+      "size": 9280,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright-core/lib/vite/dashboard/assets/firefox-nightly-Cp5nfeDT.svg",
+      "type": "regular_file",
+      "size": 9143,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright-core/lib/vite/dashboard/assets/index-AwgwcYie.css",
+      "type": "regular_file",
+      "size": 139111,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright-core/lib/vite/dashboard/assets/index-hRvO4yU2.js",
+      "type": "regular_file",
+      "size": 336491,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright-core/lib/vite/dashboard/assets/safari-na3_-uQk.svg",
+      "type": "regular_file",
+      "size": 5254,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright-core/lib/vite/dashboard/index.html",
+      "type": "regular_file",
+      "size": 1078,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright-core/lib/vite/dashboard/playwright-logo.svg",
+      "type": "regular_file",
+      "size": 5645,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright-core/lib/vite/htmlReport",
+      "type": "directory",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright-core/lib/vite/htmlReport/index.html",
+      "type": "regular_file",
+      "size": 464,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright-core/lib/vite/htmlReport/report.css",
+      "type": "regular_file",
+      "size": 100452,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright-core/lib/vite/htmlReport/report.js",
+      "type": "regular_file",
+      "size": 415864,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright-core/lib/vite/recorder",
+      "type": "directory",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright-core/lib/vite/recorder/assets",
+      "type": "directory",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright-core/lib/vite/recorder/assets/codeMirrorModule--QdMvsKi.css",
+      "type": "regular_file",
+      "size": 6251,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright-core/lib/vite/recorder/assets/codeMirrorModule-CVQWJZAA.js",
+      "type": "regular_file",
+      "size": 307374,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright-core/lib/vite/recorder/assets/codicon-DCmgc-ay.ttf",
+      "type": "regular_file",
+      "size": 80340,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright-core/lib/vite/recorder/assets/index-BZpYJZ-P.css",
+      "type": "regular_file",
+      "size": 85502,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright-core/lib/vite/recorder/assets/index-hrlLqLtq.js",
+      "type": "regular_file",
+      "size": 358603,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright-core/lib/vite/recorder/index.html",
+      "type": "regular_file",
+      "size": 1078,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright-core/lib/vite/recorder/playwright-logo.svg",
+      "type": "regular_file",
+      "size": 5033,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright-core/lib/vite/traceViewer",
+      "type": "directory",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright-core/lib/vite/traceViewer/assets",
+      "type": "directory",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright-core/lib/vite/traceViewer/assets/codeMirrorModule-BbkfBe3n.js",
+      "type": "regular_file",
+      "size": 307393,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright-core/lib/vite/traceViewer/assets/defaultSettingsView-Ds6CBOo0.js",
+      "type": "regular_file",
+      "size": 654294,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright-core/lib/vite/traceViewer/assets/urlMatch-L3liM589.js",
+      "type": "regular_file",
+      "size": 2510,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright-core/lib/vite/traceViewer/assets/xtermModule-DywYcAf8.js",
+      "type": "regular_file",
+      "size": 288730,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright-core/lib/vite/traceViewer/codeMirrorModule.-QdMvsKi.css",
+      "type": "regular_file",
+      "size": 6251,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright-core/lib/vite/traceViewer/codicon.DCmgc-ay.ttf",
+      "type": "regular_file",
+      "size": 80340,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright-core/lib/vite/traceViewer/defaultSettingsView.Bqk9acqE.css",
+      "type": "regular_file",
+      "size": 107049,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright-core/lib/vite/traceViewer/index.B4cLoZK3.js",
+      "type": "regular_file",
+      "size": 6628,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright-core/lib/vite/traceViewer/index.B_TqY17P.css",
+      "type": "regular_file",
+      "size": 2055,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright-core/lib/vite/traceViewer/index.html",
+      "type": "regular_file",
+      "size": 2363,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright-core/lib/vite/traceViewer/manifest.webmanifest",
+      "type": "regular_file",
+      "size": 429,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright-core/lib/vite/traceViewer/playwright-logo.svg",
+      "type": "regular_file",
+      "size": 5033,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright-core/lib/vite/traceViewer/snapshot.B_Jk1wbt.js",
+      "type": "regular_file",
+      "size": 650,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright-core/lib/vite/traceViewer/snapshot.html",
+      "type": "regular_file",
+      "size": 389,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright-core/lib/vite/traceViewer/sw.bundle.js",
+      "type": "regular_file",
+      "size": 95459,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright-core/lib/vite/traceViewer/uiMode.CU5KtEkS.js",
+      "type": "regular_file",
+      "size": 38057,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright-core/lib/vite/traceViewer/uiMode.CyMfwkXJ.css",
+      "type": "regular_file",
+      "size": 54590,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright-core/lib/vite/traceViewer/uiMode.html",
+      "type": "regular_file",
+      "size": 727,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright-core/lib/vite/traceViewer/xtermModule.kHJ-D0s7.css",
+      "type": "regular_file",
+      "size": 2853,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright-core/lib/webp_codec.LICENSE",
+      "type": "regular_file",
+      "size": 8841,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright-core/lib/webp_codec.wasm",
+      "type": "regular_file",
+      "size": 565369,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright-core/lib/xdg-open",
+      "type": "regular_file",
+      "size": 32416,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright-core/package.json",
+      "type": "regular_file",
+      "size": 876,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright-core/types",
+      "type": "directory",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright-core/types/protocol.d.ts",
+      "type": "regular_file",
+      "size": 814210,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright-core/types/structs.d.ts",
+      "type": "regular_file",
+      "size": 2455,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright-core/types/types.d.ts",
+      "type": "regular_file",
+      "size": 1131883,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright/LICENSE",
+      "type": "regular_file",
+      "size": 11601,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright/NOTICE",
+      "type": "regular_file",
+      "size": 254,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright/README.md",
+      "type": "regular_file",
+      "size": 11282,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright/ThirdPartyNotices.txt",
+      "type": "regular_file",
+      "size": 705,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright/cli.js",
+      "type": "regular_file",
+      "size": 698,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright/index.d.ts",
+      "type": "regular_file",
+      "size": 636,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright/index.js",
+      "type": "regular_file",
+      "size": 648,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright/index.mjs",
+      "type": "regular_file",
+      "size": 704,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright/jsx-runtime.js",
+      "type": "regular_file",
+      "size": 942,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright/jsx-runtime.mjs",
+      "type": "regular_file",
+      "size": 764,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright/lib",
+      "type": "directory",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright/lib/agents",
+      "type": "directory",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright/lib/agents/agentParser.js",
+      "type": "regular_file",
+      "size": 3475,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright/lib/agents/copilot-setup-steps.yml",
+      "type": "regular_file",
+      "size": 646,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright/lib/agents/generateAgents.js",
+      "type": "regular_file",
+      "size": 16958,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright/lib/agents/playwright-test-coverage.prompt.md",
+      "type": "regular_file",
+      "size": 1294,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright/lib/agents/playwright-test-generate.prompt.md",
+      "type": "regular_file",
+      "size": 175,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright/lib/agents/playwright-test-generator.agent.md",
+      "type": "regular_file",
+      "size": 3336,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright/lib/agents/playwright-test-heal.prompt.md",
+      "type": "regular_file",
+      "size": 105,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright/lib/agents/playwright-test-healer.agent.md",
+      "type": "regular_file",
+      "size": 2891,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright/lib/agents/playwright-test-plan.prompt.md",
+      "type": "regular_file",
+      "size": 196,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright/lib/agents/playwright-test-planner.agent.md",
+      "type": "regular_file",
+      "size": 2808,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright/lib/cli",
+      "type": "directory",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright/lib/cli/reportActions.js",
+      "type": "regular_file",
+      "size": 3603,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright/lib/cli/testActions.js",
+      "type": "regular_file",
+      "size": 9441,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright/lib/common",
+      "type": "directory",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright/lib/common/index.js",
+      "type": "regular_file",
+      "size": 115517,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright/lib/common/index.js.txt",
+      "type": "regular_file",
+      "size": 1399,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright/lib/errorContext.js",
+      "type": "regular_file",
+      "size": 4552,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright/lib/globals.js",
+      "type": "regular_file",
+      "size": 1935,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright/lib/index.js",
+      "type": "regular_file",
+      "size": 36487,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright/lib/isomorphic.js",
+      "type": "regular_file",
+      "size": 8191,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright/lib/isomorphic.js.txt",
+      "type": "regular_file",
+      "size": 267,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright/lib/loader",
+      "type": "directory",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright/lib/loader/loaderProcessEntry.js",
+      "type": "regular_file",
+      "size": 1262,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright/lib/loader/loaderProcessEntry.js.txt",
+      "type": "regular_file",
+      "size": 234,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright/lib/matchers",
+      "type": "directory",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright/lib/matchers/expect.js",
+      "type": "regular_file",
+      "size": 546839,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright/lib/matchers/expect.js.LICENSE",
+      "type": "regular_file",
+      "size": 36528,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright/lib/matchers/expect.js.txt",
+      "type": "regular_file",
+      "size": 3357,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright/lib/mcp",
+      "type": "directory",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright/lib/mcp/test",
+      "type": "directory",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright/lib/mcp/test/browserBackend.js",
+      "type": "regular_file",
+      "size": 5241,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright/lib/mcp/test/generatorTools.js",
+      "type": "regular_file",
+      "size": 5427,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright/lib/mcp/test/plannerTools.js",
+      "type": "regular_file",
+      "size": 6379,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright/lib/mcp/test/seed.js",
+      "type": "regular_file",
+      "size": 3239,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright/lib/mcp/test/streams.js",
+      "type": "regular_file",
+      "size": 1577,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright/lib/mcp/test/testBackend.js",
+      "type": "regular_file",
+      "size": 4067,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright/lib/mcp/test/testContext.js",
+      "type": "regular_file",
+      "size": 11637,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright/lib/mcp/test/testTool.js",
+      "type": "regular_file",
+      "size": 1104,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright/lib/mcp/test/testTools.js",
+      "type": "regular_file",
+      "size": 3714,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright/lib/package.js",
+      "type": "regular_file",
+      "size": 2013,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright/lib/program.js",
+      "type": "regular_file",
+      "size": 14509,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright/lib/runner",
+      "type": "directory",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright/lib/runner/index.js",
+      "type": "regular_file",
+      "size": 315445,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright/lib/runner/index.js.txt",
+      "type": "regular_file",
+      "size": 2975,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright/lib/transform",
+      "type": "directory",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright/lib/transform/babelBundle.js",
+      "type": "regular_file",
+      "size": 2901531,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright/lib/transform/babelBundle.js.LICENSE",
+      "type": "regular_file",
+      "size": 123004,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright/lib/transform/babelBundle.js.txt",
+      "type": "regular_file",
+      "size": 21645,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright/lib/transform/esmLoader.js",
+      "type": "regular_file",
+      "size": 289225,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright/lib/transform/esmLoader.js.LICENSE",
+      "type": "regular_file",
+      "size": 17406,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright/lib/transform/esmLoader.js.txt",
+      "type": "regular_file",
+      "size": 2725,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright/lib/util.js",
+      "type": "regular_file",
+      "size": 14295,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright/lib/worker",
+      "type": "directory",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright/lib/worker/workerProcessEntry.js",
+      "type": "regular_file",
+      "size": 76013,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright/lib/worker/workerProcessEntry.js.txt",
+      "type": "regular_file",
+      "size": 661,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright/package.json",
+      "type": "regular_file",
+      "size": 1359,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright/test.d.ts",
+      "type": "regular_file",
+      "size": 673,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright/test.js",
+      "type": "regular_file",
+      "size": 806,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright/test.mjs",
+      "type": "regular_file",
+      "size": 1400,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright/types",
+      "type": "directory",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright/types/test.d.ts",
+      "type": "regular_file",
+      "size": 403259,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "node_modules/playwright/types/testReporter.d.ts",
+      "type": "regular_file",
+      "size": 33453,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "package-lock.json",
+      "type": "regular_file",
+      "size": 1185,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "package.json",
+      "type": "regular_file",
+      "size": 782,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "test",
+      "type": "directory",
+      "is_symlink": false
+    },
+    {
+      "path": "test/edge_test.js",
+      "type": "regular_file",
+      "size": 4759,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "test/pixel_check.js",
+      "type": "regular_file",
+      "size": 2940,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "test/shot_attention.png",
+      "type": "regular_file",
+      "size": 336119,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "test/shot_final.png",
+      "type": "regular_file",
+      "size": 237232,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "test/shot_inspector.png",
+      "type": "regular_file",
+      "size": 237781,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "test/shot_last_step.png",
+      "type": "regular_file",
+      "size": 244899,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "test/test_model.js",
+      "type": "regular_file",
+      "size": 4632,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "test/test_reference.json",
+      "type": "regular_file",
+      "size": 42257,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "test/ui_test.js",
+      "type": "regular_file",
+      "size": 5390,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "test/visual_probe.js",
+      "type": "regular_file",
+      "size": 3701,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "tools",
+      "type": "directory",
+      "is_symlink": false
+    },
+    {
+      "path": "tools/debug_grad.py",
+      "type": "regular_file",
+      "size": 1529,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "tools/train.py",
+      "type": "regular_file",
+      "size": 15752,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "vendor",
+      "type": "directory",
+      "is_symlink": false
+    },
+    {
+      "path": "vendor/OrbitControls.js",
+      "type": "regular_file",
+      "size": 26375,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    },
+    {
+      "path": "vendor/three.min.js",
+      "type": "regular_file",
+      "size": 603445,
+      "sha256": "[REDACTED_SECRET]",
+      "is_symlink": false
+    }
+  ],
+  "entry_count": 204,
+  "symlink_count": 2,
+  "audit_exclusion": {
+    "path": "audit",
+    "was_preexisting": false,
+    "later_verifier_behavior": "Ignore audit-created paths under target/audit; compare all other target paths against this baseline."
+  },
+  "directory_count": 47,
+  "regular_file_count": 202,
+  "total_entry_count": 251
+}

@@ -1,0 +1,42 @@
+# next-token-machine audit command manifest
+# Working directory: [REDACTED_LOCAL_PATH]
+# Original app is read-only; audit artifacts are under audit/.
+# No formatter, linter, project-wide suite, GPU job, or original-file write.
+
+# Baseline integrity (run before/after aggregation)
+python3 audit/baseline/verify_integrity.py
+# Observed final: exit 0; {"ok":true,"expected_count":251,"observed_count":251,
+# "added":[],"removed":[],"changed":[]}
+
+# Independent numerical capture and comparison
+python3 audit/numerical/extract_weights.py --source js/weights.js --output audit/numerical/weights.json --manifest audit/numerical/weight_capture.json
+python3 audit/numerical/generate_cases.py --output audit/numerical/cases.json
+node audit/numerical/make_instrumented_model.js js/model.js audit/numerical/instrumented_model.js audit/numerical/model-instrument.diff audit/numerical/instrumentation_manifest.json
+node audit/numerical/original_adapter.js --root [REDACTED_LOCAL_PATH] --model [REDACTED_LOCAL_PATH] --inputs [REDACTED_LOCAL_PATH] --tolerance [REDACTED_LOCAL_PATH] --output [REDACTED_LOCAL_PATH]
+python3 audit/numerical/reference.py --weights audit/numerical/weights.json --inputs audit/numerical/cases.json --tolerance audit/numerical/tolerances.json --output audit/numerical/reference_output.json
+python3 audit/numerical/run_audit.py --inputs audit/numerical/cases.json --original audit/numerical/original_capture.json --reference audit/numerical/reference_output.json --weights audit/numerical/weights.json --tolerance audit/numerical/tolerances.json --output audit/numerical/results.json
+# Numerical result: 213 PASS, 0 FAIL, 0 BLOCKED, 0 unexecuted;
+# full=100, causality=12, cache=100, supporting reproducibility=1.
+
+# Start the original app in a separate terminal, from the working directory above:
+# python3 -m http.server 8765 --bind 127.0.0.1
+# Keep that server running for browser capture; stop it with Ctrl-C afterwards.
+# Browser capture targets http://localhost:8765/; never use another app or a training service.
+node audit/browser/run_browser_audit.js
+python3 audit/browser/compare_independent.py
+# Final browser handoff: exit 0 from the runner; 33/33 executed,
+# 26 PASS, 7 FAIL, 0 BLOCKED; fail IDs are S04,S05,S08,S09-L1H2,S22,S29,S32.
+# Independent comparator: 51 raw snapshots, 49 PASS, 2 FAIL, 0 BLOCKED.
+
+# Build and validate the complete Japanese aggregate
+python3 audit/report/build_results.py
+# exit 0; audit/results.json; 257 normalized cases; all referenced evidence present;
+# integrity verifier ok=true (expected/observed 251, no added/removed/changed).
+python3 audit/report/validate_results.py
+# exit 0; audit/report/validation.json; ok=true; failed_checks=[].
+
+# Captured environment (audit/numerical/environment.json):
+# Python 3.14.5; Node v26.7.0; NumPy 2.4.4;
+# Linux archlinux 7.0.10-arch1-1 x86_64; NumPy float64/JS binary64;
+# atol=1e-9, rtol=1e-7, mutation_min_delta=1e-12;
+# browser URL http://localhost:8765/; original_files_modified=false; gpu_jobs=false.

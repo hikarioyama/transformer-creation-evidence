@@ -1,0 +1,28 @@
+{
+  "schema": "next-token-machine-audit-environment-v1",
+  "cwd": "[REDACTED_LOCAL_PATH]",
+  "python": "3.14.5",
+  "node": "v26.7.0",
+  "numpy": "2.4.4",
+  "platform": "Linux archlinux 7.0.10-arch1-1 x86_64",
+  "precision": "NumPy float64 and JavaScript Number/Float64Array binary64",
+  "tolerance": {
+    "declaration_artifact": "tolerances.json (written and reviewed before rerun)",
+    "atol": 1e-09,
+    "rtol": 1e-07,
+    "mutation_min_delta": 1e-12,
+    "formula": "abs(a-r) <= atol + rtol*abs(r)",
+    "justification": "Both paths use binary64; tolerance and mutation threshold are declared before comparison/probes and are not relaxed post hoc."
+  },
+  "weights_source_sha256": "[REDACTED_SECRET]",
+  "model_source_sha256": "[REDACTED_SECRET]",
+  "browser_trace": {
+    "owner": "AuditBrowser",
+    "url": "http://localhost:8765/",
+    "process": "audit-browser-server",
+    "first_launch_unchanged": true,
+    "trace_confirmation": "app boot -> recompute -> TinyModel.forwardFull or forwardCached -> pushTraceToViz/render inspectors"
+  },
+  "gpu_jobs": false,
+  "original_files_modified": false
+}

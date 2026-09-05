@@ -1,0 +1,18 @@
+{
+  "sanitizer": {
+    "name": "sanitize_public.py",
+    "version": "1.0"
+  },
+  "adapter": "linewise report mode; replacement logic remains shared",
+  "name": "PI_SESSION_ANALYSIS.md",
+  "source_sha256": "00cfa676f5bd24742a8e699ddd8cd2f92f529b863116c907db7392da481df324",
+  "public_sha256": "117dc1f6ca62752a406f02a7818844fb59846945f85f3ad8ad59e73024010ca6",
+  "bytes": 72774,
+  "public_bytes": 72506,
+  "redactions": {
+    "local_file_url": 4,
+    "local_path": 6,
+    "opaque_hex": 2,
+    "opaque_id": 3
+  }
+}

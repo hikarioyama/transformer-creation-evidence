@@ -1,0 +1,15 @@
+{
+  "schema": "next-token-machine-audit-instrumentation-v1",
+  "original": "js/model.js",
+  "original_sha256": "[REDACTED_SECRET]",
+  "instrumented_copy": "audit/numerical/instrumented_model.js",
+  "instrumented_sha256": "[REDACTED_SECRET]",
+  "replacements": [
+    "counter state",
+    "matvec counter",
+    "matrix tags",
+    "counter API"
+  ],
+  "purpose": "Count Q/K/V projection calls and capture their invocation inputs in an isolated copy.",
+  "original_modified": false
+}

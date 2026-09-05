@@ -1,0 +1,19 @@
+{
+  "name": "next-token-machine",
+  "version": "1.0.0",
+  "description": "Interactive 3D browser app that dissects a tiny decoder-only Transformer (2 layers, 2 heads, d_model 16, vocab 16) doing real next-token inference with fixed trained weights, KV caching, and step-through inspection.",
+  "scripts": {
+    "start": "python3 -m http.server 8000",
+    "train": "python3 tools/train.py",
+    "test": "node test/test_model.js && node test/ui_test.js && node test/edge_test.js",
+    "test:model": "node test/test_model.js",
+    "test:ui": "node test/ui_test.js",
+    "test:edge": "node test/edge_test.js",
+    "test:visual": "node test/visual_probe.js && node test/pixel_check.js"
+  },
+  "devDependencies": {
+    "playwright": "^1.54.0"
+  },
+  "license": "MIT",
+  "private": true
+}

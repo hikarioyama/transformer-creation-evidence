@@ -1,0 +1,123 @@
+{
+  "schema": "transformer-creation-evidence-glm-v1",
+  "artifact": "GLM app, creation session, and selected audit evidence",
+  "identity": {
+    "user_attribution": "GLM 5.3 Flash EXL3",
+    "logged_model": "glm-5.3-flash-local",
+    "logged_provider": "local-glm53",
+    "verification_note": "The attribution and registration are recorded claims. EXL3 quantization, hardware, and backend configuration were not independently verified."
+  },
+  "creation_session": {
+    "path": "session.jsonl",
+    "records": 247,
+    "record_types": {
+      "session": 1,
+      "model_change": 1,
+      "thinking_level_change": 1,
+      "message": 244
+    },
+    "message_roles": {
+      "user": 1,
+      "assistant": 121,
+      "tool_result": 122
+    },
+    "usage": {
+      "input": 10986597,
+      "output": 127194,
+      "total": 11113791,
+      "assistant_responses": 121
+    },
+    "elapsed_seconds_request_to_final_response": 3328.647,
+    "source_sha256": "8c57dcfc77e0676ad83d2ae5578e7c6d0121ac2f77344cee90b9f073d6439d7c",
+    "public_sha256": "17350ebbcaaae7425a92be958525788ed2eca8596f9120ee289a51b7a024891f",
+    "source_bytes": 1143479,
+    "public_bytes": 609415,
+    "listing_redactions": {
+      "count": 7,
+      "known_source_physical_lines": [7, 9],
+      "replacement": "[OMITTED_HOME_DIRECTORY_LISTING]"
+    },
+    "embedded_image_record": {
+      "known_source_physical_line": 202,
+      "replacement": "embedded binary image omitted"
+    },
+    "training_violation": {
+      "observed": true,
+      "summary": "The request says No training, but the recorded session includes execution of tools/train.py and the resulting export. This violation remains in the public session and analysis.",
+      "release_action": "No training was rerun during publication."
+    }
+  },
+  "audit_chronology": {
+    "earlier_report": "audit/evidence/AUDIT.md predates access to the creation-session history; its historical BLOCKED statements about unobservable training/process evidence are retained verbatim apart from public sanitization.",
+    "later_history_analysis": "audit/evidence/PI_SESSION_ANALYSIS.md supplements the earlier report, records the history-backed training finding, elapsed time, usage, ordering, and failures, and does not silently rewrite the earlier verdict.",
+    "later_compact_results": "The selected numerical and browser reports are later audit evidence, not creation-session records, and were not rerun for publication."
+  },
+  "audit_results_retained": {
+    "numerical": "213/213 PASS",
+    "browser_scenarios": "26/33 PASS, 7 FAIL",
+    "independent_browser_compare": "49/51 PASS, 2 FAIL"
+  },
+  "included": {
+    "app": "app/",
+    "creation_record": "session.jsonl",
+    "audit": "audit/evidence/",
+    "third_party_notices": "app/THIRD_PARTY_NOTICES.txt"
+  },
+  "manifests": {
+    "app_sanitization": "manifests/app-sanitization.json",
+    "session_sanitization": "manifests/session-sanitization.json",
+    "audit_sanitization": "manifests/audit-sanitization.json",
+    "history_analysis_sanitization": "manifests/pi-session-analysis-sanitization.json",
+    "omissions": "manifests/omissions.json"
+  },
+  "omissions": {
+    "manifest": "manifests/omissions.json",
+    "omitted_files": 346,
+    "omitted_directories": 3,
+    "omitted_image_files": 56,
+    "omitted_large_tensor_dumps": 5,
+    "policy": "Screenshots, browser raw captures, large tensors, caches, node_modules, audit runners, and scratch artifacts are omitted with original hashes and reasons; no omitted bytes are published."
+  },
+  "manual_public_files": [
+    {
+      "path": "app/THIRD_PARTY_NOTICES.txt",
+      "source_sha256": null,
+      "public_sha256": "2ecb139cf867ea21a7304dc84156371f32af35a76cc6fc12cb775713c0bdb1b4",
+      "public_bytes": 1110,
+      "note": "Release-authored attribution and license notice."
+    },
+    {
+      "path": "audit/evidence/CHRONOLOGY.md",
+      "source_sha256": null,
+      "public_sha256": "5b53ae7d062f0edc2b44dae58fbceb43504876be6f5261d0b46fe306859babe1",
+      "public_bytes": 1668,
+      "note": "Release-authored chronology and disclosure."
+    },
+    {
+      "path": "audit/evidence/README.md",
+      "source_sha256": null,
+      "public_sha256": "9f7938a123531da454faeaee01ec4cf158ac0a8d1e94e92a56bc18a7d5aa6396",
+      "public_bytes": 2141,
+      "note": "Release-authored evidence index."
+    }
+  ],
+  "public_copy_adjustments": [
+    "The shared sanitize_public.py helper recursively sanitized JSON keys and string values and sanitized markdown, code, logs, and JSONL text.",
+    "Private absolute paths, local/file URLs, internal addresses, sensitive values, opaque identifiers/signatures, and metadata cost fields were removed or normalized; per-file counts and hashes are in the manifests.",
+    "The full home-directory listings are represented by omission markers. The embedded PNG record is represented by an auditable omission marker.",
+    "README.md replaces its screenshot reference with an explanatory omission sentence. Screenshot files and all other image binaries are not published.",
+    "pixel_check.js retains only the safe data:image/png;base64, constructor literal because its bytes are generated at runtime; no encoded image bytes or screenshot asset is published."
+  ],
+  "package_metadata_note": "package.json and package-lock.json are unchanged source metadata copies. package.json declares MIT/private and Playwright ^1.54.0; package-lock.json declares ISC at the root and Playwright/playwright-core 1.63.0 under Apache-2.0. This mismatch is disclosed, not corrected or relicensed.",
+  "source_integrity": "Included source-file original SHA256 values and public-copy SHA256 values are recorded per file in the app, session, and audit sanitizer manifests. No original git history is included.",
+  "scope_limits": [
+    "The app source and original tests/tools are included for inspection; training.py is evidence only and was not executed for this publication.",
+    "No source bug fix, retraining, or new audit was performed while assembling this subtree.",
+    "User attribution and logged model/provider names are intentionally distinct from independent model verification."
+  ],
+  "sanitizer": {
+    "name": "sanitize_public.py",
+    "version": "1.0",
+    "source": "tools/sanitize_public.py"
+  }
+}

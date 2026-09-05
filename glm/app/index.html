@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Next-Token Machine — a tiny Transformer in 3D</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="canvas3d"></div>
+
+  <div class="overlay">
+    <!-- header -->
+    <div id="hdr">
+      <h1>The Next-Token Machine</h1>
+      <div class="sub">a decoder-only Transformer, dissected live in 3D — real inference, real numbers</div>
+      <div><span class="toy-badge">educational toy model</span></div>
+      <div class="spec">2 layers · 2 heads · d_model 16 · vocab 16 · ctx 16 · GELU · pre-LN</div>
+    </div>
+
+    <!-- left: steps + explanation -->
+    <div id="left">
+      <div class="panel" id="stepsPanel">
+        <div id="stepList"></div>
+        <div id="nav">
+          <button id="btnPrev">← back</button>
+          <button id="btnNext">next →</button>
+          <span id="stepPos">1 / 15</span>
+          <button id="btnPlay">▶ play</button>
+        </div>
+      </div>
+      <div class="panel" id="explainPanel">
+        <div id="stepTitle"></div>
+        <div id="stepBody"></div>
+      </div>
+    </div>
+
+    <!-- right: inspector -->
+    <div id="right">
+      <div class="panel" id="inspector">
+        <div class="tabs">
+          <div class="tab active" data-tab="attention">Attention</div>
+          <div class="tab" data-tab="values">Values</div>
+          <div class="tab" data-tab="weights">Weights</div>
+          <div class="tab" data-tab="verify">Verify</div>
+        </div>
+        <div class="tab-body" id="tab-attention">
+          <div id="attLayerHead"></div>
+          <canvas id="attnCanvas"></canvas>
+          <div id="attHover">hover a cell for the exact weight</div>
+          <div id="attSummary"></div>
+        </div>
+        <div class="tab-body" id="tab-values" style="display:none">
+          <div id="valuesTitle" style="font-weight:700;margin-bottom:10px;font-size:13.5px"></div>
+          <div id="valuesBody"></div>
+          <div id="valuesNote" style="margin-top:12px;font-size:12px;color:var(--ink-dim)"></div>
+        </div>
+        <div class="tab-body" id="tab-weights" style="display:none">
+          <select id="weightSel"></select>
+          <canvas id="weightCanvas"></canvas>
+          <div id="weightInfo"></div>
+          <div id="weightInfo2"></div>
+        </div>
+        <div class="tab-body" id="tab-verify" style="display:none">
+          <div id="verifyDesc">
+            <b>KV caching</b>: when the model generates token after token, the Keys and Values of
+            <i>past</i> positions never change — they can be <span class="mono">cached</span> and reused.
+            Then each new token only computes its own Q, K, V and one attention row, instead of
+            re-running the whole sequence.<br><br>
+            Below, the app runs <b>both paths</b> over the current sequence — full recompute vs.
+            incremental with cache — and compares every logit and probability.
+          </div>
+          <div id="verifyOut"></div>
+          <button id="verifyBtn">⚙ run cached-vs-uncached parity check</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- bottom: sequence editor + cache -->
+    <div class="panel" id="bottom">
+      <div id="seqChips"></div>
+      <div class="seq-ctl">
+        <span id="seqLen"></span>
+        <button id="btnAppend" title="append the model's own top prediction">＋ predict</button>
+        <button id="btnRandom" title="replace with a fresh random sequence">🎲 new</button>
+        <button id="btnPop" title="remove the last token">－ pop</button>
+        <button id="btnDemo" title="back to the demo sequence">demo</button>
+      </div>
+      <div id="cacheBox">
+        <div id="cacheRow">
+          <label><input type="checkbox" id="kvToggle"> <span id="cacheState"></span></label>
+          <button id="btnCacheInfo" title="what is KV caching?">?</button>
+        </div>
+        <div id="cacheStatus"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- intro -->
+  <div id="intro">
+    <div id="introCard">
+      <button id="introClose">let's go →</button>
+      <h2>Watch a tiny Transformer think — in 3D, with real math</h2>
+      <p>
+        This is an <b>educational toy model</b>: a decoder-only Transformer small enough to show every
+        number. It was trained once, offline, on a toy language — then its weights were frozen into
+        this page. Everything you see is <b>real inference running in your browser</b>: no training,
+        no APIs, the math implemented from scratch in plain JavaScript.
+      </p>
+      <div class="rule">the toy language's one rule: next token = (token one step back) + 1, mod 16</div>
+      <ul>
+        <li><b>Step through</b> the 15 computation stages with the left panel (or arrow keys).</li>
+        <li><b>Drag</b> to orbit, <b>scroll</b> to zoom. Click token chips to select a position.</li>
+        <li><b>Edit the sequence</b> in the bottom bar; toggle <b>KV caching</b> and let it generate.</li>
+        <li>Every slab, arc, bar and table shows <b>actual computed values</b> — nothing is faked.</li>
+      </ul>
+      <p style="color:var(--ink-faint);font-size:12px">
+        Specs: 2 layers × 2 heads, hidden size 16, vocabulary 16, context 16, GELU MLPs,
+        pre-LayerNorm, learned positions. Weights: trained with numpy (gradient-checked),
+        exported as exact float64 — see <span class="mono">tools/train.py</span>.
+      </p>
+    </div>
+  </div>
+
+  <script src="vendor/three.min.js"></script>
+  <script src="vendor/OrbitControls.js"></script>
+  <script src="js/weights.js"></script>
+  <script src="js/tokens.js"></script>
+  <script src="js/model.js"></script>
+  <script src="js/viz3d.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

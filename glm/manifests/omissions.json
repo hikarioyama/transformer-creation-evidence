@@ -1,0 +1,2799 @@
+{
+  "schema": "transformer-creation-evidence-glm-omissions-v1",
+  "source_root": "[REDACTED_LOCAL_PATH]",
+  "public_hash_policy": "omitted files have public_sha256 null because no bytes were published; included-file hashes are in sanitizer manifests",
+  "omitted": [
+    {
+      "source_relpath": ".gitignore",
+      "published": false,
+      "reason": "source ignore metadata omitted; original target had no git history",
+      "bytes": 30,
+      "original_sha256": "ef23a168472c129be22531245c9dc746bc92bb430aab72bc3e72bff30679558c",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/baseline/capture_inventory.py",
+      "published": false,
+      "reason": "audit runner, scratch, or nonessential support file omitted",
+      "bytes": 4790,
+      "original_sha256": "0b5c77e85e99eb182cf63cb0ba35d22e2fe4a6ac9378d462f31ef789cd7694c7",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/baseline/verify_integrity.py",
+      "published": false,
+      "reason": "audit runner, scratch, or nonessential support file omitted",
+      "bytes": 6937,
+      "original_sha256": "3909e8c8995cefbc8a8f63ae67ae3c3d2e82382923d4cf236993d1507d32be4f",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/browser/__pycache__/compare_independent.cpython-314.pyc",
+      "published": false,
+      "reason": "generated cache omitted",
+      "bytes": 10514,
+      "original_sha256": "ce620f798544063e39ec169276f98a00baab4b01e1a1942bd9d1e644c7f602a1",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/browser/compare_independent.py",
+      "published": false,
+      "reason": "audit runner, scratch, or nonessential support file omitted",
+      "bytes": 6329,
+      "original_sha256": "f6616cc67593a372a57a719b194ee720f16982d8b98daaf5005f1dbce6776865",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/browser/raw/S01-load-intro.json",
+      "published": false,
+      "reason": "generated browser state/cache capture omitted; compact results retained",
+      "bytes": 387576,
+      "original_sha256": "58bb2b333a94c1cf8eb00be46fb8bbc0f5018c1fe3fb94393e9aec78846b6120",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/browser/raw/S02-close-intro-controls.json",
+      "published": false,
+      "reason": "generated browser state/cache capture omitted; compact results retained",
+      "bytes": 387587,
+      "original_sha256": "dcea8717d2dc51f82aba6b57ec22b48ee4d98a1e1695dffb7f6e10500b0b2620",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/browser/raw/S03-step1-input.json",
+      "published": false,
+      "reason": "generated browser state/cache capture omitted; compact results retained",
+      "bytes": 387578,
+      "original_sha256": "458a088a5c851e58d7ef918631f95eddf56bbb1b5a42a363ed94f6f527ff430b",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/browser/raw/S04-stage-01.json",
+      "published": false,
+      "reason": "generated browser state/cache capture omitted; compact results retained",
+      "bytes": 387575,
+      "original_sha256": "a628902dcbbb425fd03accab2272fcf44329f03aed050d6cedc80eeb36591fd3",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/browser/raw/S04-stage-02.json",
+      "published": false,
+      "reason": "generated browser state/cache capture omitted; compact results retained",
+      "bytes": 387477,
+      "original_sha256": "ff80ade7e26aa6cb5d3577c441069ca4c7108900b44b44955a2414f0e465f6fa",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/browser/raw/S04-stage-03.json",
+      "published": false,
+      "reason": "generated browser state/cache capture omitted; compact results retained",
+      "bytes": 387438,
+      "original_sha256": "525cae31b286c76e3edd5fa2c6165d420ff64d2603c6be9e7f704725fcc6519e",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/browser/raw/S04-stage-04.json",
+      "published": false,
+      "reason": "generated browser state/cache capture omitted; compact results retained",
+      "bytes": 387509,
+      "original_sha256": "81ea9f36484528b05423308a97ef25e4fcc966639ce3fc2015408969156637f3",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/browser/raw/S04-stage-05.json",
+      "published": false,
+      "reason": "generated browser state/cache capture omitted; compact results retained",
+      "bytes": 389069,
+      "original_sha256": "7bb4c55893ece8fb8624d6c5a344d1553602243344caad2365a55c85f120d567",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/browser/raw/S04-stage-06.json",
+      "published": false,
+      "reason": "generated browser state/cache capture omitted; compact results retained",
+      "bytes": 387472,
+      "original_sha256": "722f1f536d65a1a35534bbae2b821a1c7c2794edb88f76239bb63c9ca5046d49",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/browser/raw/S04-stage-07.json",
+      "published": false,
+      "reason": "generated browser state/cache capture omitted; compact results retained",
+      "bytes": 387627,
+      "original_sha256": "c35e8a22ca82727424d5926363e9b04dee80b0700f31d69268b316fe79cdaf8b",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/browser/raw/S04-stage-08.json",
+      "published": false,
+      "reason": "generated browser state/cache capture omitted; compact results retained",
+      "bytes": 387264,
+      "original_sha256": "32b30203e249acc14b16f54610d23ecd0280199fb05be803fdc3ce3d6991b48d",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/browser/raw/S04-stage-09.json",
+      "published": false,
+      "reason": "generated browser state/cache capture omitted; compact results retained",
+      "bytes": 387287,
+      "original_sha256": "aaa8da29e53dccc318f1849878cc64a094cc82115086f9677aa9ce1483c760c5",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/browser/raw/S04-stage-10.json",
+      "published": false,
+      "reason": "generated browser state/cache capture omitted; compact results retained",
+      "bytes": 388830,
+      "original_sha256": "d0ea94b8fa1fb9444dbdf13ad49ec3c0c88077bbb21ed27b6edbd8b8d5edbe50",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/browser/raw/S04-stage-11.json",
+      "published": false,
+      "reason": "generated browser state/cache capture omitted; compact results retained",
+      "bytes": 387279,
+      "original_sha256": "4cb7af94c41bea053ba7361a1619635aea5dc204b944af906d5239c5bb8a0b20",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/browser/raw/S04-stage-12.json",
+      "published": false,
+      "reason": "generated browser state/cache capture omitted; compact results retained",
+      "bytes": 387480,
+      "original_sha256": "dda47190415908e331998c602f4bcbca458814ed67c44870c018e3c04a008db7",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/browser/raw/S04-stage-13.json",
+      "published": false,
+      "reason": "generated browser state/cache capture omitted; compact results retained",
+      "bytes": 387366,
+      "original_sha256": "dc6205dc3a0c5af543ccbff8c45c92ed9f130b7f4d610d2921b41b09670d9382",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/browser/raw/S04-stage-14.json",
+      "published": false,
+      "reason": "generated browser state/cache capture omitted; compact results retained",
+      "bytes": 387545,
+      "original_sha256": "fa41a5dffb55278e81de2c54c2c8cd59974543e3d411570e9c9a5a1a75db4db9",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/browser/raw/S04-stage-15.json",
+      "published": false,
+      "reason": "generated browser state/cache capture omitted; compact results retained",
+      "bytes": 387638,
+      "original_sha256": "f2ddfc2bd80c12f30550ef338404d5c4d231d1b54abf472a3f0ac6a813fd4920",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/browser/raw/S04-step-walk-all-15.json",
+      "published": false,
+      "reason": "generated browser state/cache capture omitted; compact results retained",
+      "bytes": 387646,
+      "original_sha256": "6f2d4158423f54ef912659076a37f9665e20fea5d72c24b33d10683ec24d7c26",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/browser/raw/S05-embedding-values-selected-token.json",
+      "published": false,
+      "reason": "generated browser state/cache capture omitted; compact results retained",
+      "bytes": 388136,
+      "original_sha256": "2f3705432e02ffbb7ab300657c757727007c76fa6cdbdc912c656c32f6a1d689",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/browser/raw/S05-token-chip-selection.json",
+      "published": false,
+      "reason": "generated browser state/cache capture omitted; compact results retained",
+      "bytes": 389915,
+      "original_sha256": "b5a786079394800475cfc644b5feaaa87d70b6b8f32bc77e3c8fe485ebf17023",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/browser/raw/S05b-embedding-values-current-position.json",
+      "published": false,
+      "reason": "generated browser state/cache capture omitted; compact results retained",
+      "bytes": 389929,
+      "original_sha256": "906838fd609da9b97516000df88f900612fc4dc428a188ec3a047c361d34bff4",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/browser/raw/S06-layernorm-values.json",
+      "published": false,
+      "reason": "generated browser state/cache capture omitted; compact results retained",
+      "bytes": 389126,
+      "original_sha256": "d76fb62394cb31e9e39230b10816366484b171429ea18e9d33c925cf735a5542",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/browser/raw/S07-qkv-values.json",
+      "published": false,
+      "reason": "generated browser state/cache capture omitted; compact results retained",
+      "bytes": 389898,
+      "original_sha256": "105c9e6d53b966f1c3329efd31c9326f4f94bb316940b007873f9e6b75dd8491",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/browser/raw/S08-attention-L1H1.json",
+      "published": false,
+      "reason": "generated browser state/cache capture omitted; compact results retained",
+      "bytes": 390442,
+      "original_sha256": "1975cb7982b4c0fb193e70119d254fe0b9dec48558ef651944c821fafe4dd08f",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/browser/raw/S09-L1H2-selector.json",
+      "published": false,
+      "reason": "generated browser state/cache capture omitted; compact results retained",
+      "bytes": 390439,
+      "original_sha256": "03269de66a879514d04b1023ef741308297523a82dbd5557f887fd17d6143a80",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/browser/raw/S09-L2H1-selector.json",
+      "published": false,
+      "reason": "generated browser state/cache capture omitted; compact results retained",
+      "bytes": 390040,
+      "original_sha256": "7506d33e1a000f01d713fab31b2444869dd69aa9f5c7862377670e6b1e6032a8",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/browser/raw/S09-L2H2-selector.json",
+      "published": false,
+      "reason": "generated browser state/cache capture omitted; compact results retained",
+      "bytes": 390039,
+      "original_sha256": "0174415cb224900832df06e458d5091fb0d94ffa516cf3131afa35c4d2cc510b",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/browser/raw/S12-mlp.json",
+      "published": false,
+      "reason": "generated browser state/cache capture omitted; compact results retained",
+      "bytes": 392132,
+      "original_sha256": "541fe7065daad3a77312f6edc4189d4c76665fe8864a83c68cd93d64c8370954",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/browser/raw/S12-residual-add.json",
+      "published": false,
+      "reason": "generated browser state/cache capture omitted; compact results retained",
+      "bytes": 389767,
+      "original_sha256": "a66c9be5e32c54d33a73d04974783cb9bc59d244e78c1704c86473e64182ec57",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/browser/raw/S12-residual-and-mlp-values.json",
+      "published": false,
+      "reason": "generated browser state/cache capture omitted; compact results retained",
+      "bytes": 392152,
+      "original_sha256": "4d49ffa6b2e1eb12c8345df45aa6a5b105b1e9fb15e69b2c4707d5654ae5f4be",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/browser/raw/S13-final-ln-values.json",
+      "published": false,
+      "reason": "generated browser state/cache capture omitted; compact results retained",
+      "bytes": 388830,
+      "original_sha256": "a0210d69fe904dde755ccb4a3f3cc9d777bf0fcc8ef0bab0c317f84328701733",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/browser/raw/S14-logits-probability-token-ids.json",
+      "published": false,
+      "reason": "generated browser state/cache capture omitted; compact results retained",
+      "bytes": 388995,
+      "original_sha256": "4b2eab1fa8b660ed09397c0d1f4302638745d7052252482a60edbacd2b5d82c7",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/browser/raw/S15-edit-first-token.json",
+      "published": false,
+      "reason": "generated browser state/cache capture omitted; compact results retained",
+      "bytes": 388724,
+      "original_sha256": "14ec6ca54d3a02faa5f16b791e61580a95b0a6e4ffdda3c9bdd3761901b94c11",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/browser/raw/S16-edit-middle-token.json",
+      "published": false,
+      "reason": "generated browser state/cache capture omitted; compact results retained",
+      "bytes": 388569,
+      "original_sha256": "ba06c690c29e7d02275f8988409a7af3317921d026439e3febbc1a4cba922fdd",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/browser/raw/S17-edit-last-token.json",
+      "published": false,
+      "reason": "generated browser state/cache capture omitted; compact results retained",
+      "bytes": 388740,
+      "original_sha256": "36b1dd1c2ac94eb78ce86c6219185f8abaf2ec87ab27e06358426480434340e8",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/browser/raw/S18-repeat-same-token-selection.json",
+      "published": false,
+      "reason": "generated browser state/cache capture omitted; compact results retained",
+      "bytes": 388752,
+      "original_sha256": "5d67f3f9980d6435366fff2d6a91a26f254ae0c7dd00c9b8f1d4324250292aae",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/browser/raw/S19-shorten-to-length-one.json",
+      "published": false,
+      "reason": "generated browser state/cache capture omitted; compact results retained",
+      "bytes": 69835,
+      "original_sha256": "080b958e4cb34819828d5b13ca972cb09ee6cf725ccce48798b3e9fdeb97eb35",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/browser/raw/S20-cache-grow-to-max-context.json",
+      "published": false,
+      "reason": "generated browser state/cache capture omitted; compact results retained",
+      "bytes": 708368,
+      "original_sha256": "ee0537c6b48e27a98a26f55c412573690996d776a8f0095fa2aac1fcd56edb8e",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/browser/raw/S21-cache-toggle-prefill-demo.json",
+      "published": false,
+      "reason": "generated browser state/cache capture omitted; compact results retained",
+      "bytes": 386627,
+      "original_sha256": "8e70b9720a1e70dc4597aef1c8785f604e113cad73cad03d09c39bd4dcc7b8b3",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/browser/raw/S22-cache-append-twice.json",
+      "published": false,
+      "reason": "generated browser state/cache capture omitted; compact results retained",
+      "bytes": 471219,
+      "original_sha256": "c9374b902757906d4f5a45f3532a78547d67f6e837d43dbebbea37f090bdcc95",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/browser/raw/S23-cache-toggle-off-on-equivalence.json",
+      "published": false,
+      "reason": "generated browser state/cache capture omitted; compact results retained",
+      "bytes": 479571,
+      "original_sha256": "1421230207dc3ad0ab603b839442972bd87fe719c26151974dfa6d2d695f9b59",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/browser/raw/S24-cache-edit-first.json",
+      "published": false,
+      "reason": "generated browser state/cache capture omitted; compact results retained",
+      "bytes": 432893,
+      "original_sha256": "fe4a5235910df93ded60376c8f5418b397330cb40864beda9f630a4f900b6f69",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/browser/raw/S25-cache-edit-middle.json",
+      "published": false,
+      "reason": "generated browser state/cache capture omitted; compact results retained",
+      "bytes": 432765,
+      "original_sha256": "d04293716be637df8f648fc0979ec8c07f37c2d198b125439abaa852fca85e8b",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/browser/raw/S26-cache-edit-last.json",
+      "published": false,
+      "reason": "generated browser state/cache capture omitted; compact results retained",
+      "bytes": 432803,
+      "original_sha256": "489d5acda4b1ce49c6c22dacd298e27450a33af98ad189e3dfb37e6ac4d9bf6a",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/browser/raw/S27-cache-shorten-current-input.json",
+      "published": false,
+      "reason": "generated browser state/cache capture omitted; compact results retained",
+      "bytes": 386629,
+      "original_sha256": "9579adbfab35f093ef2ad3a2f6fe4c4562f148db8e6073c7ec3558440e4c3b9d",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/browser/raw/S28-verify-parity-current-sequence.json",
+      "published": false,
+      "reason": "generated browser state/cache capture omitted; compact results retained",
+      "bytes": 386754,
+      "original_sha256": "54107901f9402cc110340e39049668ba302b15518ead36b642b79b582e5b4db8",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/browser/raw/S29-verify-stale-after-edit.json",
+      "published": false,
+      "reason": "generated browser state/cache capture omitted; compact results retained",
+      "bytes": 390213,
+      "original_sha256": "06b4a23338ff09e38bfa53a3c144873e2f6e244fce004eb0d4bda5d9a387c8be",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/browser/raw/S30-random-and-demo-reset.json",
+      "published": false,
+      "reason": "generated browser state/cache capture omitted; compact results retained",
+      "bytes": 390301,
+      "original_sha256": "d32c53ba611bc83edb972090984226a65e2d98ece09575d95bbd291fa438b436",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/browser/raw/S31-weight-selector.json",
+      "published": false,
+      "reason": "generated browser state/cache capture omitted; compact results retained",
+      "bytes": 390296,
+      "original_sha256": "6e53a022564b47e684495b558444aca5783875d69e0266de40b8f57362a3857c",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/browser/raw/S32-attention-causal-render-inputs.json",
+      "published": false,
+      "reason": "generated browser state/cache capture omitted; compact results retained",
+      "bytes": 389992,
+      "original_sha256": "24e1c096f8f52c2eb71ea3bdacf20d774f579369347f8591205d8da17f519c20",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/browser/run_browser_audit.js",
+      "published": false,
+      "reason": "audit runner, scratch, or nonessential support file omitted",
+      "bytes": 53709,
+      "original_sha256": "054f4dd61dc58631c819ef72ea3b6c25a769f6aca9868706a80631574fc83d81",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/browser/scenarios/S01-load-intro.json",
+      "published": false,
+      "reason": "generated browser state/cache capture omitted; compact results retained",
+      "bytes": 3220,
+      "original_sha256": "5e9254066733160735eea36f785e245ed8124f489b0b1c33b5ef3d79e7d1e308",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/browser/scenarios/S02-close-intro-controls.json",
+      "published": false,
+      "reason": "generated browser state/cache capture omitted; compact results retained",
+      "bytes": 3210,
+      "original_sha256": "038490c1abc87df559089d35faba235b15fec45481ee3c24396095aa175c8688",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/browser/scenarios/S03-step1-input.json",
+      "published": false,
+      "reason": "generated browser state/cache capture omitted; compact results retained",
+      "bytes": 3029,
+      "original_sha256": "f1b0a5f18d9b39da54c5546279ccd4dacd01bc00126c3df15fe26173f292028f",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/browser/scenarios/S04-step-walk-all-15.json",
+      "published": false,
+      "reason": "generated browser state/cache capture omitted; compact results retained",
+      "bytes": 13735,
+      "original_sha256": "3d0fe326e653dcf8cb38f771a4cd3bb13c1a8e050823dd79dd353490b62748e2",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/browser/scenarios/S05-embedding-values-selected-token.json",
+      "published": false,
+      "reason": "generated browser state/cache capture omitted; compact results retained",
+      "bytes": 4092,
+      "original_sha256": "4ebbfe33b0bdaedae42917308f5b1d5e2b1598c5cffe92f7bdd76c3018199e55",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/browser/scenarios/S05-token-chip-selection.json",
+      "published": false,
+      "reason": "generated browser state/cache capture omitted; compact results retained",
+      "bytes": 3390,
+      "original_sha256": "b28759deaa582091a68ccf66790c6ab00a8c8a057a4a2e1238ab926a76a61a69",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/browser/scenarios/S05b-embedding-values-current-position.json",
+      "published": false,
+      "reason": "generated browser state/cache capture omitted; compact results retained",
+      "bytes": 7063,
+      "original_sha256": "deb27f74158ab2953b3b44842b2f787564c30a74cdd5fdbbe908e777fd0bcc2f",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/browser/scenarios/S06-layernorm-values.json",
+      "published": false,
+      "reason": "generated browser state/cache capture omitted; compact results retained",
+      "bytes": 5477,
+      "original_sha256": "579533a2cb52d0ba95812a2f4d63a526cd9a7f42b4c91d299b6e7b3a7c3db18e",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/browser/scenarios/S07-qkv-values.json",
+      "published": false,
+      "reason": "generated browser state/cache capture omitted; compact results retained",
+      "bytes": 6607,
+      "original_sha256": "e181117acc354bcfc7d800e82b85663e67f7fd574da0d92e4f55655ec786c545",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/browser/scenarios/S08-attention-L1H1.json",
+      "published": false,
+      "reason": "generated browser state/cache capture omitted; compact results retained",
+      "bytes": 7012,
+      "original_sha256": "af89dab16a85c830336f2316b5394d7ecb1730710b39b9d7d03fe187cfdd1db2",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/browser/scenarios/S09-L1H2-selector.json",
+      "published": false,
+      "reason": "generated browser state/cache capture omitted; compact results retained",
+      "bytes": 3711,
+      "original_sha256": "029ae387c2ce3c503c8d6ee5cb48e8c1822e25ef52ed81bef2cdc3c7c8304e24",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/browser/scenarios/S09-L2H1-selector.json",
+      "published": false,
+      "reason": "generated browser state/cache capture omitted; compact results retained",
+      "bytes": 4439,
+      "original_sha256": "ee4d40245916270899061af769bbe382437d41e91e770061de38f68f3ce3ff0c",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/browser/scenarios/S09-L2H2-selector.json",
+      "published": false,
+      "reason": "generated browser state/cache capture omitted; compact results retained",
+      "bytes": 4438,
+      "original_sha256": "813c83f483be4c439bc9fe1a2949b4d9cd50758ddd1534d722661d7f04ee57a3",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/browser/scenarios/S12-residual-and-mlp-values.json",
+      "published": false,
+      "reason": "generated browser state/cache capture omitted; compact results retained",
+      "bytes": 12548,
+      "original_sha256": "44482621612561df90f188d70aab72fc4614b87d17d5351a39a28e30dffa10bc",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/browser/scenarios/S13-final-ln-values.json",
+      "published": false,
+      "reason": "generated browser state/cache capture omitted; compact results retained",
+      "bytes": 5283,
+      "original_sha256": "ea98fc7863685f61968977a0c558ed86d782c0f183d82735b9040a1c85644a78",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/browser/scenarios/S14-logits-probability-token-ids.json",
+      "published": false,
+      "reason": "generated browser state/cache capture omitted; compact results retained",
+      "bytes": 5810,
+      "original_sha256": "e61cb5315cf51b9584718fda845f288dc6250976bd5b23799c308119f570b92d",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/browser/scenarios/S15-edit-first-token.json",
+      "published": false,
+      "reason": "generated browser state/cache capture omitted; compact results retained",
+      "bytes": 3784,
+      "original_sha256": "309ba08e0070c66f57a5b127c94924c4d61c235691896c918d6de5b4befa3d2d",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/browser/scenarios/S16-edit-middle-token.json",
+      "published": false,
+      "reason": "generated browser state/cache capture omitted; compact results retained",
+      "bytes": 3785,
+      "original_sha256": "9e3d785b16711cf9cea610ffa5968d281e13621d33ac1baee4e1e790347ec18e",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/browser/scenarios/S17-edit-last-token.json",
+      "published": false,
+      "reason": "generated browser state/cache capture omitted; compact results retained",
+      "bytes": 3784,
+      "original_sha256": "506e699efa9b9c7f42b90d444b308266298009428fa91af69d6f99c80eefddf3",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/browser/scenarios/S18-repeat-same-token-selection.json",
+      "published": false,
+      "reason": "generated browser state/cache capture omitted; compact results retained",
+      "bytes": 3325,
+      "original_sha256": "0de9649c2c87fa84e7aa5f69008cd30827f54575c71974bd4098bda6d807afc6",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/browser/scenarios/S19-shorten-to-length-one.json",
+      "published": false,
+      "reason": "generated browser state/cache capture omitted; compact results retained",
+      "bytes": 3182,
+      "original_sha256": "fe29d1345025fb8946319197ac1d84d406967d31bba0e4039e9d4fda4ce5624d",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/browser/scenarios/S20-cache-grow-to-max-context.json",
+      "published": false,
+      "reason": "generated browser state/cache capture omitted; compact results retained",
+      "bytes": 3693,
+      "original_sha256": "5f6763eef67afe272ca55c57af5bbbe4192ba698683679871c5ac594c3b37643",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/browser/scenarios/S21-cache-toggle-prefill-demo.json",
+      "published": false,
+      "reason": "generated browser state/cache capture omitted; compact results retained",
+      "bytes": 3378,
+      "original_sha256": "b1b97a3a26ae8716bcdfca4b2171ed4591aeb7b6e6f2239e9c572119f2c061c0",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/browser/scenarios/S22-cache-append-twice.json",
+      "published": false,
+      "reason": "generated browser state/cache capture omitted; compact results retained",
+      "bytes": 3893,
+      "original_sha256": "c8c81c4ee0e290d2621952358d4a40b1379d087ca0be3e37d4045a2817b74864",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/browser/scenarios/S23-cache-toggle-off-on-equivalence.json",
+      "published": false,
+      "reason": "generated browser state/cache capture omitted; compact results retained",
+      "bytes": 3479,
+      "original_sha256": "6f42a6a1ced21963e07cd5c7c90c60476f199178df4ef4b80e051edebfdc1d11",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/browser/scenarios/S24-cache-edit-first.json",
+      "published": false,
+      "reason": "generated browser state/cache capture omitted; compact results retained",
+      "bytes": 3873,
+      "original_sha256": "096982a025e237e009a4035be97274cb73d32aea74dc5208eca5657cf862cb10",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/browser/scenarios/S25-cache-edit-middle.json",
+      "published": false,
+      "reason": "generated browser state/cache capture omitted; compact results retained",
+      "bytes": 3873,
+      "original_sha256": "bb99dfba0d4959932fc2915d3d2023178a73fb7cc3f501a92f35332ce2b65bb6",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/browser/scenarios/S26-cache-edit-last.json",
+      "published": false,
+      "reason": "generated browser state/cache capture omitted; compact results retained",
+      "bytes": 3871,
+      "original_sha256": "5dda8e0a535f810452f0bfe48c610960986ce87d9c5bc0cb658f338f8f19ef32",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/browser/scenarios/S27-cache-shorten-current-input.json",
+      "published": false,
+      "reason": "generated browser state/cache capture omitted; compact results retained",
+      "bytes": 3471,
+      "original_sha256": "105ef5dfb3a6b6aba95e80fc1fdc917d3ce1d5047ecff8b6e2379cecd25c3bb5",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/browser/scenarios/S28-verify-parity-current-sequence.json",
+      "published": false,
+      "reason": "generated browser state/cache capture omitted; compact results retained",
+      "bytes": 3316,
+      "original_sha256": "5b227977e17f580293f35a23c3a593b07a003c026b4cefb9c34a311625244114",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/browser/scenarios/S29-verify-stale-after-edit.json",
+      "published": false,
+      "reason": "generated browser state/cache capture omitted; compact results retained",
+      "bytes": 3441,
+      "original_sha256": "f59551692dbdff6f5eb8e1a24ffef0ea4daa4480eb4396b6521e0d270dff4373",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/browser/scenarios/S30-random-and-demo-reset.json",
+      "published": false,
+      "reason": "generated browser state/cache capture omitted; compact results retained",
+      "bytes": 3527,
+      "original_sha256": "d0d49210d11df5ca9a69432bb3564810c29fd90bbaf61dfd195e3243106b325e",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/browser/scenarios/S31-weight-selector.json",
+      "published": false,
+      "reason": "generated browser state/cache capture omitted; compact results retained",
+      "bytes": 3137,
+      "original_sha256": "0c10120578a652f1cfea50feb179166151cba92d239fd749700a51f86dbf86a1",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/browser/scenarios/S32-attention-causal-render-inputs.json",
+      "published": false,
+      "reason": "generated browser state/cache capture omitted; compact results retained",
+      "bytes": 4724,
+      "original_sha256": "89cb95e3a600d11ad4b35682f4251f74d5785dd35b0c4be5b430bf151404cc42",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/browser/screenshots/S01-load-intro.png",
+      "published": false,
+      "reason": "image or screenshot omitted from public release",
+      "bytes": 466477,
+      "original_sha256": "2c9d5c0b82e56c7589931efd7459939d232870a3149a9e4f27ef072f75407a76",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/browser/screenshots/S02-close-intro-controls.png",
+      "published": false,
+      "reason": "image or screenshot omitted from public release",
+      "bytes": 405383,
+      "original_sha256": "a9868bac082821f757dae0660ffb14c1941f56efbb8004e2e4edd3b41f2db263",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/browser/screenshots/S03-step1-input.png",
+      "published": false,
+      "reason": "image or screenshot omitted from public release",
+      "bytes": 405383,
+      "original_sha256": "940d0d6c40392e14c9202a4c7b0d7c3198ad271a76f33ce0215f9bddcfb8b351",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/browser/screenshots/S04-stage-01.png",
+      "published": false,
+      "reason": "image or screenshot omitted from public release",
+      "bytes": 405362,
+      "original_sha256": "8849d7fcc6c5b6fdfecccf3aaa6888a65ee68e503085a4031733fd815b7a7b95",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/browser/screenshots/S04-stage-02.png",
+      "published": false,
+      "reason": "image or screenshot omitted from public release",
+      "bytes": 397808,
+      "original_sha256": "a3aaf1b8bd74099ba0182d00325cb480c1718d14c74c33b266cb40eeb841f69e",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/browser/screenshots/S04-stage-03.png",
+      "published": false,
+      "reason": "image or screenshot omitted from public release",
+      "bytes": 312456,
+      "original_sha256": "3fdf4de350cf4ad6385121ce4cc647cb719fec4cfaed97f4106e7eea2f54b00c",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/browser/screenshots/S04-stage-04.png",
+      "published": false,
+      "reason": "image or screenshot omitted from public release",
+      "bytes": 370062,
+      "original_sha256": "0e436def0d681613c3a9a340118c129511f10b9376a6fae3756ea2f35f8f6631",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/browser/screenshots/S04-stage-05.png",
+      "published": false,
+      "reason": "image or screenshot omitted from public release",
+      "bytes": 328140,
+      "original_sha256": "117f7b609837cc676c306d6b117b9fa565a02212e8c9a67b8334bb7bd352725f",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/browser/screenshots/S04-stage-06.png",
+      "published": false,
+      "reason": "image or screenshot omitted from public release",
+      "bytes": 319779,
+      "original_sha256": "bc7dc9f374af27d2d490ec36c9a5e30b9f0d74d8a590e1aed2176b239535e0fa",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/browser/screenshots/S04-stage-07.png",
+      "published": false,
+      "reason": "image or screenshot omitted from public release",
+      "bytes": 315567,
+      "original_sha256": "aed0c36111641113aba3a26137391b0e2291bfb449669e35800e1525cf11bad3",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/browser/screenshots/S04-stage-08.png",
+      "published": false,
+      "reason": "image or screenshot omitted from public release",
+      "bytes": 384996,
+      "original_sha256": "4516e8e95cdb7825c7a95770651c1554e5f1af0a4c344b3e41cd7f2e6331c764",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/browser/screenshots/S04-stage-09.png",
+      "published": false,
+      "reason": "image or screenshot omitted from public release",
+      "bytes": 332865,
+      "original_sha256": "993a92f871a18fb82e63ae13d2c6578fa4a4801c7d5d00eb5367bc14069e63f3",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/browser/screenshots/S04-stage-10.png",
+      "published": false,
+      "reason": "image or screenshot omitted from public release",
+      "bytes": 339257,
+      "original_sha256": "c717dcdaa868790be1ef40b872a3220bc947a21769421dc9e2a85b6cf6bc3c7f",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/browser/screenshots/S04-stage-11.png",
+      "published": false,
+      "reason": "image or screenshot omitted from public release",
+      "bytes": 271337,
+      "original_sha256": "4376f1fa9dd21d1d388a3c7bffc528218d5c9537e4394094f29220166692bea2",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/browser/screenshots/S04-stage-12.png",
+      "published": false,
+      "reason": "image or screenshot omitted from public release",
+      "bytes": 262809,
+      "original_sha256": "de8be606c05314f58e1d0cf1c014fadacb6ed1d4e44d93d452c10254078db9ad",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/browser/screenshots/S04-stage-13.png",
+      "published": false,
+      "reason": "image or screenshot omitted from public release",
+      "bytes": 307448,
+      "original_sha256": "f1150f68e304183bbc2da3ce0cf74d800620f8245410c5eecf4359d1deaee5cd",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/browser/screenshots/S04-stage-14.png",
+      "published": false,
+      "reason": "image or screenshot omitted from public release",
+      "bytes": 234117,
+      "original_sha256": "0460dc66e6e04f90e029fca8a856d8d0b39b0553697516cf629470f295ed5dab",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/browser/screenshots/S04-stage-15.png",
+      "published": false,
+      "reason": "image or screenshot omitted from public release",
+      "bytes": 237784,
+      "original_sha256": "5d9dce485e6ea1b282886f2f7b9d6337588b38614e971193f87fd61ecec4630b",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/browser/screenshots/S04-step-walk-all-15.png",
+      "published": false,
+      "reason": "image or screenshot omitted from public release",
+      "bytes": 237799,
+      "original_sha256": "7e58a5088c26f4dfd78ae59a49abc2ba913f26e8a6b3d24e6ad6323012743c88",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/browser/screenshots/S05-embedding-values-selected-token.png",
+      "published": false,
+      "reason": "image or screenshot omitted from public release",
+      "bytes": 426924,
+      "original_sha256": "2650ce4af5e6b8b46b685982a3f9d240beeec04b2be7bf3e27a1ff0c726fe251",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/browser/screenshots/S05-token-chip-selection.png",
+      "published": false,
+      "reason": "image or screenshot omitted from public release",
+      "bytes": 441618,
+      "original_sha256": "a898e5510eb4c7e196a97409c66f62fa352ce29540669f964e5cb3984a1c302f",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/browser/screenshots/S05b-embedding-values-current-position.png",
+      "published": false,
+      "reason": "image or screenshot omitted from public release",
+      "bytes": 426957,
+      "original_sha256": "28afe005d1928599a03bdf6683333f32ede386f32c7ebe86854764cf16b485f6",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/browser/screenshots/S06-layernorm-values.png",
+      "published": false,
+      "reason": "image or screenshot omitted from public release",
+      "bytes": 316921,
+      "original_sha256": "635058d4869e1875fb0e7dfffcc7310724580b619eead56e6c8b1ea352d9cd3a",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/browser/screenshots/S07-qkv-values.png",
+      "published": false,
+      "reason": "image or screenshot omitted from public release",
+      "bytes": 393963,
+      "original_sha256": "88d2ef89e5bc1af2fb6e4f48b9d531d2116a0a42435c1e7892a3ce710dcdcfc5",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/browser/screenshots/S08-attention-L1H1.png",
+      "published": false,
+      "reason": "image or screenshot omitted from public release",
+      "bytes": 328782,
+      "original_sha256": "8ec5b75b3c8fc67314f55d2cf4ed47d68d7990fef80d1750016e5aa301662c35",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/browser/screenshots/S09-L1H2-selector.png",
+      "published": false,
+      "reason": "image or screenshot omitted from public release",
+      "bytes": 323028,
+      "original_sha256": "16e8b12b4f5111e7481835a09556f12018e67954f725c43dec364511013b37db",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/browser/screenshots/S09-L2H1-selector.png",
+      "published": false,
+      "reason": "image or screenshot omitted from public release",
+      "bytes": 337962,
+      "original_sha256": "982fbe7a8299cf7f0d132a2af23d1b108051ef5352c54bc8c0bb020721b51665",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/browser/screenshots/S09-L2H2-selector.png",
+      "published": false,
+      "reason": "image or screenshot omitted from public release",
+      "bytes": 336269,
+      "original_sha256": "f8c2e735c98dcb6f6287783722442d79eb862e2b98e997074e11eb443af99fee",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/browser/screenshots/S12-mlp.png",
+      "published": false,
+      "reason": "image or screenshot omitted from public release",
+      "bytes": 355400,
+      "original_sha256": "4a4ce2ab12829346950f8b08357304dfed88c154ca7b66d60248969d9f2611e0",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/browser/screenshots/S12-residual-add.png",
+      "published": false,
+      "reason": "image or screenshot omitted from public release",
+      "bytes": 338322,
+      "original_sha256": "dcd7f38e2e39553116232dbbaaee5e4594278d242735e1978ff7b68d8523e1d9",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/browser/screenshots/S12-residual-and-mlp-values.png",
+      "published": false,
+      "reason": "image or screenshot omitted from public release",
+      "bytes": 355404,
+      "original_sha256": "e81ee317e65792056b81635e9eb0d88b77b3ad8efe570d5f0ce346db4426352a",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/browser/screenshots/S13-final-ln-values.png",
+      "published": false,
+      "reason": "image or screenshot omitted from public release",
+      "bytes": 310432,
+      "original_sha256": "683c6ef2e1d8f5df9948fec6df31537c630e14f24407d362742b33ad1e1669f1",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/browser/screenshots/S14-logits-probability-token-ids.png",
+      "published": false,
+      "reason": "image or screenshot omitted from public release",
+      "bytes": 247296,
+      "original_sha256": "18072fa737e902af0ab453cd34be6b65d507eea913bfb25695c3c8ee6c02feed",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/browser/screenshots/S15-edit-first-token.png",
+      "published": false,
+      "reason": "image or screenshot omitted from public release",
+      "bytes": 409523,
+      "original_sha256": "1935ce5451f1dcc25af298e81593dc164a49fb3c323bc9f7ae299e698ee1e8a4",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/browser/screenshots/S16-edit-middle-token.png",
+      "published": false,
+      "reason": "image or screenshot omitted from public release",
+      "bytes": 410328,
+      "original_sha256": "0f9ac1dedf503e0c255692ad7118520ff395d0b5697c6b6bcd2d81d95786dfaf",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/browser/screenshots/S17-edit-last-token.png",
+      "published": false,
+      "reason": "image or screenshot omitted from public release",
+      "bytes": 409681,
+      "original_sha256": "7cee793fdca331597bbb1434717c8925a02218d2c52a2367dbb1c1970acf4b9d",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/browser/screenshots/S18-repeat-same-token-selection.png",
+      "published": false,
+      "reason": "image or screenshot omitted from public release",
+      "bytes": 246672,
+      "original_sha256": "ba2da0eadf1417365834cc8a74486de23fb684d22ecfb2fb33c87872ac958d82",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/browser/screenshots/S19-shorten-to-length-one.png",
+      "published": false,
+      "reason": "image or screenshot omitted from public release",
+      "bytes": 217112,
+      "original_sha256": "cc0bef5ffc4b4c26380af36c41b30659a53128172c135690aa9f1cad55703df0",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/browser/screenshots/S20-cache-grow-to-max-context.png",
+      "published": false,
+      "reason": "image or screenshot omitted from public release",
+      "bytes": 453484,
+      "original_sha256": "2e482dd6be39d68349fc261643d5794ce4d15bcd54793f09093d6059c1201ac7",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/browser/screenshots/S21-cache-toggle-prefill-demo.png",
+      "published": false,
+      "reason": "image or screenshot omitted from public release",
+      "bytes": 329413,
+      "original_sha256": "b613e37c75490cc1adbcda8d98b7c614bf8485470a4cabd54d72995c24a9085c",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/browser/screenshots/S22-cache-append-twice.png",
+      "published": false,
+      "reason": "image or screenshot omitted from public release",
+      "bytes": 423329,
+      "original_sha256": "5b270bc36ebcfbe9d9415b6a0dc71ba07fdf73bc88e1d3000f5eb12a98078c2d",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/browser/screenshots/S23-cache-toggle-off-on-equivalence.png",
+      "published": false,
+      "reason": "image or screenshot omitted from public release",
+      "bytes": 464287,
+      "original_sha256": "589d9e8261f9fbaf97965ca102a596e3b17091332212f107039a44e3155da728",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/browser/screenshots/S24-cache-edit-first.png",
+      "published": false,
+      "reason": "image or screenshot omitted from public release",
+      "bytes": 444865,
+      "original_sha256": "b18c965356417dc0156745356576be3d3aa1db6eb3ab41a635dceb0d570495bc",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/browser/screenshots/S25-cache-edit-middle.png",
+      "published": false,
+      "reason": "image or screenshot omitted from public release",
+      "bytes": 445014,
+      "original_sha256": "0296dd3e40c23e66ef02d96c33b1665190e100ee65845f9f460c39403362b993",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/browser/screenshots/S26-cache-edit-last.png",
+      "published": false,
+      "reason": "image or screenshot omitted from public release",
+      "bytes": 444207,
+      "original_sha256": "117a73ae7845351de6d5fed9821b3461a526c16f9def98de706b4193c6e6570e",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/browser/screenshots/S27-cache-shorten-current-input.png",
+      "published": false,
+      "reason": "image or screenshot omitted from public release",
+      "bytes": 329875,
+      "original_sha256": "e8bd3e805a8278aec076bfe8984b16d75d678e008e38fbe0689b23a51442a469",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/browser/screenshots/S28-verify-parity-current-sequence.png",
+      "published": false,
+      "reason": "image or screenshot omitted from public release",
+      "bytes": 339486,
+      "original_sha256": "a0e5a5bffafcffba74f9d197dd4a7efe53d5c3cf0a2d88b0d22cc8a4c0358b31",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/browser/screenshots/S29-verify-stale-after-edit.png",
+      "published": false,
+      "reason": "image or screenshot omitted from public release",
+      "bytes": 426885,
+      "original_sha256": "cf0feee6edc01a6f8464d236b1610d4de5379d95a41ddd5e9a3f55b212c81124",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/browser/screenshots/S30-random-and-demo-reset.png",
+      "published": false,
+      "reason": "image or screenshot omitted from public release",
+      "bytes": 335361,
+      "original_sha256": "2aad62d52cec882c655b5b45a36aa287c1a9204733f559b80926a98df0e337a9",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/browser/screenshots/S31-weight-selector.png",
+      "published": false,
+      "reason": "image or screenshot omitted from public release",
+      "bytes": 305497,
+      "original_sha256": "b947d217e906e4683d11374463e0cb29a1d1e72447be95a34a1e203eebeb248d",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/browser/screenshots/S32-attention-causal-render-inputs.png",
+      "published": false,
+      "reason": "image or screenshot omitted from public release",
+      "bytes": 333882,
+      "original_sha256": "ae4fcfd0f7f4b9244135a6c41f3378363ad1e8a733f534710305bc88e91338bb",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/browser/screenshots/initial-intro.png",
+      "published": false,
+      "reason": "image or screenshot omitted from public release",
+      "bytes": 651064,
+      "original_sha256": "e94976ab0fe744a4dbe331a70737a89f105d996cafaf8d3cf99a4646a13a5707",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/numerical/__pycache__/reference.cpython-314.pyc",
+      "published": false,
+      "reason": "generated cache omitted",
+      "bytes": 15651,
+      "original_sha256": "ad9e5d0fcdcdb27724dab00b069e523d629143a2dfca65da4f69f331a13a8ba4",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/numerical/cases.json",
+      "published": false,
+      "reason": "audit runner, scratch, or nonessential support file omitted",
+      "bytes": 37338,
+      "original_sha256": "41e6192c3a4d14ff95abe30f43d94414630c1345b96e08f7e121cee13849409c",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/numerical/commands.txt",
+      "published": false,
+      "reason": "audit runner, scratch, or nonessential support file omitted",
+      "bytes": 1790,
+      "original_sha256": "03463898865e5ed13422a81b90c9c05374fa0a9f527f56f708d0efc2c6e8e062",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/numerical/extract_weights.py",
+      "published": false,
+      "reason": "audit runner, scratch, or nonessential support file omitted",
+      "bytes": 2134,
+      "original_sha256": "3438c66b665c136d9a273f4f2957a1ea152977f608be7379e4cb9299191b60e0",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/numerical/generate_cases.py",
+      "published": false,
+      "reason": "audit runner, scratch, or nonessential support file omitted",
+      "bytes": 4909,
+      "original_sha256": "d477f109d012c69dbf10bce861e7553ab05d332107276302669f90eea7293e84",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/numerical/instrumented_model.js",
+      "published": false,
+      "reason": "audit runner, scratch, or nonessential support file omitted",
+      "bytes": 15745,
+      "original_sha256": "52cb0f380782f237ad21c33d14221905008aaa14f962956d8899e7e50000ae11",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/numerical/make_instrumented_model.js",
+      "published": false,
+      "reason": "audit runner, scratch, or nonessential support file omitted",
+      "bytes": 3220,
+      "original_sha256": "e657a05bb7f076df485c113b93500a609f464512adb3b504f35929b0f9ea1f45",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/numerical/model-instrument.diff",
+      "published": false,
+      "reason": "audit runner, scratch, or nonessential support file omitted",
+      "bytes": 1559,
+      "original_sha256": "9a4c353a0c5146a66b6d2515f898b0709fb1b3b2831effe75306088b77b87647",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/numerical/original_adapter.js",
+      "published": false,
+      "reason": "audit runner, scratch, or nonessential support file omitted",
+      "bytes": 5250,
+      "original_sha256": "f5ad910cd125aea4a0f19546a93a21d3b7a94eecc36b8ab052c256605614b9b9",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/numerical/original_capture.json",
+      "published": false,
+      "reason": "large audit result/tensor dump omitted; compact findings retained",
+      "bytes": 93176437,
+      "original_sha256": "3d206d7d5ddd26396996b57669d42bd764c7469f69728272fa01c85f26f6f0c8",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/numerical/reference.py",
+      "published": false,
+      "reason": "audit runner, scratch, or nonessential support file omitted",
+      "bytes": 8058,
+      "original_sha256": "88575038877f3f62628e4e3e68f7e6c9e3fa2e0f543925983591c9d023298303",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/numerical/reference_output.json",
+      "published": false,
+      "reason": "large audit result/tensor dump omitted; compact findings retained",
+      "bytes": 36805049,
+      "original_sha256": "b8b97af436f11e9bbb202fa8897234c01a105cb134c0df03ebe38d0aade65fc5",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/numerical/results.json",
+      "published": false,
+      "reason": "large audit result/tensor dump omitted; compact findings retained",
+      "bytes": 14229319,
+      "original_sha256": "8277b5fc654caaad677937e514836e43bd4ce0de9688f6c65467d29c6b9ffd64",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/numerical/run_audit.py",
+      "published": false,
+      "reason": "audit runner, scratch, or nonessential support file omitted",
+      "bytes": 24725,
+      "original_sha256": "568fcdf7023f39417a8f90e7b1b1a7f255473d0977ef6788d5d725914a61a8e4",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/numerical/weights.json",
+      "published": false,
+      "reason": "large audit result/tensor dump omitted; compact findings retained",
+      "bytes": 216243,
+      "original_sha256": "3bb380f97d241b85fd7c5486486873a6426da780410716662af674761f4e2101",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/report/__pycache__/build_results.cpython-314.pyc",
+      "published": false,
+      "reason": "generated cache omitted",
+      "bytes": 30335,
+      "original_sha256": "e377435e4da382b41b592aafcae24ea7b2b627f4c01b6ac5498b2d78b4ad5133",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/report/__pycache__/validate_results.cpython-314.pyc",
+      "published": false,
+      "reason": "generated cache omitted",
+      "bytes": 15879,
+      "original_sha256": "597dfcc1a6f795d82a311145ed69e4a902cb6109fac8e51cf6130d84dd179f5c",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/report/build_results.py",
+      "published": false,
+      "reason": "audit runner, scratch, or nonessential support file omitted",
+      "bytes": 28414,
+      "original_sha256": "df589b15236ee07f0d0d33e6bc1e7a0d9b1034565afa4054b1420f9c63954292",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/report/validate_results.py",
+      "published": false,
+      "reason": "audit runner, scratch, or nonessential support file omitted",
+      "bytes": 7858,
+      "original_sha256": "85f59b7e2220000f713219ba4a225d1a4ff6ff8ee8b496fd0eb70ab4e2c1fbac",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "audit/results.json",
+      "published": false,
+      "reason": "large audit result/tensor dump omitted; compact findings retained",
+      "bytes": 31195050,
+      "original_sha256": "1b8ebfab8fa3ba6864dde89844c8e34f1bc765fcc3bc0df7a0ff815e20ea1be7",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/.bin/playwright",
+      "published": false,
+      "reason": "symlink omitted; no content hash"
+    },
+    {
+      "source_relpath": "node_modules/.bin/playwright-core",
+      "published": false,
+      "reason": "symlink omitted; no content hash"
+    },
+    {
+      "source_relpath": "node_modules/.package-lock.json",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 1018,
+      "original_sha256": "cc575182b2ee8abd2dd3b6d193b268cdb0e3e9dab5ee69ca61ac6016ad0e295e",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright/LICENSE",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 11601,
+      "original_sha256": "45873d00a0dd243596deb4aa23b2493b3d1f0671921bf2538ea431d7380220eb",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright/NOTICE",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 254,
+      "original_sha256": "6d602191187b35b9b01d2cffa01c8469c2c8d9de8a96f1bf868e0f264f51c81d",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright/README.md",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 11282,
+      "original_sha256": "d195f41bed2845ab708a213675900fd3f80084268a637214495444a1b96e8e7a",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright/ThirdPartyNotices.txt",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 705,
+      "original_sha256": "b17ac0bd6f4b8207e440639cc8e0ba1bf1d9eaf9b12236764ab93b346c7abd8e",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright/cli.js",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 698,
+      "original_sha256": "5e79302a6aad7d835d92d5ae6b4244c91cf61b28e94d7917279090e6c231f7a1",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright/index.d.ts",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 636,
+      "original_sha256": "b07f64ff6ec710998a62b07377fbda0ab4c313ba1f0055bfe9faa22cffedd47c",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright/index.js",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 648,
+      "original_sha256": "4e98f65f0a9d9bcab8cffc0c5cfdd87fd3f5b0be74fc494ff166a466b204cd44",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright/index.mjs",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 704,
+      "original_sha256": "a0f5715ea22354f922791a9c53dc012d5d5c067ff9cc4cd35ffb7cd272071a9f",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright/jsx-runtime.js",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 942,
+      "original_sha256": "2fefb7ec3a42dcf1cea35ca7e3eb107507c4d80821b1d6abf6cfc9bca36498f0",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright/jsx-runtime.mjs",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 764,
+      "original_sha256": "a6ae8df3a36f154f433b01fe1592170500f5fbe7798f6dacdfea5b492f31d1a6",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright/lib/agents/agentParser.js",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 3475,
+      "original_sha256": "a2f630c1c2c9eafa0a3ca9cdbeaa26e74801615bc572e3fce226acb662ceb0eb",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright/lib/agents/copilot-setup-steps.yml",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 646,
+      "original_sha256": "7483c252e2225d90cf7b66b461772a9e16e189cd45f689f48519872571e1a345",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright/lib/agents/generateAgents.js",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 16958,
+      "original_sha256": "3bae7bde1d05c0fbaaa1a82ce7a39732ff52904de575fe88e69c391a6c41478e",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright/lib/agents/playwright-test-coverage.prompt.md",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 1294,
+      "original_sha256": "8e8a32e98c7069c8af29a088a91999c81dafbeb09a144b143ebe888b48b94355",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright/lib/agents/playwright-test-generate.prompt.md",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 175,
+      "original_sha256": "6031c3eacf1e55d527a0397066b64d134d9f925fd7286bcc78646e714611da10",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright/lib/agents/playwright-test-generator.agent.md",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 3336,
+      "original_sha256": "0a61b313ff2573198fc89c7ab5b7e7db1c557193a470104ac90b2d6a0332be80",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright/lib/agents/playwright-test-heal.prompt.md",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 105,
+      "original_sha256": "19f2bea9648ddac89b90b40a3f87b50c276d416677f8bb2fbcdac894cdb6946b",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright/lib/agents/playwright-test-healer.agent.md",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 2891,
+      "original_sha256": "b3e1d85219df5ead7e3ef0dc69959b0263cc16e885f71d5b64bafdf97e6f9215",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright/lib/agents/playwright-test-plan.prompt.md",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 196,
+      "original_sha256": "6ce2c51b356b4e89ac1e3c2b8b3ff0a390c7b518c1d4d24f019f9eb179cd6669",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright/lib/agents/playwright-test-planner.agent.md",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 2808,
+      "original_sha256": "bf4baa68205aa04c4512a80bcc6a5362d3aaa76ae9165f05a9d5a29e1d34c0fd",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright/lib/cli/reportActions.js",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 3603,
+      "original_sha256": "4eeceedf9588d69a153f018aa548e00b73e5f61cb39bb05f0fc87c06131af2b3",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright/lib/cli/testActions.js",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 9441,
+      "original_sha256": "844ee2482212864404513729b51871f43d28693b5c98f260e6fbc5d7bf02827f",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright/lib/common/index.js",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 115517,
+      "original_sha256": "f4a6b14f5ba21a118b58a6a25eb0b281a3acc4157023b014e0197145056124a4",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright/lib/common/index.js.txt",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 1399,
+      "original_sha256": "07620a43f0b2a004d3b945369dea06ec73615d8a7e81ca024c89c000a20d075b",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright/lib/errorContext.js",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 4552,
+      "original_sha256": "ffc1843cebb3e90e1674c07ee2607a4a63152eff609e5f9865bbb2f9eb02e9a1",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright/lib/globals.js",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 1935,
+      "original_sha256": "f5922eb1fb6051900157492eb9c218e62d07378eed135bca4b2f173ed1184d1c",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright/lib/index.js",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 36487,
+      "original_sha256": "54bf5935cf339938408c656bde958047a1217bf77434acdf75a0c717cddaaeae",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright/lib/isomorphic.js",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 8191,
+      "original_sha256": "3d61508f951aa9518adb4bf6594d61dfd1099c95a1a4f0af809a58ccebc59025",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright/lib/isomorphic.js.txt",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 267,
+      "original_sha256": "36c16ae5721dfe8ac2555e84d26b5895b7ca113e7304bd3735a16d56b5a71b3c",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright/lib/loader/loaderProcessEntry.js",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 1262,
+      "original_sha256": "45681332f4178770c204b33e5b8dcbba940baf3bc6fc86506bab24027cb513f3",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright/lib/loader/loaderProcessEntry.js.txt",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 234,
+      "original_sha256": "0fc4ad550d17a23e9f1cbc78f646e57461f4feb22253dd5220034ef44091005c",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright/lib/matchers/expect.js",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 546839,
+      "original_sha256": "5ef2a695e787386367f4b1e03c79b05100b5526121462b24d7730a731689d941",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright/lib/matchers/expect.js.LICENSE",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 36528,
+      "original_sha256": "78b2f60563d28cb3f9ea17e4cdc0657681e641e2f72766771d9e2da9ca94c065",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright/lib/matchers/expect.js.txt",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 3357,
+      "original_sha256": "278a0516fb0b18c3206903c5919ae1f3502dbcd6725b9aa2bd265767b7b9ebf2",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright/lib/mcp/test/browserBackend.js",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 5241,
+      "original_sha256": "703f307d1c3e746291b625f886af3d3d28fc0a868b8b2a66173a75bd895ccddc",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright/lib/mcp/test/generatorTools.js",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 5427,
+      "original_sha256": "3c53feaeb9fc2ff728f334cb31f9b7211e65b20c692c7585459c3c97bdd13a12",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright/lib/mcp/test/plannerTools.js",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 6379,
+      "original_sha256": "715abc888d9ea30b532b75c6f09aa34101ab15c1eeb959c50cf9dedcf3a459ac",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright/lib/mcp/test/seed.js",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 3239,
+      "original_sha256": "f36f7fb76d4ed33225e80be208cccc9757d363a9d1527cf560736c0f1e5edd31",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright/lib/mcp/test/streams.js",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 1577,
+      "original_sha256": "8affc240a6a90ee2dbdedcde9927018efe426ec0d390bcd1ee4f0464e75adc0f",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright/lib/mcp/test/testBackend.js",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 4067,
+      "original_sha256": "dcd8d09366617f13213ce544efb5fe47df5a87258ae93545d4d0738623f43ad1",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright/lib/mcp/test/testContext.js",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 11637,
+      "original_sha256": "74ff4273ea12e6353d4860c9452387b643d7d8899fbd4951389ba94d18df5e37",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright/lib/mcp/test/testTool.js",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 1104,
+      "original_sha256": "2a8f17d0a61ccb8a4ca9c52a3255d624deca989c0b06281d579629c664f8cc8e",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright/lib/mcp/test/testTools.js",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 3714,
+      "original_sha256": "14710b5f34246005d974762b83a2a50e5cc17130af841cd3bc447811d69c6af7",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright/lib/package.js",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 2013,
+      "original_sha256": "544a18417ea51dd4c8a9f3dbc4e2b47e46c80f452e0cd23d55e9b3680bc6241e",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright/lib/program.js",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 14509,
+      "original_sha256": "dfbb7bae1431d99d330320040c03f7e9c6681184c8dcb59008a09da7ada0c409",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright/lib/runner/index.js",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 315445,
+      "original_sha256": "7a2e4e1114d3237d61b87723b4d86a37944c9143f3ce2fb0b2e8867e0c612a5e",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright/lib/runner/index.js.txt",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 2975,
+      "original_sha256": "5c8cab04ad0150b8b62ee30309638e1aea520759a26dc287db17febbd6029be9",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright/lib/transform/babelBundle.js",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 2901531,
+      "original_sha256": "72363941e21434effbc8ce0484fa490d281154499957e0be244d31cee9a1d5a7",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright/lib/transform/babelBundle.js.LICENSE",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 123004,
+      "original_sha256": "6e396aded640f0bd2671d57442575ce8172aa1371b2dece6c5d4048f2f38f34c",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright/lib/transform/babelBundle.js.txt",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 21645,
+      "original_sha256": "1f407f538c03daab08ec8c0dc594e93ba8eb9bed2203815091249472530e8bf7",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright/lib/transform/esmLoader.js",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 289225,
+      "original_sha256": "51a0a75a3aee8ec1dcfd545ad5c45300c282b5c4fe6d0a74b5a6cdcb649ad0de",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright/lib/transform/esmLoader.js.LICENSE",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 17406,
+      "original_sha256": "3cec0c446526a449e4613b0defee0adb585f88f1d7fdba919421226d69be078e",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright/lib/transform/esmLoader.js.txt",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 2725,
+      "original_sha256": "b6bc3e9508845f737014ac1745f4907f51f6a36d121b89ae79b66fb7aa4e7ff7",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright/lib/util.js",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 14295,
+      "original_sha256": "874c55495773da8c5a2ec46551c2265937bf08446231c09a8b5966e8bea2b1f7",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright/lib/worker/workerProcessEntry.js",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 76013,
+      "original_sha256": "3d6676ca271c075b1e7c8e2cd6ad5331430cf29a3332d1f621054ff7d8e06478",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright/lib/worker/workerProcessEntry.js.txt",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 661,
+      "original_sha256": "7b4f3a6e64023f52319739dd1026636d0e769edecf1eccd4b7f03bf8a4b54865",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright/package.json",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 1359,
+      "original_sha256": "8bc2ddebe8d9b051b9ecb87d62c6c63877e59d08617f32c3215681ca8bb70998",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright/test.d.ts",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 673,
+      "original_sha256": "3f00324f263189b385c3a9383b1f4dae6237697bcf0801f96aa35c340512d79c",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright/test.js",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 806,
+      "original_sha256": "b97fa53a6ab864f51c9c48b5e4647d0acae45ba2948c5d78e38bfeb56755d974",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright/test.mjs",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 1400,
+      "original_sha256": "1deb265617d0e87b6d05bf8b3d5bf73cd4b788665c249c609a01b94ceff2eea1",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright/types/test.d.ts",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 403259,
+      "original_sha256": "0c45393d79498d440f99e8eb10d93609742f073dfc631feab5ab0f1a6b21c056",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright/types/testReporter.d.ts",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 33453,
+      "original_sha256": "0304f69294f8221b82ec6b4c75511dd6d824f04b1a0999409c79931cd33219e3",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright-core/LICENSE",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 11601,
+      "original_sha256": "45873d00a0dd243596deb4aa23b2493b3d1f0671921bf2538ea431d7380220eb",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright-core/NOTICE",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 254,
+      "original_sha256": "6d602191187b35b9b01d2cffa01c8469c2c8d9de8a96f1bf868e0f264f51c81d",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright-core/README.md",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 120,
+      "original_sha256": "d16ff7f8e38fa1fc954f695ad551cdc118d9c9bdd5f3d83203901f4c317d7d7e",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright-core/ThirdPartyNotices.txt",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 676,
+      "original_sha256": "a549d329bad8806fe279f0ecae0fc0270dec7e7c2dc8ec10f90e394f7c32b144",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright-core/bin/install_media_pack.ps1",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 174,
+      "original_sha256": "bc20f049badf021e3a53bdb4156603caa5ef482c9a9a251f927605e676a44171",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright-core/bin/install_webkit_wsl.ps1",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 1464,
+      "original_sha256": "bc61beda37a808eef27d39ce684baa792f6d17737a25a432b1a84d3b591ab815",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright-core/bin/reinstall_chrome_beta_linux.sh",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 1217,
+      "original_sha256": "dc8c22b9dde76583cece2857575b88094299615f3136a3c598149710c45dee3a",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright-core/bin/reinstall_chrome_beta_mac.sh",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 563,
+      "original_sha256": "a92eaeb4ebcf5633a4e9c981481e14c80764fc81b6fcbc0565398e50ff319433",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright-core/bin/reinstall_chrome_beta_win.ps1",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 957,
+      "original_sha256": "b6d9e44742feafb98d5edc56fa20042949973cf30d141a1c5b4fb384096967c5",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright-core/bin/reinstall_chrome_stable_linux.sh",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 1212,
+      "original_sha256": "dc72ab3567a4ce43bd8353d4ecf41f1d9c03e870169367cd3ed9043aabf67dd1",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright-core/bin/reinstall_chrome_stable_mac.sh",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 519,
+      "original_sha256": "bb43a96c192a6cc81524ade0264686fff7809c019a89f7db0a9849635879c3be",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright-core/bin/reinstall_chrome_stable_win.ps1",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 923,
+      "original_sha256": "3d96c4e2f4ebbb3fad44cf3ba58d9cf90af1c9fb3073e3b27d45a74cf005515b",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright-core/bin/reinstall_msedge_beta_linux.sh",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 1494,
+      "original_sha256": "10b26f35dbc2000b94edf1172d803a29c5873a4eb8d523afbc687997b642767e",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright-core/bin/reinstall_msedge_beta_mac.sh",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 377,
+      "original_sha256": "0036d738bc90d686100d81f328ba0003bf07863f5500b792c8da391d149750fa",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright-core/bin/reinstall_msedge_beta_win.ps1",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 874,
+      "original_sha256": "b173c378a59f0cc38033cee702de1f44f09276c9b2270d1a650ebe66ee312433",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright-core/bin/reinstall_msedge_dev_linux.sh",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 1489,
+      "original_sha256": "00e4947e7a4f8339c6db09c87976d808583c07f9179e4aa7694d88614b82fe95",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright-core/bin/reinstall_msedge_dev_mac.sh",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 372,
+      "original_sha256": "6f899e3b311f742c24ca37ff9e32298e8290514ffc14bf588cc51556a29da4c0",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright-core/bin/reinstall_msedge_dev_win.ps1",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 869,
+      "original_sha256": "46f7f98c81cb0abe687d7f4a5afea9b897a38d2a6dd6f6662fbd847f7a22bd51",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright-core/bin/reinstall_msedge_stable_linux.sh",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 1507,
+      "original_sha256": "ec0a31a5f09c565e108473a1850895a4458ab00c713ac1de3aa2001912e4668f",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright-core/bin/reinstall_msedge_stable_mac.sh",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 371,
+      "original_sha256": "3af1e893527ff2257aa2dbc3b259a053b92f45c3eadb13e38eba46e87902655d",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright-core/bin/reinstall_msedge_stable_win.ps1",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 856,
+      "original_sha256": "40bb5fcbfcebbbe2ce43c6e736e7c5deefc5be03b6e9c6914423c06ec1f591be",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright-core/browsers.json",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 1137,
+      "original_sha256": "545d52f8382c391e605562c330e9c1c534a16045898203037a49bb8bd769a946",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright-core/cli.js",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 839,
+      "original_sha256": "f1c4075aef116c766092250d7f37b3249a7cee6465d953207fc38c8f6145becd",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright-core/index.d.ts",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 634,
+      "original_sha256": "7a8ec10b0834eb7183e4bfcd929838ac77583828e343211bb73676d1e47f6f01",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright-core/index.js",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 697,
+      "original_sha256": "a58fb2cec4293e7dcf73c58a179898a4f3986666451a19da4e731fa3af63265b",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright-core/index.mjs",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 1063,
+      "original_sha256": "3d36e2132d3c8b62397d23f0bb4177336aaee503203ae2a2c90fbeb5bf3317dd",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright-core/lib/bootstrap.js",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 3481,
+      "original_sha256": "4637f4dbfef9cfc01baeb5f5d2cb63fa0901522c96915ea2227290558d27123e",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright-core/lib/coreBundle.js",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 3477183,
+      "original_sha256": "549070af3acabb3efcc4f55bfe6210f9f7c2fcf633cf7eaa59bfe60719969171",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright-core/lib/entry/cliDaemon.js",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 197,
+      "original_sha256": "062f256fb29a7bf91793a014b9c3f1f9cf2dc6b12e40a8a2ebba88a630ae16a0",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright-core/lib/entry/dashboardApp.js",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 108,
+      "original_sha256": "209962c6eaeef11629f226d6a2ab33ec7a2480754242b6e19590a9e6eb71d126",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright-core/lib/entry/mcp.js",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 442,
+      "original_sha256": "cc87dc0020cb41caebbf04f50e42bc7835b033a6d80e9c3f0a3d0b3dbdf341c7",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright-core/lib/entry/oopBrowserDownload.js",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 120,
+      "original_sha256": "87567cdbd67dd2f50bb232d47d3784701ece7c81e39c0287bb7d1b466b68cf06",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright-core/lib/package.js",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 2112,
+      "original_sha256": "9f938e1d44a0dd231b1660ca62f7dae964859b79cbdc370b8542c5d375ca3c05",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright-core/lib/server/chromium/appIcon.png",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 16565,
+      "original_sha256": "6ba994f05c5cf18e22d9b6bef9898fbdec6ad4d4d77f5187d0609cb42d72d01e",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright-core/lib/server/electron/loader.js",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 4994,
+      "original_sha256": "699fb5564539da34ed72f49e9821af28f9fc06940adb639cac55dc9c477cfe7c",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright-core/lib/serverRegistry.js",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 57039,
+      "original_sha256": "38025f08f335705b099b9f188bf45b5908a56a722825fe895b1e90f56d5595b6",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright-core/lib/serverRegistry.js.LICENSE",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 2982,
+      "original_sha256": "3098a6efcbc11752cbdf6075fa65480f5470f78c8d981fab9c0796dc9a41cefe",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright-core/lib/tools/cli-client/channelSessions.js",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 7087,
+      "original_sha256": "6b9c613e87340f48ad7182addd7495a8ff3fbe55feb1bbd0ce04f59f1552e126",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright-core/lib/tools/cli-client/cli.js",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 153,
+      "original_sha256": "dfde8e9dfde30c4b3914eb25ba1c5a8524ec64651d866171d75cd7b41a827180",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright-core/lib/tools/cli-client/help.json",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 38799,
+      "original_sha256": "e78d7a22d059196e838d1f076b563eae185b851e3e36063fa4ae77a8dc1415b1",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright-core/lib/tools/cli-client/minimist.js",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 4109,
+      "original_sha256": "9430489ebc06fd02231dccfe844516f743e812a9ac4fe8e6748a67718738851c",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright-core/lib/tools/cli-client/output.js",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 11972,
+      "original_sha256": "b4c3ebab965e73d621971cd3c76b60c22cf460a0921f14c5c6c51e46e06f02d2",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright-core/lib/tools/cli-client/program.js",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 16373,
+      "original_sha256": "55a9a10132c680ecdec25b5000afb12035745ac9e75dd9cc0ef3e5d5e08d7f3e",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright-core/lib/tools/cli-client/registry.js",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 6768,
+      "original_sha256": "4976cd5b2b3a25572cc1a4b5f055a756dacd4cc1b19d48987ee3253428e759b8",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright-core/lib/tools/cli-client/session.js",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 9544,
+      "original_sha256": "a71e03ba6dc99d6d9cca4577d534daa6d0c20c32e50065311823f41caba29b46",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright-core/lib/tools/dashboard/appIcon.png",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 18945,
+      "original_sha256": "38037bcf18c7f9b950da2e1a2d8800d38fb27637ccda293d38368a3704b67f18",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright-core/lib/tools/skills/playwright-cli/SKILL.md",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 12726,
+      "original_sha256": "1a609c93bff3eea9ab99fed93c0334c851fdc39fb6ac5335551bfb87c171d57c",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright-core/lib/tools/skills/playwright-cli/references/element-attributes.md",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 665,
+      "original_sha256": "bf19aa4671e0a50a0fefa9c790f39124e803060eefe395042b723c29fcb7faa2",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright-core/lib/tools/skills/playwright-cli/references/playwright-tests.md",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 1690,
+      "original_sha256": "c5b0719fef2cfdff50bd744051b2f9afc119775db4b48e9b2882c1cf3886797c",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright-core/lib/tools/skills/playwright-cli/references/request-mocking.md",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 2182,
+      "original_sha256": "54e801c9663fc2b6d68ceb058cb1c360724c2499f42acc7852a68e83e5b5f37c",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright-core/lib/tools/skills/playwright-cli/references/running-code.md",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 5642,
+      "original_sha256": "d95c539a5990b71d02d8bdf1d9414df16191eb6cff95b0063820518b7a13dcb2",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright-core/lib/tools/skills/playwright-cli/references/session-management.md",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 5671,
+      "original_sha256": "cd3e261b8763bf952f1e371b876cb78d054379afec85482f9250633e1b7e6c44",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright-core/lib/tools/skills/playwright-cli/references/storage-state.md",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 5198,
+      "original_sha256": "9ac47f9ae4a1aedcd2077f8ac9ab1ba6bee1962cb83ff51adcd36fb6d83b5ec6",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright-core/lib/tools/skills/playwright-cli/references/test-generation.md",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 16114,
+      "original_sha256": "12f54cfa718d9e559bad918120a4ca4f11c933167713d1b9c5f99872eddaf749",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright-core/lib/tools/skills/playwright-cli/references/tracing.md",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 3456,
+      "original_sha256": "ef73e71bee792e341df9cd4f60529c929ade48b538ac76e033f4f20843e8dbda",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright-core/lib/tools/skills/playwright-cli/references/video-recording.md",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 5387,
+      "original_sha256": "8555ab5400df0d90e66318aacc0a8a4418fbf872e7463824d55d5c41615abd83",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright-core/lib/tools/skills/playwright-component-testing/SKILL.md",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 10404,
+      "original_sha256": "60f57b31767d562c30cc5332081418c2945f4d9c998efa6e09191333654dd429",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright-core/lib/tools/skills/playwright-component-testing/references/gallery-spec.md",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 6199,
+      "original_sha256": "0ca25dde6112eb379f56eb618585b64dc2dfd13c2f7f956ac7eabbd76a68912b",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright-core/lib/tools/skills/playwright-component-testing/references/migration.md",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 5031,
+      "original_sha256": "bc3a336f7970bb7455fa5a38f937e45b35fb0c18d6c3b9f37916a4ff757b7acc",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright-core/lib/tools/skills/playwright-component-testing/references/react.md",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 3115,
+      "original_sha256": "54af9cc1cdb6d4ccdb8e811c0abb29b960d5c9304f4df7d1dcf9b8df3f973102",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright-core/lib/tools/skills/playwright-component-testing/references/typing.md",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 6883,
+      "original_sha256": "c511025b5c9b02d7f49034a5613c8b478193bf60c90ea6dddb3faf9c6985c82b",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright-core/lib/tools/skills/playwright-component-testing/references/vue.md",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 3374,
+      "original_sha256": "d1b129f126c700702a3c00ad8eb6c86898bc941c29a656c1191eb7230650bf8b",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright-core/lib/tools/skills/playwright-trace/SKILL.md",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 4845,
+      "original_sha256": "4124dd790915bb76108377121d1e6ca93a5544c90485c090fa5655235efe22aa",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright-core/lib/tools/utils/extension.js",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 4689,
+      "original_sha256": "404ae19e57a7c7c5ed3e6ecf9df26a3fcf95867250732f954823078ccb879e63",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright-core/lib/tools/utils/socketConnection.js",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 3317,
+      "original_sha256": "973c2bea70a1f1445f4673f99e9fa351e50a2ec9fd93d7381b2c41bb4de764dd",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright-core/lib/utilsBundle.js",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 3048692,
+      "original_sha256": "2d1ccc01d21b7d54ca99a6305991d7fb6e072ea4e725d7fec5eb6184188c52c9",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright-core/lib/utilsBundle.js.LICENSE",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 106591,
+      "original_sha256": "2495f30be29620d54b58339821eda0ebabdfb6ee9b09455f7285a06fd46fb9f3",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright-core/lib/vite/dashboard/assets/codeMirrorModule--QdMvsKi.css",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 6251,
+      "original_sha256": "20be824a82832b62cc04642d31da3c609fd280b23f1cdcb1e622c4f40aac5ab8",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright-core/lib/vite/dashboard/assets/codeMirrorModule-CQ8RZGBm.js",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 307374,
+      "original_sha256": "56b9c6a50c09dfac28eea5ec3e76c8ae85a26009b20ebac9928959cf3c3312bb",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright-core/lib/vite/dashboard/assets/codicon-DCmgc-ay.ttf",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 80340,
+      "original_sha256": "0f1d5219934e96e83b8db162d60b4d8c09b5de1e7d38031cbafe4a3c0f2889c9",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright-core/lib/vite/dashboard/assets/firefox-1bWoP6pv.svg",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 7488,
+      "original_sha256": "3f3742d1e78c0db6c2d3531250f70c30675ee5310de32fa89befaf738c54efd0",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright-core/lib/vite/dashboard/assets/firefox-beta-k3eOH_eK.svg",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 9280,
+      "original_sha256": "7eab5ffdc25903ba33a7202f7fffa1999f119c7be45a39e9e703c118904f917a",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright-core/lib/vite/dashboard/assets/firefox-nightly-Cp5nfeDT.svg",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 9143,
+      "original_sha256": "f311c074b0fa999fcd6b73441301fb54ee87a48ff3bf05f318647928110476da",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright-core/lib/vite/dashboard/assets/index-AwgwcYie.css",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 139111,
+      "original_sha256": "82d06f291a7d0860e1b1e1803ab6f2e49c637541779a37168652e10b062b67f9",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright-core/lib/vite/dashboard/assets/index-hRvO4yU2.js",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 336491,
+      "original_sha256": "3a05ed0b026442a1459952df25b9a836d4fa1a917838cf6f9357daefc0e42285",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright-core/lib/vite/dashboard/assets/safari-na3_-uQk.svg",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 5254,
+      "original_sha256": "80fd72ca5eb8545f1981277b31f4f92951d469d4efebd078e4086b676fe517dc",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright-core/lib/vite/dashboard/index.html",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 1078,
+      "original_sha256": "202903aad66040604bc1a0c85615dda4bfc7e6f4a4674e60d9eda4d44f6faea7",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright-core/lib/vite/dashboard/playwright-logo.svg",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 5645,
+      "original_sha256": "511524a1c145819303a18fb71870a4307c3e740f9e9722f7686a2b42b0995b6c",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright-core/lib/vite/htmlReport/index.html",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 464,
+      "original_sha256": "ce7c098020a0eb9ce10edd416245ea6da50dfeaab18dfd0a2176979d22643be6",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright-core/lib/vite/htmlReport/report.css",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 100452,
+      "original_sha256": "d98a244bf950333ade383b109e97d396f970f650b20f2e5ef5ecc2740205dff7",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright-core/lib/vite/htmlReport/report.js",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 415864,
+      "original_sha256": "3db0c0291241102b14b62af4b80d84dd8169a281bb2ff360c986b9d7da57c339",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright-core/lib/vite/recorder/assets/codeMirrorModule--QdMvsKi.css",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 6251,
+      "original_sha256": "20be824a82832b62cc04642d31da3c609fd280b23f1cdcb1e622c4f40aac5ab8",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright-core/lib/vite/recorder/assets/codeMirrorModule-CVQWJZAA.js",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 307374,
+      "original_sha256": "45f900fd93bf33545e6915308a964c49ce342c2e175a54aaef0898f05b25fcf5",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright-core/lib/vite/recorder/assets/codicon-DCmgc-ay.ttf",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 80340,
+      "original_sha256": "0f1d5219934e96e83b8db162d60b4d8c09b5de1e7d38031cbafe4a3c0f2889c9",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright-core/lib/vite/recorder/assets/index-BZpYJZ-P.css",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 85502,
+      "original_sha256": "cc24563b96f286614b88f74da413e9984de263227971c4cdfabe1f73be095514",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright-core/lib/vite/recorder/assets/index-hrlLqLtq.js",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 358603,
+      "original_sha256": "f7f3dfd9113b0119821adf1f3fc873fa5dddba8b2c278014e0fb0ecc1b3f492b",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright-core/lib/vite/recorder/index.html",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 1078,
+      "original_sha256": "5783e9b7e2cc78dd8a1a409d84b44b2431bf60f8f54b8be36c6e433c6a1086ed",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright-core/lib/vite/recorder/playwright-logo.svg",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 5033,
+      "original_sha256": "6b0a4367bdeab10995bc239278f04c68c10e48adbec15e799e01909a0d66dcb9",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright-core/lib/vite/traceViewer/assets/codeMirrorModule-BbkfBe3n.js",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 307393,
+      "original_sha256": "274b964242426bf4e1c662a84f6345d8a99f67821caa508fb12c52e2d1dfd48c",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright-core/lib/vite/traceViewer/assets/defaultSettingsView-Ds6CBOo0.js",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 654294,
+      "original_sha256": "0b48f13034cfa075338cc0839f212297d22cadab9219d9699d161d2b18c79019",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright-core/lib/vite/traceViewer/assets/urlMatch-L3liM589.js",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 2510,
+      "original_sha256": "1bc6321e32d11c31a452bc75896f0b344e6153321854d9f1658818be7f845c16",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright-core/lib/vite/traceViewer/assets/xtermModule-DywYcAf8.js",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 288730,
+      "original_sha256": "2546783e4f74a432bbccd88a6763cf78ac4e951686262cdf85b54d5a26ca3995",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright-core/lib/vite/traceViewer/codeMirrorModule.-QdMvsKi.css",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 6251,
+      "original_sha256": "20be824a82832b62cc04642d31da3c609fd280b23f1cdcb1e622c4f40aac5ab8",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright-core/lib/vite/traceViewer/codicon.DCmgc-ay.ttf",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 80340,
+      "original_sha256": "0f1d5219934e96e83b8db162d60b4d8c09b5de1e7d38031cbafe4a3c0f2889c9",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright-core/lib/vite/traceViewer/defaultSettingsView.Bqk9acqE.css",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 107049,
+      "original_sha256": "cd1d3c277d4962246ed92d7d42734c5ffed6bac5c499232693f9c8331b71801f",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright-core/lib/vite/traceViewer/index.B4cLoZK3.js",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 6628,
+      "original_sha256": "7b96efd541639738a8d46e4b6ba9780ffaf57a5c104db66764e0cec46d9f64e8",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright-core/lib/vite/traceViewer/index.B_TqY17P.css",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 2055,
+      "original_sha256": "08a212fcacae1866f44f065654afcc4c7d03409c68c74b3315c5bda17a0ca003",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright-core/lib/vite/traceViewer/index.html",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 2363,
+      "original_sha256": "139ac80123fb450cfc0631296e9f01463313ca2fec961b3a247ec6c9528447a2",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright-core/lib/vite/traceViewer/manifest.webmanifest",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 429,
+      "original_sha256": "d8540500603a32a39fe7e5a0375dc0f9ebafd11118e06a846db7efc608223ab9",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright-core/lib/vite/traceViewer/playwright-logo.svg",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 5033,
+      "original_sha256": "6b0a4367bdeab10995bc239278f04c68c10e48adbec15e799e01909a0d66dcb9",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright-core/lib/vite/traceViewer/snapshot.B_Jk1wbt.js",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 650,
+      "original_sha256": "d4d09e05451d107d8e1a6bbd041405fe518b9fd2833890e4ebaaad83b7f554f5",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright-core/lib/vite/traceViewer/snapshot.html",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 389,
+      "original_sha256": "c608c8899c95c5a74d3f556e20146c3d852b9df85ae2854c659a7cc773c9b727",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright-core/lib/vite/traceViewer/sw.bundle.js",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 95459,
+      "original_sha256": "37b230329280e28e32b03df20738d2ed3bfd0ea45b408a69213158bb8400adb3",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright-core/lib/vite/traceViewer/uiMode.CU5KtEkS.js",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 38057,
+      "original_sha256": "0c0dc5e0c822c27e60420a5c1659683fda89398f1561e43608f9d829eafdc197",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright-core/lib/vite/traceViewer/uiMode.CyMfwkXJ.css",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 54590,
+      "original_sha256": "fb403cf0b07007bc1d771e29737f7408924da300e2fab8b289a3ef2e8fc08d7b",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright-core/lib/vite/traceViewer/uiMode.html",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 727,
+      "original_sha256": "c6e92923ea7f2b617db3a2128ac8889c6c1461a77764651588e0111b729c3a3d",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright-core/lib/vite/traceViewer/xtermModule.kHJ-D0s7.css",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 2853,
+      "original_sha256": "0dd60056134e6a2994a86b59a1e9789b9f04e92924da109aef8c923acaf08ce5",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright-core/lib/webp_codec.LICENSE",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 8841,
+      "original_sha256": "995c7ee35aceb7666829b7a501ca89c0864e12b493c1174b155774ab1e03d831",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright-core/lib/webp_codec.wasm",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 565369,
+      "original_sha256": "164cd9583a3e4d081f767d3b41ff0a730443dc7535fcc5caff83561463384b79",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright-core/lib/xdg-open",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 32416,
+      "original_sha256": "7d759d54f0d4ce1beeb34ee62c587985b5042374e8de237b0dcb8cd47aa698cf",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright-core/package.json",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 876,
+      "original_sha256": "f061c58427e47e843e26d201f0a57076c734e57c734ecbbd87d4a23b7a20db9b",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright-core/types/protocol.d.ts",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 814210,
+      "original_sha256": "0410ed82a9ac63269dc1471ed249b280e2d461249a3a331e71cdb54cdf10db33",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright-core/types/structs.d.ts",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 2455,
+      "original_sha256": "c9b9179b7291c8562eb0fb781219ddbdcf36149ebd7bd355e5b4a553d6b60b81",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "node_modules/playwright-core/types/types.d.ts",
+      "published": false,
+      "reason": "dependency tree omitted; not needed by the offline app",
+      "bytes": 1131883,
+      "original_sha256": "2806f6d7810fba0306066d500cd716a6d1128d90af2c3cf71723e3ea0a8904c4",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "test/shot_attention.png",
+      "published": false,
+      "reason": "image or screenshot omitted from public release",
+      "bytes": 336119,
+      "original_sha256": "b95c00b8250a4c7a4323de352a01bb72a78ae2d561c3d4e47e7194732466e05c",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "test/shot_final.png",
+      "published": false,
+      "reason": "image or screenshot omitted from public release",
+      "bytes": 237232,
+      "original_sha256": "e5724993bcc4d041af2dfa16876d86f9c4d500086f1b6785cab24a469f75c880",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "test/shot_inspector.png",
+      "published": false,
+      "reason": "image or screenshot omitted from public release",
+      "bytes": 237781,
+      "original_sha256": "20cc3ad146b910eb482522f6801110984146202f73121bb8210766b698879cdf",
+      "public_sha256": null
+    },
+    {
+      "source_relpath": "test/shot_last_step.png",
+      "published": false,
+      "reason": "image or screenshot omitted from public release",
+      "bytes": 244899,
+      "original_sha256": "98c92d0e2f48ec43be32e94b742d63c478b45630404b10b9b61b5267128b3c95",
+      "public_sha256": null
+    },
+    {
+      "directory": "node_modules/",
+      "published": false,
+      "reason": "directory omitted; see per-file hashes",
+      "file_count": 179,
+      "tree_sha256": "01e9459579abe15866db3ec2a50c7d72d436295d065066c8fe8a436bea46991c",
+      "public_sha256": null
+    },
+    {
+      "directory": "audit/",
+      "published": false,
+      "reason": "directory omitted; see per-file hashes",
+      "file_count": 162,
+      "tree_sha256": "d25f440762a10bea575f0cbf7a72fc012d953adbb168eeec44c1034a3b550f89",
+      "public_sha256": null
+    },
+    {
+      "directory": "test/",
+      "published": false,
+      "reason": "directory omitted; see per-file hashes",
+      "file_count": 4,
+      "tree_sha256": "997f230f28678e102b1fc3061d4de352ca19716279d8ea60075e4ebba590443e",
+      "public_sha256": null
+    }
+  ],
+  "totals": {
+    "omitted_files": 346,
+    "omitted_directories": 3,
+    "image_files": 56,
+    "large_dumps": 5
+  }
+}

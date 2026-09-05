@@ -1,0 +1,148 @@
+{
+  "artifact": "Astra",
+  "attribution": {
+    "user_attribution": "Astra",
+    "logged_models": [
+      {
+        "provider": "local-glm53",
+        "model_id": "glm-5.3-flash-local",
+        "role": "initial logged session model"
+      },
+      {
+        "provider": "openai-codex",
+        "model_id": "gpt-6-astra",
+        "role": "logged implementation model"
+      }
+    ],
+    "exl3_independently_verified": false
+  },
+  "source": {
+    "tree_label": "tiny-transformer-3d",
+    "session_label": "Astra session evidence",
+    "source_files_read_only": true,
+    "original_git_history_included": false,
+    "public_paths_are_relative": true
+  },
+  "integrity": {
+    "algorithm": "SHA-256",
+    "app_manifest": "manifests/app-sanitizer.json",
+    "session_manifest": "manifests/session-sanitizer.json",
+    "app_source_files_seen": 19,
+    "app_files_published": 15,
+    "app_files_omitted": 4,
+    "session_source_sha256": "d63428aab67a517c2e9cea5b8c456a140ecf1918c3a447e834e43d7fc42fa1d7",
+    "session_public_sha256": "687eecb86e87c428eb9335c58038b75939722cd304b010d1c7cb368b96aefb31"
+  },
+  "app": {
+    "included_files": [
+      {"name":".gitignore","source_sha256":"34e9693303ecbce8346c5c396957443c431793c0e2a144f070e0cc703d8968b5","public_sha256":"34e9693303ecbce8346c5c396957443c431793c0e2a144f070e0cc703d8968b5"},
+      {"name":"README.md","source_sha256":"1a64cfd3de89e3c1345d646801bd1d5e056e6703ebad58a1cbaaa4d2a6182e92","public_sha256":"2b9f9a76f40964e037168e8efd1799a263cd19857d7c75e56ee63770a191fd9c"},
+      {"name":"THIRD_PARTY_NOTICES.md","source_sha256":"95a05d807cd7c4b0d9514719f54f8fec0173aada3e47e8353ef5f723d2f5f5a8","public_sha256":"95a05d807cd7c4b0d9514719f54f8fec0173aada3e47e8353ef5f723d2f5f5a8"},
+      {"name":"app.js","source_sha256":"5eec69d046077001d93db4a86dd57f1cc18f8d62885f0ebf5bcb1991579c6973","public_sha256":"5eec69d046077001d93db4a86dd57f1cc18f8d62885f0ebf5bcb1991579c6973"},
+      {"name":"index.html","source_sha256":"34f00eca78a087a844a5884424805f8b13dc036377e45fcee68b3240960d2db6","public_sha256":"900ddb8a0d4527ca4a79a65d957532a2909cce3af8449cdb8243576013078ff3"},
+      {"name":"model.js","source_sha256":"a782d4092c4e96441fbb539e0d678070d57f6995b17e6c1b3a2148cfbfa6d262","public_sha256":"a782d4092c4e96441fbb539e0d678070d57f6995b17e6c1b3a2148cfbfa6d262"},
+      {"name":"package.json","source_sha256":"51d7be855cc709f2ec77b8f354ff5672cf3f2314b6a5997c67951dc49080c12d","public_sha256":"574089d3373377864208df6f36b738b6f5a0540e27a8d8babe9f79811177631a"},
+      {"name":"scene.js","source_sha256":"61eddf7571663681b0bebf7c3df34e47177f16e796082d034f68cd42b9e0855c","public_sha256":"61eddf7571663681b0bebf7c3df34e47177f16e796082d034f68cd42b9e0855c"},
+      {"name":"stages.js","source_sha256":"0a89828b18fb29e3f4f5e141eb698c5cfaa12c269e83b820fa7f47e4a60e6043","public_sha256":"0a89828b18fb29e3f4f5e141eb698c5cfaa12c269e83b820fa7f47e4a60e6043"},
+      {"name":"style.css","source_sha256":"fc33f474fc26624f0f289f9793f544eb70dfb9f7c1086e3c98a3465f07888f35","public_sha256":"fc33f474fc26624f0f289f9793f544eb70dfb9f7c1086e3c98a3465f07888f35"},
+      {"name":"tests/browser.mjs","source_sha256":"c1e0d179e229e1a5174baebb0e82bfcb5384053cafbc78c3bf0800aec3c3d656","public_sha256":"3f3b45e18d8c96ce9676c5b18ebda3a3f9e04e73372d76ad389c43780c65012b"},
+      {"name":"tests/model.test.js","source_sha256":"4114c031d4f6b6a054f41f078f93ce3d73e0a620b369d3965bac069ad3f82bbc","public_sha256":"4114c031d4f6b6a054f41f078f93ce3d73e0a620b369d3965bac069ad3f82bbc"},
+      {"name":"tests/numpy_reference.py","source_sha256":"12d7b11a8315ae45f42283dc1b511d7a28a513ac96befebefef7df3214832e6c","public_sha256":"12d7b11a8315ae45f42283dc1b511d7a28a513ac96befebefef7df3214832e6c"},
+      {"name":"vendor/OrbitControls.js","source_sha256":"02bb4ade710f3e607329e37a21f098bc3ac70eb6e33daf8a65e79f4db785e7b2","public_sha256":"02bb4ade710f3e607329e37a21f098bc3ac70eb6e33daf8a65e79f4db785e7b2"},
+      {"name":"vendor/three.min.js","source_sha256":"9274bbcec8d96168626c732b5d31c775aa8cfb7eaa0599bec0c175908a2c1ce2","public_sha256":"9274bbcec8d96168626c732b5d31c775aa8cfb7eaa0599bec0c175908a2c1ce2"}
+    ],
+    "omitted_files": [
+      {"name":"tests/artifacts/attention.png","source_sha256":"95546e6c280d8ec016beeaafc769d221b4001294d4549078ac26e3a06cfb643e","reason":"binary screenshot omitted"},
+      {"name":"tests/artifacts/desktop.png","source_sha256":"21969e266ca4a3f6e9d026eeeebb3ac6080ab95d614db3a5d811de6529f2aba8","reason":"binary screenshot omitted"},
+      {"name":"tests/artifacts/mobile.png","source_sha256":"c8b4b4ae9579e4a38fb7007ebfb872a5a038612d480d8f562203de3da566aa65","reason":"binary screenshot omitted"},
+      {"name":"tests/artifacts/trace.json","source_sha256":"6e9299713a6c25c56ff53da48bdca96162e876546d73213182391e723eeb68b2","reason":"generated browser export omitted; trace is reproducible from the published app"}
+    ],
+    "excluded_directories": [
+      {"name":"node_modules/","reason":"dependency/cache directory; no installed dependencies published"}
+    ]
+  },
+  "third_party": {
+    "library": "Three.js r128",
+    "license": "MIT",
+    "notice_file": "app/THIRD_PARTY_NOTICES.md",
+    "upstream_urls": [
+      "https://threejs.org/",
+      "https://github.com/mrdoob/three.js"
+    ]
+  },
+  "session": {
+    "records": 87,
+    "trailing_blank_lines": 1,
+    "order_preserved": true,
+    "logged_model_window": {
+      "start": "2026-09-05T13:32:40.578Z",
+      "end": "2026-09-05T14:02:10.243Z"
+    },
+    "usage_records": 40,
+    "usage_totals": {
+      "input": 107066,
+      "output": 33387,
+      "cacheRead": 1207808,
+      "cacheWrite": 0,
+      "reasoning": 5055,
+      "totalTokens": 1348261
+    },
+    "sanitizer_redactions": {
+      "embedded_image_object": 4,
+      "embedded_image_url": 3,
+      "home_directory_listing": 3,
+      "local_file_url": 1,
+      "local_path": 111,
+      "localhost_port_or_route": 13,
+      "metadata_omission": 40,
+      "opaque_id": 318,
+      "sensitive_key": 40
+    },
+    "structural_omissions": {
+      "id": 129,
+      "parentId": 86,
+      "responseId": 40,
+      "toolCallId": 42,
+      "thinkingSignature": 22,
+      "textSignature": 4,
+      "cost": 40
+    },
+    "retained": [
+      "user requirements",
+      "assistant text and tool calls",
+      "tool results and errors, including historical failures",
+      "timestamps",
+      "logged model identifiers",
+      "usage fields",
+      "record order"
+    ],
+    "omitted_or_redacted": [
+      "home-directory listings",
+      "absolute local paths and local file URLs",
+      "internal/private addresses",
+      "credential-like keys and values",
+      "opaque/base64 payloads and embedded images",
+      "generated event/response/call identifiers",
+      "thinking/text signatures",
+      "cost objects"
+    ]
+  },
+  "historical_verification": {
+    "unit_tests": "9 model tests passed",
+    "cache_audit": "840 cached/full prefixes passed with exact intermediate equality",
+    "numpy_reference": "144 runs and 2736 tensor checks; maximum absolute error 3.775e-15",
+    "browser": "Final browser integration pass covered WebGL, all 18 stages, exact values, cache toggle, edits/generation, attention masking, export, dialog/playback, context limits, mobile, WebGL fallback, and no external requests",
+    "scope": "These are historical session results; coordinator performs final post-staging validation."
+  },
+  "privacy": {
+    "sanitizer": "shared tools/sanitize_public.py only; no Astra-specific sanitizer",
+    "private_paths_or_identity_in_public_files": false,
+    "embedded_images_or_screenshots_in_public_files": false,
+    "original_source_modified": false,
+    "notes": [
+      "The session intentionally remains complete except for the enumerated sensitive metadata and binary/image omissions.",
+      "No private mapping from redacted markers to originals is stored in this release.",
+      "No training or application fixes were made while preparing this evidence."
+    ]
+  }
+}

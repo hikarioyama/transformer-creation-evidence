@@ -1,0 +1,5989 @@
+{
+  "generatedAt": "2026-09-05T15:54:55.202Z",
+  "target": "http://localhost:8765/",
+  "originalRoot": "[REDACTED_LOCAL_PATH]",
+  "commands": [
+    "python3 -m http.server 8765  # run from [REDACTED_LOCAL_PATH] (hub process audit-browser-server)",
+    "BASE_URL=http://localhost:8765/ node audit/browser/run_browser_audit.js"
+  ],
+  "viewport": {
+    "width": 1680,
+    "height": 1000
+  },
+  "summary": {
+    "status": "FAIL",
+    "totalCases": 33,
+    "executedCases": 33,
+    "passCases": 26,
+    "failCases": 7,
+    "blockedCases": 0,
+    "passRateAmongExecutedPassFail": 0.7878787878787878,
+    "primary": {
+      "totalCases": 20,
+      "executedCases": 20,
+      "PASS": 16,
+      "FAIL": 4,
+      "BLOCKED": 0,
+      "pass_over_pass_plus_fail": 0.8,
+      "caseIds": [
+        "S01-load-intro",
+        "S02-close-intro-controls",
+        "S04-step-walk-all-15",
+        "S05-token-chip-selection",
+        "S05b-embedding-values-current-position",
+        "S07-qkv-values",
+        "S08-attention-L1H1",
+        "S09-L2H2-selector",
+        "S12-residual-and-mlp-values",
+        "S14-logits-probability-token-ids",
+        "S15-edit-first-token",
+        "S16-edit-middle-token",
+        "S17-edit-last-token",
+        "S19-shorten-to-length-one",
+        "S20-cache-grow-to-max-context",
+        "S21-cache-toggle-prefill-demo",
+        "S22-cache-append-twice",
+        "S23-cache-toggle-off-on-equivalence",
+        "S24-cache-edit-first",
+        "S28-verify-parity-current-sequence"
+      ]
+    },
+    "consoleErrorCount": 0,
+    "pageErrorCount": 0,
+    "requestFailureCount": 0,
+    "badResponseCount": 0
+  },
+  "cases": [
+    {
+      "id": "[REDACTED_ID_1]",
+      "domain": [
+        "runtime",
+        "disclosure",
+        "usability"
+      ],
+      "status": "PASS",
+      "executed": true,
+      "inputs": {
+        "url": "http://localhost:8765/",
+        "viewport": {
+          "width": 1680,
+          "height": 1000
+        },
+        "initialOverlay": true
+      },
+      "assertions": [
+        {
+          "name": "original app loaded",
+          "status": "PASS",
+          "expected": "TinyModel, weights, Viz3D and __app available",
+          "actual": {
+            "TinyModel": "object",
+            "TINY_WEIGHTS": "object",
+            "Viz3D": "object",
+            "__app": "object"
+          }
+        },
+        {
+          "name": "intro disclosure visible",
+          "status": "PASS",
+          "expected": "toy-model disclosure before use",
+          "actual": true
+        },
+        {
+          "name": "15 stages rendered",
+          "status": "PASS",
+          "expected": "Step 1/15",
+          "actual": "Step 1/15 — The input"
+        },
+        {
+          "name": "no page/console/request errors",
+          "status": "PASS",
+          "expected": "zero page errors, failed requests, HTTP errors, or console errors",
+          "actual": {
+            "console": [
+              {
+                "type": "warning",
+                "text": "[.WebGL-0x332c00195600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+                "location": {
+                  "url": "http://localhost:8765/",
+                  "line": 0,
+                  "column": 0,
+                  "lineNumber": 0,
+                  "columnNumber": 0
+                }
+              },
+              {
+                "type": "warning",
+                "text": "[.WebGL-0x332c00195600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+                "location": {
+                  "url": "http://localhost:8765/",
+                  "line": 0,
+                  "column": 0,
+                  "lineNumber": 0,
+                  "columnNumber": 0
+                }
+              },
+              {
+                "type": "warning",
+                "text": "[.WebGL-0x332c00195600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+                "location": {
+                  "url": "http://localhost:8765/",
+                  "line": 0,
+                  "column": 0,
+                  "lineNumber": 0,
+                  "columnNumber": 0
+                }
+              },
+              {
+                "type": "warning",
+                "text": "[.WebGL-0x332c00195600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)",
+                "location": {
+                  "url": "http://localhost:8765/",
+                  "line": 0,
+                  "column": 0,
+                  "lineNumber": 0,
+                  "columnNumber": 0
+                }
+              }
+            ],
+            "pageErrors": [],
+            "requestFailures": [],
+            "badResponses": []
+          }
+        }
+      ],
+      "max_abs_error": 0,
+      "evidence": {
+        "screenshot": "audit/browser/screenshots/S01-load-intro.png",
+        "screenshotSha256": "[REDACTED_SECRET]",
+        "state": "audit/browser/raw/S01-load-intro.json",
+        "case": "audit/browser/scenarios/S01-load-intro.json"
+      },
+      "reason": null,
+      "runtimeErrors": {
+        "console": [],
+        "pageErrors": [],
+        "requestFailures": [],
+        "badResponses": []
+      }
+    },
+    {
+      "id": "[REDACTED_ID_2]",
+      "domain": [
+        "usability",
+        "visual"
+      ],
+      "status": "PASS",
+      "executed": true,
+      "inputs": {
+        "action": "click introClose"
+      },
+      "assertions": [
+        {
+          "name": "intro closes",
+          "status": "PASS",
+          "expected": "intro removed",
+          "actual": false
+        },
+        {
+          "name": "canvas available",
+          "status": "PASS",
+          "expected": "nonzero WebGL canvas",
+          "actual": {
+            "width": 1680,
+            "height": 1000
+          }
+        },
+        {
+          "name": "editing and cache controls available",
+          "status": "PASS",
+          "expected": "append/random/pop/demo/cache controls",
+          "actual": [
+            "btnPrev",
+            "btnNext",
+            "btnPlay",
+            "btnAppend",
+            "btnRandom",
+            "btnPop",
+            "btnDemo",
+            "kvToggle",
+            "verifyBtn"
+          ]
+        },
+        {
+          "name": "no page/console/request errors",
+          "status": "PASS",
+          "expected": "zero page errors, failed requests, HTTP errors, or console errors",
+          "actual": {
+            "console": [
+              {
+                "type": "warning",
+                "text": "[.WebGL-0x332c00195600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+                "location": {
+                  "url": "http://localhost:8765/",
+                  "line": 0,
+                  "column": 0,
+                  "lineNumber": 0,
+                  "columnNumber": 0
+                }
+              },
+              {
+                "type": "warning",
+                "text": "[.WebGL-0x332c00195600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+                "location": {
+                  "url": "http://localhost:8765/",
+                  "line": 0,
+                  "column": 0,
+                  "lineNumber": 0,
+                  "columnNumber": 0
+                }
+              },
+              {
+                "type": "warning",
+                "text": "[.WebGL-0x332c00195600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+                "location": {
+                  "url": "http://localhost:8765/",
+                  "line": 0,
+                  "column": 0,
+                  "lineNumber": 0,
+                  "columnNumber": 0
+                }
+              },
+              {
+                "type": "warning",
+                "text": "[.WebGL-0x332c00195600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)",
+                "location": {
+                  "url": "http://localhost:8765/",
+                  "line": 0,
+                  "column": 0,
+                  "lineNumber": 0,
+                  "columnNumber": 0
+                }
+              }
+            ],
+            "pageErrors": [],
+            "requestFailures": [],
+            "badResponses": []
+          }
+        }
+      ],
+      "max_abs_error": 0,
+      "evidence": {
+        "screenshot": "audit/browser/screenshots/S02-close-intro-controls.png",
+        "screenshotSha256": "[REDACTED_SECRET]",
+        "state": "audit/browser/raw/S02-close-intro-controls.json",
+        "case": "audit/browser/scenarios/S02-close-intro-controls.json"
+      },
+      "reason": null,
+      "runtimeErrors": {
+        "console": [],
+        "pageErrors": [],
+        "requestFailures": [],
+        "badResponses": []
+      }
+    },
+    {
+      "id": "[REDACTED_ID_3]",
+      "domain": [
+        "stages",
+        "visual"
+      ],
+      "status": "PASS",
+      "executed": true,
+      "inputs": {
+        "stage": 0,
+        "selectedPosition": 7
+      },
+      "assertions": [
+        {
+          "name": "step state is input",
+          "status": "PASS",
+          "expected": 0,
+          "actual": 0
+        },
+        {
+          "name": "displayed text finite and populated",
+          "status": "PASS",
+          "expected": "non-empty finite explanation",
+          "actual": {
+            "title": "Step 1/15 — The input",
+            "bodyLength": 567
+          }
+        },
+        {
+          "name": "input tensor render data",
+          "status": "PASS",
+          "expected": "one embedding row per input token",
+          "actual": 8
+        },
+        {
+          "name": "no page/console/request errors",
+          "status": "PASS",
+          "expected": "zero page errors, failed requests, HTTP errors, or console errors",
+          "actual": {
+            "console": [
+              {
+                "type": "warning",
+                "text": "[.WebGL-0x332c00195600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+                "location": {
+                  "url": "http://localhost:8765/",
+                  "line": 0,
+                  "column": 0,
+                  "lineNumber": 0,
+                  "columnNumber": 0
+                }
+              },
+              {
+                "type": "warning",
+                "text": "[.WebGL-0x332c00195600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+                "location": {
+                  "url": "http://localhost:8765/",
+                  "line": 0,
+                  "column": 0,
+                  "lineNumber": 0,
+                  "columnNumber": 0
+                }
+              },
+              {
+                "type": "warning",
+                "text": "[.WebGL-0x332c00195600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+                "location": {
+                  "url": "http://localhost:8765/",
+                  "line": 0,
+                  "column": 0,
+                  "lineNumber": 0,
+                  "columnNumber": 0
+                }
+              },
+              {
+                "type": "warning",
+                "text": "[.WebGL-0x332c00195600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)",
+                "location": {
+                  "url": "http://localhost:8765/",
+                  "line": 0,
+                  "column": 0,
+                  "lineNumber": 0,
+                  "columnNumber": 0
+                }
+              }
+            ],
+            "pageErrors": [],
+            "requestFailures": [],
+            "badResponses": []
+          }
+        }
+      ],
+      "max_abs_error": 0,
+      "evidence": {
+        "screenshot": "audit/browser/screenshots/S03-step1-input.png",
+        "screenshotSha256": "[REDACTED_SECRET]",
+        "state": "audit/browser/raw/S03-step1-input.json",
+        "case": "audit/browser/scenarios/S03-step1-input.json"
+      },
+      "reason": null,
+      "runtimeErrors": {
+        "console": [],
+        "pageErrors": [],
+        "requestFailures": [],
+        "badResponses": []
+      }
+    },
+    {
+      "id": "[REDACTED_ID_4]",
+      "domain": [
+        "stages",
+        "intermediates",
+        "visual"
+      ],
+      "status": "FAIL",
+      "executed": true,
+      "inputs": {
+        "action": "click each stage 1 through 15",
+        "expectedStageTitles": [
+          "The input",
+          "Embedding: token + position",
+          "Block 1 · LayerNorm",
+          "Block 1 · Queries, Keys, Values",
+          "Block 1 · Attention — the heart",
+          "Block 1 · Residual add",
+          "Block 1 · MLP + residual",
+          "Block 2 · LayerNorm",
+          "Block 2 · Queries, Keys, Values",
+          "Block 2 · Attention",
+          "Block 2 · Residual add",
+          "Block 2 · MLP + residual → X²",
+          "Final LayerNorm",
+          "Unembed → logits",
+          "Softmax → next-token prediction"
+        ]
+      },
+      "assertions": [
+        {
+          "name": "all 15 stage headings and explanations",
+          "status": "PASS",
+          "expected": [
+            "The input",
+            "Embedding: token + position",
+            "Block 1 · LayerNorm",
+            "Block 1 · Queries, Keys, Values",
+            "Block 1 · Attention — the heart",
+            "Block 1 · Residual add",
+            "Block 1 · MLP + residual",
+            "Block 2 · LayerNorm",
+            "Block 2 · Queries, Keys, Values",
+            "Block 2 · Attention",
+            "Block 2 · Residual add",
+            "Block 2 · MLP + residual → X²",
+            "Final LayerNorm",
+            "Unembed → logits",
+            "Softmax → next-token prediction"
+          ],
+          "actual": [
+            "Step 1/15 — The input",
+            "Step 2/15 — Embedding: token + position",
+            "Step 3/15 — Block 1 · LayerNorm",
+            "Step 4/15 — Block 1 · Queries, Keys, Values",
+            "Step 5/15 — Block 1 · Attention — the heart",
+            "Step 6/15 — Block 1 · Residual add",
+            "Step 7/15 — Block 1 · MLP + residual",
+            "Step 8/15 — Block 2 · LayerNorm",
+            "Step 9/15 — Block 2 · Queries, Keys, Values",
+            "Step 10/15 — Block 2 · Attention",
+            "Step 11/15 — Block 2 · Residual add",
+            "Step 12/15 — Block 2 · MLP + residual → X²",
+            "Step 13/15 — Final LayerNorm",
+            "Step 14/15 — Unembed → logits",
+            "Step 15/15 — Softmax → next-token prediction"
+          ]
+        },
+        {
+          "name": "all 15 stages expose current trace rows",
+          "status": "PASS",
+          "expected": "trace T matches current sequence at every stage",
+          "actual": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+          ]
+        },
+        {
+          "name": "all 15 explanations contain finite text",
+          "status": "PASS",
+          "expected": "no undefined/NaN/Infinity",
+          "actual": [
+            {
+              "body": 567,
+              "finite": true
+            },
+            {
+              "body": 411,
+              "finite": true
+            },
+            {
+              "body": 361,
+              "finite": true
+            },
+            {
+              "body": 396,
+              "finite": true
+            },
+            {
+              "body": 701,
+              "finite": true
+            },
+            {
+              "body": 342,
+              "finite": true
+            },
+            {
+              "body": 465,
+              "finite": true
+            },
+            {
+              "body": 118,
+              "finite": true
+            },
+            {
+              "body": 110,
+              "finite": true
+            },
+            {
+              "body": 417,
+              "finite": true
+            },
+            {
+              "body": 75,
+              "finite": true
+            },
+            {
+              "body": 233,
+              "finite": true
+            },
+            {
+              "body": 148,
+              "finite": true
+            },
+            {
+              "body": 300,
+              "finite": true
+            },
+            {
+              "body": 388,
+              "finite": true
+            }
+          ]
+        },
+        {
+          "name": "selection marker stays on focused stage",
+          "status": "FAIL",
+          "expected": "exactly focused stage marker per step",
+          "actual": [
+            {
+              "step": 1,
+              "expected": [
+                0
+              ],
+              "actual": [
+                0
+              ]
+            },
+            {
+              "step": 2,
+              "expected": [
+                0
+              ],
+              "actual": [
+                0,
+                1
+              ]
+            },
+            {
+              "step": 3,
+              "expected": [
+                1
+              ],
+              "actual": [
+                0,
+                1,
+                2
+              ]
+            },
+            {
+              "step": 4,
+              "expected": [
+                2
+              ],
+              "actual": [
+                0,
+                1,
+                2,
+                3
+              ]
+            },
+            {
+              "step": 5,
+              "expected": [
+                3
+              ],
+              "actual": [
+                0,
+                1,
+                2,
+                3,
+                4
+              ]
+            },
+            {
+              "step": 6,
+              "expected": [
+                4
+              ],
+              "actual": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5
+              ]
+            },
+            {
+              "step": 7,
+              "expected": [
+                5
+              ],
+              "actual": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+              ]
+            },
+            {
+              "step": 8,
+              "expected": [
+                6
+              ],
+              "actual": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7
+              ]
+            },
+            {
+              "step": 9,
+              "expected": [
+                7
+              ],
+              "actual": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8
+              ]
+            },
+            {
+              "step": 10,
+              "expected": [
+                8
+              ],
+              "actual": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9
+              ]
+            },
+            {
+              "step": 11,
+              "expected": [
+                9
+              ],
+              "actual": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10
+              ]
+            },
+            {
+              "step": 12,
+              "expected": [
+                10
+              ],
+              "actual": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11
+              ]
+            },
+            {
+              "step": 13,
+              "expected": [
+                11
+              ],
+              "actual": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11
+              ]
+            },
+            {
+              "step": 14,
+              "expected": [
+                12
+              ],
+              "actual": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11
+              ]
+            },
+            {
+              "step": 15,
+              "expected": [
+                12
+              ],
+              "actual": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11
+              ]
+            }
+          ]
+        },
+        {
+          "name": "no page/console/request errors",
+          "status": "PASS",
+          "expected": "zero page errors, failed requests, HTTP errors, or console errors",
+          "actual": {
+            "console": [
+              {
+                "type": "warning",
+                "text": "[.WebGL-0x332c00195600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+                "location": {
+                  "url": "http://localhost:8765/",
+                  "line": 0,
+                  "column": 0,
+                  "lineNumber": 0,
+                  "columnNumber": 0
+                }
+              },
+              {
+                "type": "warning",
+                "text": "[.WebGL-0x332c00195600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+                "location": {
+                  "url": "http://localhost:8765/",
+                  "line": 0,
+                  "column": 0,
+                  "lineNumber": 0,
+                  "columnNumber": 0
+                }
+              },
+              {
+                "type": "warning",
+                "text": "[.WebGL-0x332c00195600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+                "location": {
+                  "url": "http://localhost:8765/",
+                  "line": 0,
+                  "column": 0,
+                  "lineNumber": 0,
+                  "columnNumber": 0
+                }
+              },
+              {
+                "type": "warning",
+                "text": "[.WebGL-0x332c00195600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)",
+                "location": {
+                  "url": "http://localhost:8765/",
+                  "line": 0,
+                  "column": 0,
+                  "lineNumber": 0,
+                  "columnNumber": 0
+                }
+              }
+            ],
+            "pageErrors": [],
+            "requestFailures": [],
+            "badResponses": []
+          }
+        }
+      ],
+      "max_abs_error": 0,
+      "evidence": {
+        "screenshot": "audit/browser/screenshots/S04-step-walk-all-15.png",
+        "screenshotSha256": "[REDACTED_SECRET]",
+        "state": "audit/browser/raw/S04-step-walk-all-15.json",
+        "case": "audit/browser/scenarios/S04-step-walk-all-15.json"
+      },
+      "reason": [
+        {
+          "name": "selection marker stays on focused stage",
+          "expected": "exactly focused stage marker per step",
+          "actual": [
+            {
+              "step": 1,
+              "expected": [
+                0
+              ],
+              "actual": [
+                0
+              ]
+            },
+            {
+              "step": 2,
+              "expected": [
+                0
+              ],
+              "actual": [
+                0,
+                1
+              ]
+            },
+            {
+              "step": 3,
+              "expected": [
+                1
+              ],
+              "actual": [
+                0,
+                1,
+                2
+              ]
+            },
+            {
+              "step": 4,
+              "expected": [
+                2
+              ],
+              "actual": [
+                0,
+                1,
+                2,
+                3
+              ]
+            },
+            {
+              "step": 5,
+              "expected": [
+                3
+              ],
+              "actual": [
+                0,
+                1,
+                2,
+                3,
+                4
+              ]
+            },
+            {
+              "step": 6,
+              "expected": [
+                4
+              ],
+              "actual": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5
+              ]
+            },
+            {
+              "step": 7,
+              "expected": [
+                5
+              ],
+              "actual": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+              ]
+            },
+            {
+              "step": 8,
+              "expected": [
+                6
+              ],
+              "actual": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7
+              ]
+            },
+            {
+              "step": 9,
+              "expected": [
+                7
+              ],
+              "actual": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8
+              ]
+            },
+            {
+              "step": 10,
+              "expected": [
+                8
+              ],
+              "actual": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9
+              ]
+            },
+            {
+              "step": 11,
+              "expected": [
+                9
+              ],
+              "actual": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10
+              ]
+            },
+            {
+              "step": 12,
+              "expected": [
+                10
+              ],
+              "actual": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11
+              ]
+            },
+            {
+              "step": 13,
+              "expected": [
+                11
+              ],
+              "actual": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11
+              ]
+            },
+            {
+              "step": 14,
+              "expected": [
+                12
+              ],
+              "actual": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11
+              ]
+            },
+            {
+              "step": 15,
+              "expected": [
+                12
+              ],
+              "actual": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11
+              ]
+            }
+          ]
+        }
+      ],
+      "runtimeErrors": {
+        "console": [],
+        "pageErrors": [],
+        "requestFailures": [],
+        "badResponses": []
+      }
+    },
+    {
+      "id": "[REDACTED_ID_5]",
+      "domain": [
+        "token-selection",
+        "usability",
+        "intermediates"
+      ],
+      "status": "FAIL",
+      "executed": true,
+      "inputs": {
+        "step": 1,
+        "clickedPosition": 2,
+        "action": "click token chip without changing token"
+      },
+      "assertions": [
+        {
+          "name": "token chip opens editor",
+          "status": "PASS",
+          "expected": "one palette popover",
+          "actual": 1
+        },
+        {
+          "name": "token chip selects clicked position",
+          "status": "FAIL",
+          "expected": 2,
+          "actual": 7
+        },
+        {
+          "name": "values panel follows clicked position",
+          "status": "FAIL",
+          "expected": "position 2 in values title",
+          "actual": "Residual stream X⁰ at position 7 (fish)"
+        },
+        {
+          "name": "no page/console/request errors",
+          "status": "PASS",
+          "expected": "zero page errors, failed requests, HTTP errors, or console errors",
+          "actual": {
+            "console": [
+              {
+                "type": "warning",
+                "text": "[.WebGL-0x332c00195600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+                "location": {
+                  "url": "http://localhost:8765/",
+                  "line": 0,
+                  "column": 0,
+                  "lineNumber": 0,
+                  "columnNumber": 0
+                }
+              },
+              {
+                "type": "warning",
+                "text": "[.WebGL-0x332c00195600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+                "location": {
+                  "url": "http://localhost:8765/",
+                  "line": 0,
+                  "column": 0,
+                  "lineNumber": 0,
+                  "columnNumber": 0
+                }
+              },
+              {
+                "type": "warning",
+                "text": "[.WebGL-0x332c00195600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+                "location": {
+                  "url": "http://localhost:8765/",
+                  "line": 0,
+                  "column": 0,
+                  "lineNumber": 0,
+                  "columnNumber": 0
+                }
+              },
+              {
+                "type": "warning",
+                "text": "[.WebGL-0x332c00195600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)",
+                "location": {
+                  "url": "http://localhost:8765/",
+                  "line": 0,
+                  "column": 0,
+                  "lineNumber": 0,
+                  "columnNumber": 0
+                }
+              }
+            ],
+            "pageErrors": [],
+            "requestFailures": [],
+            "badResponses": []
+          }
+        }
+      ],
+      "max_abs_error": 0,
+      "evidence": {
+        "screenshot": "audit/browser/screenshots/S05-token-chip-selection.png",
+        "screenshotSha256": "[REDACTED_SECRET]",
+        "state": "audit/browser/raw/S05-token-chip-selection.json",
+        "case": "audit/browser/scenarios/S05-token-chip-selection.json"
+      },
+      "reason": [
+        {
+          "name": "token chip selects clicked position",
+          "expected": 2,
+          "actual": 7
+        },
+        {
+          "name": "values panel follows clicked position",
+          "expected": "position 2 in values title",
+          "actual": "Residual stream X⁰ at position 7 (fish)"
+        }
+      ],
+      "runtimeErrors": {
+        "console": [],
+        "pageErrors": [],
+        "requestFailures": [],
+        "badResponses": []
+      }
+    },
+    {
+      "id": "[REDACTED_ID_6]",
+      "domain": [
+        "intermediates",
+        "output"
+      ],
+      "status": "PASS",
+      "executed": true,
+      "inputs": {
+        "step": 1,
+        "selectedPosition": 7,
+        "action": "read current selected token values"
+      },
+      "assertions": [
+        {
+          "name": "embedding title follows current selection",
+          "status": "PASS",
+          "expected": "position 7 in values title",
+          "actual": "Residual stream X⁰ at position 7 (fish)"
+        },
+        {
+          "name": "token embedding display matches all 16 trace values",
+          "status": "PASS",
+          "expected": "E row equals tokEmb",
+          "actual": {
+            "max_abs_error": 0,
+            "shown": [
+              -0.13966306196834952,
+              0.45574942962488835,
+              0.43603311257213057,
+              -0.781901110834151,
+              -1.2157677263259021,
+              0.47306357064953025,
+              -0.3991491151379041,
+              0.45513024894382004,
+              -0.7937266298722585,
+              0.030332426759367894,
+              0.6774805571607642,
+              -0.7477085373646757,
+              -0.9926613779995114,
+              0.9196287294063032,
+              -0.5723685083505873,
+              1.3278415404305133
+            ],
+            "expected": [
+              -0.13966306196834952,
+              0.45574942962488835,
+              0.43603311257213057,
+              -0.781901110834151,
+              -1.2157677263259021,
+              0.47306357064953025,
+              -0.3991491151379041,
+              0.45513024894382004,
+              -0.7937266298722585,
+              0.030332426759367894,
+              0.6774805571607642,
+              -0.7477085373646757,
+              -0.9926613779995114,
+              0.9196287294063032,
+              -0.5723685083505873,
+              1.3278415404305133
+            ]
+          },
+          "max_abs_error": 0
+        },
+        {
+          "name": "position embedding display matches all 16 trace values",
+          "status": "PASS",
+          "expected": "P row equals posEmb",
+          "actual": {
+            "max_abs_error": 0,
+            "shown": [
+              0.9488872788817662,
+              2.0152131316216115,
+              -0.5253771569873761,
+              1.762060852780368,
+              -1.1833137867121073,
+              -1.7827572553459503,
+              -2.280552521532774,
+              0.05944834373717539,
+              -0.544514672728111,
+              -0.027092994795322504,
+              -0.43286767030643264,
+              1.2022979687567974,
+              -0.2097280922238165,
+              -1.170894721026932,
+              0.48106401686039896,
+              2.028039973285409
+            ],
+            "expected": [
+              0.9488872788817662,
+              2.0152131316216115,
+              -0.5253771569873761,
+              1.762060852780368,
+              -1.1833137867121073,
+              -1.7827572553459503,
+              -2.280552521532774,
+              0.05944834373717539,
+              -0.544514672728111,
+              -0.027092994795322504,
+              -0.43286767030643264,
+              1.2022979687567974,
+              -0.2097280922238165,
+              -1.170894721026932,
+              0.48106401686039896,
+              2.028039973285409
+            ]
+          },
+          "max_abs_error": 0
+        },
+        {
+          "name": "residual embedding display matches all 16 trace values",
+          "status": "PASS",
+          "expected": "X⁰ row equals embed",
+          "actual": {
+            "max_abs_error": 0,
+            "shown": [
+              0.8092242169134166,
+              2.4709625612465,
+              -0.08934404441524552,
+              0.980159741946217,
+              -2.399081513038009,
+              -1.30969368469642,
+              -2.679701636670678,
+              0.5145785926809954,
+              -1.3382413026003697,
+              0.0032394319640453896,
+              0.24461288685433152,
+              0.4545894313921217,
+              -1.202389470223328,
+              -0.2512659916206288,
+              -0.09130449149018832,
+              3.3558815137159224
+            ],
+            "expected": [
+              0.8092242169134166,
+              2.4709625612465,
+              -0.08934404441524552,
+              0.980159741946217,
+              -2.399081513038009,
+              -1.30969368469642,
+              -2.679701636670678,
+              0.5145785926809954,
+              -1.3382413026003697,
+              0.0032394319640453896,
+              0.24461288685433152,
+              0.4545894313921217,
+              -1.202389470223328,
+              -0.2512659916206288,
+              -0.09130449149018832,
+              3.3558815137159224
+            ]
+          },
+          "max_abs_error": 0
+        },
+        {
+          "name": "token and position embeddings rendered",
+          "status": "PASS",
+          "expected": "E, P[7] and X⁰[7] labels",
+          "actual": "E[12]\n0\n−0.140\n1\n0.456\n2\n0.436\n3\n−0.782\n4\n−1.216\n5\n0.473\n6\n−0.399\n7\n0.455\n8\n−0.794\n9\n0.030\n10\n0.677\n11\n−0.748\n12\n−0.993\n13\n0.920\n14\n−0.572\n15\n1.328\nP[7]\n0\n0.949\n1\n2.015\n2\n−0.525\n3\n"
+        },
+        {
+          "name": "no page/console/request errors",
+          "status": "PASS",
+          "expected": "zero page errors, failed requests, HTTP errors, or console errors",
+          "actual": {
+            "console": [
+              {
+                "type": "warning",
+                "text": "[.WebGL-0x332c00195600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+                "location": {
+                  "url": "http://localhost:8765/",
+                  "line": 0,
+                  "column": 0,
+                  "lineNumber": 0,
+                  "columnNumber": 0
+                }
+              },
+              {
+                "type": "warning",
+                "text": "[.WebGL-0x332c00195600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+                "location": {
+                  "url": "http://localhost:8765/",
+                  "line": 0,
+                  "column": 0,
+                  "lineNumber": 0,
+                  "columnNumber": 0
+                }
+              },
+              {
+                "type": "warning",
+                "text": "[.WebGL-0x332c00195600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+                "location": {
+                  "url": "http://localhost:8765/",
+                  "line": 0,
+                  "column": 0,
+                  "lineNumber": 0,
+                  "columnNumber": 0
+                }
+              },
+              {
+                "type": "warning",
+                "text": "[.WebGL-0x332c00195600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)",
+                "location": {
+                  "url": "http://localhost:8765/",
+                  "line": 0,
+                  "column": 0,
+                  "lineNumber": 0,
+                  "columnNumber": 0
+                }
+              }
+            ],
+            "pageErrors": [],
+            "requestFailures": [],
+            "badResponses": []
+          }
+        }
+      ],
+      "max_abs_error": 0,
+      "evidence": {
+        "screenshot": "audit/browser/screenshots/S05b-embedding-values-current-position.png",
+        "screenshotSha256": "[REDACTED_SECRET]",
+        "state": "audit/browser/raw/S05b-embedding-values-current-position.json",
+        "case": "audit/browser/scenarios/S05b-embedding-values-current-position.json"
+      },
+      "reason": null,
+      "runtimeErrors": {
+        "console": [],
+        "pageErrors": [],
+        "requestFailures": [],
+        "badResponses": []
+      }
+    },
+    {
+      "id": "[REDACTED_ID_7]",
+      "domain": [
+        "intermediates"
+      ],
+      "status": "PASS",
+      "executed": true,
+      "inputs": {
+        "step": 2,
+        "selectedPosition": 7
+      },
+      "assertions": [
+        {
+          "name": "LayerNorm stage selected",
+          "status": "PASS",
+          "expected": "Block 1 LayerNorm values",
+          "actual": {
+            "step": "Step 3/15 — Block 1 · LayerNorm",
+            "values": "LayerNorm 1 at position 7"
+          }
+        },
+        {
+          "name": "LayerNorm vectors are finite",
+          "status": "PASS",
+          "expected": "raw finite vector titles",
+          "actual": 32
+        },
+        {
+          "name": "LayerNorm input display matches all 16 trace values",
+          "status": "PASS",
+          "expected": "before row equals embed",
+          "actual": {
+            "max_abs_error": 0,
+            "shown": [
+              0.8092242169134166,
+              2.4709625612465,
+              -0.08934404441524552,
+              0.980159741946217,
+              -2.399081513038009,
+              -1.30969368469642,
+              -2.679701636670678,
+              0.5145785926809954,
+              -1.3382413026003697,
+              0.0032394319640453896,
+              0.24461288685433152,
+              0.4545894313921217,
+              -1.202389470223328,
+              -0.2512659916206288,
+              -0.09130449149018832,
+              3.3558815137159224
+            ],
+            "expected": [
+              0.8092242169134166,
+              2.4709625612465,
+              -0.08934404441524552,
+              0.980159741946217,
+              -2.399081513038009,
+              -1.30969368469642,
+              -2.679701636670678,
+              0.5145785926809954,
+              -1.3382413026003697,
+              0.0032394319640453896,
+              0.24461288685433152,
+              0.4545894313921217,
+              -1.202389470223328,
+              -0.2512659916206288,
+              -0.09130449149018832,
+              3.3558815137159224
+            ]
+          },
+          "max_abs_error": 0
+        },
+        {
+          "name": "LayerNorm output display matches all 16 trace values",
+          "status": "PASS",
+          "expected": "after row equals block0.ln1",
+          "actual": {
+            "max_abs_error": 0,
+            "shown": [
+              0.8838049335484272,
+              1.6781795057673423,
+              -0.026738303393353376,
+              0.8378010294043403,
+              -1.6404016127582053,
+              -1.0347260208824132,
+              -1.8846666999397785,
+              0.45653334851820576,
+              -0.6862366271936761,
+              -0.23867690171186592,
+              0.5037059181496121,
+              0.33870493021332937,
+              -0.7815747000370139,
+              -0.2616892624073663,
+              0.05366683466311984,
+              2.849849628563649
+            ],
+            "expected": [
+              0.8838049335484272,
+              1.6781795057673423,
+              -0.026738303393353376,
+              0.8378010294043403,
+              -1.6404016127582053,
+              -1.0347260208824132,
+              -1.8846666999397785,
+              0.45653334851820576,
+              -0.6862366271936761,
+              -0.23867690171186592,
+              0.5037059181496121,
+              0.33870493021332937,
+              -0.7815747000370139,
+              -0.2616892624073663,
+              0.05366683466311984,
+              2.849849628563649
+            ]
+          },
+          "max_abs_error": 0
+        },
+        {
+          "name": "no page/console/request errors",
+          "status": "PASS",
+          "expected": "zero page errors, failed requests, HTTP errors, or console errors",
+          "actual": {
+            "console": [
+              {
+                "type": "warning",
+                "text": "[.WebGL-0x332c00195600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+                "location": {
+                  "url": "http://localhost:8765/",
+                  "line": 0,
+                  "column": 0,
+                  "lineNumber": 0,
+                  "columnNumber": 0
+                }
+              },
+              {
+                "type": "warning",
+                "text": "[.WebGL-0x332c00195600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+                "location": {
+                  "url": "http://localhost:8765/",
+                  "line": 0,
+                  "column": 0,
+                  "lineNumber": 0,
+                  "columnNumber": 0
+                }
+              },
+              {
+                "type": "warning",
+                "text": "[.WebGL-0x332c00195600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+                "location": {
+                  "url": "http://localhost:8765/",
+                  "line": 0,
+                  "column": 0,
+                  "lineNumber": 0,
+                  "columnNumber": 0
+                }
+              },
+              {
+                "type": "warning",
+                "text": "[.WebGL-0x332c00195600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)",
+                "location": {
+                  "url": "http://localhost:8765/",
+                  "line": 0,
+                  "column": 0,
+                  "lineNumber": 0,
+                  "columnNumber": 0
+                }
+              }
+            ],
+            "pageErrors": [],
+            "requestFailures": [],
+            "badResponses": []
+          }
+        }
+      ],
+      "max_abs_error": 0,
+      "evidence": {
+        "screenshot": "audit/browser/screenshots/S06-layernorm-values.png",
+        "screenshotSha256": "[REDACTED_SECRET]",
+        "state": "audit/browser/raw/S06-layernorm-values.json",
+        "case": "audit/browser/scenarios/S06-layernorm-values.json"
+      },
+      "reason": null,
+      "runtimeErrors": {
+        "console": [],
+        "pageErrors": [],
+        "requestFailures": [],
+        "badResponses": []
+      }
+    },
+    {
+      "id": "[REDACTED_ID_8]",
+      "domain": [
+        "intermediates"
+      ],
+      "status": "PASS",
+      "executed": true,
+      "inputs": {
+        "step": 3,
+        "selectedPosition": 7
+      },
+      "assertions": [
+        {
+          "name": "QKV stage labels current position",
+          "status": "PASS",
+          "expected": "Q/K/V at position 7",
+          "actual": "Q · K · V at position 7 — head 0 = dims 0–7, head 1 = dims 8–15"
+        },
+        {
+          "name": "QKV raw values rendered",
+          "status": "PASS",
+          "expected": "48 values (Q,K,V each 16)",
+          "actual": 48
+        },
+        {
+          "name": "Q display matches all 16 trace values",
+          "status": "PASS",
+          "expected": "Q row equals block0.q",
+          "actual": {
+            "max_abs_error": 0,
+            "shown": [
+              -1.052435294613754,
+              -0.6639031872355711,
+              -0.5178122159373134,
+              -0.5882748101078236,
+              0.3097815869950684,
+              0.9831382593609395,
+              1.9598117601686453,
+              1.7832204926921622,
+              0.11046670085410848,
+              -2.579719419960012,
+              -1.9653894759469046,
+              -2.160311146262308,
+              1.061797989434036,
+              -1.4265008841221536,
+              3.138401107024637,
+              -1.195372357893145
+            ],
+            "expected": [
+              -1.052435294613754,
+              -0.6639031872355711,
+              -0.5178122159373134,
+              -0.5882748101078236,
+              0.3097815869950684,
+              0.9831382593609395,
+              1.9598117601686453,
+              1.7832204926921622,
+              0.11046670085410848,
+              -2.579719419960012,
+              -1.9653894759469046,
+              -2.160311146262308,
+              1.061797989434036,
+              -1.4265008841221536,
+              3.138401107024637,
+              -1.195372357893145
+            ]
+          },
+          "max_abs_error": 0
+        },
+        {
+          "name": "K display matches all 16 trace values",
+          "status": "PASS",
+          "expected": "K row equals block0.k",
+          "actual": {
+            "max_abs_error": 0,
+            "shown": [
+              -1.2325808827325306,
+              2.353112583040342,
+              1.5259452903461934,
+              -3.50275206373001,
+              -0.15281022820497536,
+              3.098130223185523,
+              -1.8801443544167507,
+              0.6094806187091837,
+              2.061449259604961,
+              -2.06787314656379,
+              1.839520200613354,
+              1.4471148415981034,
+              2.587447373709165,
+              5.254887849194695,
+              -0.7577306305427753,
+              -0.0799175538310957
+            ],
+            "expected": [
+              -1.2325808827325306,
+              2.353112583040342,
+              1.5259452903461934,
+              -3.50275206373001,
+              -0.15281022820497536,
+              3.098130223185523,
+              -1.8801443544167507,
+              0.6094806187091837,
+              2.061449259604961,
+              -2.06787314656379,
+              1.839520200613354,
+              1.4471148415981034,
+              2.587447373709165,
+              5.254887849194695,
+              -0.7577306305427753,
+              -0.0799175538310957
+            ]
+          },
+          "max_abs_error": 0
+        },
+        {
+          "name": "V display matches all 16 trace values",
+          "status": "PASS",
+          "expected": "V row equals block0.v",
+          "actual": {
+            "max_abs_error": 0,
+            "shown": [
+              1.1648310081644708,
+              1.0052072108018202,
+              1.3280310091884728,
+              2.506702396047221,
+              -0.3387211926787477,
+              -0.8980397799247863,
+              -2.1340232745446683,
+              -0.7379033010477467,
+              -2.653009001658318,
+              -3.7503794898642693,
+              -1.9846557510948144,
+              0.8390384657589409,
+              -2.1560305682003906,
+              -0.9160849663477577,
+              0.6122519202455543,
+              -0.19393833494624418
+            ],
+            "expected": [
+              1.1648310081644708,
+              1.0052072108018202,
+              1.3280310091884728,
+              2.506702396047221,
+              -0.3387211926787477,
+              -0.8980397799247863,
+              -2.1340232745446683,
+              -0.7379033010477467,
+              -2.653009001658318,
+              -3.7503794898642693,
+              -1.9846557510948144,
+              0.8390384657589409,
+              -2.1560305682003906,
+              -0.9160849663477577,
+              0.6122519202455543,
+              -0.19393833494624418
+            ]
+          },
+          "max_abs_error": 0
+        },
+        {
+          "name": "no page/console/request errors",
+          "status": "PASS",
+          "expected": "zero page errors, failed requests, HTTP errors, or console errors",
+          "actual": {
+            "console": [
+              {
+                "type": "warning",
+                "text": "[.WebGL-0x332c00195600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+                "location": {
+                  "url": "http://localhost:8765/",
+                  "line": 0,
+                  "column": 0,
+                  "lineNumber": 0,
+                  "columnNumber": 0
+                }
+              },
+              {
+                "type": "warning",
+                "text": "[.WebGL-0x332c00195600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+                "location": {
+                  "url": "http://localhost:8765/",
+                  "line": 0,
+                  "column": 0,
+                  "lineNumber": 0,
+                  "columnNumber": 0
+                }
+              },
+              {
+                "type": "warning",
+                "text": "[.WebGL-0x332c00195600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+                "location": {
+                  "url": "http://localhost:8765/",
+                  "line": 0,
+                  "column": 0,
+                  "lineNumber": 0,
+                  "columnNumber": 0
+                }
+              },
+              {
+                "type": "warning",
+                "text": "[.WebGL-0x332c00195600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)",
+                "location": {
+                  "url": "http://localhost:8765/",
+                  "line": 0,
+                  "column": 0,
+                  "lineNumber": 0,
+                  "columnNumber": 0
+                }
+              }
+            ],
+            "pageErrors": [],
+            "requestFailures": [],
+            "badResponses": []
+          }
+        }
+      ],
+      "max_abs_error": 0,
+      "evidence": {
+        "screenshot": "audit/browser/screenshots/S07-qkv-values.png",
+        "screenshotSha256": "[REDACTED_SECRET]",
+        "state": "audit/browser/raw/S07-qkv-values.json",
+        "case": "audit/browser/scenarios/S07-qkv-values.json"
+      },
+      "reason": null,
+      "runtimeErrors": {
+        "console": [],
+        "pageErrors": [],
+        "requestFailures": [],
+        "badResponses": []
+      }
+    },
+    {
+      "id": "[REDACTED_ID_9]",
+      "domain": [
+        "attention",
+        "visual",
+        "intermediates"
+      ],
+      "status": "FAIL",
+      "executed": true,
+      "inputs": {
+        "step": 4,
+        "layer": 0,
+        "head": 0,
+        "selectedPosition": 7
+      },
+      "assertions": [
+        {
+          "name": "attention inspector follows L1H1",
+          "status": "PASS",
+          "expected": "Layer 1, head 0 summary",
+          "actual": "Layer 1, head 0: 🐟 at position 7 attends most to position 6 💧 with 67.9% — the previous token: the circuit this toy model was trained to find."
+        },
+        {
+          "name": "attention winner agrees with trace",
+          "status": "PASS",
+          "expected": "winner position 6",
+          "actual": "Layer 1, head 0: 🐟 at position 7 attends most to position 6 💧 with 67.9% — the previous token: the circuit this toy model was trained to find."
+        },
+        {
+          "name": "causal attention row has i+1 keys",
+          "status": "PASS",
+          "expected": 8,
+          "actual": 8
+        },
+        {
+          "name": "L1 arcs rendered in L1 stage",
+          "status": "FAIL",
+          "expected": "at least one L1 TubeGeometry arc",
+          "actual": {
+            "b0": {
+              "tubes": 0,
+              "rings": 0,
+              "samples": [],
+              "stageZ": -45,
+              "postGroupZ": 3.4,
+              "arcGroupZ": 0,
+              "postWorldZ": -41.6,
+              "arcWorldZ": null
+            },
+            "b1": {
+              "tubes": 28,
+              "rings": 1,
+              "samples": [
+                {
+                  "radius": 0.09000000000000001,
+                  "opacity": 0.15000000000000002,
+                  "color": "4fc3f7"
+                },
+                {
+                  "radius": 0.0893806203857284,
+                  "opacity": 0.149115171979612,
+                  "color": "4fc3f7"
+                },
+                {
+                  "radius": 0.02061937961427161,
+                  "opacity": 0.05088482802038802,
+                  "color": "4fc3f7"
+                },
+                {
+                  "radius": 0.08987761619548627,
+                  "opacity": 0.14982516599355183,
+                  "color": "4fc3f7"
+                },
+                {
+                  "radius": 0.04404567183798021,
+                  "opacity": 0.08435095976854315,
+                  "color": "4fc3f7"
+                },
+                {
+                  "radius": 0.021661151631379195,
+                  "opacity": 0.05237307375911314,
+                  "color": "4fc3f7"
+                },
+                {
+                  "radius": 0.06381852250988809,
+                  "opacity": 0.11259788929984013,
+                  "color": "4fc3f7"
+                },
+                {
+                  "radius": 0.02047465402075252,
+                  "opacity": 0.050678077172503604,
+                  "color": "4fc3f7"
+                }
+              ],
+              "stageZ": -120,
+              "postGroupZ": 3.4,
+              "arcGroupZ": 0,
+              "postWorldZ": -116.6,
+              "arcWorldZ": -120
+            }
+          }
+        },
+        {
+          "name": "no page/console/request errors",
+          "status": "PASS",
+          "expected": "zero page errors, failed requests, HTTP errors, or console errors",
+          "actual": {
+            "console": [
+              {
+                "type": "warning",
+                "text": "[.WebGL-0x332c00195600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+                "location": {
+                  "url": "http://localhost:8765/",
+                  "line": 0,
+                  "column": 0,
+                  "lineNumber": 0,
+                  "columnNumber": 0
+                }
+              },
+              {
+                "type": "warning",
+                "text": "[.WebGL-0x332c00195600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+                "location": {
+                  "url": "http://localhost:8765/",
+                  "line": 0,
+                  "column": 0,
+                  "lineNumber": 0,
+                  "columnNumber": 0
+                }
+              },
+              {
+                "type": "warning",
+                "text": "[.WebGL-0x332c00195600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+                "location": {
+                  "url": "http://localhost:8765/",
+                  "line": 0,
+                  "column": 0,
+                  "lineNumber": 0,
+                  "columnNumber": 0
+                }
+              },
+              {
+                "type": "warning",
+                "text": "[.WebGL-0x332c00195600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)",
+                "location": {
+                  "url": "http://localhost:8765/",
+                  "line": 0,
+                  "column": 0,
+                  "lineNumber": 0,
+                  "columnNumber": 0
+                }
+              }
+            ],
+            "pageErrors": [],
+            "requestFailures": [],
+            "badResponses": []
+          }
+        }
+      ],
+      "max_abs_error": 0,
+      "evidence": {
+        "screenshot": "audit/browser/screenshots/S08-attention-L1H1.png",
+        "screenshotSha256": "[REDACTED_SECRET]",
+        "state": "audit/browser/raw/S08-attention-L1H1.json",
+        "case": "audit/browser/scenarios/S08-attention-L1H1.json"
+      },
+      "reason": [
+        {
+          "name": "L1 arcs rendered in L1 stage",
+          "expected": "at least one L1 TubeGeometry arc",
+          "actual": {
+            "b0": {
+              "tubes": 0,
+              "rings": 0,
+              "samples": [],
+              "stageZ": -45,
+              "postGroupZ": 3.4,
+              "arcGroupZ": 0,
+              "postWorldZ": -41.6,
+              "arcWorldZ": null
+            },
+            "b1": {
+              "tubes": 28,
+              "rings": 1,
+              "samples": [
+                {
+                  "radius": 0.09000000000000001,
+                  "opacity": 0.15000000000000002,
+                  "color": "4fc3f7"
+                },
+                {
+                  "radius": 0.0893806203857284,
+                  "opacity": 0.149115171979612,
+                  "color": "4fc3f7"
+                },
+                {
+                  "radius": 0.02061937961427161,
+                  "opacity": 0.05088482802038802,
+                  "color": "4fc3f7"
+                },
+                {
+                  "radius": 0.08987761619548627,
+                  "opacity": 0.14982516599355183,
+                  "color": "4fc3f7"
+                },
+                {
+                  "radius": 0.04404567183798021,
+                  "opacity": 0.08435095976854315,
+                  "color": "4fc3f7"
+                },
+                {
+                  "radius": 0.021661151631379195,
+                  "opacity": 0.05237307375911314,
+                  "color": "4fc3f7"
+                },
+                {
+                  "radius": 0.06381852250988809,
+                  "opacity": 0.11259788929984013,
+                  "color": "4fc3f7"
+                },
+                {
+                  "radius": 0.02047465402075252,
+                  "opacity": 0.050678077172503604,
+                  "color": "4fc3f7"
+                }
+              ],
+              "stageZ": -120,
+              "postGroupZ": 3.4,
+              "arcGroupZ": 0,
+              "postWorldZ": -116.6,
+              "arcWorldZ": -120
+            }
+          }
+        }
+      ],
+      "runtimeErrors": {
+        "console": [],
+        "pageErrors": [],
+        "requestFailures": [],
+        "badResponses": []
+      }
+    },
+    {
+      "id": "[REDACTED_ID_10]",
+      "domain": [
+        "attention",
+        "selectors"
+      ],
+      "status": "FAIL",
+      "executed": true,
+      "inputs": {
+        "step": 4,
+        "layer": 0,
+        "head": 1
+      },
+      "assertions": [
+        {
+          "name": "layer/head selector active",
+          "status": "PASS",
+          "expected": "L1·H2",
+          "actual": [
+            "L1·H2"
+          ]
+        },
+        {
+          "name": "summary follows selected head",
+          "status": "PASS",
+          "expected": "Layer 1, head 1, winner 6",
+          "actual": "Layer 1, head 1: 🐟 at position 7 attends most to position 6 💧 with 99.7% — the previous token: the circuit this toy model was trained to find."
+        },
+        {
+          "name": "attention arcs available for selected layer",
+          "status": "FAIL",
+          "expected": "arcs for current attention stage",
+          "actual": {
+            "tubes": 0,
+            "rings": 0,
+            "samples": [],
+            "stageZ": -45,
+            "postGroupZ": 3.4,
+            "arcGroupZ": 0,
+            "postWorldZ": -41.6,
+            "arcWorldZ": null
+          }
+        },
+        {
+          "name": "no page/console/request errors",
+          "status": "PASS",
+          "expected": "zero page errors, failed requests, HTTP errors, or console errors",
+          "actual": {
+            "console": [
+              {
+                "type": "warning",
+                "text": "[.WebGL-0x332c00195600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+                "location": {
+                  "url": "http://localhost:8765/",
+                  "line": 0,
+                  "column": 0,
+                  "lineNumber": 0,
+                  "columnNumber": 0
+                }
+              },
+              {
+                "type": "warning",
+                "text": "[.WebGL-0x332c00195600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+                "location": {
+                  "url": "http://localhost:8765/",
+                  "line": 0,
+                  "column": 0,
+                  "lineNumber": 0,
+                  "columnNumber": 0
+                }
+              },
+              {
+                "type": "warning",
+                "text": "[.WebGL-0x332c00195600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+                "location": {
+                  "url": "http://localhost:8765/",
+                  "line": 0,
+                  "column": 0,
+                  "lineNumber": 0,
+                  "columnNumber": 0
+                }
+              },
+              {
+                "type": "warning",
+                "text": "[.WebGL-0x332c00195600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)",
+                "location": {
+                  "url": "http://localhost:8765/",
+                  "line": 0,
+                  "column": 0,
+                  "lineNumber": 0,
+                  "columnNumber": 0
+                }
+              }
+            ],
+            "pageErrors": [],
+            "requestFailures": [],
+            "badResponses": []
+          }
+        }
+      ],
+      "max_abs_error": 0,
+      "evidence": {
+        "screenshot": "audit/browser/screenshots/S09-L1H2-selector.png",
+        "screenshotSha256": "[REDACTED_SECRET]",
+        "state": "audit/browser/raw/S09-L1H2-selector.json",
+        "case": "audit/browser/scenarios/S09-L1H2-selector.json"
+      },
+      "reason": [
+        {
+          "name": "attention arcs available for selected layer",
+          "expected": "arcs for current attention stage",
+          "actual": {
+            "tubes": 0,
+            "rings": 0,
+            "samples": [],
+            "stageZ": -45,
+            "postGroupZ": 3.4,
+            "arcGroupZ": 0,
+            "postWorldZ": -41.6,
+            "arcWorldZ": null
+          }
+        }
+      ],
+      "runtimeErrors": {
+        "console": [],
+        "pageErrors": [],
+        "requestFailures": [],
+        "badResponses": []
+      }
+    },
+    {
+      "id": "[REDACTED_ID_11]",
+      "domain": [
+        "attention",
+        "selectors"
+      ],
+      "status": "PASS",
+      "executed": true,
+      "inputs": {
+        "step": 9,
+        "layer": 1,
+        "head": 0
+      },
+      "assertions": [
+        {
+          "name": "layer/head selector active",
+          "status": "PASS",
+          "expected": "L2·H1",
+          "actual": [
+            "L2·H1"
+          ]
+        },
+        {
+          "name": "summary follows selected head",
+          "status": "PASS",
+          "expected": "Layer 2, head 0, winner 3",
+          "actual": "Layer 2, head 0: 🐟 at position 7 attends most to position 3 🍎 with 27.1%."
+        },
+        {
+          "name": "attention arcs available for selected layer",
+          "status": "PASS",
+          "expected": "arcs for current attention stage",
+          "actual": {
+            "tubes": 36,
+            "rings": 1,
+            "samples": [
+              {
+                "radius": 0.09000000000000001,
+                "opacity": 0.15000000000000002,
+                "color": "4fc3f7"
+              },
+              {
+                "radius": 0.04691203641134302,
+                "opacity": 0.0884457663019186,
+                "color": "4fc3f7"
+              },
+              {
+                "radius": 0.063087963588657,
+                "opacity": 0.11155423369808141,
+                "color": "4fc3f7"
+              },
+              {
+                "radius": 0.03209779007248085,
+                "opacity": 0.06728255724640121,
+                "color": "4fc3f7"
+              },
+              {
+                "radius": 0.03614847008351717,
+                "opacity": 0.07306924297645309,
+                "color": "4fc3f7"
+              },
+              {
+                "radius": 0.061753739844001995,
+                "opacity": 0.1096481997771457,
+                "color": "4fc3f7"
+              },
+              {
+                "radius": 0.02935579743777604,
+                "opacity": 0.06336542491110864,
+                "color": "4fc3f7"
+              },
+              {
+                "radius": 0.030761372685629087,
+                "opacity": 0.06537338955089869,
+                "color": "4fc3f7"
+              }
+            ],
+            "stageZ": -120,
+            "postGroupZ": 3.4,
+            "arcGroupZ": 0,
+            "postWorldZ": -116.6,
+            "arcWorldZ": -120
+          }
+        },
+        {
+          "name": "no page/console/request errors",
+          "status": "PASS",
+          "expected": "zero page errors, failed requests, HTTP errors, or console errors",
+          "actual": {
+            "console": [
+              {
+                "type": "warning",
+                "text": "[.WebGL-0x332c00195600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+                "location": {
+                  "url": "http://localhost:8765/",
+                  "line": 0,
+                  "column": 0,
+                  "lineNumber": 0,
+                  "columnNumber": 0
+                }
+              },
+              {
+                "type": "warning",
+                "text": "[.WebGL-0x332c00195600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+                "location": {
+                  "url": "http://localhost:8765/",
+                  "line": 0,
+                  "column": 0,
+                  "lineNumber": 0,
+                  "columnNumber": 0
+                }
+              },
+              {
+                "type": "warning",
+                "text": "[.WebGL-0x332c00195600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+                "location": {
+                  "url": "http://localhost:8765/",
+                  "line": 0,
+                  "column": 0,
+                  "lineNumber": 0,
+                  "columnNumber": 0
+                }
+              },
+              {
+                "type": "warning",
+                "text": "[.WebGL-0x332c00195600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)",
+                "location": {
+                  "url": "http://localhost:8765/",
+                  "line": 0,
+                  "column": 0,
+                  "lineNumber": 0,
+                  "columnNumber": 0
+                }
+              }
+            ],
+            "pageErrors": [],
+            "requestFailures": [],
+            "badResponses": []
+          }
+        }
+      ],
+      "max_abs_error": 0,
+      "evidence": {
+        "screenshot": "audit/browser/screenshots/S09-L2H1-selector.png",
+        "screenshotSha256": "[REDACTED_SECRET]",
+        "state": "audit/browser/raw/S09-L2H1-selector.json",
+        "case": "audit/browser/scenarios/S09-L2H1-selector.json"
+      },
+      "reason": null,
+      "runtimeErrors": {
+        "console": [],
+        "pageErrors": [],
+        "requestFailures": [],
+        "badResponses": []
+      }
+    },
+    {
+      "id": "[REDACTED_ID_12]",
+      "domain": [
+        "attention",
+        "selectors"
+      ],
+      "status": "PASS",
+      "executed": true,
+      "inputs": {
+        "step": 9,
+        "layer": 1,
+        "head": 1
+      },
+      "assertions": [
+        {
+          "name": "layer/head selector active",
+          "status": "PASS",
+          "expected": "L2·H2",
+          "actual": [
+            "L2·H2"
+          ]
+        },
+        {
+          "name": "summary follows selected head",
+          "status": "PASS",
+          "expected": "Layer 2, head 1, winner 7",
+          "actual": "Layer 2, head 1: 🐟 at position 7 attends most to position 7 🐟 with 47.9%."
+        },
+        {
+          "name": "attention arcs available for selected layer",
+          "status": "PASS",
+          "expected": "arcs for current attention stage",
+          "actual": {
+            "tubes": 36,
+            "rings": 1,
+            "samples": [
+              {
+                "radius": 0.09000000000000001,
+                "opacity": 0.15000000000000002,
+                "color": "ffb74d"
+              },
+              {
+                "radius": 0.05210017420935374,
+                "opacity": 0.0958573917276482,
+                "color": "ffb74d"
+              },
+              {
+                "radius": 0.05789982579064626,
+                "opacity": 0.1041426082723518,
+                "color": "ffb74d"
+              },
+              {
+                "radius": 0.03961541024726083,
+                "opacity": 0.07802201463894404,
+                "color": "ffb74d"
+              },
+              {
+                "radius": 0.03844813596075543,
+                "opacity": 0.07635447994393633,
+                "color": "ffb74d"
+              },
+              {
+                "radius": 0.05193645379198375,
+                "opacity": 0.09562350541711964,
+                "color": "ffb74d"
+              },
+              {
+                "radius": 0.03536497048764498,
+                "opacity": 0.07194995783949283,
+                "color": "ffb74d"
+              },
+              {
+                "radius": 0.03211696447096023,
+                "opacity": 0.0673099492442289,
+                "color": "ffb74d"
+              }
+            ],
+            "stageZ": -120,
+            "postGroupZ": 3.4,
+            "arcGroupZ": 0,
+            "postWorldZ": -116.6,
+            "arcWorldZ": -120
+          }
+        },
+        {
+          "name": "no page/console/request errors",
+          "status": "PASS",
+          "expected": "zero page errors, failed requests, HTTP errors, or console errors",
+          "actual": {
+            "console": [
+              {
+                "type": "warning",
+                "text": "[.WebGL-0x332c00195600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+                "location": {
+                  "url": "http://localhost:8765/",
+                  "line": 0,
+                  "column": 0,
+                  "lineNumber": 0,
+                  "columnNumber": 0
+                }
+              },
+              {
+                "type": "warning",
+                "text": "[.WebGL-0x332c00195600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+                "location": {
+                  "url": "http://localhost:8765/",
+                  "line": 0,
+                  "column": 0,
+                  "lineNumber": 0,
+                  "columnNumber": 0
+                }
+              },
+              {
+                "type": "warning",
+                "text": "[.WebGL-0x332c00195600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+                "location": {
+                  "url": "http://localhost:8765/",
+                  "line": 0,
+                  "column": 0,
+                  "lineNumber": 0,
+                  "columnNumber": 0
+                }
+              },
+              {
+                "type": "warning",
+                "text": "[.WebGL-0x332c00195600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)",
+                "location": {
+                  "url": "http://localhost:8765/",
+                  "line": 0,
+                  "column": 0,
+                  "lineNumber": 0,
+                  "columnNumber": 0
+                }
+              }
+            ],
+            "pageErrors": [],
+            "requestFailures": [],
+            "badResponses": []
+          }
+        }
+      ],
+      "max_abs_error": 0,
+      "evidence": {
+        "screenshot": "audit/browser/screenshots/S09-L2H2-selector.png",
+        "screenshotSha256": "[REDACTED_SECRET]",
+        "state": "audit/browser/raw/S09-L2H2-selector.json",
+        "case": "audit/browser/scenarios/S09-L2H2-selector.json"
+      },
+      "reason": null,
+      "runtimeErrors": {
+        "console": [],
+        "pageErrors": [],
+        "requestFailures": [],
+        "badResponses": []
+      }
+    },
+    {
+      "id": "[REDACTED_ID_13]",
+      "domain": [
+        "intermediates",
+        "stages"
+      ],
+      "status": "PASS",
+      "executed": true,
+      "inputs": {
+        "steps": [
+          5,
+          6
+        ],
+        "selectedPosition": 2
+      },
+      "assertions": [
+        {
+          "name": "residual add explains stream in/update/out",
+          "status": "PASS",
+          "expected": "three residual vectors",
+          "actual": "stream in\n0\n0.809\n1\n2.471\n2\n−0.089\n3\n0.980\n4\n−2.399\n5\n−1.310\n6\n−2.680\n7\n0.515\n8\n−1.338\n9\n0.003\n10\n0.245\n11\n0.455\n12\n−1.202\n13\n−0.251\n14\n−0.091\n15\n3.356\nattention update\n0\n4.125\n1\n3.289\n2\n−1.361\n3\n−0.533\n4\n0.024\n5\n2.497\n6"
+        },
+        {
+          "name": "residual input display matches trace",
+          "status": "PASS",
+          "expected": [
+            0.8092242169134166,
+            2.4709625612465,
+            -0.08934404441524552,
+            0.980159741946217,
+            -2.399081513038009,
+            -1.30969368469642,
+            -2.679701636670678,
+            0.5145785926809954,
+            -1.3382413026003697,
+            0.0032394319640453896,
+            0.24461288685433152,
+            0.4545894313921217,
+            -1.202389470223328,
+            -0.2512659916206288,
+            -0.09130449149018832,
+            3.3558815137159224
+          ],
+          "actual": [
+            0.8092242169134166,
+            2.4709625612465,
+            -0.08934404441524552,
+            0.980159741946217,
+            -2.399081513038009,
+            -1.30969368469642,
+            -2.679701636670678,
+            0.5145785926809954,
+            -1.3382413026003697,
+            0.0032394319640453896,
+            0.24461288685433152,
+            0.4545894313921217,
+            -1.202389470223328,
+            -0.2512659916206288,
+            -0.09130449149018832,
+            3.3558815137159224
+          ]
+        },
+        {
+          "name": "attention update display matches trace",
+          "status": "PASS",
+          "expected": [
+            4.1247243198879575,
+            3.28923176690306,
+            -1.3612530478987446,
+            -0.5329599653739509,
+            0.023564627535410942,
+            2.4974918638455432,
+            -2.066786593811757,
+            -2.4979140534806326,
+            1.227845370718275,
+            0.9354720145194024,
+            -0.27078880963158025,
+            0.18590580159618736,
+            -2.4935531062563636,
+            3.7191373276646247,
+            0.1497947116177103,
+            -3.982800346701986
+          ],
+          "actual": [
+            4.1247243198879575,
+            3.28923176690306,
+            -1.3612530478987446,
+            -0.5329599653739509,
+            0.023564627535410942,
+            2.4974918638455432,
+            -2.066786593811757,
+            -2.4979140534806326,
+            1.227845370718275,
+            0.9354720145194024,
+            -0.27078880963158025,
+            0.18590580159618736,
+            -2.4935531062563636,
+            3.7191373276646247,
+            0.1497947116177103,
+            -3.982800346701986
+          ]
+        },
+        {
+          "name": "residual output display matches trace",
+          "status": "PASS",
+          "expected": [
+            4.933948536801374,
+            5.76019432814956,
+            -1.4505970923139901,
+            0.44719977657226617,
+            -2.375516885502598,
+            1.1877981791491232,
+            -4.746488230482435,
+            -1.9833354607996372,
+            -0.11039593188209462,
+            0.9387114464834478,
+            -0.026175922777248728,
+            0.6404952329883091,
+            -3.6959425764796916,
+            3.467871336043996,
+            0.058490220127521975,
+            -0.6269188329860635
+          ],
+          "actual": [
+            4.933948536801374,
+            5.76019432814956,
+            -1.4505970923139901,
+            0.44719977657226617,
+            -2.375516885502598,
+            1.1877981791491232,
+            -4.746488230482435,
+            -1.9833354607996372,
+            -0.11039593188209462,
+            0.9387114464834478,
+            -0.026175922777248728,
+            0.6404952329883091,
+            -3.6959425764796916,
+            3.467871336043996,
+            0.058490220127521975,
+            -0.6269188329860635
+          ]
+        },
+        {
+          "name": "MLP shows 64 hidden and output vectors",
+          "status": "PASS",
+          "expected": "64 hidden plus 16 output/stream vectors",
+          "actual": 96
+        },
+        {
+          "name": "MLP activation display matches trace",
+          "status": "PASS",
+          "expected": [
+            -0.08166956148689791,
+            -0.15149591784806335,
+            0.36579855924098537,
+            2.9471995921293597,
+            -0.009153506529810874,
+            1.0192078411581957,
+            -0.1696663645931922,
+            -0.15658425883542715,
+            0.8373207047740219,
+            -0.0018542495522570531,
+            1.7492058870915217,
+            0.6832969646911313,
+            -0.13405852971029641,
+            -0.13667352213240705,
+            -0.054926694087987574,
+            -0.06844855106407238,
+            -0.11439993373690979,
+            -0.10791970218542303,
+            3.460402356923555,
+            -0.00021678517210886329,
+            -0.09769320769804893,
+            -0.010641842351112728,
+            -0.13907317854310552,
+            -0.15148236254441516,
+            -0.005983067637005253,
+            -0.015736301028638974,
+            -0.09555675478803395,
+            4.211267953678266,
+            -0.140476796475186,
+            3.207405218475151,
+            1.8621562763231887,
+            -0.12092950117756286,
+            2.878481849589977,
+            3.354410464898499,
+            1.8360170768036477,
+            1.4160234634784818,
+            -0.09586829606426302,
+            -0.07440623775947024,
+            0.6299132609796558,
+            -3.789008515419868e-09,
+            0.6530127790309511,
+            0.13589694171726632,
+            0.08869831431035435,
+            -0.06416414330668085,
+            -0.07798162879055665,
+            -0.1628184675461236,
+            -0.0015546359970558701,
+            2.508295079313994,
+            -0.17003959853800174,
+            -0.14358676652974203,
+            2.3414634771164082,
+            0.9055203668418038,
+            4.745338730918232,
+            -0.08270652966260404,
+            -0.13665562651419125,
+            0.942829051029692,
+            0.34122462892477906,
+            -0.05116592227076946,
+            0.9232461336987287,
+            0.07053608258045649,
+            -0.09584311646063216,
+            -0.00033424863679426374,
+            -0.06839571604465615,
+            3.314710087741073
+          ],
+          "actual": [
+            -0.08166956148689791,
+            -0.15149591784806335,
+            0.36579855924098537,
+            2.9471995921293597,
+            -0.009153506529810874,
+            1.0192078411581957,
+            -0.1696663645931922,
+            -0.15658425883542715,
+            0.8373207047740219,
+            -0.0018542495522570531,
+            1.7492058870915217,
+            0.6832969646911313,
+            -0.13405852971029641,
+            -0.13667352213240705,
+            -0.054926694087987574,
+            -0.06844855106407238,
+            -0.11439993373690979,
+            -0.10791970218542303,
+            3.460402356923555,
+            -0.00021678517210886329,
+            -0.09769320769804893,
+            -0.010641842351112728,
+            -0.13907317854310552,
+            -0.15148236254441516,
+            -0.005983067637005253,
+            -0.015736301028638974,
+            -0.09555675478803395,
+            4.211267953678266,
+            -0.140476796475186,
+            3.207405218475151,
+            1.8621562763231887,
+            -0.12092950117756286,
+            2.878481849589977,
+            3.354410464898499,
+            1.8360170768036477,
+            1.4160234634784818,
+            -0.09586829606426302,
+            -0.07440623775947024,
+            0.6299132609796558,
+            -3.789008515419868e-09,
+            0.6530127790309511,
+            0.13589694171726632,
+            0.08869831431035435,
+            -0.06416414330668085,
+            -0.07798162879055665,
+            -0.1628184675461236,
+            -0.0015546359970558701,
+            2.508295079313994,
+            -0.17003959853800174,
+            -0.14358676652974203,
+            2.3414634771164082,
+            0.9055203668418038,
+            4.745338730918232,
+            -0.08270652966260404,
+            -0.13665562651419125,
+            0.942829051029692,
+            0.34122462892477906,
+            -0.05116592227076946,
+            0.9232461336987287,
+            0.07053608258045649,
+            -0.09584311646063216,
+            -0.00033424863679426374,
+            -0.06839571604465615,
+            3.314710087741073
+          ]
+        },
+        {
+          "name": "MLP output display matches trace",
+          "status": "PASS",
+          "expected": [
+            3.4486162600277512,
+            -4.171834089472352,
+            0.00020967128038866523,
+            -5.144476883777677,
+            0.7464954672476081,
+            3.6694742479186306,
+            4.024536407495894,
+            1.0972072483669988,
+            4.586662923861979,
+            4.783962656865854,
+            -7.322766889598051,
+            -2.7783217429615403,
+            1.6188296543894802,
+            2.4776403364857678,
+            -1.7951921646905429,
+            -3.2141967859493974
+          ],
+          "actual": [
+            3.4486162600277512,
+            -4.171834089472352,
+            0.00020967128038866523,
+            -5.144476883777677,
+            0.7464954672476081,
+            3.6694742479186306,
+            4.024536407495894,
+            1.0972072483669988,
+            4.586662923861979,
+            4.783962656865854,
+            -7.322766889598051,
+            -2.7783217429615403,
+            1.6188296543894802,
+            2.4776403364857678,
+            -1.7951921646905429,
+            -3.2141967859493974
+          ]
+        },
+        {
+          "name": "MLP stream output display matches trace",
+          "status": "PASS",
+          "expected": [
+            8.382564796829126,
+            1.5883602386772084,
+            -1.4503874210336014,
+            -4.6972771072054105,
+            -1.62902141825499,
+            4.857272427067754,
+            -0.7219518229865409,
+            -0.8861282124326384,
+            4.476266991979885,
+            5.722674103349302,
+            -7.3489428123753,
+            -2.137826509973231,
+            -2.0771129220902114,
+            5.945511672529763,
+            -1.736701944563021,
+            -3.841115618935461
+          ],
+          "actual": [
+            8.382564796829126,
+            1.5883602386772084,
+            -1.4503874210336014,
+            -4.6972771072054105,
+            -1.62902141825499,
+            4.857272427067754,
+            -0.7219518229865409,
+            -0.8861282124326384,
+            4.476266991979885,
+            5.722674103349302,
+            -7.3489428123753,
+            -2.137826509973231,
+            -2.0771129220902114,
+            5.945511672529763,
+            -1.736701944563021,
+            -3.841115618935461
+          ]
+        },
+        {
+          "name": "final MLP state is current",
+          "status": "PASS",
+          "expected": "step 7 with 64 activation values",
+          "actual": {
+            "step": 6,
+            "hidden": 64
+          }
+        },
+        {
+          "name": "no page/console/request errors",
+          "status": "PASS",
+          "expected": "zero page errors, failed requests, HTTP errors, or console errors",
+          "actual": {
+            "console": [
+              {
+                "type": "warning",
+                "text": "[.WebGL-0x332c00195600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+                "location": {
+                  "url": "http://localhost:8765/",
+                  "line": 0,
+                  "column": 0,
+                  "lineNumber": 0,
+                  "columnNumber": 0
+                }
+              },
+              {
+                "type": "warning",
+                "text": "[.WebGL-0x332c00195600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+                "location": {
+                  "url": "http://localhost:8765/",
+                  "line": 0,
+                  "column": 0,
+                  "lineNumber": 0,
+                  "columnNumber": 0
+                }
+              },
+              {
+                "type": "warning",
+                "text": "[.WebGL-0x332c00195600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+                "location": {
+                  "url": "http://localhost:8765/",
+                  "line": 0,
+                  "column": 0,
+                  "lineNumber": 0,
+                  "columnNumber": 0
+                }
+              },
+              {
+                "type": "warning",
+                "text": "[.WebGL-0x332c00195600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)",
+                "location": {
+                  "url": "http://localhost:8765/",
+                  "line": 0,
+                  "column": 0,
+                  "lineNumber": 0,
+                  "columnNumber": 0
+                }
+              }
+            ],
+            "pageErrors": [],
+            "requestFailures": [],
+            "badResponses": []
+          }
+        }
+      ],
+      "max_abs_error": 0,
+      "evidence": {
+        "screenshot": "audit/browser/screenshots/S12-residual-and-mlp-values.png",
+        "screenshotSha256": "[REDACTED_SECRET]",
+        "state": "audit/browser/raw/S12-residual-and-mlp-values.json",
+        "case": "audit/browser/scenarios/S12-residual-and-mlp-values.json"
+      },
+      "reason": null,
+      "runtimeErrors": {
+        "console": [],
+        "pageErrors": [],
+        "requestFailures": [],
+        "badResponses": []
+      }
+    },
+    {
+      "id": "[REDACTED_ID_14]",
+      "domain": [
+        "intermediates",
+        "output"
+      ],
+      "status": "PASS",
+      "executed": true,
+      "inputs": {
+        "step": 12,
+        "selectedPosition": 2
+      },
+      "assertions": [
+        {
+          "name": "final LayerNorm values current",
+          "status": "PASS",
+          "expected": "before/after 16-vectors",
+          "actual": {
+            "title": "Final LayerNorm at position 7",
+            "cells": 32
+          }
+        },
+        {
+          "name": "final-LN input display matches all 16 trace values",
+          "status": "PASS",
+          "expected": "before row equals block1.x2",
+          "actual": {
+            "max_abs_error": 0,
+            "shown": [
+              6.5645333548004725,
+              -6.337774748506716,
+              -3.645366763008079,
+              -2.528798528089709,
+              -6.156845784937975,
+              3.4350697635226477,
+              3.3520225637237235,
+              6.88706003846524,
+              6.128562119888622,
+              5.529719728605435,
+              -4.384070312859716,
+              -1.199341196412472,
+              4.343715970931784,
+              4.387435096389003,
+              -3.191214714601255,
+              -9.592123786266797
+            ],
+            "expected": [
+              6.5645333548004725,
+              -6.337774748506716,
+              -3.645366763008079,
+              -2.528798528089709,
+              -6.156845784937975,
+              3.4350697635226477,
+              3.3520225637237235,
+              6.88706003846524,
+              6.128562119888622,
+              5.529719728605435,
+              -4.384070312859716,
+              -1.199341196412472,
+              4.343715970931784,
+              4.387435096389003,
+              -3.191214714601255,
+              -9.592123786266797
+            ]
+          },
+          "max_abs_error": 0
+        },
+        {
+          "name": "final-LN output display matches all 16 trace values",
+          "status": "PASS",
+          "expected": "after row equals final lnf",
+          "actual": {
+            "max_abs_error": 0,
+            "shown": [
+              2.1264714667285594,
+              -1.7883454354202268,
+              -0.7939227490095171,
+              -0.8499657997945027,
+              -1.7939582425442249,
+              0.8143401879529649,
+              1.091071330500381,
+              2.0301421607666446,
+              1.8077282421055867,
+              1.5876595945832204,
+              -1.3063452329799854,
+              -0.5714966396453162,
+              1.2306980307253996,
+              1.0806497530927075,
+              -0.9257378840032074,
+              -2.9478836476939985
+            ],
+            "expected": [
+              2.1264714667285594,
+              -1.7883454354202268,
+              -0.7939227490095171,
+              -0.8499657997945027,
+              -1.7939582425442249,
+              0.8143401879529649,
+              1.091071330500381,
+              2.0301421607666446,
+              1.8077282421055867,
+              1.5876595945832204,
+              -1.3063452329799854,
+              -0.5714966396453162,
+              1.2306980307253996,
+              1.0806497530927075,
+              -0.9257378840032074,
+              -2.9478836476939985
+            ]
+          },
+          "max_abs_error": 0
+        },
+        {
+          "name": "no page/console/request errors",
+          "status": "PASS",
+          "expected": "zero page errors, failed requests, HTTP errors, or console errors",
+          "actual": {
+            "console": [
+              {
+                "type": "warning",
+                "text": "[.WebGL-0x332c00195600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+                "location": {
+                  "url": "http://localhost:8765/",
+                  "line": 0,
+                  "column": 0,
+                  "lineNumber": 0,
+                  "columnNumber": 0
+                }
+              },
+              {
+                "type": "warning",
+                "text": "[.WebGL-0x332c00195600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+                "location": {
+                  "url": "http://localhost:8765/",
+                  "line": 0,
+                  "column": 0,
+                  "lineNumber": 0,
+                  "columnNumber": 0
+                }
+              },
+              {
+                "type": "warning",
+                "text": "[.WebGL-0x332c00195600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+                "location": {
+                  "url": "http://localhost:8765/",
+                  "line": 0,
+                  "column": 0,
+                  "lineNumber": 0,
+                  "columnNumber": 0
+                }
+              },
+              {
+                "type": "warning",
+                "text": "[.WebGL-0x332c00195600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)",
+                "location": {
+                  "url": "http://localhost:8765/",
+                  "line": 0,
+                  "column": 0,
+                  "lineNumber": 0,
+                  "columnNumber": 0
+                }
+              }
+            ],
+            "pageErrors": [],
+            "requestFailures": [],
+            "badResponses": []
+          }
+        }
+      ],
+      "max_abs_error": 0,
+      "evidence": {
+        "screenshot": "audit/browser/screenshots/S13-final-ln-values.png",
+        "screenshotSha256": "[REDACTED_SECRET]",
+        "state": "audit/browser/raw/S13-final-ln-values.json",
+        "case": "audit/browser/scenarios/S13-final-ln-values.json"
+      },
+      "reason": null,
+      "runtimeErrors": {
+        "console": [],
+        "pageErrors": [],
+        "requestFailures": [],
+        "badResponses": []
+      }
+    },
+    {
+      "id": "[REDACTED_ID_15]",
+      "domain": [
+        "output",
+        "token-ids"
+      ],
+      "status": "PASS",
+      "executed": true,
+      "inputs": {
+        "step": 13,
+        "selectedPosition": 2
+      },
+      "assertions": [
+        {
+          "name": "logits and probabilities have 16 outputs",
+          "status": "PASS",
+          "expected": "16 logits and 16 probability rows",
+          "actual": {
+            "vectors": 16,
+            "probs": 16
+          }
+        },
+        {
+          "name": "logit display matches all 16 trace values",
+          "status": "PASS",
+          "expected": "logits row equals trace logits",
+          "actual": {
+            "max_abs_error": 0,
+            "shown": [
+              -2.532443361521123,
+              -8.335511552857312,
+              -0.4929665253034261,
+              2.344788066475693,
+              -0.1301496526718029,
+              -4.317360484151582,
+              0.02495200811369802,
+              -2.1524217656495748,
+              15.481324726495751,
+              2.8342353686099613,
+              2.1244722645675296,
+              1.576897495259159,
+              2.5525458889883845,
+              0.5485952781905286,
+              -1.6378301606155303,
+              1.7833263541791196
+            ],
+            "expected": [
+              -2.532443361521123,
+              -8.335511552857312,
+              -0.4929665253034261,
+              2.344788066475693,
+              -0.1301496526718029,
+              -4.317360484151582,
+              0.02495200811369802,
+              -2.1524217656495748,
+              15.481324726495751,
+              2.8342353686099613,
+              2.1244722645675296,
+              1.576897495259159,
+              2.5525458889883845,
+              0.5485952781905286,
+              -1.6378301606155303,
+              1.7833263541791196
+            ]
+          },
+          "max_abs_error": 0
+        },
+        {
+          "name": "probability rows use token IDs in sorted order",
+          "status": "PASS",
+          "expected": [
+            8,
+            9,
+            12,
+            3,
+            10,
+            15,
+            11,
+            13,
+            6,
+            4,
+            2,
+            14,
+            7,
+            0,
+            5,
+            1
+          ],
+          "actual": [
+            8,
+            9,
+            12,
+            3,
+            10,
+            15,
+            11,
+            13,
+            6,
+            4,
+            2,
+            14,
+            7,
+            0,
+            5,
+            1
+          ]
+        },
+        {
+          "name": "probability display matches rounded trace values",
+          "status": "PASS",
+          "expected": "probability percentages match trace within 5e-4",
+          "actual": {
+            "max_abs_error": 1.2116105156168011e-05,
+            "shown": [
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "expected": [
+              0.9999878838948438,
+              3.2168707938584127e-06,
+              2.4271545502953823e-06,
+              1.971829479826965e-06,
+              1.5819305683537076e-06,
+              1.1246817080743387e-06,
+              9.149107225497302e-07,
+              3.271845132490923e-07,
+              1.9381052419341125e-07,
+              1.6596540144456735e-07,
+              1.154644244352919e-07,
+              3.674855237242911e-08,
+              2.196625096861517e-08,
+              1.5021546935608478e-08,
+              2.520780334457807e-09,
+              4.533923264139123e-11
+            ]
+          },
+          "max_abs_error": 1.2116105156168011e-05
+        },
+        {
+          "name": "probabilities sum to one",
+          "status": "PASS",
+          "expected": 1,
+          "actual": 1
+        },
+        {
+          "name": "no page/console/request errors",
+          "status": "PASS",
+          "expected": "zero page errors, failed requests, HTTP errors, or console errors",
+          "actual": {
+            "console": [
+              {
+                "type": "warning",
+                "text": "[.WebGL-0x332c00195600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+                "location": {
+                  "url": "http://localhost:8765/",
+                  "line": 0,
+                  "column": 0,
+                  "lineNumber": 0,
+                  "columnNumber": 0
+                }
+              },
+              {
+                "type": "warning",
+                "text": "[.WebGL-0x332c00195600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+                "location": {
+                  "url": "http://localhost:8765/",
+                  "line": 0,
+                  "column": 0,
+                  "lineNumber": 0,
+                  "columnNumber": 0
+                }
+              },
+              {
+                "type": "warning",
+                "text": "[.WebGL-0x332c00195600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+                "location": {
+                  "url": "http://localhost:8765/",
+                  "line": 0,
+                  "column": 0,
+                  "lineNumber": 0,
+                  "columnNumber": 0
+                }
+              },
+              {
+                "type": "warning",
+                "text": "[.WebGL-0x332c00195600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)",
+                "location": {
+                  "url": "http://localhost:8765/",
+                  "line": 0,
+                  "column": 0,
+                  "lineNumber": 0,
+                  "columnNumber": 0
+                }
+              }
+            ],
+            "pageErrors": [],
+            "requestFailures": [],
+            "badResponses": []
+          }
+        }
+      ],
+      "max_abs_error": 1.2116105156168011e-05,
+      "evidence": {
+        "screenshot": "audit/browser/screenshots/S14-logits-probability-token-ids.png",
+        "screenshotSha256": "[REDACTED_SECRET]",
+        "state": "audit/browser/raw/S14-logits-probability-token-ids.json",
+        "case": "audit/browser/scenarios/S14-logits-probability-token-ids.json"
+      },
+      "reason": null,
+      "runtimeErrors": {
+        "console": [],
+        "pageErrors": [],
+        "requestFailures": [],
+        "badResponses": []
+      }
+    },
+    {
+      "id": "[REDACTED_ID_16]",
+      "domain": [
+        "editing",
+        "visual",
+        "intermediates"
+      ],
+      "status": "PASS",
+      "executed": true,
+      "inputs": {
+        "position": 0,
+        "replacementToken": 1,
+        "cache": false
+      },
+      "assertions": [
+        {
+          "name": "edited ID reaches current sequence",
+          "status": "PASS",
+          "expected": [
+            1,
+            9,
+            5,
+            10,
+            6,
+            11,
+            7,
+            12
+          ],
+          "actual": [
+            1,
+            9,
+            5,
+            10,
+            6,
+            11,
+            7,
+            12
+          ]
+        },
+        {
+          "name": "edited ID reaches trace and embedding",
+          "status": "PASS",
+          "expected": "trace id 1 and changed embedding",
+          "actual": {
+            "traceId": 1,
+            "changed": true
+          }
+        },
+        {
+          "name": "no-cache edit recomputes all positions",
+          "status": "PASS",
+          "expected": "no cache — recomputed all positions",
+          "actual": {
+            "status": "no cache — recomputed all positions",
+            "fresh": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ]
+          }
+        },
+        {
+          "name": "raw render input changes after edit",
+          "status": "PASS",
+          "expected": "3D slab data receives changed row",
+          "actual": {
+            "changed": true,
+            "screenshot": "[REDACTED_SECRET]"
+          }
+        },
+        {
+          "name": "no page/console/request errors",
+          "status": "PASS",
+          "expected": "zero page errors, failed requests, HTTP errors, or console errors",
+          "actual": {
+            "console": [
+              {
+                "type": "warning",
+                "text": "[.WebGL-0x332c00195600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+                "location": {
+                  "url": "http://localhost:8765/",
+                  "line": 0,
+                  "column": 0,
+                  "lineNumber": 0,
+                  "columnNumber": 0
+                }
+              },
+              {
+                "type": "warning",
+                "text": "[.WebGL-0x332c00195600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+                "location": {
+                  "url": "http://localhost:8765/",
+                  "line": 0,
+                  "column": 0,
+                  "lineNumber": 0,
+                  "columnNumber": 0
+                }
+              },
+              {
+                "type": "warning",
+                "text": "[.WebGL-0x332c00195600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+                "location": {
+                  "url": "http://localhost:8765/",
+                  "line": 0,
+                  "column": 0,
+                  "lineNumber": 0,
+                  "columnNumber": 0
+                }
+              },
+              {
+                "type": "warning",
+                "text": "[.WebGL-0x332c00195600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)",
+                "location": {
+                  "url": "http://localhost:8765/",
+                  "line": 0,
+                  "column": 0,
+                  "lineNumber": 0,
+                  "columnNumber": 0
+                }
+              }
+            ],
+            "pageErrors": [],
+            "requestFailures": [],
+            "badResponses": []
+          }
+        }
+      ],
+      "max_abs_error": 0,
+      "evidence": {
+        "screenshot": "audit/browser/screenshots/S15-edit-first-token.png",
+        "screenshotSha256": "[REDACTED_SECRET]",
+        "state": "audit/browser/raw/S15-edit-first-token.json",
+        "case": "audit/browser/scenarios/S15-edit-first-token.json"
+      },
+      "reason": null,
+      "runtimeErrors": {
+        "console": [],
+        "pageErrors": [],
+        "requestFailures": [],
+        "badResponses": []
+      }
+    },
+    {
+      "id": "[REDACTED_ID_17]",
+      "domain": [
+        "editing",
+        "visual",
+        "intermediates"
+      ],
+      "status": "PASS",
+      "executed": true,
+      "inputs": {
+        "position": 3,
+        "replacementToken": 0,
+        "cache": false
+      },
+      "assertions": [
+        {
+          "name": "edited ID reaches current sequence",
+          "status": "PASS",
+          "expected": [
+            4,
+            9,
+            5,
+            0,
+            6,
+            11,
+            7,
+            12
+          ],
+          "actual": [
+            4,
+            9,
+            5,
+            0,
+            6,
+            11,
+            7,
+            12
+          ]
+        },
+        {
+          "name": "edited ID reaches trace and embedding",
+          "status": "PASS",
+          "expected": "trace id 0 and changed embedding",
+          "actual": {
+            "traceId": 0,
+            "changed": true
+          }
+        },
+        {
+          "name": "no-cache edit recomputes all positions",
+          "status": "PASS",
+          "expected": "no cache — recomputed all positions",
+          "actual": {
+            "status": "no cache — recomputed all positions",
+            "fresh": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ]
+          }
+        },
+        {
+          "name": "raw render input changes after edit",
+          "status": "PASS",
+          "expected": "3D slab data receives changed row",
+          "actual": {
+            "changed": true,
+            "screenshot": "[REDACTED_SECRET]"
+          }
+        },
+        {
+          "name": "no page/console/request errors",
+          "status": "PASS",
+          "expected": "zero page errors, failed requests, HTTP errors, or console errors",
+          "actual": {
+            "console": [
+              {
+                "type": "warning",
+                "text": "[.WebGL-0x332c00195600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+                "location": {
+                  "url": "http://localhost:8765/",
+                  "line": 0,
+                  "column": 0,
+                  "lineNumber": 0,
+                  "columnNumber": 0
+                }
+              },
+              {
+                "type": "warning",
+                "text": "[.WebGL-0x332c00195600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+                "location": {
+                  "url": "http://localhost:8765/",
+                  "line": 0,
+                  "column": 0,
+                  "lineNumber": 0,
+                  "columnNumber": 0
+                }
+              },
+              {
+                "type": "warning",
+                "text": "[.WebGL-0x332c00195600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+                "location": {
+                  "url": "http://localhost:8765/",
+                  "line": 0,
+                  "column": 0,
+                  "lineNumber": 0,
+                  "columnNumber": 0
+                }
+              },
+              {
+                "type": "warning",
+                "text": "[.WebGL-0x332c00195600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)",
+                "location": {
+                  "url": "http://localhost:8765/",
+                  "line": 0,
+                  "column": 0,
+                  "lineNumber": 0,
+                  "columnNumber": 0
+                }
+              }
+            ],
+            "pageErrors": [],
+            "requestFailures": [],
+            "badResponses": []
+          }
+        }
+      ],
+      "max_abs_error": 0,
+      "evidence": {
+        "screenshot": "audit/browser/screenshots/S16-edit-middle-token.png",
+        "screenshotSha256": "[REDACTED_SECRET]",
+        "state": "audit/browser/raw/S16-edit-middle-token.json",
+        "case": "audit/browser/scenarios/S16-edit-middle-token.json"
+      },
+      "reason": null,
+      "runtimeErrors": {
+        "console": [],
+        "pageErrors": [],
+        "requestFailures": [],
+        "badResponses": []
+      }
+    },
+    {
+      "id": "[REDACTED_ID_18]",
+      "domain": [
+        "editing",
+        "visual",
+        "intermediates"
+      ],
+      "status": "PASS",
+      "executed": true,
+      "inputs": {
+        "position": 7,
+        "replacementToken": 15,
+        "cache": false
+      },
+      "assertions": [
+        {
+          "name": "edited ID reaches current sequence",
+          "status": "PASS",
+          "expected": [
+            4,
+            9,
+            5,
+            10,
+            6,
+            11,
+            7,
+            15
+          ],
+          "actual": [
+            4,
+            9,
+            5,
+            10,
+            6,
+            11,
+            7,
+            15
+          ]
+        },
+        {
+          "name": "edited ID reaches trace and embedding",
+          "status": "PASS",
+          "expected": "trace id 15 and changed embedding",
+          "actual": {
+            "traceId": 15,
+            "changed": true
+          }
+        },
+        {
+          "name": "no-cache edit recomputes all positions",
+          "status": "PASS",
+          "expected": "no cache — recomputed all positions",
+          "actual": {
+            "status": "no cache — recomputed all positions",
+            "fresh": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ]
+          }
+        },
+        {
+          "name": "raw render input changes after edit",
+          "status": "PASS",
+          "expected": "3D slab data receives changed row",
+          "actual": {
+            "changed": true,
+            "screenshot": "[REDACTED_SECRET]"
+          }
+        },
+        {
+          "name": "no page/console/request errors",
+          "status": "PASS",
+          "expected": "zero page errors, failed requests, HTTP errors, or console errors",
+          "actual": {
+            "console": [
+              {
+                "type": "warning",
+                "text": "[.WebGL-0x332c00195600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+                "location": {
+                  "url": "http://localhost:8765/",
+                  "line": 0,
+                  "column": 0,
+                  "lineNumber": 0,
+                  "columnNumber": 0
+                }
+              },
+              {
+                "type": "warning",
+                "text": "[.WebGL-0x332c00195600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+                "location": {
+                  "url": "http://localhost:8765/",
+                  "line": 0,
+                  "column": 0,
+                  "lineNumber": 0,
+                  "columnNumber": 0
+                }
+              },
+              {
+                "type": "warning",
+                "text": "[.WebGL-0x332c00195600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+                "location": {
+                  "url": "http://localhost:8765/",
+                  "line": 0,
+                  "column": 0,
+                  "lineNumber": 0,
+                  "columnNumber": 0
+                }
+              },
+              {
+                "type": "warning",
+                "text": "[.WebGL-0x332c00195600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)",
+                "location": {
+                  "url": "http://localhost:8765/",
+                  "line": 0,
+                  "column": 0,
+                  "lineNumber": 0,
+                  "columnNumber": 0
+                }
+              }
+            ],
+            "pageErrors": [],
+            "requestFailures": [],
+            "badResponses": []
+          }
+        }
+      ],
+      "max_abs_error": 0,
+      "evidence": {
+        "screenshot": "audit/browser/screenshots/S17-edit-last-token.png",
+        "screenshotSha256": "[REDACTED_SECRET]",
+        "state": "audit/browser/raw/S17-edit-last-token.json",
+        "case": "audit/browser/scenarios/S17-edit-last-token.json"
+      },
+      "reason": null,
+      "runtimeErrors": {
+        "console": [],
+        "pageErrors": [],
+        "requestFailures": [],
+        "badResponses": []
+      }
+    },
+    {
+      "id": "[REDACTED_ID_19]",
+      "domain": [
+        "editing",
+        "token-selection"
+      ],
+      "status": "PASS",
+      "executed": true,
+      "inputs": {
+        "position": 2,
+        "[REDACTED_KEY]": "[REDACTED_SECRET]",
+        "action": "select current token then choose same palette token"
+      },
+      "assertions": [
+        {
+          "name": "same-token edit leaves IDs unchanged",
+          "status": "PASS",
+          "expected": [
+            4,
+            9,
+            5,
+            10,
+            6,
+            11,
+            7,
+            12
+          ],
+          "actual": [
+            4,
+            9,
+            5,
+            10,
+            6,
+            11,
+            7,
+            12
+          ]
+        },
+        {
+          "name": "same-token click preserves existing selection",
+          "status": "PASS",
+          "expected": 7,
+          "actual": 7
+        },
+        {
+          "name": "same-token click does not claim a recompute",
+          "status": "PASS",
+          "expected": "no cache — recomputed all positions",
+          "actual": "no cache — recomputed all positions"
+        },
+        {
+          "name": "no page/console/request errors",
+          "status": "PASS",
+          "expected": "zero page errors, failed requests, HTTP errors, or console errors",
+          "actual": {
+            "console": [
+              {
+                "type": "warning",
+                "text": "[.WebGL-0x332c00195600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+                "location": {
+                  "url": "http://localhost:8765/",
+                  "line": 0,
+                  "column": 0,
+                  "lineNumber": 0,
+                  "columnNumber": 0
+                }
+              },
+              {
+                "type": "warning",
+                "text": "[.WebGL-0x332c00195600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+                "location": {
+                  "url": "http://localhost:8765/",
+                  "line": 0,
+                  "column": 0,
+                  "lineNumber": 0,
+                  "columnNumber": 0
+                }
+              },
+              {
+                "type": "warning",
+                "text": "[.WebGL-0x332c00195600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+                "location": {
+                  "url": "http://localhost:8765/",
+                  "line": 0,
+                  "column": 0,
+                  "lineNumber": 0,
+                  "columnNumber": 0
+                }
+              },
+              {
+                "type": "warning",
+                "text": "[.WebGL-0x332c00195600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)",
+                "location": {
+                  "url": "http://localhost:8765/",
+                  "line": 0,
+                  "column": 0,
+                  "lineNumber": 0,
+                  "columnNumber": 0
+                }
+              }
+            ],
+            "pageErrors": [],
+            "requestFailures": [],
+            "badResponses": []
+          }
+        }
+      ],
+      "max_abs_error": 0,
+      "evidence": {
+        "screenshot": "audit/browser/screenshots/S18-repeat-same-token-selection.png",
+        "screenshotSha256": "[REDACTED_SECRET]",
+        "state": "audit/browser/raw/S18-repeat-same-token-selection.json",
+        "case": "audit/browser/scenarios/S18-repeat-same-token-selection.json"
+      },
+      "reason": null,
+      "runtimeErrors": {
+        "console": [],
+        "pageErrors": [],
+        "requestFailures": [],
+        "badResponses": []
+      }
+    },
+    {
+      "id": "[REDACTED_ID_20]",
+      "domain": [
+        "length",
+        "attention",
+        "editing"
+      ],
+      "status": "PASS",
+      "executed": true,
+      "inputs": {
+        "action": "pop seven times plus one guard click",
+        "targetLength": 1
+      },
+      "assertions": [
+        {
+          "name": "sequence reaches length one",
+          "status": "PASS",
+          "expected": "1/16",
+          "actual": {
+            "ids": [
+              4
+            ],
+            "seqLen": "1/16"
+          }
+        },
+        {
+          "name": "length-one attention row is [1]",
+          "status": "PASS",
+          "expected": [
+            1
+          ],
+          "actual": [
+            1
+          ]
+        },
+        {
+          "name": "pop guard keeps length one",
+          "status": "PASS",
+          "expected": "pop remains safe/no further deletion",
+          "actual": {
+            "disabled": false,
+            "length": 1
+          }
+        },
+        {
+          "name": "no page/console/request errors",
+          "status": "PASS",
+          "expected": "zero page errors, failed requests, HTTP errors, or console errors",
+          "actual": {
+            "console": [
+              {
+                "type": "warning",
+                "text": "[.WebGL-0x332c00195600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+                "location": {
+                  "url": "http://localhost:8765/",
+                  "line": 0,
+                  "column": 0,
+                  "lineNumber": 0,
+                  "columnNumber": 0
+                }
+              },
+              {
+                "type": "warning",
+                "text": "[.WebGL-0x332c00195600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+                "location": {
+                  "url": "http://localhost:8765/",
+                  "line": 0,
+                  "column": 0,
+                  "lineNumber": 0,
+                  "columnNumber": 0
+                }
+              },
+              {
+                "type": "warning",
+                "text": "[.WebGL-0x332c00195600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+                "location": {
+                  "url": "http://localhost:8765/",
+                  "line": 0,
+                  "column": 0,
+                  "lineNumber": 0,
+                  "columnNumber": 0
+                }
+              },
+              {
+                "type": "warning",
+                "text": "[.WebGL-0x332c00195600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)",
+                "location": {
+                  "url": "http://localhost:8765/",
+                  "line": 0,
+                  "column": 0,
+                  "lineNumber": 0,
+                  "columnNumber": 0
+                }
+              }
+            ],
+            "pageErrors": [],
+            "requestFailures": [],
+            "badResponses": []
+          }
+        }
+      ],
+      "max_abs_error": 0,
+      "evidence": {
+        "screenshot": "audit/browser/screenshots/S19-shorten-to-length-one.png",
+        "screenshotSha256": "[REDACTED_SECRET]",
+        "state": "audit/browser/raw/S19-shorten-to-length-one.json",
+        "case": "audit/browser/scenarios/S19-shorten-to-length-one.json"
+      },
+      "reason": null,
+      "runtimeErrors": {
+        "console": [],
+        "pageErrors": [],
+        "requestFailures": [],
+        "badResponses": []
+      }
+    },
+    {
+      "id": "[REDACTED_ID_21]",
+      "domain": [
+        "cache",
+        "length",
+        "editing"
+      ],
+      "status": "PASS",
+      "executed": true,
+      "inputs": {
+        "startLength": 1,
+        "appendClicks": 15,
+        "targetLength": 16
+      },
+      "assertions": [
+        {
+          "name": "cache append reaches context limit",
+          "status": "PASS",
+          "expected": "16/16",
+          "actual": {
+            "length": 16,
+            "seqLen": "16/16"
+          }
+        },
+        {
+          "name": "append disabled at context limit",
+          "status": "PASS",
+          "expected": true,
+          "actual": true
+        },
+        {
+          "name": "cache holds all context rows",
+          "status": "PASS",
+          "expected": "cache.pos=16 and 16 prefix IDs",
+          "actual": {
+            "pos": 16,
+            "prefixIds": [
+              4,
+              5,
+              5,
+              6,
+              6,
+              7,
+              7,
+              8,
+              8,
+              9,
+              9,
+              10,
+              10,
+              11,
+              11,
+              12
+            ],
+            "layerKRows": [
+              16,
+              16
+            ],
+            "layerVRows": [
+              16,
+              16
+            ],
+            "attnRows": [
+              16,
+              16
+            ]
+          }
+        },
+        {
+          "name": "max-length trace is finite",
+          "status": "PASS",
+          "expected": "finite logits/probabilities",
+          "actual": true
+        },
+        {
+          "name": "no page/console/request errors",
+          "status": "PASS",
+          "expected": "zero page errors, failed requests, HTTP errors, or console errors",
+          "actual": {
+            "console": [
+              {
+                "type": "warning",
+                "text": "[.WebGL-0x332c00195600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+                "location": {
+                  "url": "http://localhost:8765/",
+                  "line": 0,
+                  "column": 0,
+                  "lineNumber": 0,
+                  "columnNumber": 0
+                }
+              },
+              {
+                "type": "warning",
+                "text": "[.WebGL-0x332c00195600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+                "location": {
+                  "url": "http://localhost:8765/",
+                  "line": 0,
+                  "column": 0,
+                  "lineNumber": 0,
+                  "columnNumber": 0
+                }
+              },
+              {
+                "type": "warning",
+                "text": "[.WebGL-0x332c00195600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+                "location": {
+                  "url": "http://localhost:8765/",
+                  "line": 0,
+                  "column": 0,
+                  "lineNumber": 0,
+                  "columnNumber": 0
+                }
+              },
+              {
+                "type": "warning",
+                "text": "[.WebGL-0x332c00195600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)",
+                "location": {
+                  "url": "http://localhost:8765/",
+                  "line": 0,
+                  "column": 0,
+                  "lineNumber": 0,
+                  "columnNumber": 0
+                }
+              }
+            ],
+            "pageErrors": [],
+            "requestFailures": [],
+            "badResponses": []
+          }
+        }
+      ],
+      "max_abs_error": 0,
+      "evidence": {
+        "screenshot": "audit/browser/screenshots/S20-cache-grow-to-max-context.png",
+        "screenshotSha256": "[REDACTED_SECRET]",
+        "state": "audit/browser/raw/S20-cache-grow-to-max-context.json",
+        "case": "audit/browser/scenarios/S20-cache-grow-to-max-context.json"
+      },
+      "reason": null,
+      "runtimeErrors": {
+        "console": [],
+        "pageErrors": [],
+        "requestFailures": [],
+        "badResponses": []
+      }
+    },
+    {
+      "id": "[REDACTED_ID_22]",
+      "domain": [
+        "cache",
+        "intermediates"
+      ],
+      "status": "PASS",
+      "executed": true,
+      "inputs": {
+        "sequence": "demo",
+        "action": "toggle KV cache ON"
+      },
+      "assertions": [
+        {
+          "name": "cache toggle enables cached trace",
+          "status": "PASS",
+          "expected": "KV ON and fromCache true",
+          "actual": {
+            "kvOn": true,
+            "fromCache": true
+          }
+        },
+        {
+          "name": "cache prefill computes current sequence",
+          "status": "PASS",
+          "expected": "prefill computed all 8 positions",
+          "actual": {
+            "status": "KV cache prefill: computed all 8 positions",
+            "pos": 8
+          }
+        },
+        {
+          "name": "prefill has no falsely frozen rows",
+          "status": "PASS",
+          "expected": "fresh 8, frozen 0 after prefill",
+          "actual": {
+            "fresh": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "frozen": []
+          }
+        },
+        {
+          "name": "no page/console/request errors",
+          "status": "PASS",
+          "expected": "zero page errors, failed requests, HTTP errors, or console errors",
+          "actual": {
+            "console": [
+              {
+                "type": "warning",
+                "text": "[.WebGL-0x332c00195600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+                "location": {
+                  "url": "http://localhost:8765/",
+                  "line": 0,
+                  "column": 0,
+                  "lineNumber": 0,
+                  "columnNumber": 0
+                }
+              },
+              {
+                "type": "warning",
+                "text": "[.WebGL-0x332c00195600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+                "location": {
+                  "url": "http://localhost:8765/",
+                  "line": 0,
+                  "column": 0,
+                  "lineNumber": 0,
+                  "columnNumber": 0
+                }
+              },
+              {
+                "type": "warning",
+                "text": "[.WebGL-0x332c00195600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+                "location": {
+                  "url": "http://localhost:8765/",
+                  "line": 0,
+                  "column": 0,
+                  "lineNumber": 0,
+                  "columnNumber": 0
+                }
+              },
+              {
+                "type": "warning",
+                "text": "[.WebGL-0x332c00195600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)",
+                "location": {
+                  "url": "http://localhost:8765/",
+                  "line": 0,
+                  "column": 0,
+                  "lineNumber": 0,
+                  "columnNumber": 0
+                }
+              }
+            ],
+            "pageErrors": [],
+            "requestFailures": [],
+            "badResponses": []
+          }
+        }
+      ],
+      "max_abs_error": 0,
+      "evidence": {
+        "screenshot": "audit/browser/screenshots/S21-cache-toggle-prefill-demo.png",
+        "screenshotSha256": "[REDACTED_SECRET]",
+        "state": "audit/browser/raw/S21-cache-toggle-prefill-demo.json",
+        "case": "audit/browser/scenarios/S21-cache-toggle-prefill-demo.json"
+      },
+      "reason": null,
+      "runtimeErrors": {
+        "console": [],
+        "pageErrors": [],
+        "requestFailures": [],
+        "badResponses": []
+      }
+    },
+    {
+      "id": "[REDACTED_ID_23]",
+      "domain": [
+        "cache",
+        "editing",
+        "output"
+      ],
+      "status": "FAIL",
+      "executed": true,
+      "inputs": {
+        "sequence": "demo",
+        "action": "append model top prediction twice"
+      },
+      "assertions": [
+        {
+          "name": "two appends add two IDs",
+          "status": "PASS",
+          "expected": 10,
+          "actual": 10
+        },
+        {
+          "name": "cache reuses prefix on second append",
+          "status": "PASS",
+          "expected": "frozen prefix plus one fresh row and reused status",
+          "actual": {
+            "frozen": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "fresh": [
+              9
+            ],
+            "status": "⚡ KV cache: reused 9 cached rows, computed 1 new"
+          }
+        },
+        {
+          "name": "new trace output differs from prior length",
+          "status": "PASS",
+          "expected": "trace arrays match current length",
+          "actual": {
+            "logits": 10,
+            "ids": 10
+          }
+        },
+        {
+          "name": "cached append preserves embedding trace rows",
+          "status": "FAIL",
+          "expected": "tokEmb/posEmb/embed length equals current T",
+          "actual": {
+            "T": 10,
+            "tokEmb": 8,
+            "posEmb": 8,
+            "embed": 8
+          }
+        },
+        {
+          "name": "no page/console/request errors",
+          "status": "PASS",
+          "expected": "zero page errors, failed requests, HTTP errors, or console errors",
+          "actual": {
+            "console": [
+              {
+                "type": "warning",
+                "text": "[.WebGL-0x332c00195600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+                "location": {
+                  "url": "http://localhost:8765/",
+                  "line": 0,
+                  "column": 0,
+                  "lineNumber": 0,
+                  "columnNumber": 0
+                }
+              },
+              {
+                "type": "warning",
+                "text": "[.WebGL-0x332c00195600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+                "location": {
+                  "url": "http://localhost:8765/",
+                  "line": 0,
+                  "column": 0,
+                  "lineNumber": 0,
+                  "columnNumber": 0
+                }
+              },
+              {
+                "type": "warning",
+                "text": "[.WebGL-0x332c00195600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+                "location": {
+                  "url": "http://localhost:8765/",
+                  "line": 0,
+                  "column": 0,
+                  "lineNumber": 0,
+                  "columnNumber": 0
+                }
+              },
+              {
+                "type": "warning",
+                "text": "[.WebGL-0x332c00195600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)",
+                "location": {
+                  "url": "http://localhost:8765/",
+                  "line": 0,
+                  "column": 0,
+                  "lineNumber": 0,
+                  "columnNumber": 0
+                }
+              }
+            ],
+            "pageErrors": [],
+            "requestFailures": [],
+            "badResponses": []
+          }
+        }
+      ],
+      "max_abs_error": 0,
+      "evidence": {
+        "screenshot": "audit/browser/screenshots/S22-cache-append-twice.png",
+        "screenshotSha256": "[REDACTED_SECRET]",
+        "state": "audit/browser/raw/S22-cache-append-twice.json",
+        "case": "audit/browser/scenarios/S22-cache-append-twice.json"
+      },
+      "reason": [
+        {
+          "name": "cached append preserves embedding trace rows",
+          "expected": "tokEmb/posEmb/embed length equals current T",
+          "actual": {
+            "T": 10,
+            "tokEmb": 8,
+            "posEmb": 8,
+            "embed": 8
+          }
+        }
+      ],
+      "runtimeErrors": {
+        "console": [],
+        "pageErrors": [],
+        "requestFailures": [],
+        "badResponses": []
+      }
+    },
+    {
+      "id": "[REDACTED_ID_24]",
+      "domain": [
+        "cache",
+        "equivalence"
+      ],
+      "status": "PASS",
+      "executed": true,
+      "inputs": {
+        "sequence": "demo plus two generated tokens",
+        "actions": [
+          "toggle OFF",
+          "toggle ON"
+        ]
+      },
+      "assertions": [
+        {
+          "name": "toggle cycle preserves current IDs",
+          "status": "PASS",
+          "expected": [
+            4,
+            9,
+            5,
+            10,
+            6,
+            11,
+            7,
+            12,
+            8,
+            13
+          ],
+          "actual": [
+            4,
+            9,
+            5,
+            10,
+            6,
+            11,
+            7,
+            12,
+            8,
+            13
+          ]
+        },
+        {
+          "name": "cached and uncached logits equivalent",
+          "status": "PASS",
+          "expected": 0,
+          "actual": 0
+        },
+        {
+          "name": "cached and uncached probabilities equivalent",
+          "status": "PASS",
+          "expected": 0,
+          "actual": 0
+        },
+        {
+          "name": "final state is cache ON",
+          "status": "PASS",
+          "expected": "KV ON",
+          "actual": {
+            "kvOn": true,
+            "fromCache": true
+          }
+        },
+        {
+          "name": "no page/console/request errors",
+          "status": "PASS",
+          "expected": "zero page errors, failed requests, HTTP errors, or console errors",
+          "actual": {
+            "console": [
+              {
+                "type": "warning",
+                "text": "[.WebGL-0x332c00195600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+                "location": {
+                  "url": "http://localhost:8765/",
+                  "line": 0,
+                  "column": 0,
+                  "lineNumber": 0,
+                  "columnNumber": 0
+                }
+              },
+              {
+                "type": "warning",
+                "text": "[.WebGL-0x332c00195600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+                "location": {
+                  "url": "http://localhost:8765/",
+                  "line": 0,
+                  "column": 0,
+                  "lineNumber": 0,
+                  "columnNumber": 0
+                }
+              },
+              {
+                "type": "warning",
+                "text": "[.WebGL-0x332c00195600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+                "location": {
+                  "url": "http://localhost:8765/",
+                  "line": 0,
+                  "column": 0,
+                  "lineNumber": 0,
+                  "columnNumber": 0
+                }
+              },
+              {
+                "type": "warning",
+                "text": "[.WebGL-0x332c00195600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)",
+                "location": {
+                  "url": "http://localhost:8765/",
+                  "line": 0,
+                  "column": 0,
+                  "lineNumber": 0,
+                  "columnNumber": 0
+                }
+              }
+            ],
+            "pageErrors": [],
+            "requestFailures": [],
+            "badResponses": []
+          }
+        }
+      ],
+      "max_abs_error": 0,
+      "evidence": {
+        "screenshot": "audit/browser/screenshots/S23-cache-toggle-off-on-equivalence.png",
+        "screenshotSha256": "[REDACTED_SECRET]",
+        "state": "audit/browser/raw/S23-cache-toggle-off-on-equivalence.json",
+        "case": "audit/browser/scenarios/S23-cache-toggle-off-on-equivalence.json"
+      },
+      "reason": null,
+      "runtimeErrors": {
+        "console": [],
+        "pageErrors": [],
+        "requestFailures": [],
+        "badResponses": []
+      }
+    },
+    {
+      "id": "[REDACTED_ID_25]",
+      "domain": [
+        "cache",
+        "editing",
+        "equivalence"
+      ],
+      "status": "PASS",
+      "executed": true,
+      "inputs": {
+        "position": 0,
+        "replacementToken": 1,
+        "cache": true,
+        "seedAction": "demo then append one"
+      },
+      "assertions": [
+        {
+          "name": "cache edit updates current IDs",
+          "status": "PASS",
+          "expected": [
+            1,
+            9,
+            5,
+            10,
+            6,
+            11,
+            7,
+            12,
+            8
+          ],
+          "actual": [
+            1,
+            9,
+            5,
+            10,
+            6,
+            11,
+            7,
+            12,
+            8
+          ]
+        },
+        {
+          "name": "edit invalidates old cached prefix",
+          "status": "PASS",
+          "expected": "prefill all current rows with no frozen prefix",
+          "actual": {
+            "cache": {
+              "pos": 9,
+              "prefixIds": [
+                1,
+                9,
+                5,
+                10,
+                6,
+                11,
+                7,
+                12,
+                8
+              ],
+              "layerKRows": [
+                9,
+                9
+              ],
+              "layerVRows": [
+                9,
+                9
+              ],
+              "attnRows": [
+                9,
+                9
+              ]
+            },
+            "frozen": [],
+            "fresh": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ]
+          }
+        },
+        {
+          "name": "cached edit matches fresh full path",
+          "status": "PASS",
+          "expected": 0,
+          "actual": 0
+        },
+        {
+          "name": "no page/console/request errors",
+          "status": "PASS",
+          "expected": "zero page errors, failed requests, HTTP errors, or console errors",
+          "actual": {
+            "console": [
+              {
+                "type": "warning",
+                "text": "[.WebGL-0x332c00195600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+                "location": {
+                  "url": "http://localhost:8765/",
+                  "line": 0,
+                  "column": 0,
+                  "lineNumber": 0,
+                  "columnNumber": 0
+                }
+              },
+              {
+                "type": "warning",
+                "text": "[.WebGL-0x332c00195600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+                "location": {
+                  "url": "http://localhost:8765/",
+                  "line": 0,
+                  "column": 0,
+                  "lineNumber": 0,
+                  "columnNumber": 0
+                }
+              },
+              {
+                "type": "warning",
+                "text": "[.WebGL-0x332c00195600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+                "location": {
+                  "url": "http://localhost:8765/",
+                  "line": 0,
+                  "column": 0,
+                  "lineNumber": 0,
+                  "columnNumber": 0
+                }
+              },
+              {
+                "type": "warning",
+                "text": "[.WebGL-0x332c00195600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)",
+                "location": {
+                  "url": "http://localhost:8765/",
+                  "line": 0,
+                  "column": 0,
+                  "lineNumber": 0,
+                  "columnNumber": 0
+                }
+              }
+            ],
+            "pageErrors": [],
+            "requestFailures": [],
+            "badResponses": []
+          }
+        }
+      ],
+      "max_abs_error": 0,
+      "evidence": {
+        "screenshot": "audit/browser/screenshots/S24-cache-edit-first.png",
+        "screenshotSha256": "[REDACTED_SECRET]",
+        "state": "audit/browser/raw/S24-cache-edit-first.json",
+        "case": "audit/browser/scenarios/S24-cache-edit-first.json"
+      },
+      "reason": null,
+      "runtimeErrors": {
+        "console": [],
+        "pageErrors": [],
+        "requestFailures": [],
+        "badResponses": []
+      }
+    },
+    {
+      "id": "[REDACTED_ID_26]",
+      "domain": [
+        "cache",
+        "editing",
+        "equivalence"
+      ],
+      "status": "PASS",
+      "executed": true,
+      "inputs": {
+        "position": 3,
+        "replacementToken": 0,
+        "cache": true,
+        "seedAction": "demo then append one"
+      },
+      "assertions": [
+        {
+          "name": "cache edit updates current IDs",
+          "status": "PASS",
+          "expected": [
+            4,
+            9,
+            5,
+            0,
+            6,
+            11,
+            7,
+            12,
+            8
+          ],
+          "actual": [
+            4,
+            9,
+            5,
+            0,
+            6,
+            11,
+            7,
+            12,
+            8
+          ]
+        },
+        {
+          "name": "edit invalidates old cached prefix",
+          "status": "PASS",
+          "expected": "prefill all current rows with no frozen prefix",
+          "actual": {
+            "cache": {
+              "pos": 9,
+              "prefixIds": [
+                4,
+                9,
+                5,
+                0,
+                6,
+                11,
+                7,
+                12,
+                8
+              ],
+              "layerKRows": [
+                9,
+                9
+              ],
+              "layerVRows": [
+                9,
+                9
+              ],
+              "attnRows": [
+                9,
+                9
+              ]
+            },
+            "frozen": [],
+            "fresh": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ]
+          }
+        },
+        {
+          "name": "cached edit matches fresh full path",
+          "status": "PASS",
+          "expected": 0,
+          "actual": 0
+        },
+        {
+          "name": "no page/console/request errors",
+          "status": "PASS",
+          "expected": "zero page errors, failed requests, HTTP errors, or console errors",
+          "actual": {
+            "console": [
+              {
+                "type": "warning",
+                "text": "[.WebGL-0x332c00195600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+                "location": {
+                  "url": "http://localhost:8765/",
+                  "line": 0,
+                  "column": 0,
+                  "lineNumber": 0,
+                  "columnNumber": 0
+                }
+              },
+              {
+                "type": "warning",
+                "text": "[.WebGL-0x332c00195600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+                "location": {
+                  "url": "http://localhost:8765/",
+                  "line": 0,
+                  "column": 0,
+                  "lineNumber": 0,
+                  "columnNumber": 0
+                }
+              },
+              {
+                "type": "warning",
+                "text": "[.WebGL-0x332c00195600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+                "location": {
+                  "url": "http://localhost:8765/",
+                  "line": 0,
+                  "column": 0,
+                  "lineNumber": 0,
+                  "columnNumber": 0
+                }
+              },
+              {
+                "type": "warning",
+                "text": "[.WebGL-0x332c00195600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)",
+                "location": {
+                  "url": "http://localhost:8765/",
+                  "line": 0,
+                  "column": 0,
+                  "lineNumber": 0,
+                  "columnNumber": 0
+                }
+              }
+            ],
+            "pageErrors": [],
+            "requestFailures": [],
+            "badResponses": []
+          }
+        }
+      ],
+      "max_abs_error": 0,
+      "evidence": {
+        "screenshot": "audit/browser/screenshots/S25-cache-edit-middle.png",
+        "screenshotSha256": "[REDACTED_SECRET]",
+        "state": "audit/browser/raw/S25-cache-edit-middle.json",
+        "case": "audit/browser/scenarios/S25-cache-edit-middle.json"
+      },
+      "reason": null,
+      "runtimeErrors": {
+        "console": [],
+        "pageErrors": [],
+        "requestFailures": [],
+        "badResponses": []
+      }
+    },
+    {
+      "id": "[REDACTED_ID_27]",
+      "domain": [
+        "cache",
+        "editing",
+        "equivalence"
+      ],
+      "status": "PASS",
+      "executed": true,
+      "inputs": {
+        "position": 7,
+        "replacementToken": 15,
+        "cache": true,
+        "seedAction": "demo then append one"
+      },
+      "assertions": [
+        {
+          "name": "cache edit updates current IDs",
+          "status": "PASS",
+          "expected": [
+            4,
+            9,
+            5,
+            10,
+            6,
+            11,
+            7,
+            15,
+            8
+          ],
+          "actual": [
+            4,
+            9,
+            5,
+            10,
+            6,
+            11,
+            7,
+            15,
+            8
+          ]
+        },
+        {
+          "name": "edit invalidates old cached prefix",
+          "status": "PASS",
+          "expected": "prefill all current rows with no frozen prefix",
+          "actual": {
+            "cache": {
+              "pos": 9,
+              "prefixIds": [
+                4,
+                9,
+                5,
+                10,
+                6,
+                11,
+                7,
+                15,
+                8
+              ],
+              "layerKRows": [
+                9,
+                9
+              ],
+              "layerVRows": [
+                9,
+                9
+              ],
+              "attnRows": [
+                9,
+                9
+              ]
+            },
+            "frozen": [],
+            "fresh": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ]
+          }
+        },
+        {
+          "name": "cached edit matches fresh full path",
+          "status": "PASS",
+          "expected": 0,
+          "actual": 0
+        },
+        {
+          "name": "no page/console/request errors",
+          "status": "PASS",
+          "expected": "zero page errors, failed requests, HTTP errors, or console errors",
+          "actual": {
+            "console": [
+              {
+                "type": "warning",
+                "text": "[.WebGL-0x332c00195600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+                "location": {
+                  "url": "http://localhost:8765/",
+                  "line": 0,
+                  "column": 0,
+                  "lineNumber": 0,
+                  "columnNumber": 0
+                }
+              },
+              {
+                "type": "warning",
+                "text": "[.WebGL-0x332c00195600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+                "location": {
+                  "url": "http://localhost:8765/",
+                  "line": 0,
+                  "column": 0,
+                  "lineNumber": 0,
+                  "columnNumber": 0
+                }
+              },
+              {
+                "type": "warning",
+                "text": "[.WebGL-0x332c00195600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+                "location": {
+                  "url": "http://localhost:8765/",
+                  "line": 0,
+                  "column": 0,
+                  "lineNumber": 0,
+                  "columnNumber": 0
+                }
+              },
+              {
+                "type": "warning",
+                "text": "[.WebGL-0x332c00195600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)",
+                "location": {
+                  "url": "http://localhost:8765/",
+                  "line": 0,
+                  "column": 0,
+                  "lineNumber": 0,
+                  "columnNumber": 0
+                }
+              }
+            ],
+            "pageErrors": [],
+            "requestFailures": [],
+            "badResponses": []
+          }
+        }
+      ],
+      "max_abs_error": 0,
+      "evidence": {
+        "screenshot": "audit/browser/screenshots/S26-cache-edit-last.png",
+        "screenshotSha256": "[REDACTED_SECRET]",
+        "state": "audit/browser/raw/S26-cache-edit-last.json",
+        "case": "audit/browser/scenarios/S26-cache-edit-last.json"
+      },
+      "reason": null,
+      "runtimeErrors": {
+        "console": [],
+        "pageErrors": [],
+        "requestFailures": [],
+        "badResponses": []
+      }
+    },
+    {
+      "id": "[REDACTED_ID_28]",
+      "domain": [
+        "cache",
+        "length",
+        "equivalence"
+      ],
+      "status": "PASS",
+      "executed": true,
+      "inputs": {
+        "action": "cache ON, append, pop last"
+      },
+      "assertions": [
+        {
+          "name": "pop shortens current sequence",
+          "status": "PASS",
+          "expected": 8,
+          "actual": 8
+        },
+        {
+          "name": "shorten invalidates incompatible cache safely",
+          "status": "PASS",
+          "expected": "fresh prefill of shortened sequence",
+          "actual": {
+            "cache": {
+              "pos": 8,
+              "prefixIds": [
+                4,
+                9,
+                5,
+                10,
+                6,
+                11,
+                7,
+                12
+              ],
+              "layerKRows": [
+                8,
+                8
+              ],
+              "layerVRows": [
+                8,
+                8
+              ],
+              "attnRows": [
+                8,
+                8
+              ]
+            },
+            "frozen": []
+          }
+        },
+        {
+          "name": "shortened cache path matches fresh full path",
+          "status": "PASS",
+          "expected": 0,
+          "actual": 0
+        },
+        {
+          "name": "no page/console/request errors",
+          "status": "PASS",
+          "expected": "zero page errors, failed requests, HTTP errors, or console errors",
+          "actual": {
+            "console": [
+              {
+                "type": "warning",
+                "text": "[.WebGL-0x332c00195600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+                "location": {
+                  "url": "http://localhost:8765/",
+                  "line": 0,
+                  "column": 0,
+                  "lineNumber": 0,
+                  "columnNumber": 0
+                }
+              },
+              {
+                "type": "warning",
+                "text": "[.WebGL-0x332c00195600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+                "location": {
+                  "url": "http://localhost:8765/",
+                  "line": 0,
+                  "column": 0,
+                  "lineNumber": 0,
+                  "columnNumber": 0
+                }
+              },
+              {
+                "type": "warning",
+                "text": "[.WebGL-0x332c00195600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+                "location": {
+                  "url": "http://localhost:8765/",
+                  "line": 0,
+                  "column": 0,
+                  "lineNumber": 0,
+                  "columnNumber": 0
+                }
+              },
+              {
+                "type": "warning",
+                "text": "[.WebGL-0x332c00195600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)",
+                "location": {
+                  "url": "http://localhost:8765/",
+                  "line": 0,
+                  "column": 0,
+                  "lineNumber": 0,
+                  "columnNumber": 0
+                }
+              }
+            ],
+            "pageErrors": [],
+            "requestFailures": [],
+            "badResponses": []
+          }
+        }
+      ],
+      "max_abs_error": 0,
+      "evidence": {
+        "screenshot": "audit/browser/screenshots/S27-cache-shorten-current-input.png",
+        "screenshotSha256": "[REDACTED_SECRET]",
+        "state": "audit/browser/raw/S27-cache-shorten-current-input.json",
+        "case": "audit/browser/scenarios/S27-cache-shorten-current-input.json"
+      },
+      "reason": null,
+      "runtimeErrors": {
+        "console": [],
+        "pageErrors": [],
+        "requestFailures": [],
+        "badResponses": []
+      }
+    },
+    {
+      "id": "[REDACTED_ID_29]",
+      "domain": [
+        "cache",
+        "verify",
+        "equivalence"
+      ],
+      "status": "PASS",
+      "executed": true,
+      "inputs": {
+        "action": "run Verify tab check"
+      },
+      "assertions": [
+        {
+          "name": "verify reports success",
+          "status": "PASS",
+          "expected": "check-mark parity verdict",
+          "actual": "✓ cached ≡ uncached — max |Δ| = 0 (bitwise identical) over 8 positions × 16 logits+probs"
+        },
+        {
+          "name": "verify reports zero difference",
+          "status": "PASS",
+          "expected": "max |Δ| = 0",
+          "actual": "✓ cached ≡ uncached — max |Δ| = 0 (bitwise identical) over 8 positions × 16 logits+probs"
+        },
+        {
+          "name": "verify covers current sequence length",
+          "status": "PASS",
+          "expected": "over 8 positions",
+          "actual": "✓ cached ≡ uncached — max |Δ| = 0 (bitwise identical) over 8 positions × 16 logits+probs"
+        },
+        {
+          "name": "no page/console/request errors",
+          "status": "PASS",
+          "expected": "zero page errors, failed requests, HTTP errors, or console errors",
+          "actual": {
+            "console": [
+              {
+                "type": "warning",
+                "text": "[.WebGL-0x332c00195600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+                "location": {
+                  "url": "http://localhost:8765/",
+                  "line": 0,
+                  "column": 0,
+                  "lineNumber": 0,
+                  "columnNumber": 0
+                }
+              },
+              {
+                "type": "warning",
+                "text": "[.WebGL-0x332c00195600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+                "location": {
+                  "url": "http://localhost:8765/",
+                  "line": 0,
+                  "column": 0,
+                  "lineNumber": 0,
+                  "columnNumber": 0
+                }
+              },
+              {
+                "type": "warning",
+                "text": "[.WebGL-0x332c00195600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+                "location": {
+                  "url": "http://localhost:8765/",
+                  "line": 0,
+                  "column": 0,
+                  "lineNumber": 0,
+                  "columnNumber": 0
+                }
+              },
+              {
+                "type": "warning",
+                "text": "[.WebGL-0x332c00195600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)",
+                "location": {
+                  "url": "http://localhost:8765/",
+                  "line": 0,
+                  "column": 0,
+                  "lineNumber": 0,
+                  "columnNumber": 0
+                }
+              }
+            ],
+            "pageErrors": [],
+            "requestFailures": [],
+            "badResponses": []
+          }
+        }
+      ],
+      "max_abs_error": 0,
+      "evidence": {
+        "screenshot": "audit/browser/screenshots/S28-verify-parity-current-sequence.png",
+        "screenshotSha256": "[REDACTED_SECRET]",
+        "state": "audit/browser/raw/S28-verify-parity-current-sequence.json",
+        "case": "audit/browser/scenarios/S28-verify-parity-current-sequence.json"
+      },
+      "reason": null,
+      "runtimeErrors": {
+        "console": [],
+        "pageErrors": [],
+        "requestFailures": [],
+        "badResponses": []
+      }
+    },
+    {
+      "id": "[REDACTED_ID_30]",
+      "domain": [
+        "verify",
+        "editing",
+        "usability"
+      ],
+      "status": "FAIL",
+      "executed": true,
+      "inputs": {
+        "action": "run Verify, edit position 1 while Verify remains active"
+      },
+      "assertions": [
+        {
+          "name": "edit changes current sequence",
+          "status": "PASS",
+          "expected": "new IDs after edit",
+          "actual": {
+            "before": [
+              4,
+              9,
+              5,
+              10,
+              6,
+              11,
+              7,
+              12
+            ],
+            "after": [
+              4,
+              14,
+              5,
+              10,
+              6,
+              11,
+              7,
+              12
+            ]
+          }
+        },
+        {
+          "name": "verify output is invalidated or marked stale",
+          "status": "FAIL",
+          "expected": "empty/stale/current-sequence indication",
+          "actual": "✓ max |Δ| = 0 (bitwise identical)"
+        },
+        {
+          "name": "no page/console/request errors",
+          "status": "PASS",
+          "expected": "zero page errors, failed requests, HTTP errors, or console errors",
+          "actual": {
+            "console": [
+              {
+                "type": "warning",
+                "text": "[.WebGL-0x332c00195600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+                "location": {
+                  "url": "http://localhost:8765/",
+                  "line": 0,
+                  "column": 0,
+                  "lineNumber": 0,
+                  "columnNumber": 0
+                }
+              },
+              {
+                "type": "warning",
+                "text": "[.WebGL-0x332c00195600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+                "location": {
+                  "url": "http://localhost:8765/",
+                  "line": 0,
+                  "column": 0,
+                  "lineNumber": 0,
+                  "columnNumber": 0
+                }
+              },
+              {
+                "type": "warning",
+                "text": "[.WebGL-0x332c00195600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+                "location": {
+                  "url": "http://localhost:8765/",
+                  "line": 0,
+                  "column": 0,
+                  "lineNumber": 0,
+                  "columnNumber": 0
+                }
+              },
+              {
+                "type": "warning",
+                "text": "[.WebGL-0x332c00195600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)",
+                "location": {
+                  "url": "http://localhost:8765/",
+                  "line": 0,
+                  "column": 0,
+                  "lineNumber": 0,
+                  "columnNumber": 0
+                }
+              }
+            ],
+            "pageErrors": [],
+            "requestFailures": [],
+            "badResponses": []
+          }
+        }
+      ],
+      "max_abs_error": 0,
+      "evidence": {
+        "screenshot": "audit/browser/screenshots/S29-verify-stale-after-edit.png",
+        "screenshotSha256": "[REDACTED_SECRET]",
+        "state": "audit/browser/raw/S29-verify-stale-after-edit.json",
+        "case": "audit/browser/scenarios/S29-verify-stale-after-edit.json"
+      },
+      "reason": [
+        {
+          "name": "verify output is invalidated or marked stale",
+          "expected": "empty/stale/current-sequence indication",
+          "actual": "✓ max |Δ| = 0 (bitwise identical)"
+        }
+      ],
+      "runtimeErrors": {
+        "console": [],
+        "pageErrors": [],
+        "requestFailures": [],
+        "badResponses": []
+      }
+    },
+    {
+      "id": "[REDACTED_ID_31]",
+      "domain": [
+        "editing",
+        "reset",
+        "usability"
+      ],
+      "status": "PASS",
+      "executed": true,
+      "inputs": {
+        "actions": [
+          "new random sequence",
+          "demo reset"
+        ]
+      },
+      "assertions": [
+        {
+          "name": "random control changes to valid bounded length",
+          "status": "PASS",
+          "expected": "length 4–8 with token IDs 0–15",
+          "actual": [
+            8,
+            8,
+            12,
+            6,
+            1,
+            1,
+            5
+          ]
+        },
+        {
+          "name": "demo control restores deterministic demo sequence",
+          "status": "PASS",
+          "expected": [
+            4,
+            9,
+            5,
+            10,
+            6,
+            11,
+            7,
+            12
+          ],
+          "actual": [
+            4,
+            9,
+            5,
+            10,
+            6,
+            11,
+            7,
+            12
+          ]
+        },
+        {
+          "name": "restored state is current in trace",
+          "status": "PASS",
+          "expected": [
+            4,
+            9,
+            5,
+            10,
+            6,
+            11,
+            7,
+            12
+          ],
+          "actual": [
+            4,
+            9,
+            5,
+            10,
+            6,
+            11,
+            7,
+            12
+          ]
+        },
+        {
+          "name": "no page/console/request errors",
+          "status": "PASS",
+          "expected": "zero page errors, failed requests, HTTP errors, or console errors",
+          "actual": {
+            "console": [
+              {
+                "type": "warning",
+                "text": "[.WebGL-0x332c00195600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+                "location": {
+                  "url": "http://localhost:8765/",
+                  "line": 0,
+                  "column": 0,
+                  "lineNumber": 0,
+                  "columnNumber": 0
+                }
+              },
+              {
+                "type": "warning",
+                "text": "[.WebGL-0x332c00195600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+                "location": {
+                  "url": "http://localhost:8765/",
+                  "line": 0,
+                  "column": 0,
+                  "lineNumber": 0,
+                  "columnNumber": 0
+                }
+              },
+              {
+                "type": "warning",
+                "text": "[.WebGL-0x332c00195600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+                "location": {
+                  "url": "http://localhost:8765/",
+                  "line": 0,
+                  "column": 0,
+                  "lineNumber": 0,
+                  "columnNumber": 0
+                }
+              },
+              {
+                "type": "warning",
+                "text": "[.WebGL-0x332c00195600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)",
+                "location": {
+                  "url": "http://localhost:8765/",
+                  "line": 0,
+                  "column": 0,
+                  "lineNumber": 0,
+                  "columnNumber": 0
+                }
+              }
+            ],
+            "pageErrors": [],
+            "requestFailures": [],
+            "badResponses": []
+          }
+        }
+      ],
+      "max_abs_error": 0,
+      "evidence": {
+        "screenshot": "audit/browser/screenshots/S30-random-and-demo-reset.png",
+        "screenshotSha256": "[REDACTED_SECRET]",
+        "state": "audit/browser/raw/S30-random-and-demo-reset.json",
+        "case": "audit/browser/scenarios/S30-random-and-demo-reset.json"
+      },
+      "reason": null,
+      "runtimeErrors": {
+        "console": [],
+        "pageErrors": [],
+        "requestFailures": [],
+        "badResponses": []
+      }
+    },
+    {
+      "id": "[REDACTED_ID_32]",
+      "domain": [
+        "weights",
+        "selectors",
+        "visual"
+      ],
+      "status": "PASS",
+      "executed": true,
+      "inputs": {
+        "selections": [
+          "tok_emb",
+          "block0.Wq",
+          "block1.W2",
+          "Wu"
+        ]
+      },
+      "assertions": [
+        {
+          "name": "weight selector presents all requested matrices",
+          "status": "PASS",
+          "expected": "weights tab with shape/range readout",
+          "actual": {
+            "active": "weights",
+            "info": "shape 16×16 · range ±1.261 · row = input dim, col = output dim"
+          }
+        },
+        {
+          "name": "weight canvas rendered",
+          "status": "PASS",
+          "expected": "WebGL canvas remains available while weight canvas changes",
+          "actual": {
+            "width": 1680,
+            "height": 1000
+          }
+        },
+        {
+          "name": "no page/console/request errors",
+          "status": "PASS",
+          "expected": "zero page errors, failed requests, HTTP errors, or console errors",
+          "actual": {
+            "console": [
+              {
+                "type": "warning",
+                "text": "[.WebGL-0x332c00195600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+                "location": {
+                  "url": "http://localhost:8765/",
+                  "line": 0,
+                  "column": 0,
+                  "lineNumber": 0,
+                  "columnNumber": 0
+                }
+              },
+              {
+                "type": "warning",
+                "text": "[.WebGL-0x332c00195600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+                "location": {
+                  "url": "http://localhost:8765/",
+                  "line": 0,
+                  "column": 0,
+                  "lineNumber": 0,
+                  "columnNumber": 0
+                }
+              },
+              {
+                "type": "warning",
+                "text": "[.WebGL-0x332c00195600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+                "location": {
+                  "url": "http://localhost:8765/",
+                  "line": 0,
+                  "column": 0,
+                  "lineNumber": 0,
+                  "columnNumber": 0
+                }
+              },
+              {
+                "type": "warning",
+                "text": "[.WebGL-0x332c00195600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)",
+                "location": {
+                  "url": "http://localhost:8765/",
+                  "line": 0,
+                  "column": 0,
+                  "lineNumber": 0,
+                  "columnNumber": 0
+                }
+              }
+            ],
+            "pageErrors": [],
+            "requestFailures": [],
+            "badResponses": []
+          }
+        }
+      ],
+      "max_abs_error": 0,
+      "evidence": {
+        "screenshot": "audit/browser/screenshots/S31-weight-selector.png",
+        "screenshotSha256": "[REDACTED_SECRET]",
+        "state": "audit/browser/raw/S31-weight-selector.json",
+        "case": "audit/browser/scenarios/S31-weight-selector.json"
+      },
+      "reason": null,
+      "runtimeErrors": {
+        "console": [],
+        "pageErrors": [],
+        "requestFailures": [],
+        "badResponses": []
+      }
+    },
+    {
+      "id": "[REDACTED_ID_33]",
+      "domain": [
+        "attention",
+        "visual",
+        "causal-mask"
+      ],
+      "status": "FAIL",
+      "executed": true,
+      "inputs": {
+        "step": 9,
+        "layer": 1,
+        "head": 1,
+        "selectedPosition": 7
+      },
+      "assertions": [
+        {
+          "name": "causal row has only past/current keys",
+          "status": "PASS",
+          "expected": 8,
+          "actual": 8
+        },
+        {
+          "name": "attention weights sum to one",
+          "status": "PASS",
+          "expected": 1,
+          "actual": 1
+        },
+        {
+          "name": "L2 arc count follows thresholded attention rows",
+          "status": "PASS",
+          "expected": 36,
+          "actual": 36
+        },
+        {
+          "name": "selected-head arc color is captured",
+          "status": "PASS",
+          "expected": "amber L2H2 arcs",
+          "actual": [
+            {
+              "radius": 0.09000000000000001,
+              "opacity": 0.15000000000000002,
+              "color": "ffb74d"
+            },
+            {
+              "radius": 0.05210017420935374,
+              "opacity": 0.0958573917276482,
+              "color": "ffb74d"
+            },
+            {
+              "radius": 0.05789982579064626,
+              "opacity": 0.1041426082723518,
+              "color": "ffb74d"
+            },
+            {
+              "radius": 0.03961541024726083,
+              "opacity": 0.07802201463894404,
+              "color": "ffb74d"
+            },
+            {
+              "radius": 0.03844813596075543,
+              "opacity": 0.07635447994393633,
+              "color": "ffb74d"
+            },
+            {
+              "radius": 0.05193645379198375,
+              "opacity": 0.09562350541711964,
+              "color": "ffb74d"
+            },
+            {
+              "radius": 0.03536497048764498,
+              "opacity": 0.07194995783949283,
+              "color": "ffb74d"
+            },
+            {
+              "radius": 0.03211696447096023,
+              "opacity": 0.0673099492442289,
+              "color": "ffb74d"
+            }
+          ]
+        },
+        {
+          "name": "arc depth aligns with token posts",
+          "status": "FAIL",
+          "expected": "arc and post world z equal",
+          "actual": {
+            "postWorldZ": -116.6,
+            "arcWorldZ": -120,
+            "delta": 3.4000000000000057
+          }
+        },
+        {
+          "name": "no page/console/request errors",
+          "status": "PASS",
+          "expected": "zero page errors, failed requests, HTTP errors, or console errors",
+          "actual": {
+            "console": [
+              {
+                "type": "warning",
+                "text": "[.WebGL-0x332c00195600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+                "location": {
+                  "url": "http://localhost:8765/",
+                  "line": 0,
+                  "column": 0,
+                  "lineNumber": 0,
+                  "columnNumber": 0
+                }
+              },
+              {
+                "type": "warning",
+                "text": "[.WebGL-0x332c00195600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+                "location": {
+                  "url": "http://localhost:8765/",
+                  "line": 0,
+                  "column": 0,
+                  "lineNumber": 0,
+                  "columnNumber": 0
+                }
+              },
+              {
+                "type": "warning",
+                "text": "[.WebGL-0x332c00195600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+                "location": {
+                  "url": "http://localhost:8765/",
+                  "line": 0,
+                  "column": 0,
+                  "lineNumber": 0,
+                  "columnNumber": 0
+                }
+              },
+              {
+                "type": "warning",
+                "text": "[.WebGL-0x332c00195600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)",
+                "location": {
+                  "url": "http://localhost:8765/",
+                  "line": 0,
+                  "column": 0,
+                  "lineNumber": 0,
+                  "columnNumber": 0
+                }
+              }
+            ],
+            "pageErrors": [],
+            "requestFailures": [],
+            "badResponses": []
+          }
+        }
+      ],
+      "max_abs_error": 0,
+      "evidence": {
+        "screenshot": "audit/browser/screenshots/S32-attention-causal-render-inputs.png",
+        "screenshotSha256": "[REDACTED_SECRET]",
+        "state": "audit/browser/raw/S32-attention-causal-render-inputs.json",
+        "case": "audit/browser/scenarios/S32-attention-causal-render-inputs.json"
+      },
+      "reason": [
+        {
+          "name": "arc depth aligns with token posts",
+          "expected": "arc and post world z equal",
+          "actual": {
+            "postWorldZ": -116.6,
+            "arcWorldZ": -120,
+            "delta": 3.4000000000000057
+          }
+        }
+      ],
+      "runtimeErrors": {
+        "console": [],
+        "pageErrors": [],
+        "requestFailures": [],
+        "badResponses": []
+      }
+    }
+  ],
+  "limitations": [
+    "The browser run exercises the unchanged original page. No source files under the app root were modified.",
+    "The independent numerical oracle is maintained by audit/numerical; browser snapshots preserve raw UI trace/render inputs for cross-checking.",
+    "Visual readability and marker/arc placement are assessed from screenshots plus exposed render objects; subjective educational appeal is not folded into arithmetic correctness.",
+    "Software WebGL warning may appear in this headless environment; it is not a page error."
+  ],
+  "evidence": {
+    "screenshots": "audit/browser/screenshots/",
+    "rawStates": "audit/browser/raw/",
+    "scenarioFragments": "audit/browser/scenarios/",
+    "browserEvents": "audit/browser/browser_events.json"
+  },
+  "runtimeEvents": {
+    "console": [
+      {
+        "type": "warning",
+        "text": "[.WebGL-0x332c00195600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+        "location": {
+          "url": "http://localhost:8765/",
+          "line": 0,
+          "column": 0,
+          "lineNumber": 0,
+          "columnNumber": 0
+        }
+      },
+      {
+        "type": "warning",
+        "text": "[.WebGL-0x332c00195600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+        "location": {
+          "url": "http://localhost:8765/",
+          "line": 0,
+          "column": 0,
+          "lineNumber": 0,
+          "columnNumber": 0
+        }
+      },
+      {
+        "type": "warning",
+        "text": "[.WebGL-0x332c00195600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+        "location": {
+          "url": "http://localhost:8765/",
+          "line": 0,
+          "column": 0,
+          "lineNumber": 0,
+          "columnNumber": 0
+        }
+      },
+      {
+        "type": "warning",
+        "text": "[.WebGL-0x332c00195600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)",
+        "location": {
+          "url": "http://localhost:8765/",
+          "line": 0,
+          "column": 0,
+          "lineNumber": 0,
+          "columnNumber": 0
+        }
+      }
+    ],
+    "pageErrors": [],
+    "requestFailures": [],
+    "badResponses": []
+  }
+}

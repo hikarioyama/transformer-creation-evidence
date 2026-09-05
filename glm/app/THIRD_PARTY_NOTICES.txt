@@ -1,0 +1,19 @@
+Third-party notices for this public app copy
+
+Three.js r128
+- File: vendor/three.min.js
+- Upstream: https://github.com/mrdoob/three.js
+- License text/reference: https://github.com/mrdoob/three.js/blob/r128/LICENSE
+- Copyright 2010-2021 three.js authors; MIT License.
+
+OrbitControls
+- File: vendor/OrbitControls.js
+- This file is distributed by the Three.js project and has no standalone license header in the source copy.
+- Upstream project and license: https://github.com/mrdoob/three.js (MIT License; see link above).
+- No source relicensing or vendor modifications were performed for this release.
+
+Playwright (test-only dependency)
+- The app metadata identifies Playwright; dependency packages and browser binaries are not vendored in this public copy.
+- The source lock metadata identifies playwright/playwright-core under Apache-2.0. Consult the package's current distribution for complete notices before redistribution.
+
+No relicensing is intended. The app's own package metadata remains an unchanged source copy; see provenance.json for the package.json/package-lock.json metadata mismatch disclosure.

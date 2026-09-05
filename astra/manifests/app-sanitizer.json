@@ -1,0 +1,183 @@
+{
+  "sanitizer": {
+    "name": "sanitize_public.py",
+    "version": "1.0"
+  },
+  "input_kind": "directory",
+  "files": [
+    {
+      "name": ".gitignore",
+      "source_sha256": "34e9693303ecbce8346c5c396957443c431793c0e2a144f070e0cc703d8968b5",
+      "public_sha256": "34e9693303ecbce8346c5c396957443c431793c0e2a144f070e0cc703d8968b5",
+      "bytes": 44,
+      "public_bytes": 44,
+      "redactions": {}
+    },
+    {
+      "name": "README.md",
+      "source_sha256": "1a64cfd3de89e3c1345d646801bd1d5e056e6703ebad58a1cbaaa4d2a6182e92",
+      "public_sha256": "2b9f9a76f40964e037168e8efd1799a263cd19857d7c75e56ee63770a191fd9c",
+      "bytes": 4020,
+      "public_bytes": 4037,
+      "redactions": {
+        "local_file_url": 1,
+        "localhost_normalized": 1
+      }
+    },
+    {
+      "name": "THIRD_PARTY_NOTICES.md",
+      "source_sha256": "95a05d807cd7c4b0d9514719f54f8fec0173aada3e47e8353ef5f723d2f5f5a8",
+      "public_sha256": "95a05d807cd7c4b0d9514719f54f8fec0173aada3e47e8353ef5f723d2f5f5a8",
+      "bytes": 1258,
+      "public_bytes": 1258,
+      "redactions": {}
+    },
+    {
+      "name": "app.js",
+      "source_sha256": "5eec69d046077001d93db4a86dd57f1cc18f8d62885f0ebf5bcb1991579c6973",
+      "public_sha256": "5eec69d046077001d93db4a86dd57f1cc18f8d62885f0ebf5bcb1991579c6973",
+      "bytes": 14664,
+      "public_bytes": 14664,
+      "redactions": {}
+    },
+    {
+      "name": "index.html",
+      "source_sha256": "34f00eca78a087a844a5884424805f8b13dc036377e45fcee68b3240960d2db6",
+      "public_sha256": "900ddb8a0d4527ca4a79a65d957532a2909cce3af8449cdb8243576013078ff3",
+      "bytes": 9736,
+      "public_bytes": 9492,
+      "redactions": {
+        "embedded_image_url": 1
+      }
+    },
+    {
+      "name": "model.js",
+      "source_sha256": "a782d4092c4e96441fbb539e0d678070d57f6995b17e6c1b3a2148cfbfa6d262",
+      "public_sha256": "a782d4092c4e96441fbb539e0d678070d57f6995b17e6c1b3a2148cfbfa6d262",
+      "bytes": 5858,
+      "public_bytes": 5858,
+      "redactions": {}
+    },
+    {
+      "name": "package.json",
+      "source_sha256": "51d7be855cc709f2ec77b8f354ff5672cf3f2314b6a5997c67951dc49080c12d",
+      "public_sha256": "574089d3373377864208df6f36b738b6f5a0540e27a8d8babe9f79811177631a",
+      "bytes": 217,
+      "public_bytes": 229,
+      "redactions": {}
+    },
+    {
+      "name": "scene.js",
+      "source_sha256": "61eddf7571663681b0bebf7c3df34e47177f16e796082d034f68cd42b9e0855c",
+      "public_sha256": "61eddf7571663681b0bebf7c3df34e47177f16e796082d034f68cd42b9e0855c",
+      "bytes": 8819,
+      "public_bytes": 8819,
+      "redactions": {}
+    },
+    {
+      "name": "stages.js",
+      "source_sha256": "0a89828b18fb29e3f4f5e141eb698c5cfaa12c269e83b820fa7f47e4a60e6043",
+      "public_sha256": "0a89828b18fb29e3f4f5e141eb698c5cfaa12c269e83b820fa7f47e4a60e6043",
+      "bytes": 4731,
+      "public_bytes": 4731,
+      "redactions": {}
+    },
+    {
+      "name": "style.css",
+      "source_sha256": "fc33f474fc26624f0f289f9793f544eb70dfb9f7c1086e3c98a3465f07888f35",
+      "public_sha256": "fc33f474fc26624f0f289f9793f544eb70dfb9f7c1086e3c98a3465f07888f35",
+      "bytes": 14514,
+      "public_bytes": 14514,
+      "redactions": {}
+    },
+    {
+      "name": "tests/browser.mjs",
+      "source_sha256": "c1e0d179e229e1a5174baebb0e82bfcb5384053cafbc78c3bf0800aec3c3d656",
+      "public_sha256": "3f3b45e18d8c96ce9676c5b18ebda3a3f9e04e73372d76ad389c43780c65012b",
+      "bytes": 6226,
+      "public_bytes": 6226,
+      "redactions": {
+        "localhost_normalized": 3
+      }
+    },
+    {
+      "name": "tests/model.test.js",
+      "source_sha256": "4114c031d4f6b6a054f41f078f93ce3d73e0a620b369d3965bac069ad3f82bbc",
+      "public_sha256": "4114c031d4f6b6a054f41f078f93ce3d73e0a620b369d3965bac069ad3f82bbc",
+      "bytes": 4756,
+      "public_bytes": 4756,
+      "redactions": {}
+    },
+    {
+      "name": "tests/numpy_reference.py",
+      "source_sha256": "12d7b11a8315ae45f42283dc1b511d7a28a513ac96befebefef7df3214832e6c",
+      "public_sha256": "12d7b11a8315ae45f42283dc1b511d7a28a513ac96befebefef7df3214832e6c",
+      "bytes": 2988,
+      "public_bytes": 2988,
+      "redactions": {}
+    },
+    {
+      "name": "tests/artifacts/attention.png",
+      "omitted": true,
+      "reason": "binary file",
+      "source_sha256": "95546e6c280d8ec016beeaafc769d221b4001294d4549078ac26e3a06cfb643e",
+      "bytes": 1018128
+    },
+    {
+      "name": "tests/artifacts/desktop.png",
+      "omitted": true,
+      "reason": "binary file",
+      "source_sha256": "21969e266ca4a3f6e9d026eeeebb3ac6080ab95d614db3a5d811de6529f2aba8",
+      "bytes": 998951
+    },
+    {
+      "name": "tests/artifacts/mobile.png",
+      "omitted": true,
+      "reason": "binary file",
+      "source_sha256": "c8b4b4ae9579e4a38fb7007ebfb872a5a038612d480d8f562203de3da566aa65",
+      "bytes": 518228
+    },
+    {
+      "name": "tests/artifacts/trace.json",
+      "source_sha256": "6e9299713a6c25c56ff53da48bdca96162e876546d73213182391e723eeb68b2",
+      "bytes": 347092,
+      "omitted": true,
+      "reason": "generated browser export artifact omitted; numeric trace is reproducible from app and tests",
+      "sanitizer_redactions": {
+        "sensitive_key": 7
+      }
+    },
+    {
+      "name": "vendor/OrbitControls.js",
+      "source_sha256": "02bb4ade710f3e607329e37a21f098bc3ac70eb6e33daf8a65e79f4db785e7b2",
+      "public_sha256": "02bb4ade710f3e607329e37a21f098bc3ac70eb6e33daf8a65e79f4db785e7b2",
+      "bytes": 26375,
+      "public_bytes": 26375,
+      "redactions": {}
+    },
+    {
+      "name": "vendor/three.min.js",
+      "source_sha256": "9274bbcec8d96168626c732b5d31c775aa8cfb7eaa0599bec0c175908a2c1ce2",
+      "public_sha256": "9274bbcec8d96168626c732b5d31c775aa8cfb7eaa0599bec0c175908a2c1ce2",
+      "bytes": 603445,
+      "public_bytes": 603445,
+      "redactions": {}
+    }
+  ],
+  "totals": {
+    "replacements": {
+      "binary_file": 3,
+      "embedded_image_url": 1,
+      "excluded_directory": 1,
+      "local_file_url": 1,
+      "localhost_normalized": 4,
+      "sensitive_key": 7
+    },
+    "files_seen": 19,
+    "files_written": 15,
+    "files_omitted": 4
+  },
+  "notes": [
+    "Totals include sanitizer processing of the omitted generated trace; no trace output is published."
+  ]
+}

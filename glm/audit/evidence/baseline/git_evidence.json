@@ -1,0 +1,58 @@
+{
+  "schema": "next-token-machine-audit-git-evidence-v1",
+  "target": "[REDACTED_LOCAL_PATH]",
+  "captured_at_utc": "2026-09-05T15:18:16Z",
+  "is_repository": false,
+  "state": "not-a-repository",
+  "reason": "git -C [REDACTED_LOCAL_PATH] rev-parse --is-inside-work-tree exited 128 with the standard not-a-repository error.",
+  "branch": null,
+  "head": null,
+  "status": null,
+  "diff": null,
+  "untracked": null,
+  "commands": [
+    {
+      "command": "git -C [REDACTED_LOCAL_PATH] rev-parse --is-inside-work-tree",
+      "exit_code": 128,
+      "stdout": "",
+      "stderr": "fatal: not a git repository (or any parent up to mount point /)\nStopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set)."
+    },
+    {
+      "command": "git -C [REDACTED_LOCAL_PATH] status --short --branch",
+      "exit_code": 128,
+      "stdout": "",
+      "stderr": "fatal: not a git repository (or any parent up to mount point /)\nStopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set)."
+    },
+    {
+      "command": "git -C [REDACTED_LOCAL_PATH] branch --show-current",
+      "exit_code": 128,
+      "stdout": "",
+      "stderr": "fatal: not a git repository (or any parent up to mount point /)\nStopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set)."
+    },
+    {
+      "command": "git -C [REDACTED_LOCAL_PATH] rev-parse HEAD",
+      "exit_code": 128,
+      "stdout": "",
+      "stderr": "fatal: not a git repository (or any parent up to mount point /)\nStopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set)."
+    },
+    {
+      "command": "git -C [REDACTED_LOCAL_PATH] diff --no-ext-diff --no-textconv",
+      "exit_code": 129,
+      "stdout": "",
+      "stderr": "warning: Not a git repository. Use --no-index to compare two paths outside a working tree\nusage: git diff --no-index [<options>] <path> <path> [<pathspec>]"
+    },
+    {
+      "command": "git -C [REDACTED_LOCAL_PATH] ls-files --others --exclude-standard",
+      "exit_code": 128,
+      "stdout": "",
+      "stderr": "fatal: not a git repository (or any parent up to mount point /)\nStopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set)."
+    }
+  ],
+  "not_applicable_fields": [
+    "branch",
+    "head",
+    "status",
+    "diff",
+    "untracked"
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "sanitizer": {
+    "name": "sanitize_public.py",
+    "version": "1.0"
+  },
+  "input_kind": "JSONL file",
+  "records": {
+    "populated": 87,
+    "trailing_blank_lines": 1,
+    "ordering": "preserved",
+    "usage_records": 40,
+    "logged_model_window": {
+      "start": "2026-09-05T13:32:40.578Z",
+      "end": "2026-09-05T14:02:10.243Z"
+    }
+  },
+  "files": [
+    {
+      "name": "session.jsonl",
+      "source_sha256": "d63428aab67a517c2e9cea5b8c456a140ecf1918c3a447e834e43d7fc42fa1d7",
+      "public_sha256": "687eecb86e87c428eb9335c58038b75939722cd304b010d1c7cb368b96aefb31",
+      "bytes": 7320663,
+      "public_bytes": 327084,
+      "redactions": {
+        "embedded_image_object": 4,
+        "embedded_image_url": 3,
+        "home_directory_listing": 3,
+        "local_file_url": 1,
+        "local_path": 111,
+        "localhost_port_or_route": 13,
+        "metadata_omission": 40,
+        "opaque_id": 318,
+        "sensitive_key": 40
+      },
+      "structural_omissions": {
+        "id": 129,
+        "parentId": 86,
+        "responseId": 40,
+        "toolCallId": 42,
+        "thinkingSignature": 22,
+        "textSignature": 4,
+        "cost": 40
+      }
+    }
+  ],
+  "usage_totals": {
+    "input": 107066,
+    "output": 33387,
+    "cacheRead": 1207808,
+    "cacheWrite": 0,
+    "reasoning": 5055,
+    "totalTokens": 1348261
+  },
+  "notes": [
+    "Text and JSON values/keys were recursively processed by the shared sanitizer.",
+    "Structural omissions remove generated event, response, call, signature, and cost metadata only; record content, errors, tool results, timestamps, model identifiers, usage fields, and order remain.",
+    "Home-directory listings, local paths/file URLs, internal addresses, credentials, opaque payloads, and embedded images are represented by stable markers or omitted as counted above.",
+    "The public session intentionally contains no source absolute path, private mapping, response/call identifier, signature, or cost value."
+  ]
+}

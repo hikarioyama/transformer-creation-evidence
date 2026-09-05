@@ -1,0 +1,23 @@
+$ pre-run declaration: audit/numerical/tolerances.json (atol=1e-9, rtol=1e-7, mutation_min_delta=1e-12)
+
+$ python3 audit/numerical/extract_weights.py --source js/weights.js --output audit/numerical/weights.json --manifest audit/numerical/weight_capture.json
+captured 29 tensors; source_sha256=7a0cfd0ad98d4fa37aa123907c206958a847d8838d17bcce4f84be5549743297
+meta={"CTX": 16, "D": 16, "EPS": 1e-05, "F": 64, "H": 2, "HD": 8, "L": 2, "SCALE": 0.35355339059327373, "V": 16, "seed": 1234, "task": "t[k+1] = (t[k-1] + 1) mod 16"}
+
+$ python3 audit/numerical/generate_cases.py --output audit/numerical/cases.json
+generated 100 full/cache cases and 12 causality pairs with seed 20260906
+
+$ node audit/numerical/make_instrumented_model.js js/model.js audit/numerical/instrumented_model.js audit/numerical/model-instrument.diff audit/numerical/instrumentation_manifest.json
+generated isolated instrumented copy with 4 explicit replacements
+
+$ node audit/numerical/original_adapter.js --root [REDACTED_LOCAL_PATH] --model [REDACTED_LOCAL_PATH] --inputs [REDACTED_LOCAL_PATH] --tolerance [REDACTED_LOCAL_PATH] --output [REDACTED_LOCAL_PATH]
+captured 100 full traces, 100 cache runs, 12 causality pairs
+
+$ python3 audit/numerical/reference.py --weights audit/numerical/weights.json --inputs audit/numerical/cases.json --tolerance audit/numerical/tolerances.json --output audit/numerical/reference_output.json
+reference computed 100 cases and 12 causality pairs; intrinsic check failures=0
+
+$ python3 audit/numerical/run_audit.py --inputs audit/numerical/cases.json --original audit/numerical/original_capture.json --reference audit/numerical/reference_output.json --weights audit/numerical/weights.json --tolerance audit/numerical/tolerances.json --output audit/numerical/results.json
+{"BLOCKED": 0, "FAIL": 0, "PASS": 213, "domains": {"cache_incremental": {"BLOCKED": 0, "FAIL": 0, "PASS": 100, "executed_cases": 100, "pass_over_pass_plus_fail": 1.0, "status": "PASS", "unexecuted": 0}, "causality": {"BLOCKED": 0, "FAIL": 0, "PASS": 12, "executed_cases": 12, "pass_over_pass_plus_fail": 1.0, "status": "PASS", "unexecuted": 0}, "full_reference": {"BLOCKED": 0, "FAIL": 0, "PASS": 100, "executed_cases": 100, "pass_over_pass_plus_fail": 1.0, "status": "PASS", "unexecuted": 0}, "reproducibility": {"BLOCKED": 0, "FAIL": 0, "PASS": 1, "executed_cases": 1, "pass_over_pass_plus_fail": 1.0, "status": "PASS", "unexecuted": 0}, "executed_cases": 213, "pass_over_pass_plus_fail": 1.0, "status": "PASS", "unexecuted": 0}
+
+$ python3 audit/baseline/verify_integrity.py
+{"added": [], "audit_exclusion": {"new_paths_ignored": true, "path": "audit", "preexisting": false}, "baseline": "[REDACTED_LOCAL_PATH]", "changed": [], "expected_count": 251, "observed_count": 251, "ok": true, "removed": [], "target": "[REDACTED_LOCAL_PATH]"}

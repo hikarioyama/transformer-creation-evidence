@@ -1,0 +1,193 @@
+{
+  "sanitizer": {
+    "name": "sanitize_public.py",
+    "version": "1.0"
+  },
+  "input_kind": "directory",
+  "files": [
+    {
+      "name": "README.md",
+      "source_sha256": "bc1793976742a85783b86495441c547e16270688cc9c6e62326b2e59c5d20be2",
+      "public_sha256": "d708687f2503930a809af244bf28eb83c24babf4955f69f64542f9e061efc0a7",
+      "bytes": 5747,
+      "public_bytes": 5821,
+      "redactions": {
+        "local_file_url": 1,
+        "localhost_normalized": 1,
+        "screenshot_reference_omitted": 1
+      }
+    },
+    {
+      "name": "index.html",
+      "source_sha256": "4eb1aa1e4efb521cf426d47154005a94c75433f3a78dea77dc5ea928bdfd7939",
+      "public_sha256": "4eb1aa1e4efb521cf426d47154005a94c75433f3a78dea77dc5ea928bdfd7939",
+      "bytes": 5837,
+      "public_bytes": 5837,
+      "redactions": {}
+    },
+    {
+      "name": "package-lock.json",
+      "source_sha256": "ec670f142a6e888db228c443c7cceb5760dbc770f8f85531197ff9350c31e569",
+      "public_sha256": "ec670f142a6e888db228c443c7cceb5760dbc770f8f85531197ff9350c31e569",
+      "bytes": 1185,
+      "public_bytes": 1185,
+      "redactions": {}
+    },
+    {
+      "name": "package.json",
+      "source_sha256": "6dbc51cc8e3f0854350ccdb81403ba50d1e6089a170a08f01b0082c197be781a",
+      "public_sha256": "6dbc51cc8e3f0854350ccdb81403ba50d1e6089a170a08f01b0082c197be781a",
+      "bytes": 782,
+      "public_bytes": 782,
+      "redactions": {}
+    },
+    {
+      "name": "css/style.css",
+      "source_sha256": "5445d88117859a98069f14000b871e671f2e6bf7ff9b53cffac31ad70f00d046",
+      "public_sha256": "5445d88117859a98069f14000b871e671f2e6bf7ff9b53cffac31ad70f00d046",
+      "bytes": 12895,
+      "public_bytes": 12895,
+      "redactions": {}
+    },
+    {
+      "name": "js/app.js",
+      "source_sha256": "7d0d4fa7571eb50eb71656d0b08422a313c6f3bff703bc08261be4fa7d67cc90",
+      "public_sha256": "7d0d4fa7571eb50eb71656d0b08422a313c6f3bff703bc08261be4fa7d67cc90",
+      "bytes": 39485,
+      "public_bytes": 39485,
+      "redactions": {}
+    },
+    {
+      "name": "js/model.js",
+      "source_sha256": "0c32ef85535df9da87252e29966c40c519ee43ba66972dde2edeb1440a940d9f",
+      "public_sha256": "0c32ef85535df9da87252e29966c40c519ee43ba66972dde2edeb1440a940d9f",
+      "bytes": 15038,
+      "public_bytes": 15038,
+      "redactions": {}
+    },
+    {
+      "name": "js/tokens.js",
+      "source_sha256": "e91009cd2bbc8d0cc89d9866853baf318f37c180932c870f7fb5bbe0c57c09fa",
+      "public_sha256": "e91009cd2bbc8d0cc89d9866853baf318f37c180932c870f7fb5bbe0c57c09fa",
+      "bytes": 1157,
+      "public_bytes": 1157,
+      "redactions": {}
+    },
+    {
+      "name": "js/viz3d.js",
+      "source_sha256": "8c42aebba714dc4c1271fc9ccbe3ae9871bcaf1552bedb6e33e7ee71b42833a5",
+      "public_sha256": "8c42aebba714dc4c1271fc9ccbe3ae9871bcaf1552bedb6e33e7ee71b42833a5",
+      "bytes": 27225,
+      "public_bytes": 27225,
+      "redactions": {}
+    },
+    {
+      "name": "js/weights.js",
+      "source_sha256": "7a0cfd0ad98d4fa37aa123907c206958a847d8838d17bcce4f84be5549743297",
+      "public_sha256": "7a0cfd0ad98d4fa37aa123907c206958a847d8838d17bcce4f84be5549743297",
+      "bytes": 154230,
+      "public_bytes": 154230,
+      "redactions": {}
+    },
+    {
+      "name": "test/edge_test.js",
+      "source_sha256": "6cf1a58c24bd38e4aa86c5ac259bb2f0cf883b839c8af5905d5d512c0b4dbd04",
+      "public_sha256": "6cf1a58c24bd38e4aa86c5ac259bb2f0cf883b839c8af5905d5d512c0b4dbd04",
+      "bytes": 4759,
+      "public_bytes": 4759,
+      "redactions": {
+        "localhost_normalized": 1
+      }
+    },
+    {
+      "name": "test/pixel_check.js",
+      "source_sha256": "389a842aab8c8d8cbf130c854ed28b618232747b78ac963a6f548e2113a5bd9e",
+      "public_sha256": "389a842aab8c8d8cbf130c854ed28b618232747b78ac963a6f548e2113a5bd9e",
+      "bytes": 2940,
+      "public_bytes": 2940,
+      "redactions": {
+        "localhost_normalized": 1,
+        "runtime_generated_image_literal_preserved": 1
+      }
+    },
+    {
+      "name": "test/test_model.js",
+      "source_sha256": "51add802dda440de5a87d844e7ff76988cb5b149ac4f162016046cac26d6f0a9",
+      "public_sha256": "51add802dda440de5a87d844e7ff76988cb5b149ac4f162016046cac26d6f0a9",
+      "bytes": 4632,
+      "public_bytes": 4632,
+      "redactions": {}
+    },
+    {
+      "name": "test/test_reference.json",
+      "source_sha256": "2b6927579d78bab4777e935719fe69cf3f7b874efd70123fb56a33d3aca89e90",
+      "public_sha256": "239c29b1b7214c682f498359591acfdb43074037352a365ced0dd8d1444e7fac",
+      "bytes": 42257,
+      "public_bytes": 71920,
+      "redactions": {}
+    },
+    {
+      "name": "test/ui_test.js",
+      "source_sha256": "e12c2db663674a356b0a7099a5679e0006429e2b26d10cb97b5b4d59f0341498",
+      "public_sha256": "e12c2db663674a356b0a7099a5679e0006429e2b26d10cb97b5b4d59f0341498",
+      "bytes": 5390,
+      "public_bytes": 5390,
+      "redactions": {
+        "localhost_normalized": 1
+      }
+    },
+    {
+      "name": "test/visual_probe.js",
+      "source_sha256": "4899d9ccd57ad796d2bc1ca5735f5d924218973ad7b17b631fe6389467b7e7b1",
+      "public_sha256": "4899d9ccd57ad796d2bc1ca5735f5d924218973ad7b17b631fe6389467b7e7b1",
+      "bytes": 3701,
+      "public_bytes": 3701,
+      "redactions": {
+        "localhost_normalized": 1
+      }
+    },
+    {
+      "name": "tools/debug_grad.py",
+      "source_sha256": "297c71b3af3db809198aad0c544f5b84b181139c83758f4c5a74211e2d71faf2",
+      "public_sha256": "297c71b3af3db809198aad0c544f5b84b181139c83758f4c5a74211e2d71faf2",
+      "bytes": 1529,
+      "public_bytes": 1529,
+      "redactions": {}
+    },
+    {
+      "name": "tools/train.py",
+      "source_sha256": "7e1dc5242267fd51c6ff719375ca6eaf84f7dddcd51bc07b8aae2dd614b04f97",
+      "public_sha256": "7e1dc5242267fd51c6ff719375ca6eaf84f7dddcd51bc07b8aae2dd614b04f97",
+      "bytes": 15752,
+      "public_bytes": 15752,
+      "redactions": {}
+    },
+    {
+      "name": "vendor/OrbitControls.js",
+      "source_sha256": "02bb4ade710f3e607329e37a21f098bc3ac70eb6e33daf8a65e79f4db785e7b2",
+      "public_sha256": "02bb4ade710f3e607329e37a21f098bc3ac70eb6e33daf8a65e79f4db785e7b2",
+      "bytes": 26375,
+      "public_bytes": 26375,
+      "redactions": {}
+    },
+    {
+      "name": "vendor/three.min.js",
+      "source_sha256": "9274bbcec8d96168626c732b5d31c775aa8cfb7eaa0599bec0c175908a2c1ce2",
+      "public_sha256": "9274bbcec8d96168626c732b5d31c775aa8cfb7eaa0599bec0c175908a2c1ce2",
+      "bytes": 603445,
+      "public_bytes": 603445,
+      "redactions": {}
+    }
+  ],
+  "totals": {
+    "replacements": {
+      "local_file_url": 1,
+      "localhost_normalized": 5,
+      "runtime_generated_image_literal_preserved": 1,
+      "screenshot_reference_omitted": 1
+    },
+    "files_seen": 20,
+    "files_written": 20,
+    "files_omitted": 0
+  }
+}

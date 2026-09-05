@@ -1,0 +1,697 @@
+{
+  "schema": "next-token-machine-audit-validation-v1",
+  "results": "[REDACTED_LOCAL_PATH]",
+  "checks": [
+    {
+      "name": "schema",
+      "ok": true,
+      "detail": "next-token-machine-audit-aggregate-v1"
+    },
+    {
+      "name": "case_ids_unique",
+      "ok": true,
+      "detail": {
+        "total": 257
+      }
+    },
+    {
+      "name": "primary_domain_present",
+      "ok": true,
+      "detail": {
+        "missing": 0
+      }
+    },
+    {
+      "name": "exactly_six_domains",
+      "ok": true,
+      "detail": [
+        "cache_outputs_and_actual_reuse",
+        "causality",
+        "display_vs_real_computation",
+        "independent_numerical_parity",
+        "original_requirement_compliance",
+        "post_interaction_state_consistency"
+      ]
+    },
+    {
+      "name": "domain_counts:original_requirement_compliance",
+      "ok": true,
+      "detail": {
+        "computed": {
+          "PASS": 7,
+          "FAIL": 2,
+          "BLOCKED": 2,
+          "N/A": 0,
+          "UNEXECUTED": 0
+        },
+        "stored": {
+          "counting_unit": "one requirement item for domain 1; one independently exercised numerical case for domains 2-4; one complete UI scenario for domains 5-6",
+          "status": "FAIL",
+          "executed_cases": 9,
+          "PASS": 7,
+          "FAIL": 2,
+          "BLOCKED": 2,
+          "N/A": 0,
+          "unexecuted": 0,
+          "adjacent_blocked_or_unexecuted": 2,
+          "pass_over_pass_plus_fail": 0.7777777777777778,
+          "case_ids": [
+            "REQ-01",
+            "REQ-02",
+            "REQ-03",
+            "REQ-04",
+            "REQ-05",
+            "REQ-06",
+            "REQ-07",
+            "REQ-08",
+            "REQ-09",
+            "REQ-10",
+            "REQ-11"
+          ]
+        }
+      }
+    },
+    {
+      "name": "domain_ratio:original_requirement_compliance",
+      "ok": true,
+      "detail": {
+        "computed": 0.7777777777777778,
+        "stored": 0.7777777777777778
+      }
+    },
+    {
+      "name": "domain_ids:original_requirement_compliance",
+      "ok": true,
+      "detail": {
+        "count": 11
+      }
+    },
+    {
+      "name": "domain_counts:independent_numerical_parity",
+      "ok": true,
+      "detail": {
+        "computed": {
+          "PASS": 100,
+          "FAIL": 0,
+          "BLOCKED": 0,
+          "N/A": 0,
+          "UNEXECUTED": 0
+        },
+        "stored": {
+          "counting_unit": "one requirement item for domain 1; one independently exercised numerical case for domains 2-4; one complete UI scenario for domains 5-6",
+          "status": "PASS",
+          "executed_cases": 100,
+          "PASS": 100,
+          "FAIL": 0,
+          "BLOCKED": 0,
+          "N/A": 0,
+          "unexecuted": 0,
+          "adjacent_blocked_or_unexecuted": 0,
+          "pass_over_pass_plus_fail": 1.0,
+          "case_ids": [
+            "full-000",
+            "full-001",
+            "full-002",
+            "full-003",
+            "full-004",
+            "full-005",
+            "full-006",
+            "full-007",
+            "full-008",
+            "full-009",
+            "full-010",
+            "full-011",
+            "full-012",
+            "full-013",
+            "full-014",
+            "full-015",
+            "full-016",
+            "full-017",
+            "full-018",
+            "full-019",
+            "full-020",
+            "full-021",
+            "full-022",
+            "full-023",
+            "full-024",
+            "full-025",
+            "full-026",
+            "full-027",
+            "full-028",
+            "full-029",
+            "full-030",
+            "full-031",
+            "full-032",
+            "full-033",
+            "full-034",
+            "full-035",
+            "full-036",
+            "full-037",
+            "full-038",
+            "full-039",
+            "full-040",
+            "full-041",
+            "full-042",
+            "full-043",
+            "full-044",
+            "full-045",
+            "full-046",
+            "full-047",
+            "full-048",
+            "full-049",
+            "full-050",
+            "full-051",
+            "full-052",
+            "full-053",
+            "full-054",
+            "full-055",
+            "full-056",
+            "full-057",
+            "full-058",
+            "full-059",
+            "full-060",
+            "full-061",
+            "full-062",
+            "full-063",
+            "full-064",
+            "full-065",
+            "full-066",
+            "full-067",
+            "full-068",
+            "full-069",
+            "full-070",
+            "full-071",
+            "full-072",
+            "full-073",
+            "full-074",
+            "full-075",
+            "full-076",
+            "full-077",
+            "full-078",
+            "full-079",
+            "full-080",
+            "full-081",
+            "full-082",
+            "full-083",
+            "full-084",
+            "full-085",
+            "full-086",
+            "full-087",
+            "full-088",
+            "full-089",
+            "full-090",
+            "full-091",
+            "full-092",
+            "full-093",
+            "full-094",
+            "full-095",
+            "full-096",
+            "full-097",
+            "full-098",
+            "full-099"
+          ]
+        }
+      }
+    },
+    {
+      "name": "domain_ratio:independent_numerical_parity",
+      "ok": true,
+      "detail": {
+        "computed": 1.0,
+        "stored": 1.0
+      }
+    },
+    {
+      "name": "domain_ids:independent_numerical_parity",
+      "ok": true,
+      "detail": {
+        "count": 100
+      }
+    },
+    {
+      "name": "domain_counts:causality",
+      "ok": true,
+      "detail": {
+        "computed": {
+          "PASS": 12,
+          "FAIL": 0,
+          "BLOCKED": 0,
+          "N/A": 0,
+          "UNEXECUTED": 0
+        },
+        "stored": {
+          "counting_unit": "one requirement item for domain 1; one independently exercised numerical case for domains 2-4; one complete UI scenario for domains 5-6",
+          "status": "PASS",
+          "executed_cases": 12,
+          "PASS": 12,
+          "FAIL": 0,
+          "BLOCKED": 0,
+          "N/A": 0,
+          "unexecuted": 0,
+          "adjacent_blocked_or_unexecuted": 0,
+          "pass_over_pass_plus_fail": 1.0,
+          "case_ids": [
+            "causal-00",
+            "causal-01",
+            "causal-02",
+            "causal-03",
+            "causal-04",
+            "causal-05",
+            "causal-06",
+            "causal-07",
+            "causal-08",
+            "causal-09",
+            "causal-10",
+            "causal-11"
+          ]
+        }
+      }
+    },
+    {
+      "name": "domain_ratio:causality",
+      "ok": true,
+      "detail": {
+        "computed": 1.0,
+        "stored": 1.0
+      }
+    },
+    {
+      "name": "domain_ids:causality",
+      "ok": true,
+      "detail": {
+        "count": 12
+      }
+    },
+    {
+      "name": "domain_counts:cache_outputs_and_actual_reuse",
+      "ok": true,
+      "detail": {
+        "computed": {
+          "PASS": 100,
+          "FAIL": 0,
+          "BLOCKED": 0,
+          "N/A": 0,
+          "UNEXECUTED": 0
+        },
+        "stored": {
+          "counting_unit": "one requirement item for domain 1; one independently exercised numerical case for domains 2-4; one complete UI scenario for domains 5-6",
+          "status": "PASS",
+          "executed_cases": 100,
+          "PASS": 100,
+          "FAIL": 0,
+          "BLOCKED": 0,
+          "N/A": 0,
+          "unexecuted": 0,
+          "adjacent_blocked_or_unexecuted": 0,
+          "pass_over_pass_plus_fail": 1.0,
+          "case_ids": [
+            "cache-full-000",
+            "cache-full-001",
+            "cache-full-002",
+            "cache-full-003",
+            "cache-full-004",
+            "cache-full-005",
+            "cache-full-006",
+            "cache-full-007",
+            "cache-full-008",
+            "cache-full-009",
+            "cache-full-010",
+            "cache-full-011",
+            "cache-full-012",
+            "cache-full-013",
+            "cache-full-014",
+            "cache-full-015",
+            "cache-full-016",
+            "cache-full-017",
+            "cache-full-018",
+            "cache-full-019",
+            "cache-full-020",
+            "cache-full-021",
+            "cache-full-022",
+            "cache-full-023",
+            "cache-full-024",
+            "cache-full-025",
+            "cache-full-026",
+            "cache-full-027",
+            "cache-full-028",
+            "cache-full-029",
+            "cache-full-030",
+            "cache-full-031",
+            "cache-full-032",
+            "cache-full-033",
+            "cache-full-034",
+            "cache-full-035",
+            "cache-full-036",
+            "cache-full-037",
+            "cache-full-038",
+            "cache-full-039",
+            "cache-full-040",
+            "cache-full-041",
+            "cache-full-042",
+            "cache-full-043",
+            "cache-full-044",
+            "cache-full-045",
+            "cache-full-046",
+            "cache-full-047",
+            "cache-full-048",
+            "cache-full-049",
+            "cache-full-050",
+            "cache-full-051",
+            "cache-full-052",
+            "cache-full-053",
+            "cache-full-054",
+            "cache-full-055",
+            "cache-full-056",
+            "cache-full-057",
+            "cache-full-058",
+            "cache-full-059",
+            "cache-full-060",
+            "cache-full-061",
+            "cache-full-062",
+            "cache-full-063",
+            "cache-full-064",
+            "cache-full-065",
+            "cache-full-066",
+            "cache-full-067",
+            "cache-full-068",
+            "cache-full-069",
+            "cache-full-070",
+            "cache-full-071",
+            "cache-full-072",
+            "cache-full-073",
+            "cache-full-074",
+            "cache-full-075",
+            "cache-full-076",
+            "cache-full-077",
+            "cache-full-078",
+            "cache-full-079",
+            "cache-full-080",
+            "cache-full-081",
+            "cache-full-082",
+            "cache-full-083",
+            "cache-full-084",
+            "cache-full-085",
+            "cache-full-086",
+            "cache-full-087",
+            "cache-full-088",
+            "cache-full-089",
+            "cache-full-090",
+            "cache-full-091",
+            "cache-full-092",
+            "cache-full-093",
+            "cache-full-094",
+            "cache-full-095",
+            "cache-full-096",
+            "cache-full-097",
+            "cache-full-098",
+            "cache-full-099"
+          ]
+        }
+      }
+    },
+    {
+      "name": "domain_ratio:cache_outputs_and_actual_reuse",
+      "ok": true,
+      "detail": {
+        "computed": 1.0,
+        "stored": 1.0
+      }
+    },
+    {
+      "name": "domain_ids:cache_outputs_and_actual_reuse",
+      "ok": true,
+      "detail": {
+        "count": 100
+      }
+    },
+    {
+      "name": "domain_counts:post_interaction_state_consistency",
+      "ok": true,
+      "detail": {
+        "computed": {
+          "PASS": 16,
+          "FAIL": 3,
+          "BLOCKED": 0,
+          "N/A": 0,
+          "UNEXECUTED": 0
+        },
+        "stored": {
+          "counting_unit": "one requirement item for domain 1; one independently exercised numerical case for domains 2-4; one complete UI scenario for domains 5-6",
+          "status": "FAIL",
+          "executed_cases": 19,
+          "PASS": 16,
+          "FAIL": 3,
+          "BLOCKED": 0,
+          "N/A": 0,
+          "unexecuted": 0,
+          "adjacent_blocked_or_unexecuted": 0,
+          "pass_over_pass_plus_fail": 0.8421052631578947,
+          "case_ids": [
+            "S01-load-intro",
+            "S02-close-intro-controls",
+            "S05-token-chip-selection",
+            "S15-edit-first-token",
+            "S16-edit-middle-token",
+            "S17-edit-last-token",
+            "S18-repeat-same-token-selection",
+            "S19-shorten-to-length-one",
+            "S20-cache-grow-to-max-context",
+            "S21-cache-toggle-prefill-demo",
+            "S22-cache-append-twice",
+            "S23-cache-toggle-off-on-equivalence",
+            "S24-cache-edit-first",
+            "S25-cache-edit-middle",
+            "S26-cache-edit-last",
+            "S27-cache-shorten-current-input",
+            "S28-verify-parity-current-sequence",
+            "S29-verify-stale-after-edit",
+            "S30-random-and-demo-reset"
+          ]
+        }
+      }
+    },
+    {
+      "name": "domain_ratio:post_interaction_state_consistency",
+      "ok": true,
+      "detail": {
+        "computed": 0.8421052631578947,
+        "stored": 0.8421052631578947
+      }
+    },
+    {
+      "name": "domain_ids:post_interaction_state_consistency",
+      "ok": true,
+      "detail": {
+        "count": 19
+      }
+    },
+    {
+      "name": "domain_counts:display_vs_real_computation",
+      "ok": true,
+      "detail": {
+        "computed": {
+          "PASS": 10,
+          "FAIL": 4,
+          "BLOCKED": 0,
+          "N/A": 0,
+          "UNEXECUTED": 0
+        },
+        "stored": {
+          "counting_unit": "one requirement item for domain 1; one independently exercised numerical case for domains 2-4; one complete UI scenario for domains 5-6",
+          "status": "FAIL",
+          "executed_cases": 14,
+          "PASS": 10,
+          "FAIL": 4,
+          "BLOCKED": 0,
+          "N/A": 0,
+          "unexecuted": 0,
+          "adjacent_blocked_or_unexecuted": 0,
+          "pass_over_pass_plus_fail": 0.7142857142857143,
+          "case_ids": [
+            "S03-step1-input",
+            "S04-step-walk-all-15",
+            "S05b-embedding-values-current-position",
+            "S06-layernorm-values",
+            "S07-qkv-values",
+            "S08-attention-L1H1",
+            "S09-L1H2-selector",
+            "S09-L2H1-selector",
+            "S09-L2H2-selector",
+            "S12-residual-and-mlp-values",
+            "S13-final-ln-values",
+            "S14-logits-probability-token-ids",
+            "S31-weight-selector",
+            "S32-attention-causal-render-inputs"
+          ]
+        }
+      }
+    },
+    {
+      "name": "domain_ratio:display_vs_real_computation",
+      "ok": true,
+      "detail": {
+        "computed": 0.7142857142857143,
+        "stored": 0.7142857142857143
+      }
+    },
+    {
+      "name": "domain_ids:display_vs_real_computation",
+      "ok": true,
+      "detail": {
+        "count": 14
+      }
+    },
+    {
+      "name": "numerical_cases_100_12_100",
+      "ok": true,
+      "detail": {
+        "total": 213
+      }
+    },
+    {
+      "name": "numerical_all_pass",
+      "ok": true,
+      "detail": {
+        "status": "PASS",
+        "executed_cases": 213,
+        "PASS": 213,
+        "FAIL": 0,
+        "BLOCKED": 0,
+        "unexecuted": 0,
+        "pass_over_pass_plus_fail": 1.0,
+        "domains": {
+          "cache_incremental": {
+            "status": "PASS",
+            "executed_cases": 100,
+            "PASS": 100,
+            "FAIL": 0,
+            "BLOCKED": 0,
+            "unexecuted": 0,
+            "pass_over_pass_plus_fail": 1.0
+          },
+          "causality": {
+            "status": "PASS",
+            "executed_cases": 12,
+            "PASS": 12,
+            "FAIL": 0,
+            "BLOCKED": 0,
+            "unexecuted": 0,
+            "pass_over_pass_plus_fail": 1.0
+          },
+          "full_reference": {
+            "status": "PASS",
+            "executed_cases": 100,
+            "PASS": 100,
+            "FAIL": 0,
+            "BLOCKED": 0,
+            "unexecuted": 0,
+            "pass_over_pass_plus_fail": 1.0
+          },
+          "reproducibility": {
+            "status": "PASS",
+            "executed_cases": 1,
+            "PASS": 1,
+            "FAIL": 0,
+            "BLOCKED": 0,
+            "unexecuted": 0,
+            "pass_over_pass_plus_fail": 1.0
+          }
+        }
+      }
+    },
+    {
+      "name": "browser_all_cases_retained",
+      "ok": true,
+      "detail": {
+        "aggregate": 33,
+        "source": 33
+      }
+    },
+    {
+      "name": "browser_independent_compare_retained",
+      "ok": true,
+      "detail": {
+        "status": "FAIL",
+        "executed_cases": 51,
+        "PASS": 49,
+        "FAIL": 2,
+        "BLOCKED": 0,
+        "N/A": 0,
+        "unexecuted": 0,
+        "pass_over_pass_plus_fail": 0.9607843137254902,
+        "unique_sequences": 11
+      }
+    },
+    {
+      "name": "browser_cases_executed_or_counted",
+      "ok": true,
+      "detail": {
+        "nonexecuted": []
+      }
+    },
+    {
+      "name": "evidence_present",
+      "ok": true,
+      "detail": {
+        "missing": [],
+        "referenced_files": 109
+      }
+    },
+    {
+      "name": "stored_integrity_pass",
+      "ok": true,
+      "detail": {
+        "command": "python3 audit/baseline/verify_integrity.py",
+        "exit_code": 0,
+        "stdout": "{\n  \"added\": [],\n  \"audit_exclusion\": {\n    \"new_paths_ignored\": true,\n    \"path\": \"audit\",\n    \"preexisting\": false\n  },\n  \"baseline\": \"[REDACTED_LOCAL_PATH]\",\n  \"changed\": [],\n  \"expected_count\": 251,\n  \"observed_count\": 251,\n  \"ok\": true,\n  \"removed\": [],\n  \"target\": \"[REDACTED_LOCAL_PATH]\"\n}\n",
+        "stderr": "",
+        "baseline": "[REDACTED_LOCAL_PATH]",
+        "expected_inventory": {
+          "total_entries": 251,
+          "regular_files": 202,
+          "symlinks": 2,
+          "directories": 47
+        },
+        "ok": true
+      }
+    },
+    {
+      "name": "fresh_integrity_pass",
+      "ok": true,
+      "detail": {
+        "exit_code": 0,
+        "stdout": "{\n  \"added\": [],\n  \"audit_exclusion\": {\n    \"new_paths_ignored\": true,\n    \"path\": \"audit\",\n    \"preexisting\": false\n  },\n  \"baseline\": \"[REDACTED_LOCAL_PATH]\",\n  \"changed\": [],\n  \"expected_count\": 251,\n  \"observed_count\": 251,\n  \"ok\": true,\n  \"removed\": [],\n  \"target\": \"[REDACTED_LOCAL_PATH]\"\n}\n",
+        "stderr": ""
+      }
+    },
+    {
+      "name": "numerical_result_readable",
+      "ok": true,
+      "detail": {
+        "bytes": 14229319
+      }
+    },
+    {
+      "name": "browser_result_readable",
+      "ok": true,
+      "detail": {
+        "bytes": 184289
+      }
+    },
+    {
+      "name": "browser_compare_readable",
+      "ok": true,
+      "detail": {
+        "bytes": 92982
+      }
+    }
+  ],
+  "failed_checks": [],
+  "ok": true,
+  "hashes_at_validation": {
+    "results.json": "[REDACTED_SECRET]",
+    "numerical/results.json": "[REDACTED_SECRET]",
+    "browser/results.json": "[REDACTED_SECRET]",
+    "browser/independent_compare.json": "[REDACTED_SECRET]"
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "review_status": "APPROVED_FINAL_PRECOMMIT",
+  "independent_reviewer": "PublicPrivacyReview",
+  "scope": "Exact dedicated staging tree; no source backups or unreviewed bytes",
+  "candidate": {
+    "files": 71,
+    "json_files": 26,
+    "jsonl_files": 2,
+    "json_parse_failures": [],
+    "binary_or_image_files": 0
+  },
+  "integrity": {
+    "astra_session": {
+      "original_sha256": "d63428aab67a517c2e9cea5b8c456a140ecf1918c3a447e834e43d7fc42fa1d7",
+      "public_sha256": "687eecb86e87c428eb9335c58038b75939722cd304b010d1c7cb368b96aefb31",
+      "public_bytes": 327084,
+      "populated_records": 87,
+      "trailing_blank_lines": 1
+    },
+    "glm_session": {
+      "original_sha256": "8c57dcfc77e0676ad83d2ae5578e7c6d0121ac2f77344cee90b9f073d6439d7c",
+      "public_sha256": "17350ebbcaaae7425a92be958525788ed2eca8596f9120ee289a51b7a024891f",
+      "public_bytes": 609415,
+      "records": 247
+    },
+    "glm_pi_session_analysis": {
+      "public_sha256": "117dc1f6ca62752a406f02a7818844fb59846945f85f3ad8ad59e73024010ca6",
+      "public_bytes": 72506,
+      "lines": 807
+    }
+  },
+  "usage_reconciliation": {
+    "astra": {
+      "usage_records": 40,
+      "input": 107066,
+      "output": 33387,
+      "cacheRead": 1207808,
+      "cacheWrite": 0,
+      "reasoning": 5055,
+      "totalTokens": 1348261
+    },
+    "glm": {
+      "usage_records": 121,
+      "input": 10986597,
+      "output": 127194,
+      "cacheRead": 0,
+      "cacheWrite": 0,
+      "reasoning": 0,
+      "totalTokens": 11113791
+    }
+  },
+  "privacy_scan": {
+    "raw_home_users_root_paths": 0,
+    "raw_tmp_paths": 0,
+    "file_urls": 0,
+    "private_ipv4_literals": 0,
+    "internal_host_suffixes": 0,
+    "emails": 0,
+    "raw_uuid_or_provider_call_ids": 0,
+    "credential_assignments": 0,
+    "encoded_payloads": 0,
+    "runtime_data_image_constructors": 1,
+    "home_listing_results": 0,
+    "external_secret_scanner": "unavailable (gitleaks, trufflehog, detect-secrets not installed)",
+    "method": "Independent full-text regex scan plus structured JSON/JSONL parse and human review"
+  },
+  "browser_smoke": {
+    "astra": {
+      "title": "Small Signals · Transformer Observatory",
+      "canvas_elements": 1,
+      "buttons": 208
+    },
+    "glm": {
+      "title": "The Next-Token Machine — a tiny Transformer in 3D",
+      "canvas_elements": 3,
+      "buttons": 14
+    }
+  },
+  "notes": [
+    "The sole runtime data:image constructor is in pixel_check.js and creates a data URL from a screenshot generated during a local test; no image bytes are checked in.",
+    "Public localhost endpoints in app/test source are reserved local smoke targets; session histories normalize their ports.",
+    "Astra and GLM are separate n=1 runs. No unified audit comparison is claimed.",
+    "The GLM training violation and negative/failing observations remain disclosed in the evidence.",
+    "No dedicated external secret scanner was available; semantic absence of high-entropy secrets cannot be guaranteed by regex scanning alone."
+  ]
+}

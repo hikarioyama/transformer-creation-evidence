@@ -1,0 +1,40 @@
+{
+  "target": "[REDACTED_LOCAL_PATH]",
+  "browser_results_generated_at": "2026-09-05T15:54:55.202Z",
+  "numerical_cases": {
+    "executed": 213,
+    "PASS": 213,
+    "FAIL": 0,
+    "duplicate_ids": []
+  },
+  "browser_cases": {
+    "executed": 33,
+    "PASS": 26,
+    "FAIL": 7,
+    "duplicate_ids": []
+  },
+  "browser_evidence": {
+    "scenario_state_screenshot_paths_checked": 33,
+    "screenshot_sha256_values_checked": 33,
+    "missing_paths_or_hash_mismatches": []
+  },
+  "browser_independent_comparison": {
+    "executed": 51,
+    "PASS": 49,
+    "FAIL": 2
+  },
+  "original_integrity": {
+    "command": "python3 audit/baseline/verify_integrity.py",
+    "ok": true,
+    "expected_count": 251,
+    "observed_count": 251,
+    "added": [],
+    "removed": [],
+    "changed": []
+  },
+  "inspected_screenshots": [
+    "audit/browser/screenshots/S22-cache-append-twice.png",
+    "audit/browser/screenshots/S32-attention-causal-render-inputs.png"
+  ],
+  "visual_findings": "Token IDs remain readable; several token glyphs render as missing-glyph boxes, and dense 3D labels overlap or fade behind matrices. This is separate from numerical correctness."
+}
